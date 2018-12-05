@@ -4,7 +4,7 @@ contributing
 ----------
 
 * if you have todos, suggestions, requests, an easy way to keep track of them
-  is through "Issues".
+  is through ["Issues"](https://github.com/lgbouma/WASP-4b_decay/issues).
 
 * if you'd like to make direct edits to the TeX, please fork the repo and
   submit as pull requests.
