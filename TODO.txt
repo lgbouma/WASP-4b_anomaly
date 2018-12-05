@@ -1,0 +1,85 @@
+MOST PRESSING
+----------
+
+* update the text with the corrected tau_e timescale. (Section 4.2,
+  apsidal precession discussion)
+
+* discussion: apsidal precession subsection:
+
+  * look into RVs to see what the residual variance is once the
+    WASP-4b model is subtracted out.
+
+  * do the RV data rule out a 2:1 MMR?
+
+  * what are limits on the outer planet, if there is one?
+
+
+* once the above two things are done: go thru text, identify where
+  quality needs to be improved.
+
+  * save current version as a "verbose draft"
+
+  * then cut to meet the ApJL requirement.
+
+* do we want "media coverage", thru the media office?
+
+
+OTHER READING
+----------
+
+* read Cohen+ 2010
+
+* Verbunt and Phinney ~1995
+
+* Zhan 1978 -- relative rates of tidal dissipation around evolved stars vs
+  not-evolved stars.  Explains why more evolved stars -> more dissipation.
+
+
+VAGUE IDEAS PERHAPS TO BE INCLUDED IN DISCUSSION
+----------
+
+* what is the expected rotation period?
+
+* when does the radius start changing for this star, based on the
+  best-fit MESA model?
+
+* how solid is the "slightly evolved" interpretation?
+
+* leave the theory tasks -- the state of the stellar evolution, the
+  gyro age and rotation period, etc.  ... FOR THE DISCUSSION.
+
+
+
+ONCE PAPER IS SUBMITTED
+----------
+* ask Jean Michel-Desert, and Huitson, if they really do believe their
+  midtimes. (this is essential!)
+
+* ask Erin May for her data / collaborate
+   * get the midtime from it.
+
+
+PUBLISHING
+----------
+
+* follow steps of TESS publication policy.
+
+  * step 2: make wiki page.
+
+  * step 3: contact
+    POC: Roland (roland@space.mit.edu)
+    TSO: seager@mit.edu, dlatham@cfa.harvard.edu
+    SPOC: jon.jenkins@nasa.gov,
+    asking for 3 contributing authors from each list.
+    Add these 9 contributors coauthors to the 6 TESS architect
+    coauthors.
+
+  * step 4: once complete draft is ready, post draft to TESS wiki
+    contributed paper page.
+    inform architects (tess-architects@mit.edu) and contributors,
+    including a draft, asking for response within three business days,
+    with the statement:
+
+    "I have read the paper “Title”, and I agree with the methods and
+    conclusions. I wish to be included as a co-author." 
+
