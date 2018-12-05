@@ -1,9 +1,6 @@
 MOST PRESSING
 ----------
 
-* update the text with the corrected tau_e timescale. (Section 4.2,
-  apsidal precession discussion)
-
 * discussion: apsidal precession subsection:
 
   * look into RVs to see what the residual variance is once the
@@ -12,7 +9,6 @@ MOST PRESSING
   * do the RV data rule out a 2:1 MMR?
 
   * what are limits on the outer planet, if there is one?
-
 
 * once the above two things are done: go thru text, identify where
   quality needs to be improved.
@@ -66,7 +62,8 @@ PUBLISHING
 
   * step 4: once complete draft is ready, post draft to TESS wiki
     contributed paper page.
-    inform architects (tess-architects@mit.edu) and contributors,
+
+  * inform architects (tess-architects@mit.edu) and contributors,
     including a draft, asking for response within three business days,
     with the statement:
 

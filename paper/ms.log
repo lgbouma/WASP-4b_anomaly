@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.9)  5 DEC 2018 13:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.9)  5 DEC 2018 15:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,22 +1022,22 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 Class revtex4-1 Warning: Assuming \noaffiliation for authors.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 116.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 122.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 116.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 122.
 
-Overfull \hbox (9.03374pt too wide) in paragraph at lines 116--116
+Overfull \hbox (9.03374pt too wide) in paragraph at lines 122--122
 [][] 
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 142--167
+Underfull \hbox (badness 1320) in paragraph at lines 148--173
 \T1/ptm/m/n/10 in eclips-ing bi-na-ries (\T1/ptm/m/it/10 e.g.\T1/ptm/m/n/10 , [
 ][]Rus-sell[][] [][]1939[][]; [][]Schwarzschild[][]
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 1546) in paragraph at lines 179--199
+Underfull \hbox (badness 1546) in paragraph at lines 185--205
 \T1/ptm/m/n/10 ([][]2017[][]) pre-sented new tran-sit and oc-cul-ta-tion times 
 for
  []
@@ -1045,92 +1045,92 @@ for
 <f1.png, id=125, 281.49165pt x 403.2666pt>
 File: f1.png Graphic file (type png)
 <use f1.png>
-Package pdftex.def Info: f1.png  used on input line 253. on input line 253.
+Package pdftex.def Info: f1.png  used on input line 259. on input line 259.
 Package pdftex.def Info: Requested size: 246.29417pt x 352.8451pt on input line
- 253.
+ 259.
 
-Overfull \hbox (4.02765pt too wide) in paragraph at lines 253--254
+Overfull \hbox (4.02765pt too wide) in paragraph at lines 259--260
  [] 
  []
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 263.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 269.
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--301
+Underfull \hbox (badness 10000) in paragraph at lines 307--307
 [][]| [] [][][][]$\T1/ptm/m/n/8 archive . stsci . edu / hlsps / tess-[]data-[]a
 lerts / hlsp _ tess-[]data-[]alerts _ tess _
  []
 
 [2 <./f1.png>]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 319.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 325.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-<f2.pdf, id=188, pagebox=cropbox, 281.63501pt x 276.64104pt>
+<f2.pdf, id=187, pagebox=cropbox, 281.63501pt x 276.64104pt>
 File: f2.pdf Graphic file (type pdf)
 <use f2.pdf>
-Package pdftex.def Info: f2.pdf  used on input line 334. on input line 334.
+Package pdftex.def Info: f2.pdf  used on input line 340. on input line 340.
 Package pdftex.def Info: Requested size: 246.29417pt x 241.93367pt on input lin
-e 334.
+e 340.
 
-Overfull \hbox (4.02765pt too wide) in paragraph at lines 333--335
+Overfull \hbox (4.02765pt too wide) in paragraph at lines 339--341
  [] 
  []
 
 [3 <./f2.pdf>]
-<f3.pdf, id=302, pagebox=cropbox, 448.19318pt x 294.1669pt>
+<f3.pdf, id=300, pagebox=cropbox, 448.19318pt x 294.1669pt>
 File: f3.pdf Graphic file (type pdf)
 <use f3.pdf>
-Package pdftex.def Info: f3.pdf  used on input line 436. on input line 436.
+Package pdftex.def Info: f3.pdf  used on input line 442. on input line 442.
 Package pdftex.def Info: Requested size: 461.80255pt x 303.09853pt on input lin
-e 436.
+e 442.
  [4] [5 <./f3.pdf>]
-<f4.pdf, id=488, pagebox=cropbox, 297.86456pt x 675.66508pt>
+<f4.pdf, id=481, pagebox=cropbox, 297.86456pt x 675.66508pt>
 File: f4.pdf Graphic file (type pdf)
 <use f4.pdf>
-Package pdftex.def Info: f4.pdf  used on input line 726. on input line 726.
+Package pdftex.def Info: f4.pdf  used on input line 732. on input line 732.
 Package pdftex.def Info: Requested size: 212.94028pt x 483.0247pt on input line
- 726.
+ 732.
  [6]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 811.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 817.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 811.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 817.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
 [7 <./f4.pdf>] [8]
-Underfull \hbox (badness 2460) in paragraph at lines 1113--1116
+Underfull \hbox (badness 2460) in paragraph at lines 1108--1111
 []\T1/ptm/m/n/10 Another mech-a-nism to pro-duce the ob-served pe-riod
  []
 
 [9]
-<f5.pdf, id=837, pagebox=cropbox, 448.19318pt x 294.77942pt>
+<f5.pdf, id=828, pagebox=cropbox, 448.19318pt x 294.77942pt>
 File: f5.pdf Graphic file (type pdf)
 <use f5.pdf>
-Package pdftex.def Info: f5.pdf  used on input line 1170. on input line 1170.
+Package pdftex.def Info: f5.pdf  used on input line 1165. on input line 1165.
 Package pdftex.def Info: Requested size: 246.29417pt x 161.98975pt on input lin
-e 1170.
+e 1165.
 
-Overfull \hbox (4.02765pt too wide) in paragraph at lines 1169--1171
+Overfull \hbox (4.02765pt too wide) in paragraph at lines 1164--1166
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1208--1231
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1226
 
  []
 
 
-Underfull \hbox (badness 1990) in paragraph at lines 1247--1248
+Underfull \hbox (badness 1990) in paragraph at lines 1242--1243
 [][]\T1/ptm/m/n/10 2018[][]), \T1/pcr/m/n/10 BATMAN \T1/ptm/m/n/10 ([][]Krei-d-
 berg[][] [][]2015[][]), \T1/pcr/m/n/10 corner \T1/ptm/m/n/10 ([][]Foreman-
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 1247--1248
+Underfull \hbox (badness 1596) in paragraph at lines 1242--1243
 \T1/ptm/m/n/10 Mackey[][] [][]2016[][]), \T1/pcr/m/n/10 emcee \T1/ptm/m/n/10 ([
 ][]Foreman-Mackey et al.[][] [][]2013[][]),
  []
@@ -1152,24 +1152,24 @@ $\OML/ptmcm/m/it/8 a$
  []
 
 ) [15]
-<f6.pdf, id=1379, pagebox=cropbox, 438.21716pt x 295.76308pt>
+<f6.pdf, id=1371, pagebox=cropbox, 438.21716pt x 295.76308pt>
 File: f6.pdf Graphic file (type pdf)
 <use f6.pdf>
-Package pdftex.def Info: f6.pdf  used on input line 1320. on input line 1320.
+Package pdftex.def Info: f6.pdf  used on input line 1315. on input line 1315.
 Package pdftex.def Info: Requested size: 461.80255pt x 311.69766pt on input lin
-e 1320.
+e 1315.
  (./WASP-5b_transit_time_table.tex [16] [17 <./f6.pdf>])
 (./WASP-6b_transit_time_table.tex) (./WASP-18b_transit_time_table.tex [18])
 (./WASP-46b_transit_time_table.tex) [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1486.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1481.
  (./ms.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1486.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1486.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1481.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1481.
  ) 
 Here is how much of TeX's memory you used:
- 20507 strings out of 492995
- 368184 string characters out of 6135074
- 553191 words of memory out of 5000000
+ 20506 strings out of 492995
+ 368171 string characters out of 6135074
+ 553317 words of memory out of 5000000
  23415 multiletter control sequences out of 15000+600000
  93162 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1192,10 +1192,10 @@ ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ms.pdf (19 pages, 1201255 bytes).
+Output written on ms.pdf (19 pages, 1200690 bytes).
 PDF statistics:
- 1956 PDF objects out of 2073 (max. 8388607)
- 1392 compressed objects within 14 object streams
- 222 named destinations out of 1000 (max. 500000)
+ 1948 PDF objects out of 2073 (max. 8388607)
+ 1384 compressed objects within 14 object streams
+ 221 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

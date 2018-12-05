@@ -14,4 +14,9 @@
     Add these 9 contributors coauthors to the 6 TESS architect
     coauthors.
 
+- got SPOC
+
+- update the text with the corrected tau_e timescale. (Section 4.2,
+  apsidal precession discussion)
+
 
