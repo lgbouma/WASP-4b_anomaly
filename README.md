@@ -13,5 +13,5 @@ contributing
 * if you want to have more direct access to edit from the master branch, talk
   to Luke and he might give it to you.
 
-* barring the previous three better options, email comments are accepted, but
-  grudgingly.
+* barring the previous three better options, email comments to
+  `luke@astro.princeton.edu` are also OK.
