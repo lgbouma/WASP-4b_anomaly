@@ -1,0 +1,40 @@
+%\renewcommand{\arraystretch}{1.0}
+
+\startlongtable
+\begin{deluxetable}{lc}
+
+\tabletypesize{\footnotesize}
+
+\tablenum{3}
+
+%\tablewidth{0pt}
+
+\tablecaption{Best-fit model parameters.}
+\label{tab:bestfit}
+
+\tablehead{
+  \colhead{Parameter} &
+  \colhead{Median Value~(Unc.)\tablenotemark{a}}
+}
+
+\startdata
+~~~~~~{\it Constant period} &  \\
+$t_0$\,[${\rm BJD}_{\rm TBD}$]    & 2455785.780502(+19)(-19)              \\
+$P$\,[days]                       & 1.338231460(+22)(-22)                 \\
+~~~~~~{\it Constant period derivative} &  \\
+$t_0$~[${\rm BJD}_{\rm TBD}$]     & 2455785.780664(+24)(-25)              \\
+$P$\,[days]                       & 1.338231677(31)(-31)                  \\
+$dP/dt$                           & $-3.83(+39)(-36) \times 10^{-10}$     \\
+~~~~~~{\it Apsidal precession} &  \\
+$t_0$~[${\rm BJD}_{\rm TBD}$]     & 2455785.78015(+22)(-29)               \\
+$P_{\rm s}$\,[days]               & 1.33823131(+16)(-34)                  \\
+$e$                               & $1.59^{+1.38}_{-0.64} \times 10^{-3}$ \\
+$\omega_0$\,[rad]                 & 2.37(+35)(-30)                        \\
+$d\omega/dE$~[rad\,epoch$^{-1}$]  & $9.56^{+3.55}_{-2.43} \times 10^{-4}$ \\
+\enddata
+\tablenotetext{a}{
+The numbers in parenthesis give the 1$\sigma$ uncertainty in the final
+two digits, where appropriate.
+}
+\end{deluxetable}
+

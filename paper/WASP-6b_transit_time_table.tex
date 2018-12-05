@@ -1,0 +1,74 @@
+%% \begin{deluxetable}{} command tell LaTeX how many columns
+%% there are and how to align them.
+\startlongtable
+\begin{deluxetable}{ccccc}
+    
+%% Keep a portrait orientation
+
+%% Over-ride the default font size
+%% Use Default (12pt)
+\tabletypesize{\scriptsize}
+%% Use \tablewidth{?pt} to over-ride the default table width.
+%% If you are unhappy with the default look at the end of the
+%% *.log file to see what the default was set at before adjusting
+%% this value.
+
+%% This is the title of the table.
+\tablecaption{WASP-6b transit times, uncertainties, and references.}
+\label{tab:WASP-6b}
+
+%% This command over-rides LaTeX's natural table count
+%% and replaces it with this number.  LaTeX will increment 
+%% all other tables after this table based on this number
+\tablenum{5}
+
+%% The \tablehead gives provides the column headers.  It
+%% is currently set up so that the column labels are on the
+%% top line and the units surrounded by ()s are in the 
+%% bottom line.  You may add more header information by writing
+%% another line between these lines. For each column that requries
+%% extra information be sure to include a \colhead{text} command
+%% and remember to end any extra lines with \\ and include the 
+%% correct number of &s.
+\tablehead{
+  \colhead{$t_{\rm tra}$ [BJD$_\mathrm{TDB}$]} &
+  \colhead{$\sigma_{t_{\rm tra}}$ [days]} &
+  \colhead{Epoch} & 
+  \colhead{Reference}
+}
+
+%% All data must appear between the \startdata and \enddata commands
+\startdata
+ 2454425.02167 &      0.00022 &    -398 &        \citet{gillon_discovery_2009} \\
+ 2455009.83622 &      0.00021 &    -224 &  \citet{tregloan-reed_transits_2015} \\
+ 2455046.80720 &      0.00015 &    -213 &  \citet{tregloan-reed_transits_2015} \\
+ 2455073.69529 &      0.00013 &    -205 &  \citet{tregloan-reed_transits_2015} \\
+ 2455409.79541 &      0.00010 &    -105 &  \citet{tregloan-reed_transits_2015} \\
+ 2455446.76621 &      0.00058 &     -94 &          \citet{dragomir_terms_2011} \\
+ 2455473.65439 &      0.00097 &     -86 &     \citet{jordan_ground-based_2013} \\
+ 2455846.72540 &      0.00045 &      25 &         \citet{sada_extrasolar_2012} \\
+ 2456088.71801 &      0.00013 &      97 &             \citet{nikolov_hst_2015} \\
+ 2456095.43974 &      0.00017 &      99 &             \citet{nikolov_hst_2015} \\
+ 2456132.41082 &      0.00017 &     110 &             \citet{nikolov_hst_2015} \\
+ 2458357.39410 &      0.00033 &     772 &                            This work \\
+ 2458360.75573 &      0.00033 &     773 &                            This work \\
+ 2458364.11691 &      0.00032 &     774 &                            This work \\
+ 2458370.83872 &      0.00033 &     776 &                            This work \\
+ 2458374.19952 &      0.00031 &     777 &                            This work \\
+ 2458377.56026 &      0.00033 &     778 &                            This work \\
+ 2458380.92185 &      0.00038 &     779 &                            This work \\
+\enddata
+
+%% Include any \tablenotetext{key}{text}, \tablerefs{ref list},
+%% or \tablecomments{text} between the \enddata and 
+%% \end{deluxetable} commands
+
+%% General table comment marker
+\tablecomments{
+    $t_{\rm tra}$ is the measured transit midtime, and $\sigma_{t_{\rm tra}}$ is its
+    $1\sigma$ uncertainty.
+    The ``Reference'' column refers to the work describing the
+    original observations.
+}
+
+\end{deluxetable}

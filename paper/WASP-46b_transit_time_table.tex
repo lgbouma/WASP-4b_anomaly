@@ -1,0 +1,121 @@
+%% \begin{deluxetable}{} command tell LaTeX how many columns
+%% there are and how to align them.
+\startlongtable
+\begin{deluxetable}{ccccc}
+    
+%% Keep a portrait orientation
+
+%% Over-ride the default font size
+%% Use Default (12pt)
+\tabletypesize{\scriptsize}
+%% Use \tablewidth{?pt} to over-ride the default table width.
+%% If you are unhappy with the default look at the end of the
+%% *.log file to see what the default was set at before adjusting
+%% this value.
+
+%% This is the title of the table.
+\tablecaption{WASP-46b transit times, uncertainties, and references.}
+\label{tab:WASP-46b}
+
+%% This command over-rides LaTeX's natural table count
+%% and replaces it with this number.  LaTeX will increment 
+%% all other tables after this table based on this number
+\tablenum{7}
+
+%% The \tablehead gives provides the column headers.  It
+%% is currently set up so that the column labels are on the
+%% top line and the units surrounded by ()s are in the 
+%% bottom line.  You may add more header information by writing
+%% another line between these lines. For each column that requries
+%% extra information be sure to include a \colhead{text} command
+%% and remember to end any extra lines with \\ and include the 
+%% correct number of &s.
+\tablehead{
+  \colhead{$t_{\rm tra}$ [BJD$_\mathrm{TDB}$]} &
+  \colhead{$\sigma_{t_{\rm tra}}$ [days]} &
+  \colhead{Epoch} & 
+  \colhead{Reference}
+}
+
+%% All data must appear between the \startdata and \enddata commands
+\startdata
+ 2455396.60785 &      0.00062 &    -673 &  \citet{anderson_wasp-44b_2012} \\
+ 2455449.53082 &      0.00026 &    -636 &  \citet{anderson_wasp-44b_2012} \\
+ 2455722.73178 &      0.00023 &    -445 &    \citet{ciceri_physical_2016} \\
+ 2455757.06195 &      0.00094 &    -421 &    \citet{petrucci_search_2018} \\
+ 2455858.61833 &      0.00009 &    -350 &    \citet{ciceri_physical_2016} \\
+ 2456108.92771 &      0.00094 &    -175 &    \citet{petrucci_search_2018} \\
+ 2456111.79422 &      0.00016 &    -173 &    \citet{ciceri_physical_2016} \\
+ 2456111.79413 &      0.00012 &    -173 &    \citet{ciceri_physical_2016} \\
+ 2456111.79424 &      0.00015 &    -173 &    \citet{ciceri_physical_2016} \\
+ 2456130.38895 &      0.00042 &    -160 &    \citet{petrucci_search_2018} \\
+ 2456131.81456 &      0.00112 &    -159 &    \citet{petrucci_search_2018} \\
+ 2456194.75916 &      0.00027 &    -115 &    \citet{ciceri_physical_2016} \\
+ 2456217.64127 &      0.00015 &     -99 &    \citet{ciceri_physical_2016} \\
+ 2456217.64156 &      0.00013 &     -99 &    \citet{ciceri_physical_2016} \\
+ 2456227.65574 &      0.00060 &     -92 &    \citet{petrucci_search_2018} \\
+ 2456407.88096 &      0.00015 &      34 &    \citet{ciceri_physical_2016} \\
+ 2456407.88085 &      0.00018 &      34 &    \citet{ciceri_physical_2016} \\
+ 2456407.88148 &      0.00028 &      34 &    \citet{ciceri_physical_2016} \\
+ 2456407.88159 &      0.00043 &      34 &    \citet{ciceri_physical_2016} \\
+ 2456460.80526 &      0.00017 &      71 &    \citet{ciceri_physical_2016} \\
+ 2456460.80450 &      0.00024 &      71 &    \citet{ciceri_physical_2016} \\
+ 2456460.80547 &      0.00064 &      71 &    \citet{ciceri_physical_2016} \\
+ 2456510.86818 &      0.00060 &     106 &    \citet{petrucci_search_2018} \\
+ 2456510.86699 &      0.00015 &     106 &    \citet{petrucci_search_2018} \\
+ 2456516.58667 &      0.00119 &     110 &    \citet{petrucci_search_2018} \\
+ 2456520.88012 &      0.00064 &     113 &    \citet{petrucci_search_2018} \\
+ 2456533.75260 &      0.00071 &     122 &    \citet{ciceri_physical_2016} \\
+ 2456533.75480 &      0.00015 &     122 &    \citet{ciceri_physical_2016} \\
+ 2456576.66289 &      0.00109 &     152 &    \citet{petrucci_search_2018} \\
+ 2456589.54197 &      0.00090 &     161 &    \citet{petrucci_search_2018} \\
+ 2456609.56653 &      0.00043 &     175 &    \citet{petrucci_search_2018} \\
+ 2456839.85440 &      0.00123 &     336 &    \citet{petrucci_search_2018} \\
+ 2456862.74085 &      0.00048 &     352 &    \citet{petrucci_search_2018} \\
+ 2456882.76566 &      0.00073 &     366 &    \citet{petrucci_search_2018} \\
+ 2456885.62429 &      0.00053 &     368 &    \citet{petrucci_search_2018} \\
+ 2456915.66040 &      0.00123 &     389 &    \citet{petrucci_search_2018} \\
+ 2456942.83880 &      0.00078 &     408 &    \citet{petrucci_search_2018} \\
+ 2456948.56384 &      0.00074 &     412 &    \citet{petrucci_search_2018} \\
+ 2457274.68458 &      0.00184 &     640 &    \citet{petrucci_search_2018} \\
+ 2457294.70886 &      0.00140 &     654 &    \citet{petrucci_search_2018} \\
+ 2457550.74797 &      0.00031 &     833 &    \citet{petrucci_search_2018} \\
+ 2457593.65692 &      0.00024 &     863 &    \citet{petrucci_search_2018} \\
+ 2457600.80985 &      0.00039 &     868 &    \citet{petrucci_search_2018} \\
+ 2457610.82286 &      0.00020 &     875 &    \citet{petrucci_search_2018} \\
+ 2458326.00972 &      0.00091 &    1375 &                       This work \\
+ 2458327.43899 &      0.00093 &    1376 &                       This work \\
+ 2458328.86970 &      0.00094 &    1377 &                       This work \\
+ 2458330.29965 &      0.00105 &    1378 &                       This work \\
+ 2458331.73234 &      0.00105 &    1379 &                       This work \\
+ 2458333.15977 &      0.00086 &    1380 &                       This work \\
+ 2458334.59230 &      0.00095 &    1381 &                       This work \\
+ 2458336.02222 &      0.00082 &    1382 &                       This work \\
+ 2458337.45111 &      0.00099 &    1383 &                       This work \\
+ 2458340.31143 &      0.00093 &    1385 &                       This work \\
+ 2458341.74347 &      0.00093 &    1386 &                       This work \\
+ 2458343.17362 &      0.00093 &    1387 &                       This work \\
+ 2458344.60303 &      0.00110 &    1388 &                       This work \\
+ 2458346.03436 &      0.00091 &    1389 &                       This work \\
+ 2458347.46335 &      0.00168 &    1390 &                       This work \\
+ 2458348.89621 &      0.00086 &    1391 &                       This work \\
+ 2458350.32672 &      0.00101 &    1392 &                       This work \\
+ 2458351.75486 &      0.00103 &    1393 &                       This work \\
+\enddata
+
+%% Include any \tablenotetext{key}{text}, \tablerefs{ref list},
+%% or \tablecomments{text} between the \enddata and 
+%% \end{deluxetable} commands
+
+%% General table comment marker
+\tablecomments{
+    $t_{\rm tra}$ is the measured transit midtime, and $\sigma_{t_{\rm tra}}$ is its
+    $1\sigma$ uncertainty.
+    The ``Reference'' column refers to the work describing the
+    original observations.
+    All the literature times are from the homogeneous
+    \citet{petrucci_search_2018} analysis. 14 of the lightcurves
+    were acquired by ETD observers \citep[see][]{petrucci_search_2018}.
+}
+
+\end{deluxetable}

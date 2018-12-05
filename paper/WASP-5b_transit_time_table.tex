@@ -1,0 +1,98 @@
+%% \begin{deluxetable}{} command tell LaTeX how many columns
+%% there are and how to align them.
+\startlongtable
+\begin{deluxetable}{ccccc}
+    
+%% Keep a portrait orientation
+
+%% Over-ride the default font size
+%% Use Default (12pt)
+\tabletypesize{\scriptsize}
+
+%% Use \tablewidth{?pt} to over-ride the default table width.
+%% If you are unhappy with the default look at the end of the
+%% *.log file to see what the default was set at before adjusting
+%% this value.
+
+%% This is the title of the table.
+\tablecaption{WASP-5b transit times, uncertainties, and references.}
+\label{tab:WASP-5b}
+
+%% This command over-rides LaTeX's natural table count
+%% and replaces it with this number.  LaTeX will increment 
+%% all other tables after this table based on this number
+\tablenum{4}
+
+%% The \tablehead gives provides the column headers.  It
+%% is currently set up so that the column labels are on the
+%% top line and the units surrounded by ()s are in the 
+%% bottom line.  You may add more header information by writing
+%% another line between these lines. For each column that requries
+%% extra information be sure to include a \colhead{text} command
+%% and remember to end any extra lines with \\ and include the 
+%% correct number of &s.
+\tablehead{
+  \colhead{$t_{\rm tra}$ [BJD$_\mathrm{TDB}$]} &
+  \colhead{$\sigma_{t_{\rm tra}}$ [days]} &
+  \colhead{Epoch} & 
+  \colhead{Reference}
+}
+
+%% All data must appear between the \startdata and \enddata commands
+\startdata
+ 2454383.76750 &      0.00040 &    -885 &           \citet{anderson_wasp-5b_2008} \\
+ 2454387.02275 &      0.00100 &    -883 &           \citet{anderson_wasp-5b_2008} \\
+ 2454636.17459 &      0.00082 &    -730 &         \citet{fukui_measurements_2011} \\
+ 2454699.68303 &      0.00041 &    -691 &              \citet{hoyer_transit_2012} \\
+ 2454707.82465 &      0.00052 &    -686 &              \citet{hoyer_transit_2012} \\
+ 2454707.82523 &      0.00025 &    -686 &  \citet{southworth_high-precision_2009} \\
+ 2454730.62243 &      0.00031 &    -672 &  \citet{southworth_high-precision_2009} \\
+ 2454730.62301 &      0.00076 &    -672 &              \citet{hoyer_transit_2012} \\
+ 2454761.56356 &      0.00047 &    -653 &              \citet{hoyer_transit_2012} \\
+ 2454772.96212 &      0.00075 &    -646 &         \citet{fukui_measurements_2011} \\
+ 2454774.59093 &      0.00030 &    -645 &              \citet{hoyer_transit_2012} \\
+ 2454787.61792 &      0.00069 &    -637 &              \citet{hoyer_transit_2012} \\
+ 2455005.82714 &      0.00036 &    -503 &              \citet{hoyer_transit_2012} \\
+ 2455049.79540 &      0.00080 &    -476 &              \citet{hoyer_transit_2012} \\
+ 2455075.84947 &      0.00056 &    -460 &             \citet{dragomir_terms_2011} \\
+ 2455079.10830 &      0.00079 &    -458 &         \citet{fukui_measurements_2011} \\
+ 2455110.04607 &      0.00089 &    -439 &         \citet{fukui_measurements_2011} \\
+ 2455123.07611 &      0.00079 &    -431 &         \citet{fukui_measurements_2011} \\
+ 2455129.58759 &      0.00043 &    -427 &              \citet{hoyer_transit_2012} \\
+ 2455364.08150 &      0.00110 &    -283 &         \citet{fukui_measurements_2011} \\
+ 2455377.10955 &      0.00093 &    -275 &         \citet{fukui_measurements_2011} \\
+ 2455448.75927 &      0.00110 &    -231 &             \citet{dragomir_terms_2011} \\
+ 2456150.61479 &      0.00056 &     200 &          \citet{moyano_multi-band_2017} \\
+ 2456150.61396 &      0.00057 &     200 &          \citet{moyano_multi-band_2017} \\
+ 2458355.50829 &      0.00083 &    1554 &                               This work \\
+ 2458357.13741 &      0.00071 &    1555 &                               This work \\
+ 2458358.76412 &      0.00068 &    1556 &                               This work \\
+ 2458360.39377 &      0.00070 &    1557 &                               This work \\
+ 2458362.02273 &      0.00073 &    1558 &                               This work \\
+ 2458363.64908 &      0.00090 &    1559 &                               This work \\
+ 2458365.27827 &      0.00071 &    1560 &                               This work \\
+ 2458366.90627 &      0.00075 &    1561 &                               This work \\
+ 2458370.16411 &      0.00076 &    1563 &                               This work \\
+ 2458371.79126 &      0.00071 &    1564 &                               This work \\
+ 2458373.42123 &      0.00075 &    1565 &                               This work \\
+ 2458375.04910 &      0.00069 &    1566 &                               This work \\
+ 2458376.67856 &      0.00074 &    1567 &                               This work \\
+ 2458378.30530 &      0.00087 &    1568 &                               This work \\
+ 2458379.93419 &      0.00082 &    1569 &                               This work \\
+\enddata
+
+%% Include any \tablenotetext{key}{text}, \tablerefs{ref list},
+%% or \tablecomments{text} between the \enddata and 
+%% \end{deluxetable} commands
+
+%% General table comment marker
+\tablecomments{
+    $t_{\rm tra}$ is the measured transit midtime, and $\sigma_{t_{\rm tra}}$ is its
+    $1\sigma$ uncertainty.
+    The ``Reference'' column refers to the work describing the
+    original observations.
+    All the literature times except for the two \citet{moyano_multi-band_2017}
+    times are from the homogeneous \citet{hoyer_transit_2012} analysis.
+}
+
+\end{deluxetable}

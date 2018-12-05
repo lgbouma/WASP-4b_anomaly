@@ -1,0 +1,53 @@
+%\renewcommand{\arraystretch}{1.0}
+
+\startlongtable
+\begin{deluxetable*}{ccc}
+
+%\tabletypesize{\small}
+
+\tablenum{4}
+
+%\tablewidth{0pt}
+
+\tablecaption{Adopted stellar and planetary parameters.}
+\label{tab:stellar_parameters}
+
+\tablehead{
+\colhead{Parameter} & \colhead{Value} & \colhead{Uncertainty} 
+}
+
+\startdata
+Period $P$(days) & 1.33823251 & 0.00000031 \tablenotemark{a}  \\
+Minimum reference Time $T_{0}$($BJD_{TDB}$) & 2454697.797973 & 0.000076    \\
+Inclination $i$($\degr$) & 86.85  & 1.76   \\
+Stellar Radius $R_{\star}$($R_{\sun}$) & 0.92 & 0.06   \\ 
+Stellar Mass $M_{\star}$($M_{\sun}$) & 0.89  &  0.01   \\
+Stellar gravity $\log g_{\star}$($cm/s$) & 4.461 &  0.054 \\
+Semimajor axis $a$($UA$) & 0.0228  & 0.00013   \\
+Age (Gyr) & 7.0 & 2.9   \\  
+Stellar effective temperature $T_{eff}$(K) & 5436 & 34  \\
+Metallicity $[Fe/H]$(dex) & -0.05 & 0.04   \\
+Planet Radius $R_{P}$($R_{Jup}$) & 1.33  &  0.16  \\
+Planet Mass $M_{P}$($M_{Jup}$) & 1.216 &   0.013  \\
+Planet surface gravity $g_{P}$($m/s^{2}$) & 16.41 &  2.49 \\
+Planet equilibrium temperature $T'_{eq}$(K) & 1664 & 54   \\
+\enddata
+\tablecomments{
+    $t_{\rm tra}$ is the measured transit midtime, and $\sigma_{t_{\rm tra}}$ is its
+    $1\sigma$ uncertainty.
+    $\sigma_{t_0}$ was evaluated from the sampled posteriors by taking
+    the maximum of the difference between the 84th percentile
+    minus the median, and the median minus the 16th percentile.
+    The ``Reference'' column refers to the work describing the
+    original observations.
+    The ``H13?'' column is 1 if the mid-time value was taken from 
+    \citet{hoyer_tramos_2013}.  Otherwise, the mid-time
+    came from the column listed in ``Reference''.
+}
+\tablenotetext{a}{
+  %FIXME cite etc.
+The numbers in parenthesis give the 1$\sigma$ uncertainty in the final
+two digits, where appropriate.
+}
+
+\end{deluxetable*}

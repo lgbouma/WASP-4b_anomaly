@@ -1,0 +1,121 @@
+%% \begin{deluxetable}{} command tell LaTeX how many columns
+%% there are and how to align them.
+\startlongtable
+\begin{deluxetable}{ccccc}
+    
+%% Keep a portrait orientation
+
+%% Over-ride the default font size
+%% Use Default (12pt)
+\tabletypesize{\scriptsize}
+
+%% Use \tablewidth{?pt} to over-ride the default table width.
+%% If you are unhappy with the default look at the end of the
+%% *.log file to see what the default was set at before adjusting
+%% this value.
+
+%% This is the title of the table.
+\tablecaption{WASP-4b transit times, uncertainties, and references.}
+\label{tab:transit_times}
+
+%% This command over-rides LaTeX's natural table count
+%% and replaces it with this number.  LaTeX will increment 
+%% all other tables after this table based on this number
+\tablenum{1}
+
+%% The \tablehead gives provides the column headers.  It
+%% is currently set up so that the column labels are on the
+%% top line and the units surrounded by ()s are in the 
+%% bottom line.  You may add more header information by writing
+%% another line between these lines. For each column that requries
+%% extra information be sure to include a \colhead{text} command
+%% and remember to end any extra lines with \\ and include the 
+%% correct number of &s.
+\tablehead{
+  \colhead{$t_{\rm tra}$ [BJD$_\mathrm{TDB}$]} &
+  \colhead{$\sigma_{t_{\rm tra}}$ [days]} &
+  \colhead{Epoch} & 
+  \colhead{H13?} & 
+  \colhead{Reference}
+}
+
+%% All data must appear between the \startdata and \enddata commands
+% XXX pasted in from selected_transit_times.tex
+\startdata
+ 2454368.59279 &      0.00033 &   -1059 &       1 &           \citet{wilson_wasp-4b_2008} \\
+ 2454396.69576 &      0.00012 &   -1038 &       1 &          \citet{gillon_improved_2009} \\
+ 2454697.79817 &      0.00009 &    -813 &       1 &             \citet{winn_transit_2009} \\
+ 2454701.81280 &      0.00022 &    -810 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2454701.81303 &      0.00018 &    -810 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2454705.82715 &      0.00029 &    -807 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2454728.57767 &      0.00042 &    -790 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2454732.59197 &      0.00050 &    -787 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2454740.62125 &      0.00035 &    -781 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2454748.65111 &      0.00007 &    -775 &       1 &             \citet{winn_transit_2009} \\
+ 2454752.66576 &      0.00069 &    -772 &       1 &           \citet{dragomir_terms_2011} \\
+ 2455041.72377 &      0.00018 &    -556 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2455045.73853 &      0.00008 &    -553 &       1 &  \citet{sanchis-ojeda_starspots_2011} \\
+ 2455049.75325 &      0.00007 &    -550 &       1 &  \citet{sanchis-ojeda_starspots_2011} \\
+ 2455053.76774 &      0.00009 &    -547 &       1 &  \citet{sanchis-ojeda_starspots_2011} \\
+ 2455069.82661 &      0.00029 &    -535 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455069.82670 &      0.00028 &    -535 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455069.82617 &      0.00038 &    -535 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455069.82676 &      0.00031 &    -535 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455073.84128 &      0.00026 &    -532 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455073.84108 &      0.00029 &    -532 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455073.84111 &      0.00023 &    -532 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455073.84114 &      0.00018 &    -532 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455096.59148 &      0.00022 &    -515 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2455100.60595 &      0.00012 &    -512 &       1 &  \citet{sanchis-ojeda_starspots_2011} \\
+ 2455112.64986 &      0.00039 &    -503 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455112.65009 &      0.00033 &    -503 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455112.65005 &      0.00031 &    -503 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455112.65005 &      0.00049 &    -503 &       1 &          \citet{nikolov_wasp-4b_2012} \\
+ 2455132.72310 &      0.00041 &    -488 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2455468.61943 &      0.00046 &    -237 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2455526.16356 &      0.00008 &    -194 &       0 &       \citet{ranjan_atmospheric_2014} \\
+ 2455828.60375 &      0.00041 &      32 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2455832.61815 &      0.00041 &      35 &       1 &             \citet{hoyer_tramos_2013} \\
+ 2455844.66287 &      0.00009 &      44 &       0 &           \citet{huitson_gemini_2017} \\
+ 2456216.69123 &      0.00006 &     322 &       0 &           \citet{huitson_gemini_2017} \\
+ 2456576.67556 &      0.00005 &     591 &       0 &           \citet{huitson_gemini_2017} \\
+ 2456924.61561 &      0.00006 &     851 &       0 &           \citet{huitson_gemini_2017} \\
+ 2458355.18490 &      0.00024 &    1920 &       0 &                             This work \\
+ 2458356.52251 &      0.00026 &    1921 &       0 &                             This work \\
+ 2458357.86101 &      0.00024 &    1922 &       0 &                             This work \\
+ 2458359.19951 &      0.00025 &    1923 &       0 &                             This work \\
+ 2458360.53708 &      0.00027 &    1924 &       0 &                             This work \\
+ 2458361.87539 &      0.00024 &    1925 &       0 &                             This work \\
+ 2458363.21412 &      0.00027 &    1926 &       0 &                             This work \\
+ 2458364.55192 &      0.00025 &    1927 &       0 &                             This work \\
+ 2458365.89064 &      0.00026 &    1928 &       0 &                             This work \\
+ 2458369.90503 &      0.00027 &    1931 &       0 &                             This work \\
+ 2458371.24297 &      0.00026 &    1932 &       0 &                             This work \\
+ 2458372.58136 &      0.00027 &    1933 &       0 &                             This work \\
+ 2458373.91982 &      0.00027 &    1934 &       0 &                             This work \\
+ 2458375.25801 &      0.00024 &    1935 &       0 &                             This work \\
+ 2458376.59621 &      0.00024 &    1936 &       0 &                             This work \\
+ 2458377.93443 &      0.00026 &    1937 &       0 &                             This work \\
+ 2458379.27317 &      0.00026 &    1938 &       0 &                             This work \\
+ 2458380.61097 &      0.00027 &    1939 &       0 &                             This work \\
+\enddata
+
+%% Include any \tablenotetext{key}{text}, \tablerefs{ref list},
+%% or \tablecomments{text} between the \enddata and 
+%% \end{deluxetable} commands
+
+%% General table comment marker
+\tablecomments{
+    $t_{\rm tra}$ is the measured transit midtime, and $\sigma_{t_{\rm tra}}$ is its
+    $1\sigma$ uncertainty.
+    $\sigma_{t_0}$ was evaluated from the sampled posteriors by taking
+    the maximum of the difference between the 84th percentile
+    minus the median, and the median minus the 16th percentile.
+    The ``Reference'' column refers to the work describing the
+    original observations.
+    The ``H13?'' column is 1 if the mid-time value was taken from 
+    \citet{hoyer_tramos_2013}.  Otherwise, the mid-time
+    came from the column listed in ``Reference''.
+}
+
+\end{deluxetable}
