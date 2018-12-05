@@ -5,3 +5,6 @@ data*
 *_reading.txt
 src/*tex
 src/template.txt
+*.synctex.gz
+*.log
+*.aux
