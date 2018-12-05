@@ -64,16 +64,6 @@ PUBLISHING
 
 * follow steps of TESS publication policy.
 
-  * step 2: make wiki page.
-
-  * step 3: contact
-    POC: Roland (roland@space.mit.edu)
-    TSO: seager@mit.edu, dlatham@cfa.harvard.edu
-    SPOC: jon.jenkins@nasa.gov,
-    asking for 3 contributing authors from each list.
-    Add these 9 contributors coauthors to the 6 TESS architect
-    coauthors.
-
   * step 4: once complete draft is ready, post draft to TESS wiki
     contributed paper page.
     inform architects (tess-architects@mit.edu) and contributors,
@@ -82,4 +72,3 @@ PUBLISHING
 
     "I have read the paper “Title”, and I agree with the methods and
     conclusions. I wish to be included as a co-author." 
-

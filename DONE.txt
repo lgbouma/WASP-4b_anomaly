@@ -3,3 +3,15 @@
 - ask Joel+Gaspar to observe it with CHAT from LCO on the Dec 10/11 transit.
   - partials --> better than 1 minute precision unlikely. will have to
     wait until June 2019.
+
+  - step 2: make wiki page.
+
+  - step 3: contact
+    POC: Roland (roland@space.mit.edu)
+    TSO: seager@mit.edu, dlatham@cfa.harvard.edu
+    SPOC: jon.jenkins@nasa.gov,
+    asking for 3 contributing authors from each list.
+    Add these 9 contributors coauthors to the 6 TESS architect
+    coauthors.
+
+
