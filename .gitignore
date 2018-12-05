@@ -3,3 +3,5 @@ results*
 doc*
 data*
 *_reading.txt
+src/*tex
+src/template.txt
