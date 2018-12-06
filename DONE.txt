@@ -36,3 +36,19 @@
   - what are limits on the outer planet, if there is one?
 
 
+- read Cohen+ 2010
+
+  Cohen+ 2010 studied how the presence of hot Jupiters affects the magnetized
+  wind of a main sequence star. They found that for 4>a/Rstar>10, the hot Jupiter
+  seemed to be able to make the angular momentum loss from the wind less
+  efficient.
+
+  For Penev+ 2018's Qstar measurements from tidal spin-up, this might be
+  problematic. The overall effect would be to make the HJ hosts spin faster,
+  which if attributed to tides would lead to Qstar values biased slightly low. I
+  have no idea whether the effect is actually important, and I couldn't find much
+  follow-up work on this question.
+
+- read the new Millholland & Laughlin paper
+
+

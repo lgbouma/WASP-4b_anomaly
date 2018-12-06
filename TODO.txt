@@ -1,17 +1,31 @@
 MOST PRESSING
 ----------
 
-* look into Stassun's stellar analysis
-
-* Kane/Tansu: working out the O-C residuals for the Pdot model, to understand
-  that limit more carefully.
-
-* once the above two things are done: go thru text, identify where
-  quality needs to be improved.
+* go thru text, identify where quality needs to be improved.
 
   * save current version as a "verbose draft"
 
   * then cut to meet the ApJL requirement.
+
+* in tidal discussion, note:
+
+Millholland & Laughlin (2018) propose that an obliquity tide, in lieu of an
+eccentricity tide, equilibrium tide, or dynamical tide, might explain the
+changing apparent period of WASP-12b.  This is consistent with the
+sky-projected obliquity $\lambda = 59^{+15}_{-20}^\circ$ measured by Albrecht
+et al (2012).  From Rossiter measurements and spot-crossings, WASP-4b seems to
+be aligned with its host star (Triaud et al 2010; Sanchis-Ojeda et al 2011).
+Therefore the obliquity tide explanation also falls short.
+
+- look into Stassun's stellar analysis
+  * the empirical Mstar is low. that's somewhat janky...
+  * pick your preferred set of stellar parameters
+  * do the empirical thing?
+
+* Kane/Tansu: working out the O-C residuals for the Pdot model, to understand
+  that limit more carefully.
+  * Kane: what does his independent RV analysis turn up?
+  * Tansu: ditto.
 
 * do we want "media coverage", thru the media office?
 
@@ -24,8 +38,6 @@ MOST PRESSING
 
 OTHER READING
 ----------
-
-* read Cohen+ 2010
 
 * Verbunt and Phinney ~1995
 
