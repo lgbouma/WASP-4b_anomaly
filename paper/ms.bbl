@@ -8,6 +8,13 @@ Agol, E., Cowan, N.~B., Knutson, H.~A., {et~al.} 2010,
   \href{http://dx.doi.org/10.1088/0004-637X/721/2/1861}{\JournalTitle{The
   Astrophysical Journal}, 721, 1861}
 
+\bibitem[{Albrecht {et~al.}(2012)Albrecht, Winn, Johnson, Howard, Marcy,
+  Butler, Arriagada, Crane, Shectman, Thompson, Hirano, {Gaspar Bakos}, \&
+  Hartman}]{albrecht_obliquities_2012}
+Albrecht, S., Winn, J.~N., Johnson, J.~A., {et~al.} 2012,
+  \href{http://dx.doi.org/10.1088/0004-637X/757/1/18}{\JournalTitle{The
+  Astrophysical Journal}, 757, 18}
+
 \bibitem[{Anderson {et~al.}(2008)Anderson, Gillon, Hellier, Maxted, Pepe,
   Queloz, Wilson, Collier~Cameron, Smalley, Lister, Bentley, Blecha, Christian,
   Enoch, Hebb, Horne, Irwin, Joshi, Kane, Marmier, Mayor, Parley, Pollacco,
@@ -469,8 +476,8 @@ Heyl, J.~S., \& Gladman, B.~J. 2007,
   Notices of the Royal Astronomical Society}, 377, 1511}
 
 \bibitem[{Hoyer {et~al.}(2012)Hoyer, Rojo, \&
-  López-Morales}]{hoyer_transit_2012}
-Hoyer, S., Rojo, P., \& López-Morales, M. 2012,
+  L\'opez-Morales}]{hoyer_transit_2012}
+Hoyer, S., Rojo, P., \& L\'opez-Morales, M. 2012,
   \href{http://dx.doi.org/10.1088/0004-637X/748/1/22}{\JournalTitle{The
   Astrophysical Journal}, 748, 22}
 
@@ -481,9 +488,9 @@ Hoyer, S., L\'opez-Morales, M., Rojo, P., {et~al.} 2013,
   \href{http://dx.doi.org/10.1093/mnras/stt962}{\JournalTitle{Monthly Notices
   of the Royal Astronomical Society}, 434, 46}
 
-\bibitem[{Huitson {et~al.}(2017)Huitson, Désert, Bean, Fortney, Stevenson, \&
+\bibitem[{Huitson {et~al.}(2017)Huitson, D\'esert, Bean, Fortney, Stevenson, \&
   Bergmann}]{huitson_gemini_2017}
-Huitson, C.~M., Désert, J.-M., Bean, J.~L., {et~al.} 2017,
+Huitson, C.~M., D\'esert, J.-M., Bean, J.~L., {et~al.} 2017,
   \href{http://dx.doi.org/10.3847/1538-3881/aa7f72}{\JournalTitle{The
   Astronomical Journal}, 154, 95}
 
@@ -625,8 +632,8 @@ Mardling, R.~A. 2007,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2007.12500.x}{\JournalTitle{Monthly
   Notices of the Royal Astronomical Society}, 382, 1768}
 
-\bibitem[{Matsakos \& Königl(2016)}]{matsakos_origin_2016}
-Matsakos, T., \& Königl, A. 2016,
+\bibitem[{Matsakos \& K\"onigl(2016)}]{matsakos_origin_2016}
+Matsakos, T., \& K\"onigl, A. 2016,
   \href{http://dx.doi.org/10.3847/2041-8205/820/1/L8}{\JournalTitle{The
   Astrophysical Journal Letters}, 820, L8}
 
@@ -662,6 +669,11 @@ Meibom, S., \& Mathieu, R.~D. 2005,
 Metzger, B.~D., Giannios, D., \& Spiegel, D.~S. 2012,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2012.21444.x}{\JournalTitle{Monthly
   Notices of the Royal Astronomical Society}, 425, 2778}
+
+\bibitem[{Millholland \& Laughlin(2018)}]{millholland_obliquity_2018}
+Millholland, S., \& Laughlin, G. 2018,
+  \href{http://arxiv.org/abs/1812.01624}{\JournalTitle{arXiv:1812.01624
+  [astro-ph]}}, arXiv: 1812.01624
 
 \bibitem[{Milliman {et~al.}(2014)Milliman, Mathieu, Geller, Gosnell, Meibom, \&
   Platais}]{milliman_wiyn_2014}
@@ -816,10 +828,6 @@ Ricker, G.~R., Winn, J.~N., Vanderspek, R., {et~al.} 2015,
   \href{http://dx.doi.org/10.1117/1.JATIS.1.1.014003}{\JournalTitle{Journal of
   Astronomical Telescopes, Instruments, and Systems}, 1, 014003}
 
-\bibitem[{Russell(1939)}]{russell_notes_1939}
-Russell, H.~N. 1939, \href{http://dx.doi.org/10.1086/144137}{\JournalTitle{The
-  Astrophysical Journal}, 90, 641}
-
 \bibitem[{Sada {et~al.}(2012)Sada, Deming, Jennings, Jackson, Hamilton, Fraine,
   Peterson, Haase, Bays, Lunsford, \& O'Gorman}]{sada_extrasolar_2012}
 Sada, P.~V., Deming, D., Jennings, D.~E., {et~al.} 2012,
@@ -873,11 +881,11 @@ Southworth, J. 2011,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2011.19399.x}{\JournalTitle{Monthly
   Notices of the Royal Astronomical Society}, 417, 2166}
 
-\bibitem[{Southworth {et~al.}(2009)Southworth, Hinse, Jørgensen, Dominik,
+\bibitem[{Southworth {et~al.}(2009)Southworth, Hinse, J{\o}rgensen, Dominik,
   Ricci, Burgdorf, Hornstrup, Wheatley, Anguita, Bozza, Novati, Harpsøe,
   Kjærgaard, Liebig, Mancini, Masi, Mathiasen, Rahvar, Scarpetta, Snodgrass,
   Surdej, Thöne, \& Zub}]{southworth_high-precision_2009}
-Southworth, J., Hinse, T.~C., Jørgensen, U.~G., {et~al.} 2009,
+Southworth, J., Hinse, T.~C., J{\o}rgensen, U.~G., {et~al.} 2009,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2009.14767.x}{\JournalTitle{Monthly
   Notices of the Royal Astronomical Society}, 396, 1023}
 
@@ -895,6 +903,12 @@ Sullivan, P.~W., {et~al.} 2015, \JournalTitle{{ApJ}}, 809, 77
 \bibitem[{Thompson {et~al.}(2013)}]{kepler_DR19_2013}
 Thompson, S., {et~al.} 2013, Kepler Data Release 19 Notes Q14, KSCI-19059-001,
   \url{https://archive.stsci.edu/kepler/release_notes/release_notes19/DataRelease_19_20130204.pdf}
+
+\bibitem[{Torres {et~al.}(2010)Torres, Andersen, \&
+  Gim\'enez}]{torres_accurate_2010}
+Torres, G., Andersen, J., \& Gim\'enez, A. 2010,
+  \href{http://dx.doi.org/10.1007/s00159-009-0025-1}{\JournalTitle{Astronomy
+  and Astrophysics Review}, 18, 67}
 
 \bibitem[{Tregloan-Reed {et~al.}(2015)Tregloan-Reed, Southworth, Burgdorf,
   Novati, Dominik, Finet, Jørgensen, Maier, Mancini, Prof, Ricci, Snodgrass,
