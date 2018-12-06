@@ -1,21 +1,32 @@
 MOST PRESSING
 ----------
 
+* tidal discussion: shorten ur discussion of Penev's work.
+
+* tidal discussion: limit to
+  * equilibrium tide
+  * dynamical tide
+  * obliquity tide
+
+* intro: need to choose your stellar parameters (either Keivan's,
+  or others), and stick with them.
+
+* Jean-Michel spitzer times.
+  * include his times
+  
+  * re-run full analysis. (only after stellar parameters are good too).
+
 * go thru text, identify where quality needs to be improved.
 
   * save current version as a "verbose draft"
 
   * then cut to meet the ApJL requirement.
 
-* in tidal discussion, note:
+----------
 
-Millholland & Laughlin (2018) propose that an obliquity tide, in lieu of an
-eccentricity tide, equilibrium tide, or dynamical tide, might explain the
-changing apparent period of WASP-12b.  This is consistent with the
-sky-projected obliquity $\lambda = 59^{+15}_{-20}^\circ$ measured by Albrecht
-et al (2012).  From Rossiter measurements and spot-crossings, WASP-4b seems to
-be aligned with its host star (Triaud et al 2010; Sanchis-Ojeda et al 2011).
-Therefore the obliquity tide explanation also falls short.
+
+
+----------
 
 - look into Stassun's stellar analysis
   * the empirical Mstar is low. that's somewhat janky...
@@ -59,14 +70,10 @@ VAGUE IDEAS PERHAPS TO BE INCLUDED IN DISCUSSION
   gyro age and rotation period, etc.  ... FOR THE DISCUSSION.
 
 
-
 ONCE PAPER IS SUBMITTED
 ----------
-* ask Jean Michel-Desert, and Huitson, if they really do believe their
-  midtimes. (this is essential!)
+* notify Erin May of the result, ask if they would be willing to share
 
-* ask Erin May for her data / collaborate
-   * get the midtime from it.
 
 
 PUBLISHING

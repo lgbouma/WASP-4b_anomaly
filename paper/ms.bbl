@@ -8,13 +8,6 @@ Agol, E., Cowan, N.~B., Knutson, H.~A., {et~al.} 2010,
   \href{http://dx.doi.org/10.1088/0004-637X/721/2/1861}{\JournalTitle{The
   Astrophysical Journal}, 721, 1861}
 
-\bibitem[{Albrecht {et~al.}(2012)Albrecht, Winn, Johnson, Howard, Marcy,
-  Butler, Arriagada, Crane, Shectman, Thompson, Hirano, {Gaspar Bakos}, \&
-  Hartman}]{albrecht_obliquities_2012}
-Albrecht, S., Winn, J.~N., Johnson, J.~A., {et~al.} 2012,
-  \href{http://dx.doi.org/10.1088/0004-637X/757/1/18}{\JournalTitle{The
-  Astrophysical Journal}, 757, 18}
-
 \bibitem[{Anderson {et~al.}(2008)Anderson, Gillon, Hellier, Maxted, Pepe,
   Queloz, Wilson, Collier~Cameron, Smalley, Lister, Bentley, Blecha, Christian,
   Enoch, Hebb, Horne, Irwin, Joshi, Kane, Marmier, Mayor, Parley, Pollacco,
@@ -40,14 +33,6 @@ Applegate, J.~H. 1992,
 Bailey, A., \& Goodman, J. 2019,
   \href{http://dx.doi.org/10.1093/mnras/sty2805}{\JournalTitle{Monthly Notices
   of the Royal Astronomical Society}, 482, 1872}
-
-\bibitem[{Baluev {et~al.}(2015)Baluev, Sokov, Shaidulin, Sokova, Jones, Tuomi,
-  Anglada-Escudé, Benni, Colazo, Schneiter, D'Angelo, Burdanov,
-  Fernández-Lajús, Baştürk, Hentunen, \&
-  Shadick}]{baluev_benchmarking_2015}
-Baluev, R.~V., Sokov, E.~N., Shaidulin, V.~S., {et~al.} 2015,
-  \href{http://dx.doi.org/10.1093/mnras/stv788}{\JournalTitle{Monthly Notices
-  of the Royal Astronomical Society}, 450, 3101}
 
 \bibitem[{Barnes {et~al.}(2016)Barnes, Weingrill, Fritzewski, Strassmeier, \&
   Platais}]{barnes_rotation_2016}
@@ -649,12 +634,6 @@ Maxted, P. F.~L., Anderson, D.~R., Doyle, A.~P., {et~al.} 2013,
   \href{http://dx.doi.org/10.1093/mnras/sts231}{\JournalTitle{Monthly Notices
   of the Royal Astronomical Society}, 428, 2645}
 
-\bibitem[{May {et~al.}(2018)May, Zhao, Haidar, Rauscher, \&
-  Monnier}]{may_mopss_2018}
-May, E.~M., Zhao, M., Haidar, M., Rauscher, E., \& Monnier, J.~D. 2018,
-  \href{http://dx.doi.org/10.3847/1538-3881/aad4a8}{\JournalTitle{The
-  Astronomical Journal}, 156, 122}
-
 \bibitem[{McKinney(2010)}]{mckinney-proc-scipy-2010}
 McKinney, W. 2010, in Proceedings of the 9th Python in Science Conference, ed.
   S.~van~der Walt \& J.~Millman, 51
@@ -773,12 +752,6 @@ Petrucci, R., Jofr\'e, E., Schwartz, M., {et~al.} 2013,
 Phinney, E.~S. 1992,
   \href{http://dx.doi.org/10.1098/rsta.1992.0084}{\JournalTitle{Philosophical
   Transactions of the Royal Society of London Series A}, 341, 39}
-
-\bibitem[{Poddan\'y {et~al.}(2010)Poddan\'y, Br\'at, \&
-  Pejcha}]{poddany_ETD_2010}
-Poddan\'y, S., Br\'at, L., \& Pejcha, O. 2010,
-  \href{http://dx.doi.org/10.1016/j.newast.2009.09.001}{\JournalTitle{New
-  Astronomy}, 15, 297}
 
 \bibitem[{Pont(2009)}]{pont_empirical_2009}
 Pont, F. 2009,

@@ -92,6 +92,13 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None):
         weights=1/tess_err_tmid**2
     )
     bin_tess_err_tmid = np.mean(tess_err_tmid)/len(tess_tmid)**(1/2)
+
+    tess_yval = nparr(tess_tmid -
+                      linear_model(lsfit_t0, lsfit_period, tess_epoch))*24*60
+    print('std (min) {}'.format(np.std(tess_yval)))
+    print('std (sec): {}'.format(np.std(tess_yval)*60))
+    print('error (plotted, min): {}'.format(bin_tess_err_tmid*24*60))
+    print('error (plotted, sec): {}'.format(bin_tess_err_tmid*24*60*60))
     bin_tess_x = np.median(tess_epoch)
 
     ax.errorbar(bin_tess_x, bin_tess_y*24*60, bin_tess_err_tmid*24*60,

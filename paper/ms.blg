@@ -404,45 +404,45 @@ Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sulliva
 while executing---line 1561 of file yahapj.bst
 Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sullivan_2015
 while executing---line 1561 of file yahapj.bst
-You've used 143 entries,
+You've used 139 entries,
             3215 wiz_defined-function locations,
-            1655 strings with 72518 characters,
-and the built_in function-call counts, 95525 in all, are:
-= -- 6133
-> -- 9698
+            1629 strings with 70918 characters,
+and the built_in function-call counts, 93132 in all, are:
+= -- 5953
+> -- 9501
 < -- 51
-+ -- 3535
-- -- 3376
-* -- 9737
-:= -- 18072
-add.period$ -- 143
-call.type$ -- 143
-change.case$ -- 938
-chr.to.int$ -- 141
-cite$ -- 144
-duplicate$ -- 3841
-empty$ -- 4956
-format.name$ -- 3547
-if$ -- 18307
++ -- 3462
+- -- 3303
+* -- 9505
+:= -- 17639
+add.period$ -- 139
+call.type$ -- 139
+change.case$ -- 912
+chr.to.int$ -- 137
+cite$ -- 140
+duplicate$ -- 3729
+empty$ -- 4816
+format.name$ -- 3472
+if$ -- 17833
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 136
-newline$ -- 434
-num.names$ -- 573
-pop$ -- 1468
+missing$ -- 132
+newline$ -- 422
+num.names$ -- 557
+pop$ -- 1424
 preamble$ -- 1
-purify$ -- 930
+purify$ -- 904
 quote$ -- 0
-skip$ -- 2263
+skip$ -- 2201
 stack$ -- 0
-substring$ -- 3459
-swap$ -- 133
+substring$ -- 3359
+swap$ -- 129
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1281
+type$ -- 1245
 warning$ -- 1
-while$ -- 649
+while$ -- 631
 width$ -- 0
-write$ -- 1432
+write$ -- 1392
 (There were 83 error messages)

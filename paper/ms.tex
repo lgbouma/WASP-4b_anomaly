@@ -79,20 +79,33 @@ Massachusetts Institute of Technology, Cambridge, MA 02139, USA }
 % 3 representatives of each of SPOC, POC, TSO, for a total of 9. 
 %These 9 authors should be listed in alphabetical order
 %-------------------------------------
-%\\ \textcolor{red}{3 TSO coauthors:}
-\author{TSO1}
-\author{TSO2}
-\author{TSO3}
-%\\ \textcolor{red}{3 SPOC coauthors:}
-\author{J. D. Twicken} % Joseph.Twicken@nasa.gov WAITING
+% 3 TSO COAUTHORS
+%
+\author[0000-0002-3321-4924]{Z. Berta-Thompson} % Zachory.BertaThompson@Colorado.EDU WAITING
+\affiliation{Department of Astrophysical and Planetary Sciences,
+University of Colorado, Boulder, CO 80309, USA}
+%
+\author[0000-0001-8812-0565]{J. Rodriguez} % rodriguez.jr.joey@gmail.com WAITING
+\affiliation{Harvard-Smithsonian Center for Astrophysics, 60 Garden
+Street, Cambridge, MA 02138, USA }
+%
+\author[0000-0001-8020-7121]{K. Col\'on} % knicole.colon@nasa.gov WAITING
+\affiliation{NASA Goddard Space Flight Center, Exoplanets and Stellar
+Astrophysics Laboratory (Code 667), Greenbelt, MD 20771, USA}
+% 3 SPOC COAUTHORS
+%
+\author[0000-0002-6778-7552]{J. D. Twicken} % Joseph.Twicken@nasa.gov WAITING
 \affiliation{ NASA Ames Research Center, Moffett Field, CA 94035, USA }
 \affiliation{ SETI Institute, Mountain View, CA, 94043}
+%
 \author{B. Wohler} % bill.wohler@nasa.gov WAITING
 \affiliation{ NASA Ames Research Center, Moffett Field, CA 94035, USA }
 \affiliation{ SETI Institute, Mountain View, CA, 94043}
-\author{D. A. Caldwell} % douglas.Caldwell@nasa.gov % WAITING
+%
+\author[0000-0003-1963-9616]{D. A. Caldwell} % douglas.Caldwell@nasa.gov % WAITING
 \affiliation{ NASA Ames Research Center, Moffett Field, CA 94035, USA }
 \affiliation{ SETI Institute, Mountain View, CA, 94043}
+%
 %\\ \textcolor{red}{3 POC coauthors:}
 \author{POC1}
 \author{POC2}
@@ -382,12 +395,10 @@ seconds.
 Figure~\ref{fig:lightcurves} shows the light curves, best-fit transit
 models, and residuals.  Table~1 reports the mid-transit times and
 their uncertainties.
-
 Taking the mean and standard deviation of the measured planet to star
 radius ratio, we find $R_{\rm p}/R_\star=0.1538\pm0.0013$, in
 agreement with previous determinations
 \citep{wilson_wasp-4b_2008,gillon_improved_2009,winn_transit_2009,southworth_high-precision_2009}.
-
 Binning the residuals to 1-hour windows and taking the median absolute
 deviation, the residual lightcurves have a MAD of $594\,{\rm
 ppm}\,{\rm hr}^{1/2}$.  WASP-4 has a TESS-band magnitude of $T=11.78$
@@ -634,19 +645,22 @@ and 55 degrees of freedom for the best-fit precession model.
 
 %TODO: final numbers
 The difference in $\chi^2$ between the linear and quadratic fit
-corresponds to $p \approx 10^{-23}$. %In other words, assuming the linear
-%model is true, there is a $10^{-23}$ probability that simply by chance
-%we would see data that favors the quadratic model more strongly than the
-%observations.
+corresponds to $p \approx 10^{-23}$.
+%In other words, assuming the linear model is true, there is a
+%$10^{-23}$ probability that simply by chance we would see data that
+%favors the quadratic model more strongly than the observations.
 Clearly, it is more likely that some systematic error could be
 affecting one of the most important sets of times: either the earliest
 times, the Huitson et al.\ Gemini times (epoch numbers 44, 322, 591,
 and 851), or the TESS times.  We have taken every precaution against
 systematic offsets in the TESS dataset
-(Appendix~\ref{sec:verify_tess}), and Huitson et al.\ stand by their
-reported times (Huitson, priv.  comm.).  Since the linear model
-provides a poor fit to the data, we discard it from further
-consideration.
+(Appendix~\ref{sec:verify_tess}). Huitson et al.\ stand by their
+reported times (J.-M. D\'esert, priv.\
+comm.)\footnote{\citealt{huitson_gemini_2017} corrected the times to
+be at mid-exposure. They also analyzed other hot Jupiters, which all
+showed mid-transit times as expected from a constant ephemeris.}.
+Since the linear model provides a poor fit to the data, we discard it
+from further consideration.
 
 %TODO: final numbers
 The quadratic model fits better than the precession model.  It is
@@ -749,7 +763,7 @@ WASP-12b was 3.2\,Myr.
 
 Let us assume further that the ``constant phase lag'' model for tidal
 interaction in a binary applies \citep{zahn_tidal_1977}.  The fluid
-response is parametrized by a constant modified\footnote{For stars,
+response is parametrized by a modified\footnote{For stars,
 $k_\star \sim \mathcal{O}(10^{-2})$, so it is important to explicitly
 distinguish $Q_\star'$ from $Q_\star$ \citep[{\it
 e.g.},][]{schwarzschild_structure_1958}.} quality factor, $Q_\star' =
@@ -794,16 +808,16 @@ The orbital period evolves as
             \left(\frac{M_{\rm p}}{M_\star}\right)
             \left(\frac{R_\star}{a}\right)^5.
 \end{equation}
-Inserting our observed value of $\dot{P}$, the current dissipation
-rate corresponds to a modified quality factor for WASP-4 of
+Using our observed value of $\dot{P}$, the current modified quality
+factor of WASP-4 would be
 \begin{equation}
 	Q_\star' \approx 3.3\times10^4. 
 \end{equation}
 This is rather small.  Jupiter has $Q_{\rm Jup}' \approx 1.4 \times
 10^5$, based on the motion of the Galilean moons
 \citep{lainey_strong_2009}.  For stars, different $Q_\star'$ values have
-been estimated in different contexts.  Studies of the observed
-eccentricity distribution in stellar binaries have yielded $10^5 \gtrsim
+been estimated in different contexts.  Studies of the 
+eccentricity distribution of stellar binaries have yielded $10^5 \gtrsim
 Q_\star' \gtrsim 10^{7}$ \citep[{\it
 e.g.},][]{meibom_robust_2005,belczynski_compact_2008,
 geller_direct_2013,milliman_wiyn_2014}.  However the dissipation rates

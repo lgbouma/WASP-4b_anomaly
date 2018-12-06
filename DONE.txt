@@ -51,4 +51,17 @@
 
 - read the new Millholland & Laughlin paper
 
+- in tidal discussion, note:
+
+Millholland & Laughlin (2018) propose that an obliquity tide, in lieu of an
+eccentricity tide, equilibrium tide, or dynamical tide, might explain the
+changing apparent period of WASP-12b.  This is consistent with the
+sky-projected obliquity $\lambda = 59^{+15}_{-20}^\circ$ measured by Albrecht
+et al (2012).  From Rossiter measurements and spot-crossings, WASP-4b seems to
+be aligned with its host star (Triaud et al 2010; Sanchis-Ojeda et al 2011).
+Therefore the obliquity tide explanation also falls short.
+
+- ask Jean Michel-Desert, and Huitson, if they really do believe their
+  midtimes. (this is essential!)
+
 
