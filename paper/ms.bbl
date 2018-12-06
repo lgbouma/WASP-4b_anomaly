@@ -92,6 +92,12 @@ Bonomo, A.~S., Desidera, S., Benatti, S., {et~al.} 2017,
   \href{http://dx.doi.org/10.1051/0004-6361/201629882}{\JournalTitle{Astronomy
   and Astrophysics}, 602, A107}
 
+\bibitem[{Borkovits {et~al.}(2015)Borkovits, Rappaport, Hajdu, \&
+  Sztakovics}]{borkovits_eclipse_2015}
+Borkovits, T., Rappaport, S., Hajdu, T., \& Sztakovics, J. 2015,
+  \href{http://dx.doi.org/10.1093/mnras/stv015}{\JournalTitle{Monthly Notices
+  of the Royal Astronomical Society}, 448, 946}
+
 \bibitem[{C\'aceres {et~al.}(2011)C\'aceres, Ivanov, Minniti, Burrows, Selman,
   Melo, Naef, Mason, \& Pietrzynski}]{caceres_ground-based_2011}
 C\'aceres, C., Ivanov, V.~D., Minniti, D., {et~al.} 2011,
@@ -183,11 +189,11 @@ Dawson, R.~I., \& Johnson, J.~A. 2018,
   \href{http://arxiv.org/abs/1801.06117}{\JournalTitle{arXiv:1801.06117
   [astro-ph]}}, arXiv: 1801.06117
 
-\bibitem[{Dobbs-Dixon {et~al.}(2004)Dobbs-Dixon, Lin, \&
-  Mardling}]{dobbs-dixon_spin-orbit_2004}
-Dobbs-Dixon, I., Lin, D. N.~C., \& Mardling, R.~A. 2004,
-  \href{http://dx.doi.org/10.1086/421510}{\JournalTitle{The Astrophysical
-  Journal}, 610, 464}
+\bibitem[{Doyle {et~al.}(2013)Doyle, Smalley, Maxted, Anderson, Cameron,
+  Gillon, Hellier, Pollacco, Queloz, Triaud, \& West}]{doyle_accurate_2013}
+Doyle, A.~P., Smalley, B., Maxted, P. F.~L., {et~al.} 2013,
+  \href{http://dx.doi.org/10.1093/mnras/sts267}{\JournalTitle{Monthly Notices
+  of the Royal Astronomical Society}, 428, 3164}
 
 \bibitem[{Dragomir {et~al.}(2011)Dragomir, Kane, Pilyavsky, Mahadevan, Ciardi,
   Gazak, Gelino, Payne, Rabus, Ramirez, von Braun, Wright, \&
@@ -435,6 +441,11 @@ Hall, D.~S. 1989,
   \href{http://dx.doi.org/10.1007/BF00215932}{\JournalTitle{Space Science
   Reviews}, 50, 219}
 
+\bibitem[{Hansen(2010)}]{hansen_calibration_2010}
+Hansen, B. M.~S. 2010,
+  \href{http://dx.doi.org/10.1088/0004-637X/723/1/285}{\JournalTitle{The
+  Astrophysical Journal}, 723, 285}
+
 \bibitem[{Hebb {et~al.}(2009)Hebb, Collier-Cameron, Loeillet, Pollacco,
   Hébrard, Street, Bouchy, Stempels, Moutou, Simpson, Udry, Joshi, West,
   Skillen, Wilson, McDonald, Gibson, Aigrain, Anderson, Benn, Christian, Enoch,
@@ -494,6 +505,18 @@ Hut, P. 1980,
 Ibgui, L., Burrows, A., \& Spiegel, D.~S. 2010,
   \href{http://dx.doi.org/10.1088/0004-637X/713/2/751}{\JournalTitle{The
   Astrophysical Journal}, 713, 751}
+
+\bibitem[{Jackson {et~al.}(2009)Jackson, Barnes, \&
+  Greenberg}]{jackson_observational_2009}
+Jackson, B., Barnes, R., \& Greenberg, R. 2009,
+  \href{http://dx.doi.org/10.1088/0004-637X/698/2/1357}{\JournalTitle{The
+  Astrophysical Journal}, 698, 1357}
+
+\bibitem[{Jackson {et~al.}(2016)Jackson, Jensen, Peacock, Arras, \&
+  Penev}]{jackson_tidal_2016}
+Jackson, B., Jensen, E., Peacock, S., Arras, P., \& Penev, K. 2016,
+  \href{http://dx.doi.org/10.1007/s10569-016-9704-1}{\JournalTitle{Celestial
+  Mechanics and Dynamical Astronomy}, 1}
 
 \bibitem[{Jenkins {et~al.}(2016)Jenkins, Twicken, McCauliff, Campbell,
   Sanderfer, Lung, Mansouri-Samani, Girouard, Tenenbaum, Klaus, Smith,
@@ -601,6 +624,11 @@ Mansouri-Samani, M., {et~al.} 2018, TESS Science Data Products Description
 Mardling, R.~A. 2007,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2007.12500.x}{\JournalTitle{Monthly
   Notices of the Royal Astronomical Society}, 382, 1768}
+
+\bibitem[{Matsakos \& Königl(2016)}]{matsakos_origin_2016}
+Matsakos, T., \& Königl, A. 2016,
+  \href{http://dx.doi.org/10.3847/2041-8205/820/1/L8}{\JournalTitle{The
+  Astrophysical Journal Letters}, 820, L8}
 
 \bibitem[{Matsumura {et~al.}(2010)Matsumura, Peale, \&
   Rasio}]{matsumura_tidal_2010}
@@ -887,6 +915,12 @@ Triaud, A. H. M.~J., Collier~Cameron, A., Queloz, D., {et~al.} 2010,
 \bibitem[{Urban \& Seidelmann(2012)}]{urban_explanatory_2012}
 Urban, S., \& Seidelmann, P. 2012, Explanatory {Supplement} to the
   {Astronomical} {Almanac} (University Science Books)
+
+\bibitem[{Valsecchi {et~al.}(2015)Valsecchi, Rappaport, Rasio, Marchant, \&
+  Rogers}]{valsecchi_tidally-driven_2015}
+Valsecchi, F., Rappaport, S., Rasio, F.~A., Marchant, P., \& Rogers, L.~A.
+  2015, \href{http://dx.doi.org/10.1088/0004-637X/813/2/101}{\JournalTitle{The
+  Astrophysical Journal}, 813, 101}
 
 \bibitem[{Wahl {et~al.}(2016)Wahl, Hubbard, \& Militzer}]{wahl_tidal_2016}
 Wahl, S.~M., Hubbard, W.~B., \& Militzer, B. 2016,
