@@ -31,15 +31,28 @@
 \email{luke@astro.princeton.edu}
 
 \author[0000-0002-0514-5538]{L. G. Bouma}
-\affiliation{
-    Department of Astrophysical Sciences,
-    Princeton University,
-    4 Ivy Lane, Princeton, NJ 08540, USA}
+\affiliation{ Department of Astrophysical Sciences, Princeton
+University, 4 Ivy Lane, Princeton, NJ 08540, USA}
+
 \author[0000-0002-4265-047X]{J. N. Winn}
-\affiliation{
-    Department of Astrophysical Sciences,
-    Princeton University,
-    4 Ivy Lane, Princeton, NJ 08540, USA}
+\affiliation{ Department of Astrophysical Sciences, Princeton
+University, 4 Ivy Lane, Princeton, NJ 08540, USA}
+
+\author[0000-0002-6939-9211]{T. Daylan}
+\affiliation{ Department of Physics and Kavli Institute for Astrophysics
+and Space Research, Massachusetts Institute of Technology, Cambridge, MA
+02139, USA }
+
+\author[0000-0002-3481-9052]{K. G. Stassun}
+\affiliation{Vanderbilt University, Department of Physics \& Astronomy,
+6301 Stevenson Center Lane, Nashville, TN 37235, USA}
+\affiliation{Fisk University, Department of Physics, 1000 17th Avenue
+N., Nashville, TN 37208, USA}
+
+\author[0000-0002-7084-0529]{S. Kane}
+\affiliation{Department of Earth Sciences, University of California,
+Riverside, CA 92521, USA}
+ 
 %-------------------------------------
 % TESS Mission Architects:
 % These authors should be listed in this order
@@ -47,26 +60,21 @@
 %-------------------------------------
 %\\ \textcolor{red}{6 TESS Mission Architects:}
 \author{G. R. Ricker} % grr@space.mit.edu WAITING
-\affiliation{
-  Department of Physics and Kavli Institute for Astrophysics and Space
-  Research, Massachusetts Institute of Technology, Cambridge, MA
-  02139, USA }
+\affiliation{ Department of Physics and Kavli Institute for Astrophysics
+and Space Research, Massachusetts Institute of Technology, Cambridge, MA
+02139, USA }
 \author[0000-0001-6763-6562]{R. Vanderspek} % roland@space.mit.edu WAITING
-\affiliation{
-  Department of Physics and Kavli Institute for Astrophysics and Space
-  Research, Massachusetts Institute of Technology, Cambridge, MA
-  02139, USA }
+\affiliation{ Department of Physics and Kavli Institute for Astrophysics
+and Space Research, Massachusetts Institute of Technology, Cambridge, MA
+02139, USA }
 \author[0000-0001-9911-7388]{D. W.~Latham} % dlatham@cfa.harvard.edu WAITING
-\affiliation{
-  Harvard-Smithsonian Center for Astrophysics, 60 Garden Street,
-  Cambridge, MA 02138, USA }
+\affiliation{ Harvard-Smithsonian Center for Astrophysics, 60 Garden
+Street, Cambridge, MA 02138, USA }
 \author{S. Seager} % seager@mit.edu WAITING
-\affiliation{
-  Department of Earth, Atmospheric, and Planetary Sciences,
-  Massachusetts Institute of Technology, Cambridge, MA 02139, USA }
+\affiliation{ Department of Earth, Atmospheric, and Planetary Sciences,
+Massachusetts Institute of Technology, Cambridge, MA 02139, USA }
 \author[0000-0002-4715-9460]{J. M.~Jenkins} % jon.jenkins@nasa.gov WAITING
-\affiliation{
-  NASA Ames Research Center, Moffett Field, CA 94035, USA }
+\affiliation{ NASA Ames Research Center, Moffett Field, CA 94035, USA }
 %-------------------------------------
 % 3 representatives of each of SPOC, POC, TSO, for a total of 9. 
 %These 9 authors should be listed in alphabetical order
@@ -103,8 +111,8 @@
   that a systematic offset between the TESS time stamps and the barycentric
   reference sufficient to explain WASP-4b is ruled out at 6.3$\sigma$.
   If the timing variations are astrophysical,
-  major contributors to the period change could include either
-  apsidal precession, or tidal decay.
+  major contributors to the period change could include both
+  apsidal precession and tidal decay.
   The Doppler shift from WASP-4's acceleration towards us could
   account for at most one quarter of the observed period change
   (at $2\sigma$).
@@ -122,26 +130,27 @@
 \section{Introduction}
 \label{sec:intro}
 
-Long-term monitoring of hot Jupiter transit and occultation times
-should eventually reveal two distinct processes.  First, whenever the
-summed spin and orbital angular momenta in a hot Jupiter system are
-below a particular critical value, the system will be unstable to
-tidal decay \citep{counselman_outcomes_1973,hut_stability_1980}.  Most
-hot Jupiters satisfy this condition, so their orbits should be
-shrinking \citep{levrard_falling_2009,matsumura_tidal_2010}.  The rate
-of decay is uncertain, and depends on how friction dissipates energy
-carried by gravitational tides (\citealt{ogilvie_tidal_2014} gives a
-review).  If we could directly measure orbital decay rates, it would
-inform our understanding of tidal dissipation.  This is important
-because the dissipation rates determine the fate of the system.
-During its inspiral, if the planet fills its Roche lobe below the
-stellar surface, the drag force from the stellar envelope accelerates
-the inspiral, leading to a `direct-impact' merger
+Long-term monitoring of hot Jupiter transit and occultation times should
+eventually reveal two distinct processes.  First, whenever the summed
+spin and orbital angular momenta in a hot Jupiter system are below a
+particular critical value, the system will be unstable to tidal decay
+\citep{counselman_outcomes_1973,hut_stability_1980}.  Most hot Jupiters
+satisfy this condition; their orbits should be shrinking
+\citep{levrard_falling_2009,matsumura_tidal_2010}.  The rate of decay is
+uncertain, and depends on how friction dissipates energy carried by
+gravitational tides (\citealt{ogilvie_tidal_2014} gives a review).  If
+we could directly measure orbital decay rates, it would inform our
+understanding of tidal dissipation.  This is important because the
+dissipation rates determine the fate of the system.  During its
+inspiral, if the planet fills its Roche lobe below the stellar surface,
+the drag force from the stellar envelope accelerates the inspiral,
+leading to a `direct-impact' merger
 \citep{metzger_optical_2012,macleod_planetary_2018} Alternatively, if
-the planet fills its Roche lobe above above the stellar surface, then
-it could either be dynamically disrupted into an accretion disk or it
-could slowly transfer mass to the star \citep{metzger_optical_2012}.
-More broadly, the outcome of the eventual interaction between the
+the planet fills its Roche lobe above above the stellar surface, then it
+could either be dynamically disrupted into an accretion disk or it could
+slowly transfer mass to the star
+\citep{metzger_optical_2012,valsecchi_tidally-driven_2015,jackson_tidal_2016}.
+Further afield, the outcome of the eventual interaction between the
 Earth and red giant Sun also hinges on the efficiency of tidal
 dissipation \citep{rasio_tidal_1996}.
 
@@ -149,105 +158,74 @@ The second process that long-term timing studies should reveal is
 rotation of the orbital ellipse within the orbital plane (apsidal
 precession).  This effect has been studied extensively in eclipsing
 binaries \citep[{\it e.g.},][]{russell_notes_1939,
-schwarzschild_structure_1958}, and has been explored theoretically for
-transiting planets
+schwarzschild_structure_1958,borkovits_eclipse_2015}, and has been
+explored theoretically for transiting planets
 \citep{heyl_using_2007,pal_periastron_2008,jordan_observability_2008,ragozzine_probing_2009}.
 However, apsidal precession has yet to be directly observed in hot
 Jupiters, and the orbits would need non-zero eccentricity for it to be
 detectable.  Though the eccentricities of hot Jupiters are expected to
 be small, there are many mechanisms that could pump them away from
-circularity (see \S~\ref{sec:apsidal_precession}, and the
-possibilities considered by \citealt{bailey_understanding_2019}).  For
-hot Jupiters, the apsidal precession is usually dominated by the
-quadrupolar distortion of the planet by the star's tidal force
-\citep{ragozzine_probing_2009}.  If we measured apsidal precession in
-a hot Jupiter, we thus could convert the observed precession rate into
-the planet's Love number, giving us a third parameter along with the
-mass and radius with which to describe the interior structure of the
-planet \citep[{\it e.g.},][who performed a similar procedure for
-HAT-P-13b]{batygin_determination_2009}.  Measuring small
-eccentricities and understanding their origin would also help us
+circularity (see \S~\ref{sec:apsidal_precession}, and
+\citealt{bailey_understanding_2019}).  For hot Jupiters, the apsidal
+precession is usually dominated by the quadrupolar distortion of the
+planet by the star's tidal force \citep{ragozzine_probing_2009}.  If we
+measured apsidal precession in a hot Jupiter system, we could thus use
+the observed precession rate to compute the planet's Love number, giving
+a third parameter along with the mass and radius with which to describe
+the planet's interior structure \citep[{\it e.g.},][who performed a
+similar procedure for HAT-P-13b]{batygin_determination_2009}.  Measuring
+small eccentricities and understanding their origin would also help us
 understand the dynamical histories and interior structures of hot
 Jupiters.  \citep[{\it
 e.g.},][respectively]{dawson_origins_2018,ibgui_tidal_2010}
 
-% Stars hosting hot Jupiters tend to spin faster than other stars of
-% similar age and mass
-% \citep{penev_hats-18_2016,penev_empirical_2018}.  This is expected
-% because when the orbital frequency is larger than the spin rotation
-% frequency, tides donate angular momentum from the planet to the
-% star.  The reverse process occurs between the Earth and Moon,
-% leading to the Moon's slowly increasing separation from Earth of
-% $X.XX$cm~yr$^{-1}$ (CITE lunar ranging experiment).  The hot Jupiter
-% star-planet separation distribution is best reproduced by models
-% that account for tides~\citep{cameron_hierarchical_2018}.
-
-The most convincing signs seen to date of either orbital decay or apsidal
-precession have been in WASP-12b.
+While numerous indirect studies have called attention to
+population-level effects of tidal decay
+\citep{jackson_observational_2009,hansen_calibration_2010,penev_constraining_2012,husnoo_observational_2012,matsakos_origin_2016,cameron_hierarchical_2018,penev_empirical_2018},
+the most convincing direct evidence to date for either orbital decay or
+apsidal precession has come from WASP-12b.
 \citet{maciejewski_departure_2016} showed that the transit times of
-WASP-12b did not follow a linear ephemeris at $5\sigma$ confidence,
-and measured $\dot{P} = -26 \pm 4\,{\rm ms}\,{\rm yr}^{-1}$.
-\citet{patra_2017} presented new transit and occultation times for
-the system, agreed that curvature was present, and found
-$\dot{P} = -29 \pm 3\,{\rm ms}\,{\rm yr}^{-1}$.
+WASP-12b did not follow a linear ephemeris at $5\sigma$ confidence, and
+measured $\dot{P} = -26 \pm 4\,{\rm ms}\,{\rm yr}^{-1}$.
+\citet{patra_2017} presented new transit and occultation times for the
+system, and found $\dot{P} = -29 \pm 3\,{\rm ms}\,{\rm yr}^{-1}$.
 Assuming that the period change was caused entirely by tidal decay,
-\citet{patra_2017} found values for the stellar tidal quality factor
-of $Q_\star' \approx 2\times10^5$.  This level of dissipation cannot be
+\citet{patra_2017} found values for the stellar quality factor of
+$Q_\star' \approx 2\times10^5$.  This level of dissipation cannot be
 explained by standard equilibrium tide
 models~\citep{penev_tidal_2011,ogilvie_tidal_2014}.
 \citet{weinberg_tidal_2017} found though that if WASP-12 were a
-subgiant, tidal dissipation due to a dynamical tide might be
-sufficient to produce the required level of friction.
+subgiant, tidal dissipation due to a dynamical tide might be sufficient
+to produce the required level of friction.
 \cite{bailey_understanding_2019} concurred, but noted that the
-observational constraints on WASP-12 itself favor a main-sequence
-star, not a subgiant.  Thus, more data are needed to determine the
-cause of the timing variations in WASP-12b.
-
-% Tidal decay of hot Jupiters has been invoked to explain certain
-% properties of the ensemble of star-planet systems. For example, the
-% scarcity of gas giants with periods less than a day is suggestive of
-% orbital decay \citep[see,
-%   e.g.][]{Jackson+2008,Hansen2010,Penev+2012,Ogilvie2014}. The
-% anomalously rapid rotation of some hot-Jupiter host stars has been
-% attributed to transfer of the planet's orbital angular momentum
-% \citep{Penev+2016}. The absence of hot Jupiters around subgiant stars
-% may be caused by an acceleration of orbital decay when a star leaves
-% the main sequence
-% \citep{VillaverLivio2009,Hansen2010,SchlaufmanWinn2013}.  Tidal decay
-% might also be responsible for the lower occurrence of close-in planets
-% around rapidly rotating stars \citep{TeitlerKonigl2014}, or the
-% realignment of stars and their planetary orbits
-% \citep{MatsakosKonigl2015}. However, direct evidence for orbital decay
-% has been lacking: there have been no clear demonstrations of a
-% long-term period decrease due to orbital decay \citep[see,
-%   e.g.,][]{Hoyer+2016,Wilkins+2017}.
-% 
+observational constraints on WASP-12 itself favor a main-sequence star,
+not a subgiant.  More data are needed to determine the cause of the
+timing variations in WASP-12b.
 
 This work focuses on WASP-4b, which is also a plausible candidate for
-orbital decay.  The planet has radius $1.37 \pm 0.04\ R_{\rm Jup}$,
-and mass $1.29 \pm 0.10\ M_{\rm Jup}$
-\citep{southworth_homogeneous_2011}.  It has an orbital period of 1.34
-days, orbits its host star at a distance of $a/R_\star = 5.41$, and
-has been frequently observed over the past decade
-\citep{wilson_wasp-4b_2008,huitson_gemini_2017}.  The orbit is
-consistent with circular \citep[][but see
+orbital decay.  The planet has radius $1.37 \pm 0.04\ R_{\rm Jup}$, and
+mass $1.29 \pm 0.10\ M_{\rm Jup}$ \citep{southworth_homogeneous_2011}.
+It has an orbital period of 1.34 days, orbits its host star at a
+distance of $a/R_\star = 5.41$, and has been frequently observed over
+the past decade \citep{wilson_wasp-4b_2008,huitson_gemini_2017}.  The
+orbit is consistent with circular \citep[][but see
 \S~\ref{sec:apsidal_precession}]{beerer_secondary_2011,husnoo_observational_2012,bonomo_gaps_2017}.
-The host star is a G7V dwarf, with $R_\star = 0.91 \pm 0.12\ R_\odot$,
-$M_\star = 0.94 \pm 0.09\ M_\odot$, $T_{\rm eff} = 5436 \pm 34\ {\rm
+The host star is a G7V dwarf, with $R_\star = 0.92 \pm 0.13\ R_\odot$,
+$M_\star = 0.92 \pm 0.07\ M_\odot$, $T_{\rm eff} = 5400 \pm 90\ {\rm
 K}$, and an isochronal age of roughly $7\ {\rm Gyr}$
-\citep{southworth_homogeneous_2011,petrucci_no_2013}.
+\citep{southworth_homogeneous_2011,petrucci_no_2013,doyle_accurate_2013}.
 
 We measure new transit times for WASP-4b using data from TESS
 (\S~\ref{sec:transits}).  We then merge these times with previous
 observations and compare three models for the times
 (\S~\ref{sec:timing}): a constant period, a decaying period, and a
-slightly eccentric orbit undergoing precession.  We rule out a
-constant period, but cannot firmly distinguish between the latter two
+slightly eccentric orbit undergoing precession.  We rule out a constant
+period, but cannot firmly distinguish between the latter two
 possibilities.  Each would have interesting implications
 (\S~\ref{sec:implications}).  We rule out the possibility that a
 systematic time system offset causes the observed variation
-(Appendix~\ref{sec:verify_tess}), and conclude by advocating for
-further monitoring of the system (\S~\ref{sec:future}).
+(Appendix~\ref{sec:verify_tess}), and conclude by advocating for further
+monitoring of the system (\S~\ref{sec:future}).
 
 
 
@@ -272,62 +250,60 @@ further monitoring of the system (\S~\ref{sec:future}).
 \subsection{Observations and cleaning}
 WASP-4 was observed in TESS camera 2 from August 23, 2018 to September
 20, during the spacecraft's second sector of science operations.  The
-star is designated by the TESS Input
-Catalog~\citep[TIC;][]{stassun_TIC_2018} as TIC 402026209.
+star is designated by the TESS Input Catalog as TIC 402026209
+\citep{stassun_TIC_2018}.
 
 The TESS spacecraft recorded images of WASP-4 in an $11\times11$ pixel
-array at a cadence of 2 minutes.  It was included on the
-``short-cadence'' target list thanks to the Guest Investigator
-programs of J.\ Southworth and S.\ Kane (G011112 and G011183
-respectively).  After being downlinked through the Deep Space Network,
-the data were processed through the Science Processing Operations
-Center (SPOC) pipeline at NASA Ames~\citep{jenkins_tess_2016}.  One
-important step in this processing was converting from spacecraft time
-to barycentric time.  SPOC then reports timestamps in the ``BTJD''
-time system, where ${\rm BTJD} = {\rm BJD} - 2457000$, and all times
-are in the TDB reference (see \citealt{urban_explanatory_2012} for
-explanations of time systems).  The lightcurves were then vetted and
-released by the MIT TESS Science Office to the Mikulski Archive for
-Space Telescopes~\citep{ricker_tess_alerts_2018}.
+array every 2 minutes.  It was included on the ``short-cadence'' target
+list thanks to the Guest Investigator programs of J.\ Southworth and S.\
+Kane (G011112 and G011183 respectively).  After being downlinked through
+the Deep Space Network, the data were processed through the Science
+Processing Operations Center (SPOC) pipeline at NASA
+Ames~\citep{jenkins_tess_2016}.  One important step in this processing
+was converting from spacecraft time to barycentric time.  SPOC then
+reports timestamps in ``BTJD'', where ${\rm BTJD} = {\rm BJD} -
+2457000$, BJD is the barycentric julian date, and all times are in the
+TDB reference (see \citealt{urban_explanatory_2012} for explanations of
+time systems).  The lightcurves were then vetted and released by the MIT
+TESS Science Office to the Mikulski Archive for Space
+Telescopes~\citep{ricker_tess_alerts_2018}.
 
 We begin our analysis with the Presearch Data Conditioning (PDC) light
-curves from MAST.  The processing steps used to find an optimal
-aperture (for WASP-4, a $3\times 3$ pixel array) and the PDC-MAP
-algorithm are described by \citet{smith_kepler_apertures_2017} and
+curves from MAST.  The steps used to find an optimal aperture (for
+WASP-4, a $3\times 3$ pixel array) and the PDC-MAP algorithm are
+described by \citet{smith_kepler_apertures_2017} and
 \citet{smith_kepler_PDC_2017} respectively.
 
-Our processing steps were then as follows.  First, we removed all
-points with non-zero quality flags.  This removes data that is
-contaminated by coarse spacecraft pointing, cosmic rays, and other
-annoyances \citep{tess_data_product_description_2018}.  We then
-filtered out known bad observing windows.  The data closest to
-spacecraft perigee typically show ramp-like systematics, so we clipped
-out the first and last hour of both orbits.  Next, we focused on the
-momentum dumps. As described in the data release
+We then processed the lightcurve as follows.  First, we removed all points
+with non-zero quality flags.  This removes data contaminated by
+coarse spacecraft pointing, cosmic rays, and other annoyances
+\citep{tess_data_product_description_2018}.  We then filtered out known
+bad observing windows.  The data closest to spacecraft perigee typically
+show ramp-like systematics, so we clipped out the first and last hour of
+both orbits.  Next, we focused on the momentum dumps. As described in
+the data release
 notes\footnote{\url{archive.stsci.edu/hlsps/tess-data-alerts/hlsp_tess-data-alerts_tess_phot_s01_tess_v1_release-notes.pdf}},
 during the first two TESS sectors, every 2.5~days the spacecraft's
-reaction wheels were reset to maintain pointing stability.  These
-events were assigned the quality flags corresponding to ``Reaction
-Wheel Desaturation Event'' and ``Manual Exclude''.  In the WASP-4
-lightcurve, these flags were simultaneously set for 54 distinct
-cadences, and there were 10 momentum dumps, averaging about 10 minutes
-of flagged data per dump.  Simply out of caution, we clipped out an
-additional 10 minutes before and after every momentum dump.  Before
-applying any filters, we had 19737 data points. After applying all the
-filters, we were left with 18165 measurements, or 92\% of the original
-data.
+reaction wheels were reset to maintain pointing stability.  These events
+were assigned quality flags corresponding to ``Reaction Wheel
+Desaturation Event'' and ``Manual Exclude''.  For WASP-4,
+these flags were simultaneously set for 54 distinct cadences, and there
+were 10 momentum dumps, averaging about 10 minutes of flagged data per
+dump.  Simply out of caution, we clipped out an additional 10 minutes
+before and after every momentum dump.  Before applying any filters, we
+had 19737 data points. After applying all the filters, we were left with
+18165 measurements, or 92\% of the original data.
 
 After ``cleaning'' the data, we normalized the flux measurements by
 dividing out the median flux.  We then converted the timestamps from
-BTJD to BJD by adding the appropriate offset of 2457000
-days~\citep{tess_data_product_description_2018}.  Many of these and
+BTJD to BJD by adding the appropriate 2457000 day offset
+\citep{tess_data_product_description_2018}.  Many of these and
 subsequent processing steps were performed using
 \texttt{astrobase}~\citep{bhatti_astrobase_2018} We opted not to
 ``flatten'' the lightcurves at this stage, as is often done with {\it
-e.g.}, a median filter, spline, or gaussian process regression.  Such
-procedures are asymmetric about the transit minimum and can skew the
-transit time measurement, and their effect on the measurement
-uncertainties is difficult to capture.
+e.g.}, a spline or gaussian process regression.  Such procedures are
+asymmetric about the transit minimum and can skew the transit time
+measurement without being captured by the measurement uncertainties.
 
 
 
@@ -341,53 +317,51 @@ uncertainties is difficult to capture.
     \end{center}
     \vspace{-0.5cm}
     \caption{
+      %TODO: final number
         {\bf TESS saw WASP-4b transit earlier than expected.}
         Points are differences between observed transit times and the
-        constant-period ephemeris predicted by previous transit
-        measurements.  Black points with circle markers are the more
-        precise half of literatures times; gray points are the less
-        precise half.  The blue curves represent the $\pm 1\sigma$
-        credible interval around the constant-period ephemeris.  The
-        binned TESS observation (red point) arrived $77.8 \pm 10.7\
-        {\rm seconds}$ before it was expected.
+        constant-period ephemeris we fit to literature transits.
+        Black points are the more precise half of literatures times;
+        gray points are the less precise half.  The blue curves
+        represent the $\pm 1\sigma$ credible interval around the
+        constant-period ephemeris.  The binned TESS observation (red
+        point) arrived $77.8 \pm 10.7\ {\rm seconds}$ before it was
+        expected.
         \label{fig:arrived_early}
     }
 \end{figure}
 
-Using the times, flux measurements, and errors determined above, we
-began our measurement procedure by using the Box Least Squares (BLS)
-method to estimate the transit epoch, period, and duration
-\citep{kovacs_box-fitting_2002}.  From the BLS parameters, we isolated
-each transit to a rough estimate of its midtime, $\pm$10 transit
-durations.  In each transit window, we then simultaneously fit for a
-model transit, plus a local linear trend.  Our transit model uses the
-analytic formulae calculated by \citet{mandel_analytic_2002}, and
-implemented by \citet{kreidberg_batman_2015}.
+Using the times, flux measurements, and errors determined above, we ran
+Box Least Squares (BLS) to estimate the transit epoch, period, and
+duration \citep{kovacs_box-fitting_2002}.  From the BLS parameters, we
+isolated each transit to within $\pm$10 transit durations of its
+midtime.  In each transit window, we then simultaneously fit for a model
+transit, plus a local linear trend.  Our transit model uses the analytic
+formulae calculated by \citet{mandel_analytic_2002} and implemented by
+\citet{kreidberg_batman_2015}.
 
-To measure the times, we allowed four free parameters per transit: the
+We allowed four free parameters per transit: the
 time of mid-transit $t_{\rm tra}$, the planet-to-star radius ratio
-$R_{\rm p}/R_\star$, and the slope and intercept of the line. Our
-priors were wide uniform distributions centered on the BLS estimates
-for $t_{\rm tra}$ and $R_{\rm p}/R_\star$, and on a slope of zero and
-an intercept of unity for the line.
-
+$R_{\rm p}/R_\star$, and the slope and intercept of the line.
+% Our priors were wide uniform distributions centered on the BLS
+% estimates for $t_{\rm tra}$ and $R_{\rm p}/R_\star$, and on a slope of
+% zero and an intercept of unity for the line.
 We fixed the remaining transit parameters as follows.  We set the
-eccentricity to zero, and the longitude of periastron to $\pi/2$.  For
-the limb darkening, we assumed a fixed quadratic law, with
-coefficients interpolated from the tables computed by
-\citet{claret_limb_2017}.  For the period, $a/R_\star$, and
-inclination, we adopted the values from~\citet{petrucci_no_2013}.
+eccentricity to zero, and the longitude of periastron to $\pi/2$.  We
+assumed a quadratic limb-darkening law, with coefficients interpolated
+from the \citet{claret_limb_2017} tables.  For the period, $a/R_\star$,
+and inclination, we adopted the values from~\citet{petrucci_no_2013}.
 These are in reasonable agreement with the parameters reported by
 \citet{gillon_improved_2009}, \citet{southworth_high-precision_2009},
 and \citet{huitson_gemini_2017}.
 
-Having defined all the free and fixed parameters, we calculated an
-initial guess for the free parameters by maximizing the likelihood.
-We then sampled over the posterior using the algorithm proposed by
-\citet{goodman_ensemble_2010}, and implemented by
+Having defined the free and fixed parameters, we calculated an initial
+guess for the free parameters by maximizing the likelihood.  We then
+sampled over the posterior using the algorithm proposed by
+\citet{goodman_ensemble_2010} and implemented by
 \citet{foreman-mackey_emcee_2013}.  During this process, we used the
 \texttt{corner} software to check that our posteriors were being
-adequately sampled~\citep{corner_2016}.
+well-sampled~\citep{corner_2016}.
 
 After performing the initial fit, we set the photometric error bars to
 be equal to the standard deviation of the in-transit points of the
@@ -395,40 +369,39 @@ residual lightcurve.  We then reperformed the same fitting procedure,
 using the empirically determined photometric errors.
 
 % TODO: final numbers
-To check that the measured uncertainties are plausible, we computed
-the reduced $\chi^2$ for a linear ephemeris fit to the measured TESS
-transit times.  We found that $\chi^2 = 8.4$, with 16 degrees of
-freedom.  Examining the residuals by eye showed that the error
-variance was being overestimated, so we multiplied the measured TESS
-errors by a fudge factor $f=0.73$, forcing a reduced $\chi^2$ of
-unity.  This reduced the mean transit time uncertainty from $\sim$30
-seconds per transit to $\sim$22 seconds per transit.
+To check that the measured uncertainties are plausible, we computed the
+reduced $\chi^2$ for a linear ephemeris fit to the measured TESS transit
+times.  We found that $\chi^2 = 8.4$, with 16 degrees of freedom.
+Examining the residuals by eye showed that the error variance was being
+overestimated, so we multiplied the measured TESS errors by a factor
+$f=0.73$, forcing a reduced $\chi^2$ of unity.  This reduced the mean
+transit time uncertainty from $\sim$30 seconds per transit to $\sim$22
+seconds per transit.
 
 Figure~\ref{fig:lightcurves} shows the light curves, best-fit transit
 models, and residuals.  Table~1 reports the mid-transit times and
 their uncertainties, and also includes the previously reported times
-that are analyzed in \S~\ref{sec:timing}.
+analyzed in \S~\ref{sec:timing}.
 
 Taking the mean and standard deviation of the measured planet to star
 radius ratio, we find $R_{\rm p}/R_\star=0.1538\pm0.0013$, in
-agreement with the determinations by {\it e.g.},
-\citet{wilson_wasp-4b_2008}, \citet{gillon_improved_2009},
-\citet{winn_transit_2009}, and \citet{southworth_high-precision_2009}.
+agreement with previous determinations
+\citep{wilson_wasp-4b_2008,gillon_improved_2009,winn_transit_2009,southworth_high-precision_2009}.
 
 Binning the residuals to 1-hour windows and taking the median absolute
 deviation, we measure a MAD of the residual lightcurves of $594\,{\rm
 ppm}\,{\rm hr}^{1/2}$.  WASP-4 has a TESS-band magnitude of $T=11.78$
 \citep{stassun_TIC_2018}, corresponding to a predicted photon-counting
-noise\footnote{github.com/lgbouma/tnm} of $410\,{\rm ppm}\,{\rm
+noise\footnote{\url{github.com/lgbouma/tnm}} of $410\,{\rm ppm}\,{\rm
 hr}^{1/2}$.  At $T=11.78$, with a 9-pixel aperture read noise is
-expected to contribute an additional $202\,{\rm ppm}\,{\rm hr}^{1/2}$
-in quadrature.  The predicted zodiacal background contribution is
-$673\,{\rm ppm}\,{\rm hr}^{1/2}$, based on the zodiacal background
-model calculated by \citet{winn_photonflux_2013} and used in the
-\citet{Sullivan_2015} planet detection simulations.  The predicted
-level of zodiacal noise seems to have been an overestimate, given the
-observed RMS of WASP-4.  We leave a broader assessment of TESS's
-photometric performance to future work.
+expected to contribute an additional $202\,{\rm ppm}\,{\rm hr}^{1/2}$ in
+quadrature.  The predicted zodiacal background contribution is
+$673\,{\rm ppm}\,{\rm hr}^{1/2}$, based on the
+\citet{winn_photonflux_2013} model, which was used in the
+\citet{Sullivan_2015} planet detection simulations.  The predicted level
+of zodiacal noise seems to have been an overestimate, given the observed
+RMS of WASP-4.  A more detailed assessment of TESS's photometric
+performance is beyond the scope of this work.
 
 \section{Timing analysis}
 \label{sec:timing}
@@ -445,13 +418,13 @@ photometric performance to future work.
     \caption{
         {\bf Timing residuals and best-fit models for WASP-4b.}
         Points are differences between observed transit times and a
-        linear ephemeris fit to the entire timing dataset.  The
-        constant period model is a poor fit to the observed times
-        (gray line).  Black points are the more precise half of
-        measured times; gray points are the less precise half.  The
-        blue curve is the best-fit model with a constant period
-        derivative.  The orange curve is the best-fit model assuming
-        apsidal precession causes the observed timing deviations.
+        linear ephemeris fit to all the times.  The constant period
+        model is a poor fit to the observed times (gray line).  Black
+        points are the more precise half of measured times; gray points
+        are the less precise half.  The blue curve is the best-fit model
+        with a constant period derivative.  The orange curve is the
+        best-fit model assuming apsidal precession causes the observed
+        timing deviations.
         \label{fig:times}
     }
 \end{figure*}
@@ -469,25 +442,24 @@ the diameter of the orbit by subtracting $2a/c = 22.8$ seconds from
 the observed time.
 
 We use the homogeneous \citet{hoyer_tramos_2013} timing study as our
-starting point.  We took their BJD$_{\rm TT}$ times to be equivalent
-to times in BJD$_{\rm TDB}$, since the two time systems differ
-periodically by only milliseconds \citep{urban_explanatory_2012}.  We
-verified that their times, as well as all other times in subsequent
-analysis, were on the BJD$_{\rm TDB}$ time standard using the
-calculator provided by~\citet{eastman_achieving_2010}.  We set the
-zero-point epoch to be as close as possible to the average of the
-transit times, weighted as the inverse variance of the transit
-midtime. This minimizes the covariance between the transit epoch and
-the period \citep{gibson_gemini_2013}.
+starting point.  We took their BJD$_{\rm TT}$ times to be equivalent to
+times in BJD$_{\rm TDB}$, since the two time systems differ periodically
+by only milliseconds \citep{urban_explanatory_2012}.  We verified that
+their times, as well as all others, were on the BJD$_{\rm TDB}$ time
+standard using the calculator provided
+by~\citet{eastman_achieving_2010}.  We set the zero-point epoch to be as
+close as possible to the average of the transit times, weighted as the
+inverse midtime variance. This minimizes the covariance between the
+transit epoch and the period \citep{gibson_gemini_2013}.
 
-Important contributions to the transit timing data are as follows.
-The earliest epoch in our fit is provided by the EulerCam lightcurve
-observed by \citet{wilson_wasp-4b_2008}.  The second, more precise,
-epoch comes from $z$-band photometry acquired by
-\citet{gillon_improved_2009} at the VLT with FORS2.  Subsequent epochs
-came from \citet{winn_transit_2009}\footnote{\citet{winn_transit_2009}
-recorded the GPS clock time in UT reference. They then converted this
-to BJD in the TDB reference for their reported midtimes.},
+Important contributions to the timing dataset are as follows.  The
+earliest epoch in our fit is from the EulerCam lightcurve observed by
+\citet{wilson_wasp-4b_2008}.  The second, more precise, epoch comes from
+$z$-band photometry acquired by \citet{gillon_improved_2009} at the VLT
+with FORS2.  Subsequent epochs came from
+\citet{winn_transit_2009}\footnote{\citet{winn_transit_2009} recorded
+the GPS clock time in UT reference. They then converted this to BJD in
+the TDB reference for their reported midtimes.},
 \citet{dragomir_terms_2011}, \citet{sanchis-ojeda_starspots_2011}, and
 \citet{nikolov_wasp-4b_2012}.
 %\citet{winn_transit_2009} measured two transits with the Baade 6.5-m
@@ -505,27 +477,25 @@ to BJD in the TDB reference for their reported midtimes.},
 %\citet{nikolov_wasp-4b_2012} observed 3 transits, in 4 independent
 %photometry bands (Sloan {\it g'}, {\it r'}, {\it i'}, {\it z'}) with
 %the MPG/EOS-2.2~m at La Silla.
-\citet{hoyer_tramos_2013} reported nine transit observations taken
-with the the Y4KCAM on the SMARTS 1-m telescope, and another three
-with the SOI on the SOAR 4.2-m telescope.  \citet{hoyer_tramos_2013}
-also homogeneously redetermined the transit times from all previous
-studies.  Though their latest two epochs did fall slightly below the
-prediction of a linear ephemeris (Panel C of their Figure~6), they did
-not find any statistical need for a quadratic function to fit the O-C
-values.
+\citet{hoyer_tramos_2013} reported nine transit observations taken with
+the the Y4KCAM on the SMARTS 1-m telescope, and another three with the
+SOI on the SOAR 4.2-m telescope.  \citet{hoyer_tramos_2013} also
+homogeneously redetermined the transit times from all previous studies.
+Though their latest two epochs fell slightly below the prediction of a
+linear ephemeris (Panel C of their Figure~6), they did not find a need
+to fit a quadratic function to the O-C values.
 
 After the study by \citet{hoyer_tramos_2013},
 \citet{ranjan_atmospheric_2014} acquired near-IR spectra of WASP-4b
-using HST's WFC3 over five orbits in transit, and five orbits in
-secondary eclipse.  We adopt only their transit time, since the epoch
-of occultation was not allowed to be a free parameter in their fit.
-\citet{huitson_gemini_2017} acquired optical transmission spectra with
-the 8.1-m Gemini South telescope over 2011 to 2014, one transit per
-season.  The per-point standard deviation of their lightcurves is a
-few hundred parts per million, less than a factor of 3 away from the
-photon noise limit.  The uncertainties on their reported transit
-times~--~on average 5.6~seconds~--~ are small, but possible given the
-quality of their data~\citep[cf.][]{carter_analytic_2008}.
+using HST's WFC3 in both transit and secondary eclipse.  We adopt only
+their transit time, since the epoch of occultation was not fit as a free
+parameter.  \citet{huitson_gemini_2017} acquired optical transmission
+spectra with the 8.1-m Gemini South telescope over 2011 to 2014, one
+transit per season.  The per-point standard deviation of their
+lightcurves is a few hundred parts per million, less than a factor of 3
+away from the photon noise limit.  The uncertainties on their reported
+transit times~--~on average 5.6~seconds~--~ are small, but possible
+given the quality of their data~\citep[cf.][]{carter_analytic_2008}.
 
 There have been other studies of WASP-4b for which the transit timing
 data are either hetereogenous, not available, or not useable.  We
@@ -551,19 +521,19 @@ the results reported by \citet{huitson_gemini_2017}.  They did not
 report transit times.
 
 There are fewer available occultation times.
-\citet{beerer_secondary_2011} observed two occultations of WASP-4b
-using warm Spitzer in the 3.6\,$\mu$m and 4.5\,$\mu$m bands.
+\citet{beerer_secondary_2011} observed two occultations of WASP-4b using
+warm Spitzer in the 3.6\,$\mu$m and 4.5\,$\mu$m bands.
 \citet{caceres_ground-based_2011} detected an occultation from the
 ground in the ${\rm K}_{\rm s}$ band, and gave a time in HJD, without
-specifying the time standard.  We correspondingly added $69.184$
-seconds of uncertainty to their reported errors, in quadrature.
-Finally, as previously mentioned, \citet{ranjan_atmospheric_2014}
-acquired occultation data with HST but kept the epoch as a fixed
-parameter.  \citet{zhou_secondary_2015} performed a similar analysis
-with occultation data from the Anglo-Australian Telescope, focusing on
-the eclipse depth, but also fitting for $e\cos\omega$.  We converted
-their $e\cos\omega$ results into a midtime, using their ephemeris and
-the standard formula \citep[{\it
+specifying the time standard.  We correspondingly added $69.184$ seconds
+of uncertainty to their reported errors, in quadrature.  Finally, as
+previously mentioned, \citet{ranjan_atmospheric_2014} acquired
+occultation data with HST but kept the epoch as a fixed parameter.
+\citet{zhou_secondary_2015} performed a similar analysis with
+occultation data from the Anglo-Australian Telescope, focusing on the
+eclipse depth, but also fitting for $e\cos\omega$.  We converted their
+$e\cos\omega$ results into a midtime, using their ephemeris and the
+standard formula \citep[{\it
 e.g.},][]{charbonneau_detection_2005,winn_exoplanet_2010}
 \begin{equation}
   t_{\rm occ}(E) =
@@ -646,55 +616,50 @@ For the linear model, we took uniform priors over small windows around
 the expected parameters.  For the quadratic model we did the same, and
 took the quadratic term to have a uniform prior corresponding to
 $
-  Q_\star \sim \mathcal{U}[10^3, 10^9],
+  Q_\star' \sim \mathcal{U}[10^3, 10^9],
 $
-for $Q_\star$ the ``quality factor'' corresponding to the star's
-response against tidal forcing, defined in \S~\ref{sec:implications}.
-For the precession model, we took the same priors in epoch and
-sidereal period, and drew the remaining parameters from wide uniform
-distributions.
+for $Q_\star'$ the modified quality factor defined in
+\S~\ref{sec:implications}.  For the precession model, we took the same
+priors in epoch and sidereal period, and drew the remaining parameters
+from wide uniform distributions.
 
+%TODO: final numbers
 Figure~\ref{fig:times} shows the residuals with respect to the linear
-model.
+model.  The median MCMC linear fit has $\chi^2 = 149$ and 58 degrees of
+freedom.  The median MCMC quadratic fit has $\chi^2 = 48.0$ and 57
+degrees of freedom.  The median MCMC precession fit has $\chi^2 = 51.0$
+and 55 degrees of freedom.
+
 %TODO: final numbers
-The median MCMC linear fit has $\chi^2 = 149$ and 58 degrees of freedom.
-The median MCMC quadratic fit has $\chi^2 = 48.0$ and 57 degrees of freedom.
-The median MCMC precession fit has $\chi^2 = 51.0$ and 55 degrees of freedom.
-
-
 The difference in $\chi^2$ between the linear and quadratic fit
-corresponds to $p \approx 10^{-23}$. In other words, assuming the
-linear model is true, there is a $10^{-23}$ probability that simply by
-chance we would see data that favors the quadratic model more strongly
-than the observations.  Clearly, a more likely possibility would be
-systematic errors in one of the most important sets of times: either
-the earliest times, the Huitson et al.\ Gemini times (epoch numbers
-44, 322, 591, and 851), or the TESS times. 
-We have taken every precaution against systematic offsets in the
-TESS dataset (Appendix~\ref{sec:verify_tess}), and Huitson et al.\ 
-stand by their reported times (Huitson, priv. comm.).
-Since the linear model provides a poor fit to the data, we discard it
-from further consideration.
+corresponds to $p \approx 10^{-23}$. In other words, assuming the linear
+model is true, there is a $10^{-23}$ probability that simply by chance
+we would see data that favors the quadratic model more strongly than the
+observations.  A more likely possibility is some systematic error being
+present in one of the most important sets of times: either the earliest
+times, the Huitson et al.\ Gemini times (epoch numbers 44, 322, 591, and
+851), or the TESS times.  We have taken every precaution against
+systematic offsets in the TESS dataset (Appendix~\ref{sec:verify_tess}),
+and Huitson et al.\ stand by their reported times (Huitson, priv.
+comm.).  Since the linear model provides a poor fit to the data, we
+discard it from further consideration.
 
 %TODO: final numbers
-The quadratic model fits better than the precession model.
-It is favored over the precession fit by $\Delta \chi^2 = 3.0$,
-and has two fewer free parameters.
-Another heuristic useful for model comparison is the Bayesian
-Information Criterion (BIC),
+The quadratic model fits better than the precession model.  It is
+favored over the precession fit by $\Delta \chi^2 = 3.0$, and has two
+fewer free parameters.  Another useful heuristic for model comparison is
+the Bayesian Information Criterion (BIC),
 \begin{equation}
   {\rm BIC} = \chi^2 + k\log n,
 \end{equation}
 for $k$ the number of free parameters, and $n$ the number of data
-points. For us, $n=60$.
-The difference in the BIC for the precession and decay models is
-$\Delta {\rm BIC} = {\rm BIC}_{\rm prec} - {\rm BIC}_{\rm quad} = 11$,
-corrsonding to a Bayes factor of $\approx 4\times10^{4}$.
-In the language of~\citet{kass_bayes_1995}, this is ``decisive
-evidence'' for the quadratic model describing the data better than the
-precession model.
-Using the Akaike Information Criterion similarly favors the orbital
-decay model, by $\Delta {\rm AIC} = 7$.
+points. For us, $n=60$.  The difference in the BIC for the precession
+and decay models is $\Delta {\rm BIC} = {\rm BIC}_{\rm prec} - {\rm
+BIC}_{\rm quad} = 11$, corrsonding to a Bayes factor of $\approx
+4\times10^{4}$.  In the language of~\citet{kass_bayes_1995}, this is
+``decisive evidence'' for the quadratic model describing the data better
+than the precession model.  Using the Akaike Information Criterion
+similarly favors the orbital decay model, by $\Delta {\rm AIC} = 7$.
 
 %TODO: final numbers
 Assuming the orbital decay model, we find a period derivative 
@@ -704,10 +669,9 @@ Assuming the orbital decay model, we find a period derivative
     = - (12.1^{+1.2}_{-1.2})\,{\rm ms}\,{\rm yr}^{-1}.
 \end{equation}
 For comparison, the period derivative seen by
-\citet{maciejewski_departure_2016} and \citet{patra_2017} in
-WASP-12b is $\dot{P} = -29 \pm 3\,{\rm ms}\,{\rm yr}^{-1}$.
-Assuming the quadratic model, WASP-4b is thus decaying at
-about half the rate as WASP-12b.
+\citet{maciejewski_departure_2016} and \citet{patra_2017} in WASP-12b is
+$\dot{P} = -29 \pm 3\,{\rm ms}\,{\rm yr}^{-1}$.  Assuming the quadratic
+model, WASP-4b is thus decaying at about half the rate as WASP-12b.
 
 %TODO: final numbers
 If we instead assume the precession model, the best-fit
@@ -716,13 +680,12 @@ longitude of periapse correspondingly advances by $\dot{\omega}
 = 14.8^{+5.4}_{3.8}\ {\rm degrees}\,{\rm yr}^{-1}$.   The
 corresponding precession period would be $24^{+8}_{-6}$ years.
 
-The median parameters and their standard deviations are reported for
-all the models in Table~3.  In summary, a linear ephemeris does not
-describe the observed times.  Both orbital decay and precession can
-fit the observed data.  However, the precession model has two extra
-free parameters, and is statistically disfavored.  Further
-observations will help discriminate between orbital decay and
-precession.
+The median parameters and their standard deviations are reported for all
+the models in Table~3.  To summarize, a linear ephemeris does not
+describe the observed times.  Both orbital decay and precession can fit
+the observed data.  However, the precession model has two extra free
+parameters, and is statistically disfavored.  Further observations will
+help discriminate between orbital decay and precession.
 
 \section{Implications}
 \label{sec:implications}
@@ -795,7 +758,7 @@ fact change sharply with varying tidal frequency
 \citep{penev_empirical_2018}.
 
 If the planet's spin and orbit are synchronized, the star is slowly
-rotating, and the eccentricity is small, then the semimajor axis and
+rotating, and the eccentricity is small, then the semi-major axis and
 eccentricity evolve as
 \citep[][Appendix B]{metzger_optical_2012}
 \begin{align}
@@ -827,24 +790,24 @@ rate corresponds to a modified quality factor for WASP-4 of
 \begin{equation}
 	Q_\star' \approx 3.3\times10^4. 
 \end{equation}
-For comparison, Jupiter has $Q_{\rm Jup}' \approx 1.4 \times 10^5$,
-based on the motion of the Galilean moons \citep{lainey_strong_2009}.
-For stars, different $Q_\star'$ values have been estimated in
-different contexts.  Studies of the observed eccentricity distribution
-in stellar binaries have yielded $10^5 \gtrsim Q_\star' \gtrsim
-10^{7}$ \citep[{\it
+This is rather small.  Jupiter has $Q_{\rm Jup}' \approx 1.4 \times
+10^5$, based on the motion of the Galilean moons
+\citep{lainey_strong_2009}.  For stars, different $Q_\star'$ values have
+been estimated in different contexts.  Studies of the observed
+eccentricity distribution in stellar binaries have yielded $10^5 \gtrsim
+Q_\star' \gtrsim 10^{7}$ \citep[{\it
 e.g.},][]{meibom_robust_2005,belczynski_compact_2008,
 geller_direct_2013,milliman_wiyn_2014}.  However the dissipation rates
 may be different in hot Jupiter systems, since the tidal forcing
 frequencies and amplitudes are different.  In fact, for the observed
-population of hot Jupiters, \citet{penev_constraining_2012} argued
-that $Q_\star' > 10^7$ would be required at some phase of hot Jupiter
+population of hot Jupiters, \citet{penev_constraining_2012} argued that
+$Q_\star' > 10^7$ would be required at some phase of hot Jupiter
 evolution at the 99\% level, or else the observed population would not
 exist (though \citealt{birkby_wts-2_2014} point out more efficient
 dissipation would be allowed if the hot Jupiters arrived later).
-Developing a generative model for the orbital separation distribution
-of the hot Jupiter population, \citet{cameron_hierarchical_2018}
-similarly found $10^7 \gtrsim Q_\star' \gtrsim 10^8$.
+Developing a generative model for the orbital separation distribution of
+the hot Jupiter population, \citet{cameron_hierarchical_2018} similarly
+found $10^7 \gtrsim Q_\star' \gtrsim 10^8$.
 
 Using an empirical approach, \citet{penev_empirical_2018} reported a
 $Q_\star'$ measurement for WASP-4.  In earlier work,
@@ -898,21 +861,20 @@ continue to vary.  Such an analysis is beyond the scope of this study.
 In short, if the observed period change is caused entirely by tidal
 decay, it would imply a tidal dissipation efficiency stronger than
 typical orbit-averaged predictions.  It might be possible that we are
-observing at a special time, when the planet is near resonance with
-the star's fluid response, and the energy dissipation is exceptionally
-large \citep{ogilvie_tidal_2014,essick_orbital_2016}.  Tidal
-dissipation rates might also be increased if the star is turning off
-the main sequence.  WASP-4 shows little evidence for this, so it is
-unclear that tidal decay is a well-motivated explanation for its
-changing period.
+observing at a special time, when the planet is near resonance with the
+some stellar oscillation mode, and the energy dissipation is
+exceptionally large \citep{ogilvie_tidal_2014,essick_orbital_2016}.
+Tidal dissipation rates might also be increased if the star is turning
+off the main sequence.  WASP-4 shows little evidence for this; it is
+unclear that tidal decay could explain its changing period.
 
 
 \subsection{Apsidal precession}
 \label{sec:apsidal_precession}
 
-Let us instead assume that the entire timing variation can be
-explained as being a portion of an apsidal precession cycle.
-The required orbital eccentricity is then
+Let us instead assume that the entire timing variation can be explained
+as being a portion of an apsidal precession cycle.  The required orbital
+eccentricity is then
 \begin{equation}
   e = (1.6^{+1.5}_{-0.7})\times10^{-3},
 \end{equation}
@@ -920,42 +882,41 @@ and the line of apsides is advancing by
 \begin{equation}
   \dot{\omega} = 14.8^{+5.4}_{-3.8}\ {\rm degrees}\,{\rm yr}^{-1}.
 \end{equation}
-One full precession period would thus take roughly 24 years, about
-twice the current observing baseline.
+One full precession period would take about 24 years, or twice the
+current observing baseline.
 
-\citet{ragozzine_probing_2009} calculated apsidal precession periods
-for hot Jupiters ranging between of order 10 and 100 years.  They
-highlighted that for many hot Jupiters, including WASP-4b, over 90\%
-of the apsidal precession comes from the tidal bulge of the planet.
+\citet{ragozzine_probing_2009} calculated apsidal precession periods for
+hot Jupiters ranging between of order 10 and 100 years.  They
+highlighted that for many hot Jupiters, including WASP-4b, over 90\% of
+the apsidal precession comes from the tidal bulge of the planet.
 Precession from general relativity, the planet's rotational bulge, and
-the star's rotational and tidal bulges are all minor contributors.
-\citet{ragozzine_probing_2009} also calcuated that WASP-4b was
-expected to have a relatively short precession period, of 120 years.
+the star's rotational and tidal bulges are minor contributors.
+\citet{ragozzine_probing_2009} also calcuated that WASP-4b was expected
+to have a relatively short precession period, of 120 years.
 
-One implication of the study by \citet{ragozzine_probing_2009} is that
-if the planet has non-zero eccentricity, a measurement of
-$\dot{\omega}$ can be converted into a measurement of the planetary
-Love number, $k_{2,\rm p}$.  Following \citet{ragozzine_probing_2009}
-Equation 14, the implied planetary Love number for WASP-4b is
+\citet{ragozzine_probing_2009} also noted that if the planet has
+non-zero eccentricity, a measurement of $\dot{\omega}$ can be converted
+into a measurement of the planetary Love number, $k_{2,\rm p}$.
+From \citet{ragozzine_probing_2009} Equation 14, the implied
+planetary Love number for WASP-4b is
 \begin{equation}
 k_{2,{\rm p}} = 1.6^{+2.1}_{-1.2}.
 \end{equation}
 For comparison, $k_{2,{\rm Jup}} \approx 0.59$
-(\citealt{wahl_tidal_2016}, though \citealt{ni_empirical_2018} give an
-estimate that is 10\% lower).  A uniform density sphere has $k_2 =
-1.5$.  Our reported uncertainties on $k_{2,{\rm p}}$ are large because
-the eccentricity, reference time, and ${\rm d}\omega/{\rm d}E$ are
-quite correlated, and the measured occultation times only barely
-constrain them (Figure~\ref{fig:future}).
+(\citealt{wahl_tidal_2016}, bug see \citealt{ni_empirical_2018}).  A
+uniform density sphere has $k_2 = 1.5$.  Our reported uncertainties on
+$k_{2,{\rm p}}$ are large because the eccentricity, reference time, and
+${\rm d}\omega/{\rm d}E$ are quite correlated, and the measured
+occultation times only barely constrain them (Figure~\ref{fig:future}).
 
 \subsubsection{Empirical constraints on small eccentricities in hot
 Jupiters}
 
-Could the eccentricity truly be non-zero?  For WASP-4b, the
-eccentricity damping timescale (Equation~\ref{eq:de_dt}) is $\tau_e =
-0.29 (Q_{\rm p}'/10^5) \, {\rm Myr}$.  The system age appears to be
-well over $1\,{\rm Gyr}$ \citep{winn_transit_2009}, so any initial
-eccentricity should have been erased.
+Could the eccentricity truly be non-zero?  For WASP-4b, the eccentricity
+damping timescale (Equation~\ref{eq:de_dt}) is $\tau_e = 0.29 (Q_{\rm
+p}'/10^5) \, {\rm Myr}$.  The system appears to be well over $1\,{\rm
+Gyr}$ \citep{winn_transit_2009} old, so any initial eccentricity should
+have been erased.
 
 The top panel of Figure~\ref{fig:context} compares the expected
 eccentricity damping time of WASP-4b with other transiting giant
@@ -974,15 +935,15 @@ its eccentricity from RVs is $e<0.011$
 
 Occultation timing can provide stronger eccentricity limits than RV
 measurements, but they often come with caveats.  For WASP-4b, the
-strongest limit on its eccentricity comes from the secondary eclipses
-observed by \citet{beerer_secondary_2011}, which led to a $2\sigma$
-upper limit on $| e\cos\omega | $ of 0.0024.
+strongest limit on its eccentricity comes from
+\citet{beerer_secondary_2011}, who observed occultations and derived a
+$2\sigma$ upper limit on $| e\cos\omega | $ of 0.0024.
 % \citet{caceres_ground-based_2011} report $e\cos\omega = 0.0027 \pm
 % 0.0018$.  \citet{zhou_secondary_2015} report a weaker $e\cos\omega =
 % -0.001 \pm 0.003$. 
 Placing eccentricity limits stronger than $e< 10^{-3}$ has only been
-possible for a few hot Jupiters, and often with numerous false-starts.
-HD 189733b, for example, was initially reported to have a very small
+possible for a few hot Jupiters, and with numerous false-starts.
+HD 189733b, for example, was initially reported to have a non-zero
 eccentricty, $e\cos\omega = 0.0010 \pm 0.0002$
 \citep{knutson_map_2007}.  This result was retracted by
 \citet{agol_climate_2010}, who used a larger dataset of 7 Spitzer
@@ -990,71 +951,101 @@ eclipses and found a smaller average offset in the secondary eclipse
 time than \citet{knutson_map_2007}.  \citet{agol_climate_2010} also
 noted that a larger fraction of the planet's observed occultation time
 offset could be explained by detailed modeling of the planetary
-hot-spot, which can change occultation time offsets by up to a few
+hot-spot, which can shift occultation times by up to a few
 minutes \citep{williams_resolving_2006}.  Including an updated
 hot-spot model, \citet{agol_climate_2010} reported a 2$\sigma$ limit
-of $e\cos\omega < 0.00023$, perhaps the strongest eccentricity limit
-yet for a hot Jupiter.  A similar saga occurred for HD 209458b, for
-which \citet{winn_measurement_2005} combined Spitzer secondary
-eclipses with RV data and reported a best-fit eccentricity of
-$e>0.0057$ at 90\% confidence.  They suspected that the data were
-consistent with zero eccentricity, and that the lower bound on $e$ was
-an artifact of imperfect limb-darkening model.  Stronger limits were
-eventually put in place by \citet{crossfield_spitzer_mips_2012}, who
-found $e\cos\omega < 0.0007$ at $2\sigma$.  The final example is
-WASP-12b, for which the discovery RVs and photometry led to a non-zero
-but small eccentricity measurement \citep[][at
-$3\sigma$]{hebb_wasp-12b_2009}.  A prompt ground-based occultation
-measurement by \citet{lopez-morales_day-side_2010} concurred with weak
-statistical significance that a small eccentricity was favored, but
-further follow-up found occultation times consistent with circular
-orbits; $| e\cos\omega| < 0.0040 $
-\citep{campo_orbit_2011,croll_near-infrared_2011}.
+of $e\cos\omega < 0.00023$, perhaps the strongest eccentricity limit yet
+for a hot Jupiter.  A similar saga occurred for HD 209458b, for which
+\citet{winn_measurement_2005} combined Spitzer secondary eclipses with
+RV data and reported a small finite eccentricity.  They suspected that
+the data were consistent with zero eccentricity, and that the lower
+bound on $e$ was an artifact of an imperfect limb-darkening model.
+\citet{crossfield_spitzer_mips_2012} eventually found stronger limited:
+$e\cos\omega < 0.0007$ at $2\sigma$.  The final example is WASP-12b, for
+which the discovery RVs and photometry gave a small finite eccentricity
+measurement \citep[][at $3\sigma$]{hebb_wasp-12b_2009}.  A prompt
+ground-based occultation measurement by
+\citet{lopez-morales_day-side_2010} concurred that a small eccentricity
+was favored with weak statistical significance. Further follow-up found
+occultation times consistent with circular orbits; $| e\cos\omega| <
+0.0040 $ \citep{campo_orbit_2011,croll_near-infrared_2011}.
 
-In summary, empirical constraints on whether hot Jupiters are
-circular at the $e \lesssim 10^{-3}$ level are only present for HD
-189733b and HD 209458b, from occultation timing.  Once the timing
-offsets are of order tens of seconds, eccentricities from occultation
-timing may have systematic uncertainties because of the hot-spot issue
-\citep{williams_resolving_2006,agol_climate_2010}.  With the sole
-exception of WASP-18b, radial velocity measurements have provided
-eccentricity constraints only at the $e > 10^{-2}$ level.  Thus,
-though empirical constraints on the shortest period hot Jupiters are
-typically consistent with circular orbits, they cannot rule out
-eccentricities at the level needed to contextualize WASP-4.
+In summary, empirical constraints on the ellipticity of hot Jupiter
+orbits at the $e \lesssim 10^{-3}$ level are present only for HD 189733b
+and HD 209458b, from occultation timing.  Once the timing offsets are of
+order tens of seconds, eccentricities from occultation timing may have
+systematic uncertainties because of the hot-spot issue
+\citep{williams_resolving_2006,agol_climate_2010}.  With the exception
+of WASP-18b, radial velocity measurements have provided eccentricity
+constraints only at the $e > 10^{-2}$ level.  Empirical cannot rule out
+hot Jupiter eccentricities at the level needed to contextualize WASP-4.
 
 \subsubsection{Theoretical expectations for small eccentricities in hot
 Jupiters}
 
-For lack of empirical data, we now turn to theoretical mechanisms
-that could maintain small eccentricities.
+Lacking empirical data, we now turn to theoretical mechanisms that could
+produce small eccentricities.
 
 \paragraph{Neighboring companion}
-\citet{mardling_long-term_2007} considered the long-term tidal
-evolution of hot Jupiters with companions.  They pointed out that
-although the early phases of the two-planet eccentricity evolution
-would typically occur over millions of years, the final phase of the
-joint eccentricity evolution towards circularity would often occur on
-timescales several orders of magnitude longer than the circularization
-time (see their Figures~4 and 5).  The companion in their model is
-coplanar, and can have a mass down to an Earth-mass; the main
-requirement is that both the hot Jupiter and the outer companion start
-on eccentric orbits.
+\citet{mardling_long-term_2007} considered the long-term tidal evolution
+of hot Jupiters with companions.  They pointed out that although the
+early phases of the two-planet eccentricity evolution would occur
+quickly, the final phase of the joint eccentricity evolution towards
+circularity would often occur on timescales several orders of magnitude
+longer than the circularization time (see their Figures~4 and 5).  The
+companion in their model is coplanar, and can have a mass down to an
+Earth-mass; the main requirement is that both the hot Jupiter and the
+outer companion start on eccentric orbits.
 
 Another mechanism to excite the hot Jupiter's eccentricity is the
 Kozai-Lidov mechanism \citep{lidov_evolution_1962,kozai_secular_1962}.
-In this case, the orbital plane of the companion would need to be
-inclined relative to that of the hot Jupiter by at least $\sin^{-1}
-\sqrt{2/5} \approx 39^\circ$.
+In this case, the orbital plane of the outer companion, ``c'', would
+need to be inclined relative to that of the hot Jupiter, ``b'', by at
+least $\sin^{-1} \sqrt{2/5} \approx 39^\circ$.
 \citet{bailey_understanding_2019} point out how the joint requirements
 of Kozai-Lidov oscillations with a non-detection of an additional RV
-signal can be combined to produce lower and upper limits on the outer
-companion's mass and the semimajor axis ratio, $a_{\rm c}/a_{\rm b}$.
-For WASP-4, ...
-% TODO: check this mechanism
-% FIXME: take a look at RVs. rule this out, or understand where the
-% bounds are.
-
+signal can be combined to produce lower and upper limits on the
+companion's mass.  For the Kozai-Lidov mechanism to operate, from
+\citet{bailey_understanding_2019} Equation 20 we need
+\begin{equation}
+  M_{\rm c} > 7.7\,M_\oplus
+  \times \left( \frac{a_{\rm c}}{a_{\rm b}} \right)^{3/2},
+  \label{eq:kozai_bound}
+\end{equation}
+where $M_{\rm b,c}$ and $a_{\rm b,c}$ are the mass and semi-major axis
+of WASP-4b and the hypothetical WASP-4c, and we have assumed $k_{2,{\rm
+b}}\approx 0.6$, for $k_{2,{\rm b}}$ WASP-4b's Love number.  For the RV
+signal of the companion to remain undetected, it would need to be in the
+residual $(O-C)_{\rm RV} = 15.2\,{\rm m s}^{-1}$ reported by
+\citet{triaud_spin-orbit_2010}.  Again following
+\citet{bailey_understanding_2019}, this implies
+\begin{align}
+  M_{\rm c} &<
+  (O-C)_{\rm RV}
+  \left( \frac{M_\star a_b}{G} \right)^{1/2}
+  \left( \frac{a_c}{a_b} \right)^{1/2}
+  f^{-1/2}
+  \nonumber
+  \\
+  &< 
+  24.2\,M_\oplus
+  \times 
+  \left( \frac{a_c}{a_b} \right)^{1/2}
+  f^{-1/2},
+  \label{eq:rv_bound}
+\end{align}
+for $f(e_{\rm c},\omega_{\rm c}, i_{\rm c}) \propto sin^2 i_{\rm c}$ a
+geometric prefactor that depends on the argument of periastron and
+inclination of the exterior companion
+(\citealt{bailey_understanding_2019} Equation 23).  Since WASP-4b
+transits along the line of sight, $f$ can be arbitrarily small, and both
+of the preceding limits can be easily satisfied.  While the mechanism
+could produce the needed eccentricity, it would be more satifying if
+long-term radial velocity monitoring showed an additional planet in the
+system.  The chances of one existing with a mass between 1-13\,$M_{\rm
+Jup}$ and orbital semi-major axis between 1-20\,AU is about 50\%, and a
+linear trend is currently present at $\sim 2\sigma$
+\citep{knutson_friends_2014}.
 
 \paragraph{Fluctuations in the gravitational potential from convection}
 A separate mechanism that might produce the eccentricity is simply
@@ -1075,7 +1066,7 @@ to never have exactly zero eccentricity.  In particular, from
 \end{equation}
 for $L$ the stellar luminosity, $R_{\rm conv}$ ($M_{\rm conv}$) the
 width (mass) of the convective region,  $\mu$ the reduced mass, $n$
-the orbital frequency, and $a$ the semimajor axis.  For WASP-4,
+the orbital frequency, and $a$ the semi-major axis.  For WASP-4,
 convection in the star is more important than convection in the
 planet, and $\langle e^2 \rangle^{1/2} < 10^{-5}$.
 
@@ -1180,18 +1171,20 @@ the possible causes.
 
 If TESS continues observing after its primary mission, it will observe
 additional transits of WASP-4b in the early 2020s
-(Figure~\ref{fig:future}).  In order to rule between orbital decay and
-apsidal precession, occultation measurements in the near term, and
-also in the mid-2020s, will be helpful.  However it may take up to a
-decade to firmly distinguish the two models, through the combination
-of transit and occultation measurements.  These observations should be
-carried out, because they will lead to new knowledge; either a measure
-of the efficiency of tidal dissipation within the star, or the
-eccentricity and Love number of the planet.  Measuring either for a
-single system would be rather interesting.  In the coming decade,
-wide-field photometric surveys (TESS, HATPI, NGTS, PLATO) might even
-enable such measurements at a population level, which would be a good
-deal more interesting.
+(Figure~\ref{fig:future}).  High-precision ground-based transit
+measurements could also be useful.  In order to rule between orbital
+decay and apsidal precession, occultation measurements in the near term,
+and also in the mid-2020s, will be helpful.  Additionally, confirmation
+and extension of the linear trend suggested by
+\citet{knutson_friends_2014} would help in understanding whether an
+exterior companion in the system might explain any residual
+eccentricity.  These observations should be carried out, because they
+will lead to new knowledge; either a measure of the efficiency of tidal
+dissipation within the star, or the eccentricity and Love number of the
+planet.  Measuring either for a single system would be rather
+interesting.  In the coming decade, wide-field photometric surveys
+(TESS, HATPI, NGTS, PLATO) might even enable such measurements at a
+population level, which would be a good deal more interesting.
 
 
 %Detailed modeling of the star's interior
