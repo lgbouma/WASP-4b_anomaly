@@ -19,4 +19,20 @@
 - update the text with the corrected tau_e timescale. (Section 4.2,
   apsidal precession discussion)
 
+- add new coauthors
+  - T. Daylan
+  - K. Stassun
+  - S. Kane
+
+- in Kozai-Lidov subsection, add the bit you get for free.
+
+- add a simple calculation of the RV O-C limit you get for free from Triaud et
+  al 2010.
+
+- discussion: apsidal precession subsection:
+  - look into RVs to see what the residual variance is once the
+    WASP-4b model is subtracted out.
+  X do the RV data rule out a 2:1 MMR?
+  - what are limits on the outer planet, if there is one?
+
 

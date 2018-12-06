@@ -1,14 +1,10 @@
 MOST PRESSING
 ----------
 
-* discussion: apsidal precession subsection:
+* look into Stassun's stellar analysis
 
-  * look into RVs to see what the residual variance is once the
-    WASP-4b model is subtracted out.
-
-  * do the RV data rule out a 2:1 MMR?
-
-  * what are limits on the outer planet, if there is one?
+* Kane/Tansu: working out the O-C residuals for the Pdot model, to understand
+  that limit more carefully.
 
 * once the above two things are done: go thru text, identify where
   quality needs to be improved.
@@ -18,6 +14,12 @@ MOST PRESSING
   * then cut to meet the ApJL requirement.
 
 * do we want "media coverage", thru the media office?
+
+* we should maybe get some HIRES RV observations, to extend the linear trend
+  pointed out by Knutson et al 2014. i don't think new ones have been taken in
+  a while.  (a planet should be there...)
+
+  * ... is WASP-4 up soon from Hawaii?
 
 
 OTHER READING
