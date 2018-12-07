@@ -34,13 +34,6 @@ Bailey, A., \& Goodman, J. 2019,
   \href{http://dx.doi.org/10.1093/mnras/sty2805}{\JournalTitle{Monthly Notices
   of the Royal Astronomical Society}, 482, 1872}
 
-\bibitem[{Barnes {et~al.}(2016)Barnes, Weingrill, Fritzewski, Strassmeier, \&
-  Platais}]{barnes_rotation_2016}
-Barnes, S.~A., Weingrill, J., Fritzewski, D., Strassmeier, K.~G., \& Platais,
-  I. 2016,
-  \href{http://dx.doi.org/10.3847/0004-637X/823/1/16}{\JournalTitle{The
-  Astrophysical Journal}, 823, 16}
-
 \bibitem[{Batygin {et~al.}(2009)Batygin, Bodenheimer, \&
   Laughlin}]{batygin_determination_2009}
 Batygin, K., Bodenheimer, P., \& Laughlin, G. 2009,
@@ -63,16 +56,6 @@ Belczynski, K., Kalogera, V., Rasio, F.~A., {et~al.} 2008,
 \bibitem[{Bhatti {et~al.}(2018)Bhatti, Bouma, \&
   Wallace}]{bhatti_astrobase_2018}
 Bhatti, W., Bouma, L.~G., \& Wallace, J. 2018, \texttt{astrobase}
-
-\bibitem[{Birkby {et~al.}(2014)Birkby, Cappetta, Cruz, Koppenhoefer, Ivanyuk,
-  Mustill, Hodgkin, Pinfield, Sipőcz, Kovács, Saglia, Pavlenko, Barrado,
-  Bayo, Campbell, Catalan, Fossati, Gálvez-Ortiz, Kenworthy, Lillo-Box,
-  Martín, Mislis, de~Mooij, Nefs, Snellen, Stoev, Zendejas, del Burgo, Barnes,
-  Goulding, Haswell, Kuznetsov, Lodieu, Murgas, Palle, Solano, Steele, \&
-  Tata}]{birkby_wts-2_2014}
-Birkby, J.~L., Cappetta, M., Cruz, P., {et~al.} 2014,
-  \href{http://dx.doi.org/10.1093/mnras/stu343}{\JournalTitle{Monthly Notices
-  of the Royal Astronomical Society}, 440, 1470}
 
 \bibitem[{Bonomo {et~al.}(2017)Bonomo, Desidera, Benatti, Borsa, Crespi,
   Damasso, Lanza, Sozzetti, Lodato, Marzari, Boccato, Claudi, Cosentino,
@@ -108,13 +91,6 @@ Campo, C.~J., Harrington, J., Hardy, R.~A., {et~al.} 2011,
 Carter, J.~A., Yee, J.~C., Eastman, J., Gaudi, B.~S., \& Winn, J.~N. 2008,
   \href{http://iopscience.iop.org/0004-637X/689/1/499}{\JournalTitle{The
   Astrophysical Journal}, 689, 499}
-
-\bibitem[{Charbonneau {et~al.}(2005)Charbonneau, Allen, Megeath, Torres,
-  Alonso, Brown, Gilliland, Latham, Mandushev, O'Donovan, \&
-  Sozzetti}]{charbonneau_detection_2005}
-Charbonneau, D., Allen, L.~E., Megeath, S.~T., {et~al.} 2005,
-  \href{http://dx.doi.org/10.1086/429991}{\JournalTitle{The Astrophysical
-  Journal}, 626, 523}
 
 \bibitem[{Ciceri {et~al.}(2016)Ciceri, Mancini, Southworth, Lendl,
   Tregloan-Reed, Brahm, Chen, D'Ago, Dominik, Figuera~Jaimes, Galianni,
@@ -813,23 +789,19 @@ Sanchis-Ojeda, R., Winn, J.~N., Holman, M.~J., {et~al.} 2011,
   \href{http://dx.doi.org/10.1088/0004-637X/733/2/127}{\JournalTitle{The
   Astrophysical Journal}, 733, 127}
 
-\bibitem[{Schatzman(1962)}]{schatzman_theory_1962}
-Schatzman, E. 1962,
-  \href{http://adsabs.harvard.edu/abs/1962AnAp...25...18S}{\JournalTitle{Annales
-  d'Astrophysique}, 25, 18}
-
 \bibitem[{Schwarzschild(1958)}]{schwarzschild_structure_1958}
 Schwarzschild, M. 1958, Structure and evolution of the stars (Princeton
   Univesity Press), {Ch.} 18
+
+\bibitem[{Seager \& Mall\'en-Ornelas(2003)}]{seager_unique_2003}
+Seager, S., \& Mall\'en-Ornelas, G. 2003,
+  \href{http://dx.doi.org/10.1086/346105}{\JournalTitle{The Astrophysical
+  Journal}, 585, 1038}
 
 \bibitem[{Shklovskii(1970)}]{shklovskii_possible_1970}
 Shklovskii, I.~S. 1970,
   \href{http://adsabs.harvard.edu/abs/1970SvA....13..562S}{\JournalTitle{Soviet
   Astronomy}, 13, 562}
-
-\bibitem[{Skumanich(1972)}]{skumanich_time_1972}
-Skumanich, A. 1972, \href{http://dx.doi.org/10.1086/151310}{\JournalTitle{The
-  Astrophysical Journal}, 171, 565}
 
 \bibitem[{Smith {et~al.}(2017{\natexlab{a}})Smith, Morris, Jenkins, Bryson,
   Caldwell, \& Girouard}]{smith_kepler_apertures_2017}
@@ -861,6 +833,17 @@ Southworth, J. 2011,
 Southworth, J., Hinse, T.~C., J{\o}rgensen, U.~G., {et~al.} 2009,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2009.14767.x}{\JournalTitle{Monthly
   Notices of the Royal Astronomical Society}, 396, 1023}
+
+\bibitem[{Stassun {et~al.}(2017)Stassun, Collins, \&
+  Gaudi}]{stassun_accurate_2017}
+Stassun, K.~G., Collins, K.~A., \& Gaudi, B.~S. 2017,
+  \href{http://dx.doi.org/10.3847/1538-3881/aa5df3}{\JournalTitle{The
+  Astronomical Journal}, 153, 136}
+
+\bibitem[{Stassun \& Torres(2018)}]{stassun_evidence_2018}
+Stassun, K.~G., \& Torres, G. 2018,
+  \href{http://dx.doi.org/10.3847/1538-4357/aacafc}{\JournalTitle{The
+  Astrophysical Journal}, 862, 61}
 
 \bibitem[{Stassun {et~al.}(2018)Stassun, Oelkers, Pepper, Paegert, Lee, Torres,
   Latham, Charpinet, Dressing, Huber, Kane, {Sébastien Lépine}, Mann,
