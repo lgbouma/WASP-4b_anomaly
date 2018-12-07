@@ -237,6 +237,11 @@ def plot_O_minus_C(
                    - linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1],
                 label='best linear fit', zorder=-3, color='gray')
 
+        a0.text(0.98,0.95, 'Transits', transform=a0.transAxes, color='k',
+                fontsize='medium', va='top', ha='right')
+        a1.text(0.98,0.05, 'Occultations', transform=a1.transAxes, color='k',
+                fontsize='medium', va='bottom', ha='right')
+
         # hidden point for a1 legend
         #a1.plot(1500, 3, alpha=1, mew=0.5,
         #        zorder=-3, label='binned TESS time', markerfacecolor='yellow',

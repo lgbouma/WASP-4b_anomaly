@@ -198,6 +198,7 @@ def plot_hjs():
             zorder=3, linewidth=0
         )
 
+        print(plname, meanerr)
         sigtxt = (
             '$\sigma_{\mathrm{predicted}}$: '+
             '{:.1f} sec'.format(meanerr)

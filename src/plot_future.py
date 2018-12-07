@@ -155,7 +155,7 @@ def plot_future(
     a1.set_ylim(ylim1)
 
     fig.text(0.5,0, xlabel, ha='center')
-    fig.text(-0.025,0.5, ylabel, va='center', rotation=90)
+    fig.text(0,0.5, ylabel, va='center', rotation=90)
 
     fig.tight_layout(h_pad=0, w_pad=0)
     fig.savefig(savpath, bbox_inches='tight', dpi=400)
