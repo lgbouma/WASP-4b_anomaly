@@ -64,4 +64,63 @@ Therefore the obliquity tide explanation also falls short.
 - ask Jean Michel-Desert, and Huitson, if they really do believe their
   midtimes. (this is essential!)
 
+- include J.M. Desert as coauthor
+
+- you've hit the 20-author count. so shift the affiliations elsewhere?
+  not so nice to just move everything to "et al"...
+
+  - basically did it
+
+- make the table (a small one) for your system parameters.
+- update all system parameter table numbers
+- update caption with caveat
+- correct error bar on +/-. they add linearly, not in quadrature.
+  >>> 9.428449720144272 + 5.350645025935923
+  14.779094746080194
+- intro: need to choose your stellar parameters (either Keivan's,
+  or others), and stick with them.
+- look into Stassun's stellar analysis
+  - the empirical Mstar is low. that's somewhat janky...
+    - this was because we didn't use the updated spectroscopic parameters
+  - pick your preferred set of stellar parameters
+  - do the empirical thing?
+    - yes.
+- no. the errors add in quadrature. cf.
+  https://en.wikipedia.org/wiki/Propagation_of_uncertainty#Example_formulas
+
+  >>> ( (9.428449720144272)**2 + (5.350645025935923)**2 )**(1/2)
+  10.8
+
+- run write-up by keivan to see if he finds it acceptable
+  x what is the angular radius?
+  - what is the parallax?
+
+VAGUE IDEAS PERHAPS TO BE INCLUDED IN DISCUSSION
+----------
+
+x what is the expected rotation period?
+
+x when does the radius start changing for this star, based on the
+  best-fit MESA model?
+
+- how solid is the "slightly evolved" interpretation?
+
+x leave the theory tasks -- the state of the stellar evolution, the
+  gyro age and rotation period, etc.  ... FOR THE DISCUSSION.
+
+- tidal discussion: shorten ur discussion of Penev's work.
+
+----------
+- tidal discussion: limit to
+  - equilibrium tide
+  - dynamical tide
+  - obliquity tide
+
+- add text "transits" and "occultations" to the O-C charts
+
+- go thru text, identify where quality needs to be improved.
+  - save current version as a "verbose draft"
+  x then cut to meet the ApJL requirement.
+    - perhaps not. we need this appendix. ApJ it is.
+
 
