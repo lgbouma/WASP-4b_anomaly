@@ -36,12 +36,6 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None):
     model_epoch = np.arange(-1000,3000,1)
     model_tmid = lsfit_t0 + model_epoch*lsfit_period
 
-    # model_tmid_upper = (
-    #     (lsfit_t0+lsfit_t0_err) + model_epoch*(lsfit_period+lsfit_period_err)
-    # )
-    # model_tmid_lower = (
-    #     (lsfit_t0-lsfit_t0_err) + model_epoch*(lsfit_period-lsfit_period_err)
-    # )
     model_tmid_upper = (
         (lsfit_t0) + model_epoch*(lsfit_period+lsfit_period_err)
     )
@@ -50,42 +44,46 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None):
     )
 
     # make the plot
-    fig,ax = plt.subplots(figsize=(4,4))
+    fig,(a0,a1) = plt.subplots(nrows=2,ncols=1,figsize=(4,7))
 
     # transit axis
     cuterr = np.percentile(err_tmid, 50)
     print('showing points with err > {:.2f} seconds as solid'.
           format(cuterr*60))
-    sel_solid = (err_tmid <= cuterr) & (err_tmid*24*60 < 1)
-    sel_seethru = (~sel_solid)  & (err_tmid*24*60 < 1)
 
-    # solid black
-    ax.errorbar(epoch[sel_solid],
-                nparr(tmid - linear_model(
-                    lsfit_t0, lsfit_period, epoch))[sel_solid]*24*60,
-                err_tmid[sel_solid]*24*60,
-                fmt='.k', ecolor='black', zorder=10, alpha=1, mew=1,
-                elinewidth=1,
-                label='$\sigma_{t_{\mathrm{tra}}} \geq \mathrm{median}(\sigma_{t_{\mathrm{tra}}})$')
+    _ix = 0
+    for e, tm, err in zip(epoch,tmid,err_tmid):
+        if _ix == 0:
+            a0.errorbar(e,
+                        nparr(tm - linear_model(
+                            lsfit_t0, lsfit_period, e))*24*60,
+                        err*24*60,
+                        fmt='.k', ecolor='black', zorder=10, mew=0,
+                        ms=6,
+                        elinewidth=1,
+                        alpha= 1-(err/np.max(err_tmid))**(1/2) + 0.1,
+                        label='pre-TESS')
+            _ix += 1
+        else:
+            a0.errorbar(e,
+                        nparr(tm - linear_model(
+                            lsfit_t0, lsfit_period, e))*24*60,
+                        err*24*60,
+                        fmt='.k', ecolor='black', zorder=10, mew=0,
+                        ms=7,
+                        elinewidth=1,
+                        alpha= 1-(err/np.max(err_tmid))**(1/2) + 0.1
+                       )
 
-    # gray
-    ax.errorbar(epoch[sel_seethru],
-                nparr(tmid -
-                      linear_model(lsfit_t0, lsfit_period, epoch))[sel_seethru]*24*60,
-                err_tmid[sel_seethru]*24*60,
-                fmt='.', color='lightgray', ecolor='lightgray',
-                zorder=8,
-                alpha=1, mew=1, elinewidth=1,
-                label='$\sigma_{t_{\mathrm{tra}}} < \mathrm{median}(\sigma_{t_{\mathrm{tra}}})$')
-
-    ax.errorbar(tess_epoch,
-                nparr(tess_tmid -
-                      linear_model(lsfit_t0, lsfit_period, tess_epoch))*24*60,
-                tess_err_tmid*24*60,
-                fmt='sk', ecolor='black', zorder=9, alpha=1, mew=1,
-                ms=3,
-                elinewidth=1,
-                label='TESS observation')
+    for ax in (a0,a1):
+        ax.errorbar(tess_epoch,
+                    nparr(tess_tmid -
+                          linear_model(lsfit_t0, lsfit_period, tess_epoch))*24*60,
+                    tess_err_tmid*24*60,
+                    fmt='sk', ecolor='black', zorder=9, alpha=1, mew=1,
+                    ms=3,
+                    elinewidth=1,
+                    label='TESS')
 
     bin_tess_y = np.average(nparr(
         tess_tmid-linear_model(lsfit_t0, lsfit_period, tess_epoch)),
@@ -101,12 +99,13 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None):
     print('error (plotted, sec): {}'.format(bin_tess_err_tmid*24*60*60))
     bin_tess_x = np.median(tess_epoch)
 
-    ax.errorbar(bin_tess_x, bin_tess_y*24*60, bin_tess_err_tmid*24*60,
-                alpha=1, zorder=11, label='binned TESS',
-                fmt='s', mfc='red', elinewidth=1,
-                ms=3,
-                mec='red',mew=1,
-                ecolor='red')
+    for ax in (a0,a1):
+        ax.errorbar(bin_tess_x, bin_tess_y*24*60, bin_tess_err_tmid*24*60,
+                    alpha=1, zorder=11, label='binned TESS',
+                    fmt='s', mfc='red', elinewidth=1,
+                    ms=3,
+                    mec='red',mew=1,
+                    ecolor='red')
 
     yupper = (
         model_tmid_upper -
@@ -117,23 +116,34 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None):
         linear_model(lsfit_t0, lsfit_period, model_epoch)
     )
 
-    ax.plot(model_epoch, yupper*24*60, color='#1f77b4', zorder=-1, lw=0.5)
-    ax.plot(model_epoch, ylower*24*60, color='#1f77b4', zorder=-1, lw=0.5)
-    l1 = ax.fill_between(model_epoch, ylower*24*60, yupper*24*60, alpha=0.3,
-                         label='literature prediction',
-                         color='#1f77b4', zorder=-2, linewidth=0)
+    for ax in (a0,a1):
+        ax.plot(model_epoch, yupper*24*60, color='#1f77b4', zorder=-1, lw=0.5)
+        ax.plot(model_epoch, ylower*24*60, color='#1f77b4', zorder=-1, lw=0.5)
+        l1 = ax.fill_between(model_epoch, ylower*24*60, yupper*24*60, alpha=0.3,
+                             label='pre-TESS ephemeris',
+                             color='#1f77b4', zorder=-2, linewidth=0)
 
-    ax.legend(loc='best', fontsize='xx-small')
-    ax.set_xlabel('Epoch')
-    ax.set_ylabel('Deviation from predicted transit time [minutes]')
+    a0.legend(loc='best', fontsize='x-small')
+    a1.set_xlabel('Epoch')
+    fig.text(0.,0.5, 'Deviation from predicted transit time [minutes]',
+             va='center', rotation=90)
     if xlim:
-        ax.set_xlim(xlim)
+        a0.set_xlim(xlim)
     if ylim:
-        ax.set_ylim(ylim)
+        a0.set_ylim(ylim)
+    ax.set_xlim((np.floor(bin_tess_x-1.1*len(tess_epoch)/2),
+                 np.ceil(bin_tess_x+1.1*len(tess_epoch)/2)))
 
-    ax.get_yaxis().set_tick_params(which='both', direction='in')
-    ax.get_xaxis().set_tick_params(which='both', direction='in')
-    fig.tight_layout(h_pad=0, w_pad=0)
+    a0.text(0.02,0.98,'All transits',ha='left',
+            va='top',fontsize='medium',transform=a0.transAxes)
+    a1.text(0.98,0.02,'TESS transits',ha='right',
+            va='bottom',fontsize='medium',transform=a1.transAxes)
+
+    for ax in (a0,a1):
+        ax.get_yaxis().set_tick_params(which='both', direction='in')
+        ax.get_xaxis().set_tick_params(which='both', direction='in')
+
+    fig.tight_layout(h_pad=0.02, w_pad=0)
 
     fig.savefig(savpath, bbox_inches='tight', dpi=400)
     print('saved {:s}'.format(savpath))

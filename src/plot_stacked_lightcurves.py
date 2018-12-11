@@ -101,7 +101,7 @@ def plot_stacked_lightcurves(
         a0.set_ylim(ylim)
         a1.set_ylim(ylim)
     a0.set_ylabel('Relative flux')
-    f.text(0.55,0, 'Time from mid-transit [hour]', ha='center')
+    f.text(0.55,0, 'Time from mid-transit [hours]', ha='center')
     for ax in (a0,a1):
         ax.get_yaxis().set_tick_params(which='both', direction='in')
         ax.get_xaxis().set_tick_params(which='both', direction='in')

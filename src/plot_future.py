@@ -61,19 +61,15 @@ def plot_future(
     ################
     # transit axis #
     ################
-    # solid
-    a0.errorbar(tmid.decimalyear[sel_solid],
-                nparr(y-linear_fit(theta_linear, x))[sel_solid],
-                sigma_y[sel_solid],
-                fmt='.k', ecolor='black', zorder=2, alpha=1, mew=1,
-                elinewidth=1)
-
-    # see through
-    a0.errorbar(tmid.decimalyear[sel_seethru],
-                nparr(y-linear_fit(theta_linear, x))[sel_seethru],
-                sigma_y[sel_seethru],
-                fmt='.', color='lightgray', ecolor='lightgray', zorder=1,
-                alpha=1, mew=1, elinewidth=1)
+    for _x, _y, _err, _tmid in zip(x,y,sigma_y,tmid):
+        a0.errorbar(_tmid.decimalyear,
+                    nparr(_y-linear_fit(theta_linear, _x)),
+                    _err,
+                    fmt='.k', ecolor='black', zorder=2, mew=0,
+                    ms=7,
+                    elinewidth=1,
+                    alpha= 1-(_err/np.max(sigma_y))**(1/2) + 0.1
+                   )
 
     # bin TESS points &/or make a subplot
     is_tess = (refs=='me')
@@ -93,15 +89,15 @@ def plot_future(
     a0.plot(tfit.decimalyear,
             quadratic_fit(theta_quadratic, xfit)
                 - linear_fit(theta_linear, xfit),
-            label='best quadratic fit', zorder=-1, c='#1f77b4')
+            label='quadratic fit', zorder=-1, c='#1f77b4')
     a0.plot(tfit.decimalyear,
             precession_fit(theta_prec, xfit)
                 - linear_fit(theta_linear, xfit),
-            label='best precession fit', zorder=0, c='#ff7f0e')
+            label='precession fit', zorder=0, c='#ff7f0e')
     a0.plot(tfit.decimalyear,
             linear_fit(theta_linear, xfit)
                 - linear_fit(theta_linear, xfit),
-            label='best linear fit', zorder=-3, color='gray')
+            label='linear fit', zorder=-3, color='gray')
 
     for theta_quad_sample in theta_quad_samples:
         a0.plot(tfit.decimalyear,

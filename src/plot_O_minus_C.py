@@ -140,21 +140,15 @@ def plot_O_minus_C(
         sel_solid = sigma_y <= cuterr
         sel_seethru = ~sel_solid
 
-        # solid black
-        a0.errorbar(x[sel_solid],
-                    nparr(y-linear_fit(theta_linear, x))[sel_solid],
-                    sigma_y[sel_solid],
-                    fmt='.k', ecolor='black', zorder=2, alpha=1, mew=1,
-                    elinewidth=1,
-                    label='$\sigma_{t_{\mathrm{tra}}} \geq \mathrm{median}(\sigma_{t_{\mathrm{tra}}})$')
-
-        # gray
-        a0.errorbar(x[sel_seethru],
-                    nparr(y-linear_fit(theta_linear, x))[sel_seethru],
-                    sigma_y[sel_seethru],
-                    fmt='.', color='lightgray', ecolor='lightgray', zorder=1,
-                    alpha=1, mew=1, elinewidth=1,
-                    label='$\sigma_{t_{\mathrm{tra}}} < \mathrm{median}(\sigma_{t_{\mathrm{tra}}})$')
+        for e, tm, err in zip(x,y,sigma_y):
+            a0.errorbar(e,
+                        nparr(tm-linear_fit(theta_linear, e)),
+                        err,
+                        fmt='.k', ecolor='black', zorder=10, mew=0,
+                        ms=7,
+                        elinewidth=1,
+                        alpha= 1-(err/np.max(sigma_y))**(1/2) + 0.1
+                       )
 
         # bin TESS points
         is_tess = (refs=='me')
@@ -171,7 +165,7 @@ def plot_O_minus_C(
         print('{:.2f} seconds'.format(bin_tess_sigma_y*60))
 
         a0.plot(bin_tess_x, bin_tess_y, alpha=1, mew=0.5,
-                zorder=8, label='binned TESS', markerfacecolor='yellow',
+                zorder=42, label='binned TESS', markerfacecolor='yellow',
                 markersize=9, marker='*', color='black', lw=0)
 
         if include_all_points:
@@ -227,15 +221,15 @@ def plot_O_minus_C(
         a1.plot(xfit_occ,
                 quadratic_fit(theta_quadratic, xfit, x_occ=xfit_occ)[1]
                    - linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1],
-                label='best quadratic fit', zorder=-1)
+                label='quadratic fit', zorder=-1)
         a1.plot(xfit_occ,
                 precession_fit(theta_prec, xfit, x_occ=xfit_occ)[1]
                     - linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1],
-                label='best precession fit', zorder=-1)
+                label='precession fit', zorder=-1)
         a1.plot(xfit_occ,
                 linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1]
                    - linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1],
-                label='best linear fit', zorder=-3, color='gray')
+                label='linear fit', zorder=-3, color='gray')
 
         a0.text(0.98,0.95, 'Transits', transform=a0.transAxes, color='k',
                 fontsize='medium', va='top', ha='right')
@@ -465,7 +459,7 @@ def main(plname, xlim=None, ylim=None, include_all_points=False, ylim1=None):
         refs,
         savpath=savpath,
         xlabel='Epoch',
-        ylabel='Deviation from constant period [minutes]',
+        ylabel='Deviation from linear fit [minutes]',
         xlim=xlim, ylim=ylim,
         include_all_points=include_all_points,
         x_extra=x_extra, y_extra=y_extra, sigma_y_extra=sigma_y_extra,
