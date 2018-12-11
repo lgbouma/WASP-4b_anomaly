@@ -180,21 +180,28 @@ Earth and red giant Sun also hinges on the efficiency of tidal
 dissipation \citep{rasio_tidal_1996}.
 
 The second process that long-term timing studies should reveal is
-rotation of the orbital ellipse within the orbital plane (apsidal
-precession).  This effect has been studied extensively in eclipsing
-binaries \citep[{\it e.g.},][]{
+apsidal precession, {\it i.e.}, rotation of the orbital ellipse within
+the orbital plane. Apsidal precession has been observed extensively in
+eclipsing binaries \citep[{\it e.g.},][]{
   schwarzschild_structure_1958,torres_accurate_2010,borkovits_eclipse_2015},
-and has been explored theoretically for transiting planets
-\citep{heyl_using_2007,pal_periastron_2008,jordan_observability_2008,ragozzine_probing_2009}.
-However, apsidal precession has yet to be directly observed in hot
-Jupiters, and the orbits would need non-zero eccentricity for it to be
-detectable.  Though the eccentricities of hot Jupiters are expected to
-be small, there are many mechanisms that could pump them away from
-circularity (see \S~\ref{sec:apsidal_precession}, and
-\citealt{bailey_understanding_2019}).  For hot Jupiters, the apsidal
+and has been detected in a handful of exoplanet systems, including
+circumbinary planets (Kepler-413 \citealt{kostov_kepler-413b_2014};
+Kepler-453 \citealt{welsh_kepler_2015}, planets orbiting rapidly
+rotating stars (Kepler-13
+\citealt{szabo_spin-orbit_2012,szabo_mapping_2014,masuda_spin-orbit_2015};
+PTFO 8-8695 \citealt{barnes_measurement_2013}), and systems with
+multiple interacting giant planets (Kepler-108
+\citealt{mills_kepler-108_2017}; Kepler-693
+\citealt{masuda_eccentric_2017}).  Apsidal precession is not regularly
+observed in hot Jupiter systems, perhaps in part because their orbits
+are nearly circular.  However, there are many mechanisms that
+could pump hot Jupiter orbits away from circularity (see
+\S~\ref{sec:apsidal_precession}, and
+\citealt{bailey_understanding_2019}), which would then lead to
+observable timing variations.  For hot Jupiters, the apsidal
 precession is usually dominated by the quadrupolar distortion of the
 planet by the star's tidal force \citep{ragozzine_probing_2009}.  The
-observed precession rate in a hot Jupiter system can thus be used to
+observed precession rate in a hot Jupiter system could thus be used to
 compute the planet's Love number, giving a third parameter along with
 the mass and radius with which to describe the planet's interior
 structure \citep[{\it e.g.},][who performed a similar procedure for
@@ -228,8 +235,8 @@ the WASP-12b timing variations.
 This work focuses on the hot Jupiter WASP-4b, which orbits its host
 star every 1.34 days, at a distance of $a/R_\star = 5.46$
 \citep{wilson_wasp-4b_2008,hoyer_tramos_2013}.  WASP-4b is a plausible
-candidate for orbital decay, in part because it has been frequently
-observed over the past decade.  The host is a G7V dwarf, and is on the
+candidate for orbital decay, and has been
+observed often over the past decade.  The host is a G7V dwarf, and is on the
 main sequence (\S~\ref{sec:system_parameters}).  The orbit is
 consistent with being circular (but see
 \S~\ref{sec:apsidal_precession}), and having sky-projected obliquity
@@ -335,16 +342,21 @@ measurement without being captured by the measurement uncertainties.
         \leavevmode
         \includegraphics[width=0.48\textwidth]{f2.pdf}
     \end{center}
-    \vspace{-0.5cm}
+    \vspace{-0.6cm}
     \caption{
       %TODO: final number
         {\bf TESS saw WASP-4b transit earlier than expected.}
-        Points are differences between observed transit times and the
-        constant-period ephemeris we fit to literature times.  Black
-        points are the more precise half of literature times; gray
-        points are the less precise half.  Blue curves represent the
+        Points are the
+        differences between observed transit times and the
+        pre-TESS ephemeris, plotted against
+        transit number.
+        Blue curves are the
         $\pm 1\sigma$ credible interval around the constant-period
-        ephemeris.  The binned TESS observation (red point) arrived
+        prediction.
+        {\it Top:} The full timing dataset spans 10 years.
+                Less precise points are more transparent.
+        {\it Bottom:}
+        The binned TESS observation (red point) arrived
         $77.8 \pm 10.8\ {\rm seconds}$ before it was expected.
         \label{fig:arrived_early}
     }
@@ -508,14 +520,14 @@ evolution.
     \vspace{-0.5cm}
     \caption{
         {\bf Timing residuals and best-fit models for WASP-4b.}
-        Points are differences between observed transit times and a
-        linear ephemeris fit to all the times.  The constant period
-        model is a poor fit to the observed times (gray line).  Black
-        points are the more precise half of measured times; gray
-        points are the less precise half.  The blue curve is the
-        best-fit model with a constant period derivative.  The orange
-        curve is the best-fit model assuming apsidal precession causes
-        the observed timing deviations. The binned TESS point (star)
+        Points are observed transit times minus a
+        linear fit to all the times.
+        Less precise times are more transparent.
+        The best constant period
+        model is a poor fit to the observations (gray line).
+        The best-fit tidal decay model (blue) and apsidal precession
+        model (orange) can fit the data.
+        The binned TESS point (star)
         is for display purposes only.
         \label{fig:times}
     }
@@ -614,15 +626,19 @@ There are fewer available occultation times.
 using warm Spitzer in the 3.6\,$\mu$m and 4.5\,$\mu$m bands.
 \citet{caceres_ground-based_2011} detected an occultation from the
 ground in the ${\rm K}_{\rm s}$ band, and gave a time in HJD, without
-specifying the time standard.  We correspondingly added $69.184$
-seconds of uncertainty to their reported errors, in quadrature.
+specifying the time standard.  We assumed the standard was UTC, but
+added $32.182 + N$ seconds of uncertainty to the reported errors,
+where $N=35$ is the appropriate number of leap-seconds
+\citep[see][]{eastman_achieving_2010}.
+Though not rigorous, this procedure inflates the error bar to a more
+realistic $\pm$94 seconds.
 %Finally, as previously mentioned, \citet{ranjan_atmospheric_2014}
 %acquired occultation data with HST but kept the epoch as a fixed
 %parameter.
-\citet{zhou_secondary_2015} acquired occultation data from the
-Anglo-Australian Telescope, focusing on the eclipse depth, but also
-fitting for $e\cos\omega$.  We converted their $e\cos\omega$ result
-into a midtime, using their ephemeris and the standard formula
+Finally, \citet{zhou_secondary_2015} acquired occultation data from
+the Anglo-Australian Telescope, focusing on the eclipse depth, but
+also fitting for $e\cos\omega$.  We converted their $e\cos\omega$
+result into a midtime, using their ephemeris and the standard formula
 \citep[{\it e.g.},][]{winn_exoplanet_2010}
 \begin{equation}
   t_{\rm occ}(E) =
@@ -819,17 +835,19 @@ fit the data, but the precession model is statistically disfavored.
 
 The middle panel of Figure~\ref{fig:context} shows the expected
 orbital decay time of WASP-4b compared to other transiting giant
-planets.  Though roughly 20 hot Jupiters might be expected to decay
-faster, some orbit stars with minimal convective zones ({\it e.g.},
-WASP-18), and most are not as well-observed as WASP-4.
+planets.  Though roughly 20 hot Jupiters have shorter predicted decay
+times, most are not as well-observed as WASP-4b. Moreover, some hot
+Jupiters, {\it e.g.}, WASP-18b, orbit fully radiative stars, which may
+dissipate tidal energy less efficiently than stars that are partially
+convective.
 
 For the sake of argument, let us assume that the timing variation is
-caused entirely by orbital decay.  If the period continues to decrease
-at a fixed rate, it will reach zero after
+caused entirely by orbital decay.  If the period decreases
+at a fixed rate, then it will reach zero after
 \begin{equation}
   \frac{P}{ \dot{P} } = 9.6 \, {\rm Myr}.
 \end{equation}
-For comparison, the ``survival time'' found by \citet{patra_2017} for
+For comparison, the survival time found by \citet{patra_2017} for
 WASP-12b was 3.2\,Myr.
 
 Let us assume further that the ``constant phase lag'' model for tidal
@@ -843,12 +861,12 @@ which is smaller when the star's density distribution is more
 centrally concentrated. $Q_\star$ is the ratio of the energy stored in
 the equilibrium deformation of the star, divided by the energy lost to
 heat per tidal period \citep[{\it e.g.},][]{goldreich_q_1966}.  A
-larger $Q_\star$ implies less efficient dissipiation.  Though the
-fluid mechanics responsible for the dissipation should depend on the
-amplitude and frequency of the tidal perturbation
+larger $Q_\star$ implies less efficient tidal dissipiation.  Though
+the fluid mechanics responsible for the dissipation should depend on
+the amplitude and frequency of the tidal perturbation
 \citep[][Section~3.3]{ogilvie_tidal_2014}, we will treat $Q_\star'$ as
 a constant.  This should not be taken literally; $Q_\star'$ may in
-fact change sharply with varying tidal frequency
+fact change sharply as the tidal frequency changes
 \citep{penev_empirical_2018}.
 
 If the planet's spin and orbit are synchronized, the star is slowly
@@ -878,8 +896,8 @@ The orbital period evolves as
             \left(\frac{M_{\rm p}}{M_\star}\right)
             \left(\frac{R_\star}{a}\right)^5.
 \end{equation}
-Using the observed value of $\dot{P}$, the current modified quality
-factor of WASP-4 would be
+The modified quality factor of WASP-4 corresponding to the observed
+value of $\dot{P}$ would then be
 \begin{equation}
 	Q_\star' \approx 3.3\times10^4. 
 \end{equation}
@@ -888,10 +906,10 @@ This is rather small.  Jupiter has $Q_{\rm Jup}' \approx 1.4 \times
 \citep{lainey_strong_2009}.  For stars, studies of the binary
 eccentricity distribution have yielded $Q_\star' \approx 10^5 - 10^7$
 \citep[{\it e.g.},][]{meibom_robust_2005,belczynski_compact_2008,
-geller_direct_2013,milliman_wiyn_2014}.  However the dissipation rates
-may differ in hot Jupiter systems, since the tidal forcing frequencies
-and amplitudes are different.  Observationally-driven studies of hot
-Jupiter systems have found $Q_\star' \approx 10^5 - 10^8$, often using
+geller_direct_2013,milliman_wiyn_2014}.  The dissipation rates may
+differ in hot Jupiter systems, since the tidal forcing frequencies and
+amplitudes are different.  Observationally-driven studies of hot
+Jupiter systems have found $Q_\star' \approx 10^5 - 10^8$, from quite
 different models
 \citep{jackson_observational_2009,hansen_calibration_2010,penev_constraining_2012,penev_empirical_2018,cameron_hierarchical_2018}.
 For instance, motivated by the rapid rotation of some hot Jupiter
@@ -937,20 +955,20 @@ value we infer from the apparent period change.
 % decaying orbit would imply.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-A theoretically-motivated model for tidal dissipation was proposed by
-\citet{essick_orbital_2016}, who considered the nonlinear response of
-the star to a coupled network of gravity modes excited at the base of
-the convective zone, and braking near the stellar core.  In their
+\citet{essick_orbital_2016} proposed a theoretically-motivated tidal
+dissipation model , in which a coupled network of gravity modes would
+be excited at the base of the stellar convective zone, and would brake
+near the stellar core to provide the needed dissipation.  In their
 approach, the stellar quality factors in hot Jupiter systems vary from
-$Q_\star' \approx 10^5 - 10^6$.  Using their Equation 26, the
-prediction for WASP-4 is $Q_\star' = 7\times10^5$.  This is an order
-of magnitude larger than implied by the observed period change.
+$Q_\star' \approx 10^5 - 10^6$.  From their Equation 26, the predicted
+quality factor for WASP-4 is $Q_\star' = 7\times10^5$.  This is an
+order of magnitude larger than implied by the observed period change.
 
 The applicability of the \citet{essick_orbital_2016} model depends on
 the evolutionary state of the star.  The bottom panel of
-Figure~\ref{fig:context} shows WASP-4 in the context of other giant
-planet hosts from the \citet{bonomo_gaps_2017} sample.  On the y-axis
-is $G=g-\mu$, for $g$ the apparent Gaia-band magnitude, and $\mu$ the
+Figure~\ref{fig:context} shows WASP-4 in the context of giant planet
+hosts from the \citet{bonomo_gaps_2017} sample.  On the y-axis is
+$G=g-\mu$, for $g$ the apparent Gaia-band magnitude, and $\mu$ the
 distance modulus reported by \citet{gaia_collaboration_gaia_2018}.
 The x-axis is the effective temperature from \citet{bonomo_gaps_2017},
 which for WASP-4 agrees within $1\sigma$ of that from Table~2.
@@ -967,16 +985,19 @@ evolved, in agreement with our analysis from
 % the scope of this study.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In short, if the observed period change is caused entirely by tidal
+In summary, if the observed period change is caused entirely by tidal
 decay, it would imply a tidal dissipation efficiency stronger than
 most predictions.  It might be possible that we are observing at a
 special time, shortly after the planet's inward migration, or when the
-planet is near resonance with a stellar oscillation mode
-\citep{ogilvie_tidal_2014,essick_orbital_2016}.  Tidal dissipation
-rates might also be increased if the star is turning off the main
-sequence.  All of these explanations are strained; it is unclear that
-tidal decay could explain the observed timing variations without
-fine-tuning.
+planet is near resonance with a stellar oscillation mode.  Tidal
+dissipation rates might also be increased if the star is turning off
+the main sequence.  A final possibility is that an exterior planet
+could be trapping WASP-4b's spin vector in a high-obliquity state,
+causing planetary obliquity tides as suggested for WASP-12b
+\citep{millholland_obliquity_2018}.  For now, all of these
+explanations seem strained; it is unclear that tidal decay can explain
+the observed timing variations by any mechanism that we have
+considered.
 
 
 \subsection{Apsidal precession}
@@ -1281,8 +1302,8 @@ interpretation.
 	\end{center}
   \vspace{-0.5cm}
 	\caption{
-		{\bf Pecise long-term monitoring past 2025 will likely be needed to
-	    understand WASP-4b.}
+		{\bf Further observations will be needed to
+	    confirm and understand the timing variations of WASP-4b.}
 		Dots are as in Figure~\ref{fig:times}.
 		Lines are 100 random draws from the posteriors of the apsidal
 		precession model (orange), and the orbital decay model (blue).    
