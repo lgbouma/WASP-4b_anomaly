@@ -123,4 +123,84 @@ x leave the theory tasks -- the state of the stellar evolution, the
   x then cut to meet the ApJL requirement.
     - perhaps not. we need this appendix. ApJ it is.
 
+- Spin-orbit precession from stellar quadrupole was inferred from transit shape
+  and duration variations in Kepler-13 (Szabo+ 2012, 2014, Masuda+ 2015).
+  In particular from Masuda+ 2015:
+  "...our analysis confirms that the observed TDVs are actually due to the
+  variation in cos iorb, further supporting the precession scenario with the
+  more realistic model of the asymmetric transit light curve."
+  They got the stellar J2 from this.
+  "This variation is consistent with the precession of the stellar spin and
+  orbital angular momenta around the total angular momentum of the system,
+  induced by the oblateness of the rapidly rotating host star."
+
+- Same story for PTFO 8-8695, studied by Barnes et al (2013), 
+
+- Mills 2017, in his thesis, discussing Kepler 108.
+
+- From Masuda (2017):
+"However, there has been no direct measurement of a large orbital misalignment
+between WJs and their outer companions such that it might induce a large
+eccentricity oscillation, partly because these systems are mostly detected with
+the radial velocity (RV) technique, which yields no information on the orbital
+direction. Notable exceptions include the Kepler-419 system (Dawson et al.
+2014) and the doubly transiting giant-planet system Kepler-108 (Mills &
+Fabrycky 2017), where the mutual inclinations were constrained via dynamical
+modeling of transit timing and duration variations (TTVs and TDVs), although
+their mutual inclinations are likely too small to drive secular eccentricity
+oscillations."
+
+- "In particular, I confirm a large mutual orbital inclination between the inner
+WJ and the companion in the latter system, which can induce a large amplitude
+of the eccentricity oscillation and the tidal shrinkage of the inner orbit
+(Section 6)—exactly as predicted in the “slow Kozai” scenario by a close
+companion. The companions’ properties, however, are not fully compatible with
+such migration starting from beyond the snow line. Thus I also assess the
+possibility of in situ formation (Section 6.3)."
+
+- Kane quotes gammadot = -0.0191 +/- 0.0068 m/s/day.
+  Knutson quotes gammadot = -0.0099 +/- 0.0052 m/s/day.
+
+  the error on the difference (quadrature sum) is 0.0086 m /s / day.
+
+  the difference is
+  kane - knutson =  -0.0092 +/- 0.0086 m/s/day.
+
+  the 2 sigma limit from kane value is
+
+  gammadot = -0.0191 - 2*0.0069 = -0.0329
+
+  * is this to be believed? probably not, but let's find out.
+
+  This is a factor of 1.56x greater than before, and since the Pdot goes
+  linearly, while we formerly had 9e-11, this would mean doppler Pdot < 1.41e-10.
+
+  So this would mean at most one third of the Pdot could be from doppler.
+
+  Uncomfortable.
+
+x Precessing orbital planes were observed in CBPs:
+  Kepler 413, precession period 11 years (Kostov+ 2014)
+  Kepler 453, precession period ~103 years (Welsh+ 2015)
+
+- draft off to JNW.
+
+
+  * Kane: what does his independent RV analysis turn up?
+
+
+==========================================
+Tue 11 Dec 2018 01:20:37 PM EST
+
+- include Keivan's broadband photometry sentence.
+
+- double-check all the literature times.
+  - verify you correctly copied in the Hoyer+ 2013 times.
+    - i double checked by reading the tables, and my spreadsheet.
+
+  - collect the individual times that Hoyer collected yourself.
+
+  - rerun Eastman conversion on the above times. Does anything change?
+    - answer: no.
+
 
