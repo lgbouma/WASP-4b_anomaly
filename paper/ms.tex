@@ -124,24 +124,25 @@ Astrophysics Laboratory (Code 667), Greenbelt, MD 20771, USA}
 
 \begin{abstract}
   %TODO: final numbers
-  By combining data from the Transiting Exoplanet Survey Satellite (TESS)
-  with data from previous studies, we show that the transit times of WASP-4b are
-  incompatible with a constant orbital period.  The
-  transits observed by TESS occurred $77.8 \pm 10.8$~seconds earlier than one would expect, based on the previous data.
-  The orbital period appears to be shrinking by $\dot{P}=-12.1 \pm 1.2$
-  milliseconds per year.   A simple clock offset is unlikely, because TESS observations of other
-  hot Jupiter (WASP-6b, 18b, and 46b) are compatible with a constant period and rule out
-  a 77.8-second offset at the 6.3$\sigma$ level.
-  The timing variations seem to be astrophysical,
-  and could be caused by apsidal precession, or perhaps by tidal
-  decay.  The latter seems implausible on theoretical grounds, as it
-  would require a stellar quality factor $Q_\star' \approx
-  3\times10^4$.  Apsidal precession would imply an eccentricity
-  $e\approx1.6\times 10^{-3}$, and the possibility of measuring the
-  planet's Love number.  A Doppler shift from WASP-4's acceleration
-  towards us could account for at most one quarter of the observed
-  period change (at $2\sigma$).  Further observations will help
-  confirm the reality of the timing variation, and eventually
+  By combining data from the Transiting Exoplanet Survey Satellite
+  (TESS) with data from previous studies, we show that the transit
+  times of WASP-4b are incompatible with a constant orbital period.
+  The transits observed by TESS occurred $77.8 \pm 10.8$~seconds
+  earlier than one would expect, based on the previous data.  The
+  orbital period appears to be shrinking by $\dot{P}=-12.1 \pm 1.2$
+  milliseconds per year.   A simple clock offset is unlikely, because
+  TESS observations of other hot Jupiters (WASP-6b, 18b, and 46b) are
+  compatible with a constant period and rule out a 77.8-second offset
+  at the 6.3$\sigma$ level.  The timing variations seem to be
+  astrophysical, and could be caused by apsidal precession, or perhaps
+  by tidal decay.  The latter seems implausible on theoretical
+  grounds, as it would require a stellar quality factor $Q_\star'
+  \approx 3\times10^4$.  Apsidal precession would imply an
+  eccentricity $e\approx1.6\times 10^{-3}$, and the possibility of
+  measuring the planet's Love number.  A Doppler shift from WASP-4's
+  acceleration towards us could account for at most one quarter of the
+  observed period change (at $2\sigma$).  Further observations will
+  help confirm the reality of the timing variation, and eventually
   determine its cause.
 \end{abstract}
 
@@ -365,7 +366,7 @@ measurement without being captured by the measurement uncertainties.
 Using the cleaned PDC lightcurve, we ran Box Least Squares (BLS) to
 estimate the transit epoch, period, and duration
 \citep{kovacs_box-fitting_2002}.  Using these parameters, we isolated
-each transit to within $\pm$10 transit durations of its midtime.  In
+each transit to within $\pm$5 transit durations of its midtime.  In
 each transit window, we then simultaneously fit for a model transit,
 plus a local linear trend.  Our transit model uses the analytic
 formulae calculated by \citet{mandel_analytic_2002} and implemented by
@@ -378,7 +379,7 @@ and the slope and intercept of the line.
 % estimates for $t_{\rm tra}$ and $R_{\rm p}/R_\star$, and on a slope
 % of zero and an intercept of unity for the line.
 We fixed the remaining transit parameters as follows.  We set the
-eccentricity to zero, and the longitude of periastron to $\pi/2$.  We
+eccentricity to zero. We
 assumed a quadratic limb-darkening law, with coefficients interpolated
 from the \citet{claret_limb_2017} tables.  For the period,
 $a/R_\star$, and inclination, we adopted the values
@@ -395,7 +396,7 @@ sampled over the posterior using the algorithm proposed by
 % During this process, we used the \texttt{corner} software to check
 % that our posteriors were being well-sampled~\citep{corner_2016}.
 After completing an initial fit, we set the photometric error bars to
-be equal to the standard deviation of the in-transit points of the
+be equal to the standard deviation of the out-of-transit points of the
 residual lightcurve.  We then reperformed the fitting procedure, using
 the empirically determined photometric errors.
 
@@ -415,7 +416,7 @@ planet to star radius ratio, we find $R_{\rm
 p}/R_\star=0.1538\pm0.0013$, in agreement with previous determinations
 \citep{wilson_wasp-4b_2008,gillon_improved_2009,winn_transit_2009,southworth_high-precision_2009}.
 Binning the residuals to 1-hour windows and taking the median absolute
-deviation, the lightcurves have a MAD of $594\,{\rm ppm}\,{\rm
+deviation, the lightcurves have an RMS of $586\,{\rm ppm}\,{\rm
 hr}^{1/2}$.  The predicted\footnote{\url{github.com/lgbouma/tnm}}
 photon-counting noise is $410\,{\rm ppm}\,{\rm hr}^{1/2}$.  At
 $T\approx11.8$, with a 9-pixel aperture read noise is expected to
@@ -424,7 +425,7 @@ quadrature.  The predicted zodiacal background contribution is
 $673\,{\rm ppm}\,{\rm hr}^{1/2}$, based on the
 \citet{winn_photonflux_2013} model, which \citet{Sullivan_2015} used
 in planet detection simulations.  This zodiacal noise prediction seems
-to have been an overestimate, given the observed MAD of WASP-4.  A
+to have been an overestimate, given the observed RMS of WASP-4.  A
 more detailed assessment of TESS's photometric performance is beyond
 the scope of this work.
 
@@ -544,13 +545,16 @@ for the light-travel time across the diameter of the orbit by
 subtracting $2a/c = 22.8$ seconds from the observed time.
 
 We used the homogeneous \citet{hoyer_tramos_2013} timing study as our
-starting point.  Though their latest two epochs fell slightly below
-the prediction of a linear ephemeris (Panel C of their Figure~6), they
-did not find a need to fit a quadratic function to the O-C values.  We
-verified that all times were on the BJD$_{\rm TDB}$ time standard
-using the \citet{eastman_achieving_2010} calculator.  We set the
-zero-point epoch to be as close as possible to the average of the
-midtimes, weighted as the inverse midtime variance. This minimizes the
+starting point\footnote{We also tried using times directly from the
+original authors; the results did not change, so we opted for the
+\citet{hoyer_tramos_2013} times as the more homogeneous option.}.
+Though their latest two epochs fell slightly below the prediction of a
+linear ephemeris (Panel C of their Figure~6), they did not find a need
+to fit a quadratic function to the O-C values.  We verified that all
+times were on the BJD$_{\rm TDB}$ time standard using the
+\citet{eastman_achieving_2010} calculator.  We set the zero-point
+epoch to be as close as possible to the average of the midtimes,
+weighted as the inverse midtime variance. This minimizes the
 covariance between the transit epoch and the period
 \citep{gibson_gemini_2013}.
 

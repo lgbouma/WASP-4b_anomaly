@@ -34,6 +34,13 @@ Bailey, A., \& Goodman, J. 2019,
   \href{http://dx.doi.org/10.1093/mnras/sty2805}{\JournalTitle{Monthly Notices
   of the Royal Astronomical Society}, 482, 1872}
 
+\bibitem[{Barnes {et~al.}(2013)Barnes, van Eyken, Jackson, Ciardi, \&
+  Fortney}]{barnes_measurement_2013}
+Barnes, J.~W., van Eyken, J.~C., Jackson, B.~K., Ciardi, D.~R., \& Fortney,
+  J.~J. 2013,
+  \href{http://dx.doi.org/10.1088/0004-637X/774/1/53}{\JournalTitle{The
+  Astrophysical Journal}, 774, 53}
+
 \bibitem[{Batygin {et~al.}(2009)Batygin, Bodenheimer, \&
   Laughlin}]{batygin_determination_2009}
 Batygin, K., Bodenheimer, P., \& Laughlin, G. 2009,
@@ -431,11 +438,6 @@ Hellier, C., Anderson, D.~R., Collier~Cameron, A., {et~al.} 2009,
   \href{http://dx.doi.org/10.1038/nature08245}{\JournalTitle{Nature}, 460,
   1098}
 
-\bibitem[{Heyl \& Gladman(2007)}]{heyl_using_2007}
-Heyl, J.~S., \& Gladman, B.~J. 2007,
-  \href{http://dx.doi.org/10.1111/j.1365-2966.2007.11697.x}{\JournalTitle{Monthly
-  Notices of the Royal Astronomical Society}, 377, 1511}
-
 \bibitem[{Hoyer {et~al.}(2012)Hoyer, Rojo, \&
   L\'opez-Morales}]{hoyer_transit_2012}
 Hoyer, S., Rojo, P., \& L\'opez-Morales, M. 2012,
@@ -499,11 +501,6 @@ Jenkins, J.~M., Twicken, J.~D., McCauliff, S., {et~al.} 2016,
 Jones, E., Oliphant, T., Peterson, P., {et~al.} 2001, Open {source}
   {scientific} {tools} for {Python}
 
-\bibitem[{Jord\'an \& Bakos(2008)}]{jordan_observability_2008}
-Jord\'an, A., \& Bakos, G.~A. 2008,
-  \href{http://dx.doi.org/10.1086/590549}{\JournalTitle{The Astrophysical
-  Journal}, 685, 543}
-
 \bibitem[{Jord\'an {et~al.}(2013)Jord\'an, Espinoza, Rabus, Eyheramendy, Sing,
   Désert, Bakos, Fortney, López-Morales, Maxted, Triaud, \&
   Szentgyorgyi}]{jordan_ground-based_2013}
@@ -527,6 +524,13 @@ Knutson, H.~A., Charbonneau, D., Allen, L.~E., {et~al.} 2007,
 Knutson, H.~A., Fulton, B.~J., Montet, B.~T., {et~al.} 2014,
   \href{http://dx.doi.org/10.1088/0004-637X/785/2/126}{\JournalTitle{The
   Astrophysical Journal}, 785, 126}
+
+\bibitem[{Kostov {et~al.}(2014)Kostov, McCullough, Carter, Deleuil, Díaz,
+  Fabrycky, Hébrard, Hinse, Mazeh, Orosz, Tsvetanov, \&
+  Welsh}]{kostov_kepler-413b_2014}
+Kostov, V.~B., McCullough, P.~R., Carter, J.~A., {et~al.} 2014,
+  \href{http://dx.doi.org/10.1088/0004-637X/784/1/14}{\JournalTitle{The
+  Astrophysical Journal}, 784, 14}
 
 \bibitem[{Kov\'acs {et~al.}(2002)Kov\'acs, Zucker, \&
   Mazeh}]{kovacs_box-fitting_2002}
@@ -593,6 +597,15 @@ Mardling, R.~A. 2007,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2007.12500.x}{\JournalTitle{Monthly
   Notices of the Royal Astronomical Society}, 382, 1768}
 
+\bibitem[{Masuda(2015)}]{masuda_spin-orbit_2015}
+Masuda, K. 2015,
+  \href{http://dx.doi.org/10.1088/0004-637X/805/1/28}{\JournalTitle{The
+  Astrophysical Journal}, 805, 28}
+
+\bibitem[{Masuda(2017)}]{masuda_eccentric_2017}
+---. 2017, \href{http://dx.doi.org/10.3847/1538-3881/aa7aeb}{\JournalTitle{The
+  Astronomical Journal}, 154, 64}
+
 \bibitem[{Matsakos \& K\"onigl(2016)}]{matsakos_origin_2016}
 Matsakos, T., \& K\"onigl, A. 2016,
   \href{http://dx.doi.org/10.3847/2041-8205/820/1/L8}{\JournalTitle{The
@@ -636,6 +649,11 @@ Milliman, K.~E., Mathieu, R.~D., Geller, A.~M., {et~al.} 2014,
   \href{http://dx.doi.org/10.1088/0004-6256/148/2/38}{\JournalTitle{The
   Astronomical Journal}, 148, 38}
 
+\bibitem[{Mills \& Fabrycky(2017)}]{mills_kepler-108_2017}
+Mills, S.~M., \& Fabrycky, D.~C. 2017,
+  \href{http://dx.doi.org/10.3847/1538-3881/153/1/45}{\JournalTitle{The
+  Astronomical Journal}, 153, 45}
+
 \bibitem[{Moyano {et~al.}(2017)Moyano, Almeida, von Essen, Jablonski, \&
   Pereira}]{moyano_multi-band_2017}
 Moyano, M., Almeida, L.~A., von Essen, C., Jablonski, F., \& Pereira, M.~G.
@@ -664,11 +682,6 @@ Nikolov, N., Sing, D.~K., Burrows, A.~S., {et~al.} 2015,
 Ogilvie, G.~I. 2014,
   \href{http://dx.doi.org/10.1146/annurev-astro-081913-035941}{\JournalTitle{Annual
   Review of Astronomy and Astrophysics}, 52, 171}, arXiv: 1406.2207
-
-\bibitem[{P\'al \& Kocsis(2008)}]{pal_periastron_2008}
-P\'al, A., \& Kocsis, B. 2008,
-  \href{http://dx.doi.org/10.1111/j.1365-2966.2008.13512.x}{\JournalTitle{Monthly
-  Notices of the Royal Astronomical Society}, 389, 191}
 
 \bibitem[{Patra {et~al.}(2017)Patra, Winn, Holman, Yu, Deming, \&
   Dai}]{patra_2017}
@@ -856,6 +869,17 @@ Stassun, K.~G., Oelkers, R.~J., Pepper, J., {et~al.} 2018,
 \bibitem[{Sullivan {et~al.}(2015)}]{Sullivan_2015}
 Sullivan, P.~W., {et~al.} 2015, \JournalTitle{{ApJ}}, 809, 77
 
+\bibitem[{Szab\'o {et~al.}(2012)Szab\'o, P\'al, Derekas, Simon, Szalai, \&
+  Kiss}]{szabo_spin-orbit_2012}
+Szab\'o, G.~M., P\'al, A., Derekas, A., {et~al.} 2012,
+  \href{http://dx.doi.org/10.1111/j.1745-3933.2012.01219.x}{\JournalTitle{Monthly
+  Notices of the Royal Astronomical Society}, 421, L122}
+
+\bibitem[{Szab\'o {et~al.}(2014)Szab\'o, Simon, \& Kiss}]{szabo_mapping_2014}
+Szab\'o, G.~M., Simon, A., \& Kiss, L.~L. 2014,
+  \href{http://dx.doi.org/10.1093/mnras/stt1724}{\JournalTitle{Monthly Notices
+  of the Royal Astronomical Society}, 437, 1045}
+
 \bibitem[{Thompson {et~al.}(2013)}]{kepler_DR19_2013}
 Thompson, S., {et~al.} 2013, Kepler Data Release 19 Notes Q14, KSCI-19059-001,
   \url{https://archive.stsci.edu/kepler/release_notes/release_notes19/DataRelease_19_20130204.pdf}
@@ -911,6 +935,14 @@ Watson, C.~A., \& Marsh, T.~R. 2010,
 Weinberg, N.~N., Sun, M., Arras, P., \& Essick, R. 2017,
   \href{http://dx.doi.org/10.3847/2041-8213/aa9113}{\JournalTitle{The
   Astrophysical Journal Letters}, 849, L11}
+
+\bibitem[{Welsh {et~al.}(2015)Welsh, Orosz, Short, Cochran, Endl, {Erik
+  Brugamyer}, Haghighipour, Buchhave, Doyle, Fabrycky, Hinse, Kane, Kostov,
+  Mazeh, Mills, Müller, {Billy Quarles}, Quinn, Ragozzine, Shporer, Steffen,
+  Tal-Or, Torres, {Gur Windmiller}, \& Borucki}]{welsh_kepler_2015}
+Welsh, W.~F., Orosz, J.~A., Short, D.~R., {et~al.} 2015,
+  \href{http://dx.doi.org/10.1088/0004-637X/809/1/26}{\JournalTitle{The
+  Astrophysical Journal}, 809, 26}
 
 \bibitem[{Wilkins {et~al.}(2017)Wilkins, Delrez, Barker, Deming, Hamilton,
   Gillon, \& Jehin}]{wilkins_searching_2017}
