@@ -203,4 +203,104 @@ Tue 11 Dec 2018 01:20:37 PM EST
   - rerun Eastman conversion on the above times. Does anything change?
     - answer: no.
 
+- introduction: include better text for precession, e.g.,:
+
+  For the Kepler CBPs, photodynamical modeling for Kepler 413 (Kostov+ 2014) and
+  Kepler 453 (Welsh+ 2015) found that the planetary orbits precessed, and so the
+  transit times and durations changed. The precession there is driven by the
+  quadrupole of the inner binary.
+
+  There have also been measurements of precession in single-star systems due to a
+  rapidly spinning host star. The duration variations in Kepler-13 are due to
+  variations in the orbital inclination (Szabo+ 2012, 2014, Masuda+ 2015). Same
+  story in PTFO 8-8695 (Barnes+ 2013).
+
+  Finally, photodynamical modeling of various Kepler systems has turned up
+  various instances of precessing orbits. The two clearest cases are systems of
+  two giant planets, on mutually inclined orbits: Kepler-108 (Mills & Fabrycky
+  2016) and Kepler-693 (Masuda 2017) show this effect. Precession of the inner
+  one is observed through both timing and duration variations.
+
+  None of these are hot Jupiters, on slightly eccentric orbits, precessing
+  because of the quadrupole from the planet's tidal bulge. So while the claim
+  isn't technically wrong, it's wrong enough that I'll reword it ;-)
+
+WINN COMMENTS WIP I
+
+- Why not fit for a/R and inclination?  Taking them from an external source
+  seems chancy.  I had recommended finding a lightcurve solution using all the
+  TESS data, and then fitting individual transits after fixing all parameters
+  except the midpoint and the linear function.
+
+  - Good point. I misunderstood the initial suggestion for how to run this part
+    of the analysis.
+
+  - Now done.
+
+  - paper reflects it.
+
+- Is it clearly documented that the TESS time stamps represent ‘mid exposure’
+  times, i.e., the one-minute mark, for the 2-minute summed images?
+
+  - as clear as possible. but a double-check from Jon or Ed has been requested.
+
+- For estimating the photometric uncertainties, it is probably better to use
+  out-of-transit data, rather than residuals of the in-transit data.  The
+  general principle is to avoid too much involvement with a theoretical model.
+  The in-transit data may be affected by starspots or other failures of the
+  model.
+
+  - changed to using OOT points.
+
+- Fitting a segment spanning 20 transit durations seems excessive. Is a linear
+  model really good enough to describe the variation over such a long interval
+  of time?
+
+  - the residuals looked fine by eye. I have changed this to +/- 5 transit
+    durations.  (I had actually already done this in the code, but forgot to
+    update the paper).
+
+- The longitude of periastron is not well defined for e=0.  Do you mean “time
+  of conjunction” or “longitude at a particular reference time”?
+
+  - I meant a number that was needed to initialize code but otherwise had no
+    useful meaning.
+
+- On page 4, you compare the MAD (presumably median absolute deviation) with
+  various expectations.  Are the expected values expressed as an rms value?  If
+  so, then a correction is needed, because the MAD and rms are generally not the
+  same.  For a Gaussian distribution, the rms is about 1.5 times the MAD.
+
+  - The expected values are expressed as an RMS. So I was comparing apples to
+    oranges. I've now taken to measuring the RMS, not the MAD, and have updated
+    the text accordingly.
+
+- Also, explain where 69.184 comes from.
+  - done
+
+- Fig. 1 [hour] —> [hours]
+
+- In Fig. 2, the black TESS points are crammed together too closely.  Include a
+second panel with just the TESS times.  Or, have the figure reach across two
+columns, and use an inset panel to show the TESS data?
+
+- In the legend: “literature prediction” —> “pre-TESS ephemeris”.
+
+- I don’t like separating the points into “top half” and “bottom half”
+  according to uncertainty. This implies a sharp division when in fact there
+  is no sharp division. Can you plot all the data points in the same style, but
+  somewhat transparent, so you can see them all?  Or use opacity to encode
+  precision?
+
+  - this problem is insane. sent JNW options for comments.
+
+- “The TESS observations arrived early.”  One example of many with strange
+syntax.  Better: “The transits observed by TESS occurred earlier than
+expected.”
+
+- Sec. 4.1 first paragraph - significance of ‘convective zones’ will not be
+  clear to the reader.
+
+
+==========================================
 
