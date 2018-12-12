@@ -364,41 +364,44 @@ measurement without being captured by the measurement uncertainties.
 \end{figure}
 
 Using the cleaned PDC lightcurve, we ran Box Least Squares (BLS) to
-estimate the transit epoch, period, and duration
-\citep{kovacs_box-fitting_2002}.  Using these parameters, we isolated
-each transit to within $\pm$5 transit durations of its midtime.  In
-each transit window, we then simultaneously fit for a model transit,
-plus a local linear trend.  Our transit model uses the analytic
-formulae calculated by \citet{mandel_analytic_2002} and implemented by
-\citet{kreidberg_batman_2015}.
-
-We allowed four free parameters per transit: the time of mid-transit
-$t_{\rm tra}$, the planet-to-star radius ratio $R_{\rm p}/R_\star$,
-and the slope and intercept of the line.
-% Our priors were wide uniform distributions centered on the BLS
-% estimates for $t_{\rm tra}$ and $R_{\rm p}/R_\star$, and on a slope
-% of zero and an intercept of unity for the line.
-We fixed the remaining transit parameters as follows.  We set the
-eccentricity to zero. We
-assumed a quadratic limb-darkening law, with coefficients interpolated
-from the \citet{claret_limb_2017} tables.  For the period,
-$a/R_\star$, and inclination, we adopted the values
-from~\citet{petrucci_no_2013}.  These are in reasonable agreement with
-the parameters reported by \citet{gillon_improved_2009},
-\citet{southworth_high-precision_2009}, and
-\citet{huitson_gemini_2017}.
+determine the orbital period, and to estimate the transit duration and
+a reference epoch \citep{kovacs_box-fitting_2002}.  From these
+parameters, we isolated each transit to within $\pm$4 transit
+durations of its midtime.  We then fit the phase-folded transit, using
+the analytic formulae calculated by \citet{mandel_analytic_2002} and
+implemented by \citet{kreidberg_batman_2015}.  Specifically, we fit
+for a reference epoch, the planet to star radius ratio $R_{\rm
+p}/R_\star$, the semi-major axis to stellar radius ratio $a/R_\star$,
+the inclination $i$, two quadratic limb-darkening coefficients
+$(u_{\rm linear}, u_{\rm quad})$, and the orbital period $P$.  We set
+the eccentricity to zero. 
 
 Having defined the free and fixed parameters, we calculated an initial
 guess for the free parameters by maximizing the likelihood.  We then
 sampled over the posterior using the algorithm proposed by
 \citet{goodman_ensemble_2010} and implemented by
 \citet{foreman-mackey_emcee_2013}.
+Table~1 gives the results, which are in reasonable agreement with the
+parameters reported by \citet{gillon_improved_2009},
+\citet{southworth_high-precision_2009}, and
+\citet{huitson_gemini_2017}.
+%TODO: is this true? Or do the periods actually differ?
+
+To measure mid-transit times, we then focused on each individual
+transit window.  We fit for a model transit, plus a local linear
+trend.  We allowed four free parameters per transit: the time of
+mid-transit $t_{\rm tra}$, the planet-to-star radius ratio $R_{\rm
+p}/R_\star$, and the slope and intercept of the line.  We fixed the
+remaining parameters~--~$a/R_\star$, $i$, $P$, and the limb-darkening
+coefficients~--~to the best-fit values from the global fit.
+
 % During this process, we used the \texttt{corner} software to check
 % that our posteriors were being well-sampled~\citep{corner_2016}.
-After completing an initial fit, we set the photometric error bars to
-be equal to the standard deviation of the out-of-transit points of the
-residual lightcurve.  We then reperformed the fitting procedure, using
-the empirically determined photometric errors.
+After completing an initial fit for each transit, we set the
+photometric error bars to be equal to the standard deviation of the
+out-of-transit points of the residual lightcurve.  We then reperformed
+the fitting procedure, using the empirically determined photometric
+errors.
 
 % TODO: final numbers
 To verify that the measured uncertainties are plausible, we computed
@@ -410,11 +413,8 @@ factor $f=0.73$, forcing a reduced $\chi^2$ of unity.  This lowered
 the mean midtime uncertainty for each transit from 30 to 22 seconds.
 
 Figure~\ref{fig:lightcurves} shows the light curves, best-fit models,
-and residuals.  Table~1 reports the mid-transit times and their
-uncertainties.  Taking the mean and standard deviation of the measured
-planet to star radius ratio, we find $R_{\rm
-p}/R_\star=0.1538\pm0.0013$, in agreement with previous determinations
-\citep{wilson_wasp-4b_2008,gillon_improved_2009,winn_transit_2009,southworth_high-precision_2009}.
+and residuals.  Table~2 reports the mid-transit times and their
+uncertainties.
 Binning the residuals to 1-hour windows and taking the median absolute
 deviation, the lightcurves have an RMS of $586\,{\rm ppm}\,{\rm
 hr}^{1/2}$.  The predicted\footnote{\url{github.com/lgbouma/tnm}}
@@ -436,43 +436,46 @@ the scope of this work.
 \begin{deluxetable}{lccc}
 \tabletypesize{\scriptsize}
 \tablecaption{Selected system parameters of WASP-4b\label{tbl:params}}
-\tablenum{2}
+\tablenum{1}
 
 \tablehead{
-\colhead{Parameter} & \colhead{Value} & \colhead{Error} & \colhead{Comment}
+\colhead{Parameter} & \colhead{Value} & \colhead{Uncertainty} & \colhead{Comment}
 }
 
 \startdata
+%FIXME with new method
+%TODO numbers with updated method
 {\it Transit/RV parameters:} & & & \\
   $R_{\rm p}/R_\star$                        & $0.1538$               & $\pm 0.0013$                & A \\
-  $i$~[deg]                                  & $88.52$                & $+0.39$, $-0.26$            & B \\
-  $a/R_\star$                                & $5.463$                & $+0.025$, $-0.020$          & B \\
-  $K$~[m~s$^{-1}$]                           & $241.1$                & $+2.8$, $-3.1$              & C \\
+  $i$~[deg]                                  & $88.52$                & $+0.39$, $-0.26$            & A \\
+  $a/R_\star$                                & $5.463$                & $+0.025$, $-0.020$          & A \\
+  $u_{\rm linear}$                           & $0.XXX$                & $+0.XXX$, $-0.XXX$          & A \\
+  $u_{\rm quad}$                             & $0.XXX$                & $+0.XXX$, $-0.XXX$          & A \\
+  $K$~[m~s$^{-1}$]                           & $241.1$                & $+2.8$, $-3.1$              & B \\
 {\it Stellar parameters:} & & & \\
-  $T_{\rm eff}$~[K]                          & $5400$                 & $\pm 90$                    & D \\
-  $\log g_\star$~[cgs]                       & $4.47$                 & $\pm 0.11$                  & D \\
-  $[{\rm Fe/H}]$                             & $-0.07$                & $\pm 0.19$                  & D \\
-  $F_{\rm bol}$~[erg~cm$^{-2}$~s$^{-1}$]     & $2.802\times10^{-10}$  & $\pm 0.076\times10^{-10}$   & E \\
-  $\pi$~[mas]                                & $3.7145$               & $0.0517$                    & G \\
-  $R_\star$~[R$_{\odot}$]                    & $0.893$                & $\pm 0.034$                 & F \\
-  $\rho_\star$~[g~cm$^{-3}$]                 & $1.722$                & $+0.024$, $-0.019$          & A \\
-  $M_\star$~[M$_{\odot}$]                    & $0.870$                & $+0.085$, $-0.077$          & F \\
-  $T$ magnitude                              & $11.778$               & $\pm 0.018$                 & H \\
+  $T_{\rm eff}$~[K]                          & $5400$                 & $\pm 90$                    & C \\
+  $\log g_\star$~[cgs]                       & $4.47$                 & $\pm 0.11$                  & C \\
+  $[{\rm Fe/H}]$                             & $-0.07$                & $\pm 0.19$                  & C \\
+  $F_{\rm bol}$~[erg~cm$^{-2}$~s$^{-1}$]     & $2.802\times10^{-10}$  & $\pm 0.076\times10^{-10}$   & D \\
+  $\pi$~[mas]                                & $3.7145$               & $0.0517$                    & F \\
+  $R_\star$~[R$_{\odot}$]                    & $0.893$                & $\pm 0.034$                 & E \\
+  $\rho_\star$~[g~cm$^{-3}$]                 & $1.722$                & $+0.024$, $-0.019$          & E \\
+  $M_\star$~[M$_{\odot}$]                    & $0.870$                & $+0.085$, $-0.077$          & E \\
+  $T$ magnitude                              & $11.778$               & $\pm 0.018$                 & G \\
 {\it Planetary parameters:} & & & \\
-  $a$~[AU]                                   & $0.0227$               & $\pm 0.0007$                & F \\
-  $M_p$~[M$_{\rm Jup}$]                      & $1.192$                & $+0.091$, $-0.086$          & F \\
-  $R_p$~[R$_{\rm Jup}$]                      & $1.337$                & $\pm 0.048$                 & F \\
+  $a$~[AU]                                   & $0.0227$               & $\pm 0.0007$                & E \\
+  $M_p$~[M$_{\rm Jup}$]                      & $1.192$                & $+0.091$, $-0.086$          & E \\
+  $R_p$~[R$_{\rm Jup}$]                      & $1.337$                & $\pm 0.048$                 & E \\
 \enddata
 
 \tablecomments{
-  (A) From TESS lightcurves (\S~\ref{sec:measurement}).
-  (B) \citet{hoyer_tramos_2013}.
-  (C) \citet{triaud_spin-orbit_2010}.
-  (D) From HARPS spectra \citep{doyle_accurate_2013}.
-  (E) \citet{stassun_accurate_2017}.
-  (F) From functions of stellar, transit or RV parameters as discussed in text.
-  (G) {\it Gaia} DR2.
-  (H) \citet{stassun_TIC_2018}.
+  (A) From TESS lightcurves (\S~\ref{sec:measurement}). Orbital periods from timing data are in Table~4.
+  (B) \citep{triaud_spin-orbit_2010}.
+  (C) From HARPS spectra \citep{doyle_accurate_2013}.
+  (D) \citet{stassun_accurate_2017}.
+  (E) From functions of stellar, transit or RV parameters as discussed in text.
+  (F) {\it Gaia} DR2.
+  (G) \citet{stassun_TIC_2018}.
 }
 
 \end{deluxetable}
