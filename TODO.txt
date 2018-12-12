@@ -41,9 +41,13 @@ be added in quadrature.
     per-transit residual lightcurves. they didn't show much. perhaps one or two
     spot-crossings, at low significance.
   - initial fit done
-  * want a phased plot where you can see the residual (?)
+  X want a phased plot where you can see the residual (?)
+  X want an extra figure in the paper for this?
 
-* seek out and destroy examples of weird syntax!
+* recompute the t_mid uncertainties using your updated WASP-4b transit times.
+
+* actually use your stellar parameters in the wasp-4 analysis / all subsequent
+  numbers.
 
 * Another test you might try (or that a referee may suggest) is to refit after
   omitting a single data point.  Repeat for all possible choices of data point.
@@ -51,11 +55,13 @@ be added in quadrature.
   others that are individually crucial for the conclusion that the period is not
   constant?
 
-* Are you sure that HD 209458 and HD 189733 are the only cases of hot Jupiters
-  for which we have bounded ecosw at the level 10^-3?  There are so many hot
-  Jupiters for which occultations have been observed with Spitzer.
+  X this seems rather excessive for the time being... the answer by inspection is
+  that the TESS data point is most important, the first few are somewhat
+  important for curvature, and the middle is important for precision.
+  Should we treat the Huitson+ 2017 data points as "a single data point"?
+  What about that Spitzer time?
 
-* What do you think of trying your hand at a mass/period exclusion diagram, based
+X What do you think of trying your hand at a mass/period exclusion diagram, based
   on the existing RV data?  There are probably many ways to do so.  One would be:
   Remove the WASP-4 signal.  Then for each trial period and phase, fit and remove
   a linear trend.  Then fit a sinusoid of the given period and phase, and
@@ -63,6 +69,14 @@ be added in quadrature.
   Record the amplitude.  Repeat for a grid of periods and phases.  Plot the
   maximum amplitude as a function of period - hopefully there will be a well
   defined envelope.
+
+  X I'm not convinced right now that this is the right RV analysis.  The
+  Csizmadia_2018_WASP18b_love_number paper is maybe a better direction...
+
+  X JNW: "I don't think it would be worthwhile to search for apsidal precession
+  using these data.  The signal takes the form of a phase shift, and the time
+  sampling of these (RV) data is not well suited for measuring a phase shift with
+  great confidence."
 
 
 ====================

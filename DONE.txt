@@ -301,6 +301,23 @@ expected.”
 - Sec. 4.1 first paragraph - significance of ‘convective zones’ will not be
   clear to the reader.
 
-
 ==========================================
+
+Wed Dec 12 15:10:16 2018
+
+
+- seek out and destroy examples of weird syntax!
+  - abstract
+  - method "observations" section
+  - all figure captions
+  - method contd...
+  - rest of the thing.
+
+- Are you sure that HD 209458 and HD 189733 are the only cases of hot Jupiters
+  for which we have bounded ecosw at the level 10^-3?  There are so many hot
+  Jupiters for which occultations have been observed with Spitzer.
+
+  - no, so I've softened the wording.
+
+
 
