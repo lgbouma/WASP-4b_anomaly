@@ -216,7 +216,7 @@ def plot_hjs():
 
     fig.legend((l1,l2,l3),
                ('KDE from TESS', 'observed TESS',
-                'literature prediction'),
+                'pre-TESS prediction'),
                loc='upper right',
                bbox_to_anchor=(0.98, 0.42),
                fontsize='xx-small')
