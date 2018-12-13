@@ -391,4 +391,24 @@ x Another test you might try (or that a referee may suggest) is to refit after
 
   - not really. Rp/Rs a tiny bit, but not by much.
 
+- recompute the t_mid uncertainties using your updated WASP-4b transit times.
+
+  - (i.e. retrieve from pickles, run that, & fix the directory paths)
+    python retrieve_measured_times.py --ticid 402026209
+
+- update to use your stellar parameters in the wasp-4 analysis / all subsequent
+  numbers.
+
+- rerun everything using Spitzer points!
+  - python make_parameter_vs_epoch_plots.py
+  - python model_comparison_linear_quadratic_precession.py | tee ../results/model_comparison/WASP-4b/model_comparison_output.txt
+  - input the above results into the paper
+     - need to believe them first --> many samples from precession model
+     - ran them.
+     - input them
+- update all tables
+  - stellar parameter table
+  - transit time and uncert table
+  - occultation time table
+
 

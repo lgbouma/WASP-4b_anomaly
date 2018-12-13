@@ -1,13 +1,20 @@
 MOST PRESSING
 ----------
 
-* recompute the t_mid uncertainties using your updated WASP-4b transit times.
-  * (i.e. retrieve from pickles, run that, & fix the directory paths)
-
-* rerun everything using Spitzer points!
-
-* actually use your stellar parameters in the wasp-4 analysis / all subsequent
+- update to use your stellar parameters in the wasp-4 analysis / all subsequent
   numbers.
+
+- rerun everything using Spitzer points!
+  - python make_parameter_vs_epoch_plots.py
+  - python model_comparison_linear_quadratic_precession.py | tee ../results/model_comparison/WASP-4b/model_comparison_output.txt
+  - input the above results into the paper
+     - need to believe them first --> many samples from precession model
+     - ran them.
+     - input them
+- update all tables
+  - stellar parameter table
+  - transit time and uncert table
+  - occultation time table
 
 X Fig. 3 Again the individual TESS points are not helpful. Here, plot the
   binned point only.  Omit “best” from legend labels.
@@ -15,10 +22,11 @@ X Fig. 3 Again the individual TESS points are not helpful. Here, plot the
   X I respectfully disgaree -- we're using all the TESS times in the fit, so we
     should put them on the plot, I think!
 
- * Winn thinks: might as well hide 'em! Because they hide the message.
+ - On fig 2, add band for the binned time. No red point.
+ - Acquiesce 
 
- * On fig 2, add band for the binned time. No red point.
- * Acquiesce 
+ * Winn thinks: might as well hide 'em! Because they hide the message.
+ * fix this on fig 3.
 
 - make a phase folded and binned, high-SNR light curve. Check for any
   persistent glitches or asymmetry.
