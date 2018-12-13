@@ -11,11 +11,11 @@ from astropy import units as u, constants as const
 # Petrucci+ 2013, table 3, for all parameters
 P = 1.33823251*u.day
 
+#Mstar, Rstar, Mplanet, Rplanet = 0.867, 0.893, 1.189, 1.314 # USED: my table 1
 Mstar, Rstar, Mplanet, Rplanet = (
-    0.89*u.Msun, 0.92*u.Rsun, 1.216*u.Mjup, 1.33*u.Rjup
+    0.867*u.Msun, 0.893*u.Rsun, 1.189*u.Mjup, 1.314*u.Rjup
 )
-
-sma = 0.0228*u.au
+sma = 0.0227*u.au
 
 Qplanetprime = 1e5
 

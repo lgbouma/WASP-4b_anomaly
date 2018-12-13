@@ -64,6 +64,8 @@ def main():
             references.append('\citet{huitson_gemini_2017}')
         elif ref == 'me':
             references.append('This work')
+        elif ref == 'Baxter et al. (in prep)':
+            references.append('Baxter et al.\ (in prep)')
     references = np.array(references)
 
     outdf = pd.DataFrame(

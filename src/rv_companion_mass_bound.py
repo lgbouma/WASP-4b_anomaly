@@ -8,10 +8,10 @@ import numpy as np
 
 from astropy import units as u, constants as const
 
-# Petrucci+ 2013, table 3, for all parameters
-a_b = 0.0228*u.au
+# parameters from my table
+a_b = 0.0227*u.au
 M_star, R_star, M_b, R_b = (
-    0.89*u.Msun, 0.92*u.Rsun, 1.216*u.Mjup, 1.33*u.Rjup
+    0.867*u.Msun, 0.893*u.Rsun, 1.189*u.Mjup, 1.314*u.Rjup
 )
 
 # from equation (52) of the latex'd equation in Avery's email
