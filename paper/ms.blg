@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ms.aux
 The style file: yahapj.bst
 Database file #1: bibliography.bib
@@ -404,45 +404,45 @@ Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sulliva
 while executing---line 1561 of file yahapj.bst
 Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sullivan_2015
 while executing---line 1561 of file yahapj.bst
-You've used 141 entries,
+You've used 142 entries,
             3215 wiz_defined-function locations,
-            1638 strings with 71416 characters,
-and the built_in function-call counts, 94138 in all, are:
-= -- 6049
-> -- 9561
-< -- 50
-+ -- 3483
-- -- 3329
-* -- 9592
-:= -- 17811
-add.period$ -- 141
-call.type$ -- 141
-change.case$ -- 930
-chr.to.int$ -- 139
-cite$ -- 142
-duplicate$ -- 3778
-empty$ -- 4881
-format.name$ -- 3499
-if$ -- 18038
+            1646 strings with 71667 characters,
+and the built_in function-call counts, 94551 in all, are:
+= -- 6087
+> -- 9573
+< -- 51
++ -- 3489
+- -- 3332
+* -- 9622
+:= -- 17882
+add.period$ -- 142
+call.type$ -- 142
+change.case$ -- 936
+chr.to.int$ -- 140
+cite$ -- 143
+duplicate$ -- 3805
+empty$ -- 4916
+format.name$ -- 3503
+if$ -- 18125
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 134
-newline$ -- 428
-num.names$ -- 565
-pop$ -- 1454
+missing$ -- 135
+newline$ -- 431
+num.names$ -- 569
+pop$ -- 1460
 preamble$ -- 1
-purify$ -- 923
+purify$ -- 928
 quote$ -- 0
-skip$ -- 2228
+skip$ -- 2245
 stack$ -- 0
-substring$ -- 3391
-swap$ -- 131
+substring$ -- 3418
+swap$ -- 132
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1263
+type$ -- 1272
 warning$ -- 1
-while$ -- 641
+while$ -- 646
 width$ -- 0
-write$ -- 1411
+write$ -- 1422
 (There were 83 error messages)

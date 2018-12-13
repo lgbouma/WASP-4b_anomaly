@@ -398,7 +398,6 @@ Table~1 gives the results, which are in reasonable agreement with the
 parameters reported by \citet{gillon_improved_2009},
 \citet{southworth_high-precision_2009}, and
 \citet{huitson_gemini_2017}.
-%TODO: is this true? Or do the periods actually differ?
 
 To measure mid-transit times, we then focused on each individual
 transit window.  We fit for a model transit, plus a local linear
@@ -452,17 +451,16 @@ the scope of this work.
 \tablenum{1}
 
 \tablehead{
-\colhead{Parameter} & \colhead{Value} & \colhead{Uncertainty} & \colhead{Comment}
+\colhead{Parameter} & \colhead{Value} & \colhead{68\% Confidence Interval} & \colhead{Comment}
 }
 
 \startdata
-%TODO numbers with updated method
 {\it Transit/RV parameters:} & & & \\
-  $R_{\rm p}/R_\star$                        & $0.XXXX$               & $\pm 0.0013$                & A \\
-  $i$~[deg]                                  & $XX.XX$                & $+0.39$, $-0.26$            & A \\
-  $a/R_\star$                                & $5.XXX$                & $+0.025$, $-0.020$          & A \\
-  $u_{\rm linear}$                           & $0.XXX$                & $+0.XXX$, $-0.XXX$          & A \\
-  $u_{\rm quad}$                             & $0.XXX$                & $+0.XXX$, $-0.XXX$          & A \\
+  $R_{\rm p}/R_\star$                        & $0.15117$              & $+0.00047$, $-0.00037$      & A \\
+  $i$~[deg]                                  & $88.85$                & $+0.77$, $-0.90$            & A \\
+  $a/R_\star$                                & $5.457$                & $+0.030$, $-0.066$          & A \\
+  $u_{\rm linear}$                           & $0.388$                & ---                         & A \\
+  $u_{\rm quad}$                             & $0.212$                & ---                         & A \\
   $K$~[m~s$^{-1}$]                           & $241.1$                & $+2.8$, $-3.1$              & B \\
 {\it Stellar parameters:} & & & \\
   $T_{\rm eff}$~[K]                          & $5400$                 & $\pm 90$                    & C \\
@@ -471,17 +469,20 @@ the scope of this work.
   $F_{\rm bol}$~[erg~cm$^{-2}$~s$^{-1}$]     & $2.802\times10^{-10}$  & $\pm 0.076\times10^{-10}$   & D \\
   $\pi$~[mas]                                & $3.7145$               & $0.0517$                    & F \\
   $R_\star$~[R$_{\odot}$]                    & $0.893$                & $\pm 0.034$                 & E \\
-  $\rho_\star$~[g~cm$^{-3}$]                 & $1.722$                & $+0.024$, $-0.019$          & E \\
-  $M_\star$~[M$_{\odot}$]                    & $0.870$                & $+0.085$, $-0.077$          & E \\
+  $\rho_\star$~[g~cm$^{-3}$]                 & $1.717$                & $+0.029$, $-0.062$          & E \\
+  $M_\star$~[M$_{\odot}$]                    & $0.867$                & $+0.087$, $-0.097$          & E \\
   $T$ magnitude                              & $11.778$               & $\pm 0.018$                 & G \\
 {\it Planetary parameters:} & & & \\
-  $a$~[AU]                                   & $0.0227$               & $\pm 0.0007$                & E \\
-  $M_p$~[M$_{\rm Jup}$]                      & $1.192$                & $+0.091$, $-0.086$          & E \\
-  $R_p$~[R$_{\rm Jup}$]                      & $1.337$                & $\pm 0.048$                 & E \\
+  $a$~[AU]                                   & $0.0227$               & $\pm 0.0008$                & E \\
+  $M_p$~[M$_{\rm Jup}$]                      & $1.189$                & $+0.093$, $-0.104$          & E \\
+  $R_p$~[R$_{\rm Jup}$]                      & $1.314$                & $\pm 0.039$                 & E \\
 \enddata
 
 \tablecomments{
-  (A) From TESS lightcurves (\S~\ref{sec:measurement}). Orbital periods from timing data are in Table~4.
+  (A) From phase-folded TESS lightcurve (\S~\ref{sec:measurement}).
+  Orbital periods are in Table~4. The limb darkening parameters were
+  allowed to float around the \citet{claret_limb_2017} prediction, but
+  were unconstrained.
   (B) \citep{triaud_spin-orbit_2010}.
   (C) From HARPS spectra \citep{doyle_accurate_2013}.
   (D) \citet{stassun_accurate_2017}.
@@ -513,9 +514,14 @@ observed RV semi-amplitude and inclination angle from the transit
 \citep{triaud_spin-orbit_2010}.
 
 We list the resulting parameters in Table~3, and adopt them for the
-remaining analysis.  Our parameters broadly agree with those of
-previous authors
+remaining analysis.  Our parameters broadly agree with those of previous
+authors
 \citep{wilson_wasp-4b_2008,gillon_discovery_2009,winn_transit_2009,southworth_homogeneous_2011,petrucci_no_2013}.
+% The sole exception is that our measured $R_{\rm p}/R_\star$ value is
+% slightly smaller than most ground-based measurements (see Tables 2 and
+% 3 of \citealt{hoyer_tramos_2013}).  However, looking at the I-band
+% measurements of \citet{hoyer_tramos_2013} and taking the mean + std
+% deviation, it's a ~1 sigma effect. So I won't mention it!
 Comparing our empirical result with the Yonsei-Yale evolutionary track
 predicted by the spectroscopic parameters, we see that WASP-4 has an
 age $\approx 7\,{\rm Gyr}$, and is securely in the main-sequence stage
@@ -640,13 +646,9 @@ There were fewer available occultation times.
 \citet{beerer_secondary_2011} observed two occultations of WASP-4b
 using warm Spitzer in the 3.6\,$\mu$m and 4.5\,$\mu$m bands.
 \citet{caceres_ground-based_2011} detected an occultation from the
-ground in the $K_S$ band, and gave a time in HJD, without
-specifying the time standard.  We assumed the standard was UTC, but
-added $32.182 + N$ seconds of uncertainty to the reported errors,
-where $N=35$ is the appropriate number of leap-seconds
-\citep{eastman_achieving_2010}.
-Though not rigorous, this procedure inflated the error bar to a more
-realistic $\pm$94 seconds.
+ground in the $K_S$ band, and gave a time in HJD, without specifying
+the time standard.  We assumed the standard was UTC, and verified that
+assuming TDB did not alter any of our conclusions.
 %Finally, as previously mentioned, \citet{ranjan_atmospheric_2014}
 %acquired occultation data with HST but kept the epoch as a fixed
 %parameter.
