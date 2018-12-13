@@ -414,16 +414,15 @@ out-of-transit points of the residual lightcurve.  We then reperformed
 the fitting procedure, using the empirically determined photometric
 errors.
 
-% TODO: final numbers
 To verify that the measured uncertainties are plausible, we computed
 the reduced $\chi^2$ for a linear ephemeris fit to the measured TESS
-transit times.  We found that $\chi^2 = 8.4$, with 16 degrees of
+transit times.  We found that $\chi^2 = 9.2$, with 16 degrees of
 freedom.  Visually inspecting residuals showed that the error variance
 had been overestimated, so we multiplied the measured TESS errors by a
-factor $f=0.73$, forcing a reduced $\chi^2$ of unity.  This lowered
-the mean midtime uncertainty for each transit from 30 to 22 seconds.
+factor $f=0.76$, forcing a reduced $\chi^2$ of unity.  This lowered
+the mean uncertainty of the transit midtimes from $29.8$ to $22.6$
+seconds.
 
-% TODO: final numbers
 Figure~\ref{fig:lightcurves} shows the lightcurves, best-fit models,
 and residuals.  Table~2 reports the mid-transit times and their
 uncertainties.
@@ -752,19 +751,19 @@ $(t_0, P_{\rm s}, e, \omega_0, {\rm d}\omega/{\rm d}E)$.
 
 %TODO: final numbers
 Figure~\ref{fig:times} shows the residuals with respect to the linear
-model.  The best linear fit has $\chi^2 = 149$ and 58 degrees of
-freedom.  The best quadratic fit has $\chi^2 = 48.0$ and 57
-degrees of freedom, compared to $\chi^2 = 51.0$
-and 55 degrees of freedom for the best-fit precession model.
+model.  The best linear fit has $\chi^2 = 174$ and 61 degrees of
+freedom.  The best quadratic fit has $\chi^2 = 62.6$ and 60
+degrees of freedom, compared to $\chi^2 = 64.4$
+and 58 degrees of freedom for the best-fit precession model.
 
 %TODO: final numbers. note epoch changes...
 The difference in $\chi^2$ between the linear and quadratic fit
-corresponds to $p \approx 10^{-23}$.  A more likely possibility is
+corresponds to $p \approx 10^{-26}$.  A more likely possibility is
 clearly that a systematic error is affecting one of the most important
 sets of times: either the earliest times, the Huitson et al.\ Gemini
-times (epoch numbers 44, 322, 591, and 851), or the TESS times.  We
+times (epoch numbers 30, 308, 577, and 837), or the TESS times.  We
 have taken every precaution against systematic offsets in the TESS
-timestamps (Appendix~\ref{sec:verify_tess}). Huitson et al.\ stand by
+times (Appendix~\ref{sec:verify_tess}), and Huitson et al.\ stand by
 their reported times (J.-M. D\'esert, priv.\
 comm.)\footnote{\citet{huitson_gemini_2017} corrected the times to be
 at mid-exposure. They also analyzed other hot Jupiters, which all
@@ -772,29 +771,27 @@ showed mid-transit times as expected from a constant ephemeris.}.
 Since the linear model provides a poor fit to the data, we discard it
 from further consideration.
 
-%TODO: final numbers
-The quadratic model provides a better fit to the data than the
-precession model.  It is favored by $\Delta \chi^2 = 3.0$, and has two
+The quadratic model provides a slightly better fit to the data than the
+precession model.  It is favored by $\Delta \chi^2 = 1.8$, and has two
 fewer free parameters.  Another useful heuristic for model comparison
 is the Bayesian Information Criterion (BIC),
 \begin{equation}
   {\rm BIC} = \chi^2 + k\log n,
 \end{equation}
 for $k$ the number of free parameters, and $n$ the number of data
-points. For us, $n=60$.  The difference in the BIC for the precession
+points. For us, $n=62$.  The difference in the BIC for the precession
 and decay models is $\Delta {\rm BIC} = {\rm BIC}_{\rm prec} - {\rm
-BIC}_{\rm quad} = 11$, corrsonding to a Bayes factor $\approx
-4\times10^{4}$.  The Akaike Information Criterion similarly favors the
-orbital decay model, by $\Delta {\rm AIC} = 7$.  This is strong
+BIC}_{\rm quad} = 10$, corrsonding to a Bayes factor $\approx
+1.2\times10^{4}$.  The Akaike Information Criterion similarly favors
+the orbital decay model, by $\Delta {\rm AIC} = 5.8$.  This is strong
 evidence that the quadratic model describes the data better than the
 precession model \citep{kass_bayes_1995}.
 
-%TODO: final numbers
 If we assume the orbital decay model, we find a period derivative 
 \begin{equation}
 \dot{P}
-  = - (3.82 \pm 0.38)\times 10^{-10}
-  = - (12.1) \pm 1.2\,{\rm ms}\,{\rm yr}^{-1}.
+  = - (3.98 \pm 0.38)\times 10^{-10}
+  = - (12.6) \pm 1.2\,{\rm ms}\,{\rm yr}^{-1}.
   \label{eq:dP_dt_obs}
 \end{equation}
 For comparison, the period derivative seen by
@@ -803,15 +800,14 @@ is $\dot{P} = -29 \pm 3\,{\rm ms}\,{\rm yr}^{-1}$.  If both planets
 are decaying, WASP-4b would be inspiraling at about half the rate as
 WASP-12b.
 
-%TODO: final numbers
 If we instead assume the precession model, the best-fit eccentricity
 is
 \begin{equation}
-  e = (1.63^{+ 1.48}_{- 0.65})\times10^{-3}
+  e = (1.83^{+ 1.88}_{- 0.75})\times10^{-3}
 \end{equation}
-The longitude of periapse correspondingly advances by $\dot{\omega}
-= 14.8^{+5.4}_{-3.8}\ {\rm degrees}\,{\rm yr}^{-1}$, and the
-precession period would be $24^{+8}_{-6}$ years.
+The longitude of periapse correspondingly advances by $\dot{\omega} =
+14.0^{+4.9}_{-3.5}\ {\rm degrees}\,{\rm yr}^{-1}$, and the precession
+period would be $26^{+9}_{-7}$ years.
 
 The median parameters and their 68\% confidence intervals are reported
 for the three models in Table~4.  In short, a linear ephemeris does
@@ -834,9 +830,8 @@ disfavored.
     main sequence host.
     }
     {\bf \it Top:}
-    Points are
-    transiting giant planets from \citet{bonomo_gaps_2017}, who
-    measured the eccentricities using radial velocities.  Solid
+    Points are transiting giant planets from \citet{bonomo_gaps_2017},
+    who measured the eccentricities using radial velocities.  Solid
     squares (including WASP-18b) have significant eccentricity
     detections.  The axes are chosen so that constant eccentricity
     damping timescales (Equation~\ref{eq:de_dt}) are lines.  The
@@ -868,7 +863,7 @@ For the sake of argument, let us assume that the timing variation is
 caused entirely by orbital decay.  If the orbital period decreases
 at a fixed rate, then it will reach zero after
 \begin{equation}
-  \frac{P}{ \dot{P} } = 9.6 \, {\rm Myr}.
+  \frac{P}{ \dot{P} } = 9.2 \, {\rm Myr}.
 \end{equation}
 For comparison, the survival time found by \citet{patra_2017} for
 WASP-12b was 3.2\,Myr.
@@ -922,7 +917,7 @@ The orbital period evolves as
 The modified quality factor of WASP-4 corresponding to the observed
 value of $\dot{P}$ is then
 \begin{equation}
-	Q_\star' \approx 3.3\times10^4,
+	Q_\star' \approx 2.9\times10^4,
 \end{equation}
 which is rather small.  Jupiter has $Q_{\rm Jup}' \approx 1.4 \times
 10^5$, based on the orbits of the Galilean moons
@@ -1028,7 +1023,7 @@ considered.
 
 Let us instead assume that the timing variation is a portion of an
 apsidal precession cycle.  The required orbital eccentricity is then
-$e\approx 1.6\times10^{-3}$, and one full precession period would take
+$e\approx 1.8\times10^{-3}$, and one full precession period would take
 about 24 years.
 
 \citet{ragozzine_probing_2009} calculated apsidal precession periods
@@ -1045,7 +1040,7 @@ non-zero eccentricity, a measurement of $\dot{\omega}$ can be used to
 measure the planet's Love number.  From their Equation 14, the implied
 Love number for WASP-4b is
 \begin{equation}
-k_{2,{\rm p}} = 1.6^{+2.1}_{-1.2}.
+k_{2,{\rm p}} = 1.5^{+2.1}_{-1.1}.
 \end{equation}
 For comparison, $k_{2,{\rm Jup}} \approx 0.55$
 \citep{wahl_tidal_2016,ni_empirical_2018}.  A uniform density sphere
@@ -1059,8 +1054,8 @@ Jupiter systems}
 
 Could the eccentricity truly be non-zero?  For WASP-4b, the
 eccentricity damping timescale (Equation~\ref{eq:de_dt}) is $\tau_e =
-0.29 (Q_{\rm p}'/10^5) \, {\rm Myr}$.  The system is well over
-$1\,{\rm Gyr}$ old \citep[{\it e.g.},][]{winn_transit_2009}, so any
+0.30 (Q_{\rm p}'/10^5) \, {\rm Myr}$.  The system is well over
+$1\,{\rm Gyr}$ old, so unless the planet arrived very recently, any
 initial eccentricity should have been erased.
 
 The top panel of Figure~\ref{fig:context} compares the expected
@@ -1087,10 +1082,9 @@ $2\sigma$ upper limit on $| e\cos\omega | $ of 0.0024.
 % 0.0018$.  \citet{zhou_secondary_2015} report a weaker $e\cos\omega =
 % -0.001 \pm 0.003$. 
 Placing eccentricity limits stronger than $e< 10^{-3}$ has only been
-possible for a few hot Jupiters, and with numerous false-starts.
-HD 189733b, for example, was initially reported to have a non-zero
-eccentricty
-\citep{knutson_map_2007}.  This result was retracted by
+possible for a few hot Jupiters, and with numerous false-starts.  HD
+189733b, for example, was initially reported to have a non-zero
+eccentricty \citep{knutson_map_2007}.  This result was retracted by
 \citet{agol_climate_2010}, who used a larger dataset of 7 Spitzer
 occultations and found a smaller average offset in the occultation
 time than \citet{knutson_map_2007}.  \citet{agol_climate_2010} also
@@ -1165,7 +1159,7 @@ least $\sin^{-1} \sqrt{2/5} \approx 39^\circ$.
 For the Kozai-Lidov mechanism to operate at maximum efficiency, we
 need \citep[][Equation 20]{bailey_understanding_2019}
 \begin{equation}
-  M_{\rm c} > 7.7\,M_\oplus
+  M_{\rm c} > 7.1\,M_\oplus
   \times \left( \frac{a_{\rm c}}{a_{\rm b}} \right)^{3/2},
   \label{eq:kozai_bound}
 \end{equation}
@@ -1185,7 +1179,7 @@ $({\rm O-C})_{\rm RV} = 15.2\,{\rm m s}^{-1}$ reported by
   \nonumber
   \\
   M_{\rm c} &< 
-  24.2\,M_\oplus
+  23.8\,M_\oplus
   \times 
   \left( \frac{a_c}{a_b} \right)^{1/2}
   f^{-1/2},
@@ -1291,7 +1285,6 @@ observed period decrease (Equation~\ref{eq:dP_dt_obs}).
 Improved radial velocity
 monitoring will help clarify the situation,
 particularly given that WASP-4 shows short-term RV trends with
-%$\dot{\gamma} \approx 2.8 \,{\rm m}\,{\rm s}^{-1}\,{\rm day}^{-1}$ over
 amplitudes $\sim$$\mathcal{O}(10\,{\rm m\,s}^{-1})$, over tens of days
 \citep{husnoo_observational_2012}.  Given that WASP-4 is a
 magnetically active star \citep{sanchis-ojeda_starspots_2011}, these
