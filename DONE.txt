@@ -320,4 +320,75 @@ Wed Dec 12 15:10:16 2018
   - no, so I've softened the wording.
 
 
+X “We correspondingly added 69.184 seconds…” The error is systematic, not
+statistical.  I don’t think it makes sense to treat it as a two-sided error to
+be added in quadrature. 
+
+  X so do we just omit the time? I've updated the "method" to just add the
+  uncertainty (rather than doing it quadrature), and have added a sentence to
+  indicate that we know this is a bad thing, but that there isn't a clearly
+  better way to do it. (Except asking the authors what the time standard is).
+
+  The relevant text now reads:
+  "We assumed the standard was UTC, but added $32.182 + N$ seconds of
+  uncertainty to the reported errors, where $N=35$ is the appropriate number of
+  leap-seconds \citep[see][]{eastman_achieving_2010}.  Though not rigorous, this
+  procedure inflates the error bar to a more realistic $\pm$94 seconds."
+
+  What do you think?
+
+  - Don't do this. Just use the original uncertainty.
+
+  - update the text
+
+X In the abstract, why not mention an additional planet as a possible
+  explanation?
+
+  X is it not a "sub-explanation" for apsidal precession? Unless you mean
+  the direct gravitational forcing?
+
+
+X What do you think of trying your hand at a mass/period exclusion diagram, based
+  on the existing RV data?  There are probably many ways to do so.  One would be:
+  Remove the WASP-4 signal.  Then for each trial period and phase, fit and remove
+  a linear trend.  Then fit a sinusoid of the given period and phase, and
+  increase the amplitude of a sinusoid until \Delta\chi^2 exceeds (say) 9.
+  Record the amplitude.  Repeat for a grid of periods and phases.  Plot the
+  maximum amplitude as a function of period - hopefully there will be a well
+  defined envelope.
+
+  X I'm not convinced right now that this is the right RV analysis.  The
+  Csizmadia_2018_WASP18b_love_number paper is maybe a better direction...
+
+  X JNW: "I don't think it would be worthwhile to search for apsidal precession
+  using these data.  The signal takes the form of a phase shift, and the time
+  sampling of these (RV) data is not well suited for measuring a phase shift with
+  great confidence."
+
+  X this could take up to a week, which is cutting it a bit too close.
+
+x Another test you might try (or that a referee may suggest) is to refit after
+  omitting a single data point.  Repeat for all possible choices of data point.
+  Treat the TESS data as a single data point.  Besides the TESS datum, are there
+  others that are individually crucial for the conclusion that the period is not
+  constant?
+
+  X this seems rather excessive for the time being... the answer by inspection is
+  that the TESS data point is most important, the first few are somewhat
+  important for curvature, and the middle is important for precision.
+  Should we treat the Huitson+ 2017 data points as "a single data point"?
+  What about that Spitzer time? ...
+
+- Kane/Tansu: working out the O-C RV residuals for the Pdot model
+  - Tansu: ditto.
+
+==========================================
+
+- recompute Table 1 (stellar/transit) parameters consistently with the
+  values from the phased lightcurve.
+
+  - is anything obviously differnet from previous measurements?
+
+  - not really. Rp/Rs a tiny bit, but not by much.
+
 
