@@ -47,10 +47,6 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None):
     fig,(a0,a1) = plt.subplots(nrows=2,ncols=1,figsize=(4,7))
 
     # transit axis
-    cuterr = np.percentile(err_tmid, 50)
-    print('showing points with err > {:.2f} seconds as solid'.
-          format(cuterr*60))
-
     _ix = 0
     for e, tm, err in zip(epoch,tmid,err_tmid):
         if _ix == 0:
@@ -75,7 +71,7 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None):
                         alpha= 1-(err/np.max(err_tmid))**(1/2) + 0.1
                        )
 
-    for ax in (a0,a1):
+    for ax in [a1]:
         ax.errorbar(tess_epoch,
                     nparr(tess_tmid -
                           linear_model(lsfit_t0, lsfit_period, tess_epoch))*24*60,
@@ -84,6 +80,12 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None):
                     ms=3,
                     elinewidth=1,
                     label='TESS')
+
+    # for the legend
+    a0.errorbar(9001, 9001, np.mean(tess_err_tmid*24*60),
+                fmt='sk', ecolor='black', zorder=9, alpha=1, mew=1, ms=3,
+                elinewidth=1, label='TESS')
+
 
     bin_tess_y = np.average(nparr(
         tess_tmid-linear_model(lsfit_t0, lsfit_period, tess_epoch)),
@@ -99,13 +101,13 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None):
     print('error (plotted, sec): {}'.format(bin_tess_err_tmid*24*60*60))
     bin_tess_x = np.median(tess_epoch)
 
-    for ax in (a0,a1):
+    for ax in [a0]:
         ax.errorbar(bin_tess_x, bin_tess_y*24*60, bin_tess_err_tmid*24*60,
                     alpha=1, zorder=11, label='binned TESS',
-                    fmt='s', mfc='red', elinewidth=1,
+                    fmt='s', mfc='firebrick', elinewidth=1,
                     ms=3,
-                    mec='red',mew=1,
-                    ecolor='red')
+                    mec='firebrick',mew=1,
+                    ecolor='firebrick')
 
     yupper = (
         model_tmid_upper -
@@ -119,9 +121,18 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None):
     for ax in (a0,a1):
         ax.plot(model_epoch, yupper*24*60, color='#1f77b4', zorder=-1, lw=0.5)
         ax.plot(model_epoch, ylower*24*60, color='#1f77b4', zorder=-1, lw=0.5)
-        l1 = ax.fill_between(model_epoch, ylower*24*60, yupper*24*60, alpha=0.3,
+        ax.fill_between(model_epoch, ylower*24*60, yupper*24*60, alpha=0.3,
                              label='pre-TESS ephemeris',
                              color='#1f77b4', zorder=-2, linewidth=0)
+
+    bin_yupper = np.ones_like(model_epoch)*( bin_tess_y*24*60 +
+                                            bin_tess_err_tmid*24*60 )
+    bin_ylower = np.ones_like(model_epoch)*( bin_tess_y*24*60 -
+                                            bin_tess_err_tmid*24*60 )
+    a1.plot(model_epoch, bin_yupper, color='firebrick', zorder=-1, lw=0.5)
+    a1.plot(model_epoch, bin_ylower, color='firebrick', zorder=-1, lw=0.5)
+    a1.fill_between(model_epoch, bin_ylower, bin_yupper, alpha=0.3,
+                         color='firebrick', zorder=-2, linewidth=0)
 
     a0.legend(loc='best', fontsize='x-small')
     a1.set_xlabel('Epoch')
