@@ -209,8 +209,8 @@ multiple interacting giant planets (Kepler-108
 \citealt{mills_kepler-108_2017}; Kepler-693
 \citealt{masuda_eccentric_2017}).  Apsidal precession is not regularly
 observed in hot Jupiter systems, perhaps in part because their orbits
-are nearly circular.  However, there are many mechanisms that
-could pump hot Jupiter orbits away from circularity (see
+are nearly circular.  However, there are many mechanisms that could
+pump hot Jupiter orbits away from circularity (see
 \S~\ref{sec:apsidal_precession}, and
 \citealt{bailey_understanding_2019}), which would then lead to
 observable timing variations.  For hot Jupiters, the apsidal
@@ -363,15 +363,14 @@ measurement without being captured by the measurement uncertainties.
     \end{center}
     \vspace{-0.6cm}
     \caption{
-      %TODO: final number
-        {\bf TESS saw WASP-4b transit earlier than expected.}
-        Both plots show observed transit times minus the pre-TESS
-        ephemeris as a function of transit number.  Blue curves are
-        the $\pm 1\sigma$ credible interval around the constant-period
+        {\bf TESS saw WASP-4b transit earlier than expected.} Both
+        plots show observed transit times minus the pre-TESS ephemeris
+        as a function of transit number.  Blue curves are the $\pm
+        1\sigma$ credible interval around the constant-period
         prediction.  {\it Top:} The full timing dataset spans 10
         years.  Less precise points are more transparent.  {\it
-        Bottom:} The binned TESS observation (red point) arrived $77.8
-        \pm 10.8\ {\rm seconds}$ before it was expected.
+        Bottom:} The binned TESS observation (red band) arrived $81.5
+        \pm 11.8\ {\rm seconds}$ before it was expected.
         \label{fig:arrived_early}
     }
 \end{figure}
@@ -389,15 +388,12 @@ $i$, two quadratic limb-darkening coefficients $(u_{\rm linear},
 u_{\rm quad})$, and the orbital period $P$.  We set the eccentricity
 to zero. 
 
-Having defined the free and fixed parameters, %we calculated an initial
-%guess for the free parameters by maximizing the likelihood.  W
-we then
-sampled over the posterior using the algorithm proposed by
+Having defined the free and fixed parameters, we then sampled over the
+posterior using the algorithm proposed by
 \citet{goodman_ensemble_2010} and implemented by
-\citet{foreman-mackey_emcee_2013}.
-Table~1 gives the results, which are in reasonable agreement with the
-parameters reported by {\it e.g.},
-\citet{southworth_high-precision_2009} and 
+\citet{foreman-mackey_emcee_2013}.  Table~1 gives the results, which
+are in reasonable agreement with the parameters reported by {\it
+e.g.}, \citet{southworth_high-precision_2009} and
 \citet{huitson_gemini_2017}.
 
 To measure the transit midtimes, we then fit  each individual transit
@@ -484,7 +480,7 @@ the scope of this work.
   Orbital periods are in Table~4. The limb darkening parameters were
   allowed to float around the \citet{claret_limb_2017} prediction, but
   were unconstrained.
-  (B) \citep{triaud_spin-orbit_2010}.
+  (B) \citet{triaud_spin-orbit_2010}.
   (C) From HARPS spectra \citep{doyle_accurate_2013}.
   (D) \citet{stassun_accurate_2017}.
   (E) From functions of stellar, transit or RV parameters as discussed in text.
