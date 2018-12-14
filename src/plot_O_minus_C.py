@@ -476,15 +476,15 @@ def main(plname, xlim=None, ylim=None, include_all_points=False, ylim1=None):
         x_occ=x_occ, y_occ=y_occ, sigma_y_occ=sigma_y_occ, ylim1=ylim1)
 
     if not include_all_points:
-        copyfile(savpath, '../paper/f3.png')
-        print('saved ../paper/f3.png')
-        copyfile(savpath.replace('.png','.pdf'), '../paper/f3.pdf')
-        print('saved ../paper/f3.pdf')
+        copyfile(savpath, '../paper/f4.png')
+        print('saved ../paper/f4.png')
+        copyfile(savpath.replace('.png','.pdf'), '../paper/f4.pdf')
+        print('saved ../paper/f4.pdf')
     else:
-        copyfile(savpath, '../paper/f7.png')
-        print('saved ../paper/f7.png')
-        copyfile(savpath.replace('.png','.pdf'), '../paper/f7.pdf')
-        print('saved ../paper/f7.pdf')
+        copyfile(savpath, '../paper/f8.png')
+        print('saved ../paper/f8.png')
+        copyfile(savpath.replace('.png','.pdf'), '../paper/f8.pdf')
+        print('saved ../paper/f8.pdf')
 
 
 if __name__=="__main__":

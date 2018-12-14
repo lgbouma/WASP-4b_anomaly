@@ -405,10 +405,10 @@ def plot_all():
 
     fig.savefig(resultspng, dpi=500, bbox_inches='tight')
     print('saved {:s}'.format(resultspng))
-    copyfile(resultspng, '../paper/f4.png')
-    print('saved ../paper/f4.png')
-    fig.savefig('../paper/f4.pdf', bbox_inches='tight')
-    print('saved ../paper/f4.pdf')
+    copyfile(resultspng, '../paper/f5.png')
+    print('saved ../paper/f5.png')
+    fig.savefig('../paper/f5.pdf', bbox_inches='tight')
+    print('saved ../paper/f5.pdf')
 
 
 if __name__=="__main__":

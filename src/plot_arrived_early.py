@@ -199,8 +199,8 @@ if __name__=="__main__":
     plot_arrived_early(plname, xlim=xlim, ylim=ylim, savpath=savpath,
                        ylim1=ylim1)
 
-    copyfile(savpath, '../paper/f2.png')
-    print('saved ../paper/f2.png')
-    copyfile(savpath.replace('.png','.pdf'), '../paper/f2.pdf')
-    print('saved ../paper/f2.pdf')
+    copyfile(savpath, '../paper/f3.png')
+    print('saved ../paper/f3.png')
+    copyfile(savpath.replace('.png','.pdf'), '../paper/f3.pdf')
+    print('saved ../paper/f3.pdf')
 

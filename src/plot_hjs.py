@@ -236,8 +236,8 @@ def plot_hjs():
 
     fig.tight_layout(h_pad=0, w_pad=0)
 
-    for savname in ['../results/hjs.png', '../paper/f6.png',
-                    '../results/hjs.pdf', '../paper/f6.pdf']:
+    for savname in ['../results/hjs.png', '../paper/f7.png',
+                    '../results/hjs.pdf', '../paper/f7.pdf']:
        fig.savefig(savname, dpi=400, bbox_inches='tight')
        print('saved {:s}'.format(savname))
 

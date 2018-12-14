@@ -267,10 +267,10 @@ def main(plname, xlim=None, ylim=None, savname=None, ylim1=None):
         xlim=xlim, ylim=ylim, ylim1=ylim1)
 
     if savpath == os.path.join(pkldir, 'future.png'):
-        copyfile(savpath, '../paper/f5.png')
-        print('saved ../paper/f5.png')
-        copyfile(savpath.replace('.png','.pdf'), '../paper/f5.pdf')
-        print('saved ../paper/f5.pdf')
+        copyfile(savpath, '../paper/f6.png')
+        print('saved ../paper/f6.png')
+        copyfile(savpath.replace('.png','.pdf'), '../paper/f6.pdf')
+        print('saved ../paper/f6.pdf')
 
 
 if __name__=="__main__":

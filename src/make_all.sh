@@ -10,6 +10,8 @@ python make_select_transit_times_table.py
 
 echo "making plots"
 
+python plot_phasefold.py
+
 python plot_stacked_lightcurves.py
 
 python plot_arrived_early.py
