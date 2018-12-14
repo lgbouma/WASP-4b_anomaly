@@ -133,14 +133,11 @@ def plot_O_minus_C(
         fig, (a0,a1) = plt.subplots(nrows=2, ncols=1, figsize=(6,4),
                                     sharex=True)
 
-        # transit axis
-        cuterr = np.percentile(sigma_y, 50)
-        print('showing points with err > {:.2f} seconds as solid'.
-              format(cuterr*60))
-        sel_solid = sigma_y <= cuterr
-        sel_seethru = ~sel_solid
+        print('USING HACK TO NOT PLOT TESS DATA POINTS')
+        istess = x > 1600
 
-        for e, tm, err in zip(x,y,sigma_y):
+        # transit axis
+        for e, tm, err in zip(x[~istess],y[~istess],sigma_y[~istess]):
             a0.errorbar(e,
                         nparr(tm-linear_fit(theta_linear, e)),
                         err,
@@ -149,6 +146,12 @@ def plot_O_minus_C(
                         elinewidth=1,
                         alpha= 1-(err/np.max(sigma_y))**(1/2) + 0.1
                        )
+
+        # for legend
+        a0.errorbar(9001, 9001, np.mean(err),
+                    fmt='.k', ecolor='black', zorder=9, alpha=1, mew=1, ms=3,
+                    elinewidth=1, label='pre-TESS')
+
 
         # bin TESS points
         is_tess = (refs=='me')
@@ -164,9 +167,16 @@ def plot_O_minus_C(
         print('\n----- error on binned tess measurement -----\n')
         print('{:.2f} seconds'.format(bin_tess_sigma_y*60))
 
-        a0.plot(bin_tess_x, bin_tess_y, alpha=1, mew=0.5,
-                zorder=42, label='binned TESS', markerfacecolor='yellow',
-                markersize=9, marker='*', color='black', lw=0)
+        #a0.plot(bin_tess_x, bin_tess_y, alpha=1, mew=0.5,
+        #        zorder=42, label='binned TESS', markerfacecolor='yellow',
+        #        markersize=9, marker='*', color='black', lw=0)
+        a0.errorbar(bin_tess_x, bin_tess_y, bin_tess_sigma_y,
+                    alpha=1, zorder=11, label='binned TESS',
+                    fmt='s', mfc='firebrick', elinewidth=1,
+                    ms=3,
+                    mec='firebrick',mew=1,
+                    ecolor='firebrick')
+
 
         if include_all_points:
             a0.errorbar(x_extra,
@@ -484,7 +494,7 @@ if __name__=="__main__":
 
     # with selected points used in fit
     xlim = [-1100,2000]
-    ylim = [-1.6,1.05]
+    ylim = [-1.6,1.3]
     ylim1 = [-5,4.2]
     main(plname, xlim=xlim, ylim=ylim, include_all_points=False, ylim1=ylim1)
 

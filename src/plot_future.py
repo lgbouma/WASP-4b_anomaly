@@ -36,12 +36,6 @@ def plot_future(
     fig, (a0,a1) = plt.subplots(nrows=2, ncols=1, figsize=(6,4),
                                 sharex=True)
 
-    cuterr = np.percentile(sigma_y, 50)
-    print('showing points with err > {:.2f} seconds as solid'.
-          format(cuterr*60))
-    sel_solid = sigma_y <= cuterr
-    sel_seethru = ~sel_solid
-
     # converting epoch to time. first get tmid in days, then fix offset.
     tmid = (theta_linear[0] + x*theta_linear[1])/(24*60)
     t0_offset = int(tcol.split('_')[-2])
@@ -61,7 +55,12 @@ def plot_future(
     ################
     # transit axis #
     ################
-    for _x, _y, _err, _tmid in zip(x,y,sigma_y,tmid):
+    is_tess = (refs=='me')
+
+    for _x, _y, _err, _tmid in zip(
+        x[~is_tess],y[~is_tess],sigma_y[~is_tess],tmid[~is_tess]
+    ):
+
         a0.errorbar(_tmid.decimalyear,
                     nparr(_y-linear_fit(theta_linear, _x)),
                     _err,
@@ -72,7 +71,6 @@ def plot_future(
                    )
 
     # bin TESS points &/or make a subplot
-    is_tess = (refs=='me')
     tess_x = x[is_tess]
     tess_y = y[is_tess]
     tess_sigma_y = sigma_y[is_tess]
@@ -89,15 +87,15 @@ def plot_future(
     a0.plot(tfit.decimalyear,
             quadratic_fit(theta_quadratic, xfit)
                 - linear_fit(theta_linear, xfit),
-            label='quadratic fit', zorder=-1, c='#1f77b4')
+            label='orbital decay', zorder=-1, c='#1f77b4')
     a0.plot(tfit.decimalyear,
             precession_fit(theta_prec, xfit)
                 - linear_fit(theta_linear, xfit),
-            label='precession fit', zorder=0, c='#ff7f0e')
+            label='apsidal precession', zorder=0, c='#ff7f0e')
     a0.plot(tfit.decimalyear,
             linear_fit(theta_linear, xfit)
                 - linear_fit(theta_linear, xfit),
-            label='linear fit', zorder=-3, color='gray')
+            label='constant period', zorder=-3, color='gray')
 
     for theta_quad_sample in theta_quad_samples:
         a0.plot(tfit.decimalyear,
@@ -277,12 +275,14 @@ def main(plname, xlim=None, ylim=None, savname=None, ylim1=None):
 
 if __name__=="__main__":
 
+    np.random.seed(42)
+
     #FIXME maybe better to argparse this...
     ticid = 402026209
     plname = 'WASP-4b'
     xlim = [2005, 2030]
-    ylim = [-10.3,1.05]
-    ylim1 = [-10.3,4.2]
+    ylim = [-10.5,2]
+    ylim1 = [-10.5,4.2]
 
     savname = None #'future_2005_to_2020.png'
 

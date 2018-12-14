@@ -89,14 +89,15 @@ def calculate_timing_accuracy(plname, period_guess):
     # now: calculate the uncertainty on the ephemeris during the time window that
     # tess observes, based on the literature values.
     tmid_expected = lsfit_t0 + lsfit_period*tess_epoch
-    tmid_lower = (
-        (lsfit_t0-lsfit_t0_err) +
-        (lsfit_period-lsfit_period_err)*tess_epoch
+    tmid_upper = np.maximum(
+        (lsfit_t0+lsfit_t0_err) + tess_epoch*(lsfit_period+lsfit_period_err),
+        (lsfit_t0+lsfit_t0_err) + tess_epoch*(lsfit_period-lsfit_period_err)
     )
-    tmid_upper = (
-        (lsfit_t0+lsfit_t0_err) +
-        (lsfit_period+lsfit_period_err)*tess_epoch
+    tmid_lower = np.minimum(
+        (lsfit_t0-lsfit_t0_err) + tess_epoch*(lsfit_period-lsfit_period_err),
+        (lsfit_t0-lsfit_t0_err) + tess_epoch*(lsfit_period+lsfit_period_err)
     )
+
 
     tmid_perr = (tmid_upper - tmid_expected)
     tmid_merr = (tmid_expected - tmid_lower)
