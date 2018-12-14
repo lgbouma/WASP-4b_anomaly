@@ -55,7 +55,7 @@ def plot_phasefold(picklepath, xlim=None, ylim0=None, ylim1=None):
     ##########################################
     plt.close('all')
     f, (a0, a1) = plt.subplots(nrows=2, ncols=1, sharex=True,
-                               figsize=(6,4), gridspec_kw=
+                               figsize=(0.8*6,0.8*4), gridspec_kw=
                                {'height_ratios':[3, 1]})
 
     a0.scatter(phase*fit_period*24, phz_flux, c='k', alpha=0.15, label='data',
