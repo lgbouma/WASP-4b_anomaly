@@ -384,6 +384,8 @@ x Another test you might try (or that a referee may suggest) is to refit after
 
 ==========================================
 
+Thu 13 Dec 2018 06:22:19 PM EST
+
 - recompute Table 1 (stellar/transit) parameters consistently with the
   values from the phased lightcurve.
 
@@ -410,5 +412,47 @@ x Another test you might try (or that a referee may suggest) is to refit after
   - stellar parameter table
   - transit time and uncert table
   - occultation time table
+
+- Fig 2. Move "pre-TESS ephemeris" and bar for "binned TESS" to subplot 2.
+
+X Fig. 3 Again the individual TESS points are not helpful. Here, plot the
+  binned point only.  Omit “best” from legend labels.
+  
+  X I respectfully disgaree -- we're using all the TESS times in the fit, so we
+    should put them on the plot, I think!
+
+ - On fig 2, add band for the binned time. No red point.
+ - Winn thinks: might as well hide 'em! Because they hide the message.
+
+ - fix this on fig 3.
+
+- Jean-Michel spitzer times.
+  - include his times
+  - re-run full analysis. (ensure stellar parameters are good in code too).
+
+- remake fig 5, with the same style as fig 3.
+  - be sure to use the new samples...
+
+- remake fig 7 (ETD), using the new measurements for curiosity's sake.
+  - doesn't tell you much more. of the 5 or 6 newest ETD transits, 4 seem
+    consistent with the decaying orbit, 2 look like they would be consistent
+    with a re-fit straight line.
+  - good to know; not worth worrying over.
+
+- caught bug in my logic for propagating the error in the ephemeris.
+  the plots (and the number in the abstract) are now what they should be --
+  they propagate the error in both t0 and period, not just period.
+
+- recalculate the timing offsets from the appendix for a 81.5 second offset,
+  not the old (77 second) one
+  - what is new level of statistical significance?
+
+- make a phase folded and binned, high-SNR light curve. Check for any
+  persistent glitches or asymmetry.
+
+  - i have already checked for persistent glitches and/or asymmetry in the
+    per-transit residual lightcurves. they didn't show much. perhaps one or two
+    spot-crossings, at low significance.
+  - initial fit done
 
 

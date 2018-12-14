@@ -1,48 +1,24 @@
 MOST PRESSING
 ----------
 
-- update to use your stellar parameters in the wasp-4 analysis / all subsequent
-  numbers.
+* want a phased plot where you can see the residual (?)
+* want an extra figure in the paper for this?
+  * yes, do this!
 
-- rerun everything using Spitzer points!
-  - python make_parameter_vs_epoch_plots.py
-  - python model_comparison_linear_quadratic_precession.py | tee ../results/model_comparison/WASP-4b/model_comparison_output.txt
-  - input the above results into the paper
-     - need to believe them first --> many samples from precession model
-     - ran them.
-     - input them
-- update all tables
-  - stellar parameter table
-  - transit time and uncert table
-  - occultation time table
+PUBLISHING
+----------
 
-X Fig. 3 Again the individual TESS points are not helpful. Here, plot the
-  binned point only.  Omit “best” from legend labels.
-  
-  X I respectfully disgaree -- we're using all the TESS times in the fit, so we
-    should put them on the plot, I think!
+* inform architects (tess-architects@mit.edu) and contributors,
+  including a draft, asking for response within three business days,
+  with the statement:
 
- - On fig 2, add band for the binned time. No red point.
- - Acquiesce 
+  "I have read the paper “Title”, and I agree with the methods and
+  conclusions. I wish to be included as a co-author." 
 
- * Winn thinks: might as well hide 'em! Because they hide the message.
- * fix this on fig 3.
+* step 4: once complete draft is ready, post draft to TESS wiki
+  contributed paper page.
 
-- make a phase folded and binned, high-SNR light curve. Check for any
-  persistent glitches or asymmetry.
-
-  - i have already checked for persistent glitches and/or asymmetry in the
-    per-transit residual lightcurves. they didn't show much. perhaps one or two
-    spot-crossings, at low significance.
-  - initial fit done
-  * want a phased plot where you can see the residual (?)
-  * want an extra figure in the paper for this?
-    * yes, do this!
-
-* Jean-Michel spitzer times.
-  * include his times
-  * re-run full analysis. (ensure stellar parameters are good in code too).
-
+===============================================================================
 
 ONCE PAPER IS SUBMITTED
 ----------
@@ -60,19 +36,6 @@ ONCE PAPER IS SUBMITTED
 
 * schedule in further ground-based follow-up next season.
   * get some magellan time to observe an occultation / transit?
-
-PUBLISHING
-----------
-
-* inform architects (tess-architects@mit.edu) and contributors,
-  including a draft, asking for response within three business days,
-  with the statement:
-
-  "I have read the paper “Title”, and I agree with the methods and
-  conclusions. I wish to be included as a co-author." 
-
-* step 4: once complete draft is ready, post draft to TESS wiki
-  contributed paper page.
 
 
 EVENTUAL READING
