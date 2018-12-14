@@ -274,17 +274,33 @@ further monitoring of the system (\S~\ref{sec:future}).
 
 
 \section{New transits and system parameters}
+
 \begin{figure}[t]
     \begin{center}
         \includegraphics[width=0.48\textwidth]{f1.png}
     \end{center}
     \vspace{-0.5cm}
     \caption{
-        {\bf TESS transits of WASP-4b.} On the left, black points are
-        TESS flux measurements, with a vertical offset applied. Blue
-        curves are best-fit models. Rounded midtimes are printed in
-        BTJD next to the appropriate transits.  The residuals are
-        shown on the right.
+        {\bf Phase-folded transit of WASP-4b.} Black points are TESS
+        flux measurements; yellow points are binned measurements.
+        Using the fit to the phase-folded transit (blue line), we
+        measure mid-transit times by fitting the individual transits
+        (Figure~\ref{fig:lightcurves}).
+        \label{fig:phasefold}
+    }
+\end{figure}
+
+\begin{figure}[t]
+    \begin{center}
+        \includegraphics[width=0.48\textwidth]{f2.png}
+    \end{center}
+    \vspace{-0.5cm}
+    \caption{
+        {\bf Individual transits of WASP-4b.} On the left, black
+        points are TESS flux measurements, with a vertical offset
+        applied. Blue curves are best-fit models. Rounded midtimes are
+        printed in BTJD next to the appropriate transits.  The
+        residuals are shown on the right.
         \label{fig:lightcurves}
     }
 \end{figure}
@@ -359,7 +375,7 @@ measurement without being captured by the measurement uncertainties.
 \begin{figure}[t]
     \begin{center}
         \leavevmode
-        \includegraphics[width=0.48\textwidth]{f2.pdf}
+        \includegraphics[width=0.48\textwidth]{f3.pdf}
     \end{center}
     \vspace{-0.6cm}
     \caption{
@@ -388,13 +404,14 @@ $i$, two quadratic limb-darkening coefficients $(u_{\rm linear},
 u_{\rm quad})$, and the orbital period $P$.  We set the eccentricity
 to zero. 
 
-Having defined the free and fixed parameters, we then sampled over the
+Having defined the free and fixed parameters, we sampled over the
 posterior using the algorithm proposed by
 \citet{goodman_ensemble_2010} and implemented by
 \citet{foreman-mackey_emcee_2013}.  Table~1 gives the results, which
 are in reasonable agreement with the parameters reported by {\it
 e.g.}, \citet{southworth_high-precision_2009} and
 \citet{huitson_gemini_2017}.
+Figure~\ref{fig:phasefold} shows the phase-folded lightcurve.
 
 To measure the transit midtimes, we then fit  each individual transit
 for a model transit, plus a local linear trend.  We allowed four free 
@@ -421,9 +438,9 @@ factor $f=0.76$, forcing a reduced $\chi^2$ of unity.  This lowered
 the mean uncertainty of the transit midtimes from $29.8$ to $22.6$
 seconds.
 
-Figure~\ref{fig:lightcurves} shows the lightcurves, best-fit models,
-and residuals.  Table~2 reports the mid-transit times and their
-uncertainties.
+Figure~\ref{fig:lightcurves} shows the lightcurve of each transit, the
+best-fit models, and the residuals.  Table~2 reports the mid-transit
+times and their uncertainties.
 Binning the residuals to 1-hour windows and taking the median absolute
 deviation, the lightcurves have an RMS of $586\,{\rm ppm}\,{\rm
 hr}^{1/2}$.  The predicted\footnote{\url{github.com/lgbouma/tnm}}
@@ -533,7 +550,7 @@ of evolution.
 \begin{figure*}[t]
     \begin{center}
         \leavevmode
-        \includegraphics[width=0.9\textwidth]{f3.pdf}
+        \includegraphics[width=0.9\textwidth]{f4.pdf}
     \end{center}
     \vspace{-0.5cm}
     \caption{
@@ -822,7 +839,7 @@ disfavored.
 
 \begin{figure}[t!]
   \begin{center}
-    \includegraphics[width=0.417\textwidth]{f4.pdf}
+    \includegraphics[width=0.417\textwidth]{f5.pdf}
   \end{center}
   \vspace{-0.5cm}
   \caption{
@@ -1319,7 +1336,7 @@ for a definitive interpretation.
 \begin{figure}[!t]
 	\begin{center}
 		\leavevmode
-		\includegraphics[width=0.48\textwidth]{f5.pdf}
+		\includegraphics[width=0.48\textwidth]{f6.pdf}
 	\end{center}
   \vspace{-0.5cm}
 	\caption{
@@ -1480,7 +1497,7 @@ effect of interest, so we treat the SPOC BJD correction as
 \begin{figure*}[ht!]
   \begin{center}
     \leavevmode
-    \includegraphics[width=0.9\textwidth]{f6.pdf}
+    \includegraphics[width=0.9\textwidth]{f7.pdf}
   \end{center}
   \vspace{-0.5cm}
   \caption{
