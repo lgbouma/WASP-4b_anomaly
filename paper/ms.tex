@@ -139,22 +139,21 @@ Street, Cambridge, MA 02138, USA }
 
 
 \begin{abstract}
-  %TODO: final numbers
   By combining data from the Transiting Exoplanet Survey Satellite
   (TESS) with data from previous studies, we show that the transit
   times of WASP-4b are incompatible with a constant orbital period.
-  The transits observed by TESS occurred $77.8 \pm 10.8$~seconds
+  The transits observed by TESS occurred $81.5 \pm 11.8$~seconds
   earlier than one would expect, based on the previous data.  The
-  orbital period appears to be shrinking by $\dot{P}=-12.1 \pm 1.2$
+  orbital period appears to be shrinking by $\dot{P}=-12.6 \pm 1.2$
   milliseconds per year.   A simple clock offset is unlikely, because
   TESS observations of other hot Jupiters (WASP-6b, 18b, and 46b) are
-  compatible with a constant period and rule out a 77.8-second offset
+  compatible with a constant period and rule out a 81.5-second offset
   at the 6.3$\sigma$ level.  The timing variations seem to be
   astrophysical, and could be caused by apsidal precession, or perhaps
   by tidal decay.  The latter seems implausible on theoretical
   grounds, as it would require a stellar quality factor $Q_\star'
   \approx 3\times10^4$.  Apsidal precession would imply an
-  eccentricity $e\approx1.6\times 10^{-3}$, and the possibility of
+  eccentricity $e\approx1.8\times 10^{-3}$, and the possibility of
   measuring the planet's Love number.  A Doppler shift from WASP-4's
   acceleration towards us could account for at most one quarter of the
   observed period change (at $2\sigma$).  Further observations are
@@ -300,16 +299,17 @@ star is designated by the TESS Input Catalog as TIC 402026209
 
 The TESS spacecraft recorded images of WASP-4 in an $11\times11$ pixel
 array every 2 minutes.   The data were downlinked via the Deep Space
-Network, and the Payload Operations Center then converted the
-timestamps from the spacecraft clock to TESS Julian Day in the {\it
-Temps Dynamique Barycentrique} (TDB) reference.  The data were then
-processed through the Science Processing Operations Center (SPOC)
-pipeline at NASA Ames~\citep{jenkins_tess_2016}.  SPOC used the known
+Network. The timestamps from the spacecraft clock were then converted
+by the Payload Operations Center to TESS Julian Day in the {\it
+Temps Dynamique Barycentrique} (TDB) reference.  The images were then
+reduced to lightcurves by the Science Processing Operations Center (SPOC)
+at NASA Ames~\citep{jenkins_tess_2016}.  During this processing, SPOC used
+the known
 spacecraft trajectory to compute the barycentric time corrections on a
 target by target basis, and reported timestamps in ``BTJD'', where
 ${\rm BTJD} = {\rm BJD} - 2457000$, BJD is the barycentric julian
-date, and all times are in the TDB reference (see
-\citealt{urban_explanatory_2012} for explanations of time systems).
+date, and all times are in the TDB reference (\citealt{urban_explanatory_2012} 
+describe the relevant time systems).
 The lightcurves were then vetted and released by the MIT TESS Science
 Office to the Mikulski Archive for Space
 Telescopes~\citep{ricker_tess_alerts_2018}.
@@ -345,10 +345,10 @@ dividing out the median flux.  We converted the timestamps from BTJD
 to BJD by adding the appropriate 2457000 day offset
 \citep{tess_data_product_description_2018}.  Many of these and
 subsequent processing steps were performed using
-\texttt{astrobase}~\citep{bhatti_astrobase_2018} We opted not to
-``flatten'' the lightcurves at this stage, as is often done with {\it
+\texttt{astrobase}~\citep{bhatti_astrobase_2018} We did not
+``flatten'' the lightcurves, as is often done with {\it
 e.g.}, a spline or gaussian process regression.  Such procedures are
-asymmetric about the transit minimum and can skew the transit time
+asymmetric about the transit minimum and can skew the midtime
 measurement without being captured by the measurement uncertainties.
 
 
@@ -389,28 +389,30 @@ $i$, two quadratic limb-darkening coefficients $(u_{\rm linear},
 u_{\rm quad})$, and the orbital period $P$.  We set the eccentricity
 to zero. 
 
-Having defined the free and fixed parameters, we calculated an initial
-guess for the free parameters by maximizing the likelihood.  We then
+Having defined the free and fixed parameters, %we calculated an initial
+%guess for the free parameters by maximizing the likelihood.  W
+we then
 sampled over the posterior using the algorithm proposed by
 \citet{goodman_ensemble_2010} and implemented by
 \citet{foreman-mackey_emcee_2013}.
 Table~1 gives the results, which are in reasonable agreement with the
-parameters reported by \citet{gillon_improved_2009},
-\citet{southworth_high-precision_2009}, and
+parameters reported by {\it e.g.},
+\citet{southworth_high-precision_2009} and 
 \citet{huitson_gemini_2017}.
 
-To measure mid-transit times, we then focused on each individual
-transit window.  We fit for a model transit, plus a local linear
-trend.  We allowed four free parameters per transit: the time of
+To measure the transit midtimes, we then fit  each individual transit
+for a model transit, plus a local linear trend.  We allowed four free 
+parameters per transit: the time of
 mid-transit $t_{\rm tra}$, the planet-to-star radius ratio, and the
 slope and intercept of the line.  We fixed the remaining
-parameters~---~$a/R_\star$, $i$, $P$, and the limb-darkening
-coefficients~---~to the best-fit values determined from the
+parameters%~---~$a/R_\star$, $i$, $P$, and the limb-darkening
+%coefficients~---~
+to the best-fit values determined from the
 phase-folded TESS lightcurve.
 
 After completing an initial fit for each transit, we set the
 photometric error bars to equal the standard deviation of the
-out-of-transit points of the residual lightcurve.  We then reperformed
+out-of-transit points of the residual lightcurve.  We then repeated
 the fitting procedure, using the empirically determined photometric
 errors.
 
@@ -429,8 +431,8 @@ uncertainties.
 Binning the residuals to 1-hour windows and taking the median absolute
 deviation, the lightcurves have an RMS of $586\,{\rm ppm}\,{\rm
 hr}^{1/2}$.  The predicted\footnote{\url{github.com/lgbouma/tnm}}
-photon-counting noise is $410\,{\rm ppm}\,{\rm hr}^{1/2}$.  At
-$T\approx11.8$, with a 9-pixel aperture read noise is expected to
+photon-counting noise is $410\,{\rm ppm}\,{\rm hr}^{1/2}$.  For a
+$T\approx11.8$ star with a 9-pixel aperture, read noise is expected to
 contribute an additional $202\,{\rm ppm}\,{\rm hr}^{1/2}$ in
 quadrature.  The predicted zodiacal background contribution is
 $673\,{\rm ppm}\,{\rm hr}^{1/2}$, based on the
@@ -506,13 +508,13 @@ with the {\it Gaia} DR2 parallax, and adjusting for the parallax
 offset \citep{stassun_evidence_2018}, we obtain the stellar radius.
 For the stellar mass, we started with the $a/R_\star$ value found from
 the phase-folded TESS lightcurve.  The implied stellar density follows
-\citep{seager_unique_2003}, and using the stellar radius we obtain the
+\citep{seager_unique_2003}, as do the
 semi-major axis and stellar mass.  We get the planet radius using our
-measured $R_{\rm p}/R_\star$.  Finally, for the planet mass we use the
-observed RV semi-amplitude and inclination angle from the transit
-\citep{triaud_spin-orbit_2010}.
+$R_{\rm p}/R_\star$ measurement.  Finally, for the planet mass we use the
+inclination angle from the transit, and the RV semi-amplitude from 
+\citet{triaud_spin-orbit_2010}.
 
-We list the resulting parameters in Table~3, and adopt them for the
+We list the resulting parameters in Table~1, and adopt them for the
 remaining analysis.  Our parameters broadly agree with those of previous
 authors
 \citep{wilson_wasp-4b_2008,gillon_discovery_2009,winn_transit_2009,southworth_homogeneous_2011,petrucci_no_2013}.
@@ -545,7 +547,8 @@ of evolution.
         best constant period model (gray line) is a poor fit to the
         observations.  The best-fit tidal decay model (blue) and
         apsidal precession model (orange) can fit the data.  The
-        binned TESS point (star) is for display purposes only.
+        binned TESS point (red square) is for display purposes only;
+        the individual TESS times are used to fit the models.
         \label{fig:times}
     }
 \end{figure*}
@@ -821,11 +824,11 @@ disfavored.
 
 \begin{figure}[t!]
   \begin{center}
-    \includegraphics[width=0.40\textwidth]{f4.pdf}
+    \includegraphics[width=0.417\textwidth]{f4.pdf}
   \end{center}
   \vspace{-0.5cm}
   \caption{
-    {\bf WASP-4b has a short eccentricity damping time and a medium
+    {\bf WASP-4b should have a short eccentricity damping time and an average
     decay time compared to other hot Jupiters.  It seems to orbit a
     main sequence host.
     }
@@ -1510,16 +1513,17 @@ Jupiters for which there were at least five distinct epochs reported
 in the peer-reviewed literature.  We required that each observation be
 of a single transit, that the midpoint be fit as a free parameter, and
 that the time system be clearly documented.  Our final hot Jupiter
-sample included WASPs-4b, -5b, -6b, -18b, and -46b.  The collected and
+sample included WASP-4b, 5b, 6b, 18b, and 46b.  The collected and
 measured times are given in Tables~5, 6, 7, and 8 for each.
 
 Using the literature timing data for each hot Jupiter, we then
 performed a least-squares fit to a linear ephemeris.  Using the
-best-fit values and variances, we calculated the uncertainty on the
-predicted transit time during the TESS observations.  This gave 9, 94,
-18, 42, and 60 seconds for WASPs-4b, -5b, -6b, -18b, and -46b.  We
-show in Figure~\ref{fig:hjs} that WASP-4b is the only hot Jupiter that
-transited significantly earlier than expected.
+best-fit values and variances, we calculated the precision of the
+predicted transit time during the TESS observing epoch.  This gave 11,
+94, 18, 42, and 59 seconds for WASP-4b, 5b, 6b, 18b, and 46b.
+Comparing the observed and predicted times, Figure~\ref{fig:hjs} shows
+that WASP-4b is the only hot Jupiter that transited significantly
+earlier than expected.
 
 To convert this intuition into a quantitative limit, for each hot
 Jupiter we considered the model
@@ -1540,16 +1544,17 @@ using only the literature transit times, and $(\sigma_{t_0'},
 \sigma_{P'})$ are their uncertainties.
 
 For each planet, we then ask: what fraction of the posterior for
-$t_{\rm offset}$ is consistent with an offset worse than $77$ seconds?
-For WASP-4b, the answer is unsurpringly about half.  For WASP-6b, the
-most constraining object, about 1 sample in 2 million is consistent
-with such a timing offset ($4.9\sigma$).  For WASP-18b, 1 in 63
-samples would be consistent with this timing offset ($2.1\sigma$), and
-in WASP-46b, the limit is 1 in 38 samples ($1.9\sigma$).  For WASP-5b,
-the predicted time is too imprecise to rule out timing offsets at the
-necessary amplitude.  Multiplying the three independent probabilities
-for WASPs-5b, 6b, and -18b, we rule out $t_{\rm offset} < -77\ {\rm
-seconds}$ at $6.3\sigma$, or about about 1 part in 5 billion.
+$t_{\rm offset}$ is consistent with an offset worse than $81.5$
+seconds?  For WASP-4b, the answer is unsurpringly about half.  For
+WASP-6b, the most constraining object, about 1 sample in 2 million is
+consistent with such a timing offset ($4.9\sigma$).  For WASP-18b, 1
+in 80 samples would be consistent with this timing offset
+($2.2\sigma$), and in WASP-46b, the limit is 1 in 44 samples
+($2.0\sigma$).  For WASP-5b, the predicted time is too imprecise to
+rule out timing offsets at the necessary amplitude.  Multiplying the
+three independent probabilities for WASP-5b, 6b, and 18b, we can rule
+out $t_{\rm offset} < -81.5\ {\rm seconds}$ at $6.3\sigma$, or about
+about 1 part in 8 billion.
 
 
 %\clearpage
@@ -1612,7 +1617,7 @@ seconds}$ at $6.3\sigma$, or about about 1 part in 5 billion.
 % produced lightcurves of extremely high quality, we included their times
 % in our analysis.  From private correspondence with
 % \citealt{huitson_gemini_2017}, the authors also stand by their
-% timestamps\todo[inline]{verify this}. Since the ETD data come from
+% timestamps. Since the ETD data come from
 % heterogeneous sources, their timestamps are less clearly documented,
 % and the times are thus more prone to systematic errors, we
 % categorically omit them from consideration.
