@@ -1,8 +1,12 @@
 MOST PRESSING
 ----------
 
-* get more hot jupiters from sector 3 alerts that match the criteria for
-  inclusion as 
+* in discussion: add mention of WASP-53 system architecture. Maybe there's some
+  eccentric BD outside that came in on periastron passage, and caused a
+  "direct" TTV (e.g., descrbed by Triuad+2017).
+
+  The observed amplitude of ~70seconds is plausible, given the description of
+  Triaud+2017.
 
 
 PUBLISHING

@@ -458,4 +458,53 @@ X Fig. 3 Again the individual TESS points are not helpful. Here, plot the
 - make a phased plot where you can see the residual
 - put this extra figure in the paper
 
+- consider including new HJs from sector 3.
+  - look closely into what's possible.
+  - there are not many good candidates. 
+  X don't both with it. first two sectors seems about as good as 3.
 
+Verbose sector 3 description:
+
+WASP-18 and WASP-53 are weird exceptions (see below), but the remaining sector
+3 hot Jupiters don't have sufficient ground-based followup data to give precise
+& accurate midtime predictions. The list is below, as is a more verbose
+description.
+
+From reviewing the sector 1 - sector 3 literature, my takeaway is that there
+seem to be very few southern systems with as much follow-up data as e.g.,
+WASP-12 or WASP-4. The situation may be different in the north.
+
+* WASP-18 has new times, which will help somewhat. I've collect the new times,
+  and they are consistent with the old ones. The real issue for this case was
+the precision of the prediction, not the sector 2 observations.
+
+* WASP-53 (Triaud+2017) has 8 follow-up lightcurves from its discovery paper
+  that would produce a sufficient baseline to give a good tmid prediction. This
+is an interesting system because the RVs revealed a ~8 year brown dwarf outer
+companion that is predicted to produce a ~35 second TTV during the TESS
+observations. Discovering the outer companion was a lucky break, because the BD
+is eccentric, and they caught it during it periastron passage. They mention
+that had this not been the case, they would have just seen a  linear trend (as
+we see now with WASP-4...).
+
+Regardless, for this system the individual mid-times are not fit or reported.
+So digging into this system would require fitting the individual lightcurves.
+The best way to do this involves applying instrument-specific "baseline
+functions" (e.g., quadratic+centroid xy + sometimes sinusoidal in time fitting
+for EulerCAM, + a fit offset for TRAPPIST at the time of their meridian flips).
+This seems like a rather large effort, especially for a system that is
+predicted to be a bad reference clock ;-)
+
+Here are the other known transiting planets from Sector 3 that were alerted:
+   pl_hostname  is_transiting    Tmag  total_sectors_obsd     tic_id
+0      WASP-18              1   8.833                   2  100100827
+1      WASP-99              1   8.923                   1  166836920
+2     WASP-117              1   9.632                   2  166739520
+3      WASP-62              1   9.716                  10  149603524
+4     WASP-100              1  10.307                  12   38846515
+5      WASP-72              1  10.452                   2  122612091
+6     WASP-126              1  10.555                  10   25155310
+7     WASP-105              1  11.192                   2  158623531
+8     WASP-119              1  11.547                   6  388104525
+9     WASP-139              1  11.664                   2  159951311
+10     WASP-53              1  11.692                   1  268766053
