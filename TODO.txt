@@ -1,9 +1,9 @@
 MOST PRESSING
 ----------
 
-* want a phased plot where you can see the residual (?)
-* want an extra figure in the paper for this?
-  * yes, do this!
+* get more hot jupiters from sector 3 alerts that match the criteria for
+  inclusion as 
+
 
 PUBLISHING
 ----------
@@ -26,11 +26,11 @@ ONCE PAPER IS SUBMITTED
 
 * notify Erin May of the result, ask if they would be willing to share
 
-* Email caceres after submitting.
+* Email Caceres after submitting. plz confirm UTC, not TDB.
 
-* we should maybe get some HIRES RV observations, to extend the linear trend
-  pointed out by Knutson et al 2014. i don't think new ones have been taken in
-  a while.  (a planet should be there...)
+* Consider contacting Andrew Howard, to get a few HIRES RV observations, to
+  extend the linear trend pointed out by Knutson et al 2014. i don't think new
+  ones have been taken in a while.  (a planet should be there...)
 
   * ... is WASP-4 up soon from Hawaii?
 

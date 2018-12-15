@@ -455,4 +455,7 @@ X Fig. 3 Again the individual TESS points are not helpful. Here, plot the
     spot-crossings, at low significance.
   - initial fit done
 
+- make a phased plot where you can see the residual
+- put this extra figure in the paper
+
 
