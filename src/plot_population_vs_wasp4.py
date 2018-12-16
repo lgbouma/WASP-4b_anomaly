@@ -369,7 +369,7 @@ def plot_HJs_HR_diagram(catpath, ax):
 
     leg = ax.legend(loc='lower left', fontsize='x-small', framealpha=1)
 
-    ax.set_ylabel('absolute G mag (DR2)')
+    ax.set_ylabel('Absolute G mag (DR2)')
     ax.set_xlabel('$T_{\mathrm{eff}}$ [K]')
 
     ax.set_xscale('linear')
