@@ -32,12 +32,12 @@ if __name__=="__main__":
     get_sigma_given_percent(frac)
 
     print('WASP-46b, t_systematic_offset < -81.50 sec ruled out at XX sigma')
-    val_46b = 0.022780460097
+    val_46b = 0.020497142857
     frac = 1 - val_46b
     get_sigma_given_percent(frac)
 
     print('WASP-18b, t_systematic_offset < -81.50 sec ruled out at XX sigma')
-    val_18b = 0.012510650383
+    val_18b = 0.009668571429
     frac = 1- val_18b
     get_sigma_given_percent(frac)
 
