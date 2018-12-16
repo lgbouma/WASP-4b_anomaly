@@ -63,6 +63,8 @@ def make_temp_table(plname):
             references.append('\citet{huitson_gemini_2017}')
         elif ref == 'me':
             references.append('This work')
+        elif ref == 'Baxter et al. (in prep)':
+            references.append('Baxter et al.\ (in prep)')
         #WASP-5b
         elif ref == '2008MNRAS.387L...4A':
             references.append('\citet{anderson_wasp-5b_2008}')
@@ -132,7 +134,7 @@ if __name__=="__main__":
         temppath = make_temp_table(plname)
 
         templatetxt = 'template.txt'
-        outtable = ( '../paper/{:s}_transit_time_table.tex'.
+        outtable = ( '../paper/template_{:s}_transit_time_table.tex'.
                     format(plname) )
 
         with open(temppath, mode='r') as f:
