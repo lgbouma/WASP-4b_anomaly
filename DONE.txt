@@ -508,3 +508,42 @@ Here are the other known transiting planets from Sector 3 that were alerted:
 8     WASP-119              1  11.547                   6  388104525
 9     WASP-139              1  11.664                   2  159951311
 10     WASP-53              1  11.692                   1  268766053
+
+
+==========================================
+Sun Dec 16 14:54:13 2018
+
+- merge JNW comments
+
+- in discussion: add mention of WASP-53 system architecture. Maybe there's some
+  eccentric BD outside that came in on periastron passage, and caused a
+  "direct" TTV (e.g., descrbed by Triuad+2017).
+
+  The observed amplitude of ~70seconds is plausible, given the description of
+  Triaud+2017.
+
+- in code, change f1<-->f2
+- remake the figures, match the text.
+
+
+% JNW: I think the KDE needs to be removed and perhaps replaced with something
+% else.  It gives the impression that the WASP-4 anomaly is only at
+% the 2-sigma level, which is false.  The KDE illustrates the spread
+% in values, but what is relevant is the standard deviation of the
+% mean of the measurements, which is narrower than the KDE implies.
+% I suggest replacing it with a Gaussian with a mean equal to the mean of the
+% deviations, and a width equal to the uncertainty in the mean, i.e., the
+% standard deviation divided by sqrt(N-1).
+
+- Remake plot per above
+- Correct the abstract with N-1, not N.
+- Verify that you believe the plot numbers, and that they are
+  consistent with all the others in the text.
+
+- update WASP-18 table with new times from sector 3.
+- update WASP-18 time offset limit, and associated overall limit
+- fix the figure placement in the text. what's up with it right now?
+
+- send JNW individual transit fits, and responses
+
+

@@ -1,13 +1,17 @@
 MOST PRESSING
 ----------
 
-* in discussion: add mention of WASP-53 system architecture. Maybe there's some
-  eccentric BD outside that came in on periastron passage, and caused a
-  "direct" TTV (e.g., descrbed by Triuad+2017).
+TODO:
 
-  The observed amplitude of ~70seconds is plausible, given the description of
-  Triaud+2017.
+* fix the log-likelihood transit "period" vs "per" bug lines 1571 and 1613 of
+  lcfit.py
+  
+  * probably also add an assertion to force correct key names in passed
+    dictionaries.
 
+* verify that not doing the f=0.76 fudge factor doesn't change
+  anything (probably just inflates uncertainties). --> would it
+  appreciably reduce certainty of period decay? if so, would bear mentioning!
 
 PUBLISHING
 ----------
