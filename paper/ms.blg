@@ -3,396 +3,26 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ms.aux
 The style file: yahapj.bst
 Database file #1: bibliography.bib
-Repeated entry---line 2325 of file bibliography.bib
+Repeated entry---line 2410 of file bibliography.bib
  : @article{husnoo_observational_2012
  :                                   ,
 I'm skipping whatever remains of this entry
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Repeated entry---line 2897 of file bibliography.bib
+Repeated entry---line 2982 of file bibliography.bib
  : @article{southworth_high-precision_2009
  :                                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2937 of file bibliography.bib
+Repeated entry---line 3022 of file bibliography.bib
  : @article{sanchis-ojeda_starspots_2011
  :                                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2999 of file bibliography.bib
+Repeated entry---line 3084 of file bibliography.bib
  : @article{hoyer_tramos_2013
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3032 of file bibliography.bib
+Repeated entry---line 3117 of file bibliography.bib
  : @article{petrucci_no_2013
  :                          ,
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3228 of file bibliography.bib
- : 
- : #    author = {{Winn}, J.~N.},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3241 of file bibliography.bib
- : 
- : #    author = {{Petigura}, E.~A. and {Marcy}, G.~W. and {Howard}, A.~W.},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3259 of file bibliography.bib
- : 
- : #  title = {On the {Occurrence} {Rate} of {Hot} {Jupiters} in {Different} {Stellar} {Environments}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3278 of file bibliography.bib
- : 
- : #     title = {The {Kepler} {Follow}-up {Observation} {Program}. {I}. {A}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3326 of file bibliography.bib
- : 
- : #  title = {The {California}- \textit{{Kepler}} {Survey}. {III}. {A} {Gap} in the {Radius} {Distribution} of {Small} {Planets}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3341 of file bibliography.bib
- : 
- : #  title = {The evaporation valley in the {Kepler} planets},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3354 of file bibliography.bib
- : 
- : #  title = {Stellar {Multiplicity}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3370 of file bibliography.bib
- : 
- : #  title = {A {SURVEY} {OF} {STELLAR} {FAMILIES}: {MULTIPLICITY} {OF} {SOLAR}-{TYPE} {STARS}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3387 of file bibliography.bib
- : 
- : #     title = {Searching for {Transiting} {Planets} in {Stellar} {Systems}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3430 of file bibliography.bib
- : 
- : #     title = {Using {All}-{Sky} {Surveys} to {Find} {Planetary} {Transits}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3454 of file bibliography.bib
- : 
- : #  title = {{PLANET} {OCCURRENCE} {WITHIN} 0.25 {AU} {OF} {SOLAR}-{TYPE} {STARS} {FROM} \textit{{KEPLER}}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3469 of file bibliography.bib
- : 
- : #  title = {{EXOPLANET} {POPULATION} {INFERENCE} {AND} {THE} {ABUNDANCE} {OF} {EARTH} {ANALOGS} {FROM} {NOISY}, {INCOMPLETE} {CATALOGS}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3484 of file bibliography.bib
- : 
- : #  title = {{THE} {FALSE} {POSITIVE} {RATE} {OF} \textit{{KEPLER}} {AND} {THE} {OCCURRENCE} {OF} {PLANETS}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3499 of file bibliography.bib
- : 
- : #  title = {The {Occurrence} of {Potentially} {Habitable} {Planets} {Orbiting} {M} {Dwarfs} {Estimated} from the {Full} {Kepler} {Dataset} and an {Empirical} {Measurement} of the {Detection} {Sensitivity}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3516 of file bibliography.bib
- : 
- : #  title = {{TERRESTRIAL} {PLANET} {OCCURRENCE} {RATES} {FOR} {THE} \textit{{KEPLER}} {GK} {DWARF} {SAMPLE}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3532 of file bibliography.bib
- : 
- : #     title = {Speckle {Camera} {Observations} for the {NASA} {Kepler} {Mission}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3567 of file bibliography.bib
- : 
- : #     title = {Adaptive {Optics} {Images} of {Kepler} {Objects} of {Interest}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3607 of file bibliography.bib
- : 
- : #     title = {Adaptive {Optics} {Images}. {II}. 12 {Kepler} {Objects} of {Interest} and
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3651 of file bibliography.bib
- : 
- : #     title = {Observations of {Binary} {Stars} with the {Differential} {Speckle}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3683 of file bibliography.bib
- : 
- : #     title = {Most {Sub}-arcsecond {Companions} of {Kepler} {Exoplanet} {Candidate}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3717 of file bibliography.bib
- : 
- : #     title = {Multiplicity in transiting planet-host stars. {A} lucky imaging study of
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3761 of file bibliography.bib
- : 
- : #     title = {High-resolution imaging of {Kepler} planet host candidates. {A}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3822 of file bibliography.bib
- : 
- : #     title = {Adaptive {Optics} {Images}. {III}. 87 {Kepler} {Objects} of {Interest}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3858 of file bibliography.bib
- : 
- : #     title = {Robotic {Laser} {Adaptive} {Optics} {Imaging} of 715 {Kepler} {Exoplanet}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3905 of file bibliography.bib
- : 
- : #     title = {Revision of {Earth}-sized {Kepler} {Planet} {Candidate} {Properties} with
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 3961 of file bibliography.bib
- : 
- : #     title = {High-{Resolution} {Multi}-{Band} {Imaging} for {Validation} and
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4006 of file bibliography.bib
- : 
- : #     title = {Hubble {Space} {Telescope} {High}-{Resolution} {Imaging} of {Kepler}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4048 of file bibliography.bib
- : 
- : #     title = {Influence of {Stellar} {Multiplicity} {On} {Planet} {Formation}. {III}.
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4091 of file bibliography.bib
- : 
- : #     title = {Influence of {Stellar} {Multiplicity} on {Planet} {Formation}. {IV}.
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4136 of file bibliography.bib
- : 
- : #     title = {Robo-{AO} {Kepler} {Planetary} {Candidate} {Survey}. {II}. {Adaptive}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4183 of file bibliography.bib
- : 
- : #     title = {Spectroscopic [{Fe}/{H}] for 98 extra-solar planet-host stars.
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4234 of file bibliography.bib
- : 
- : #     title = {On the {Metallicities} of {Kepler} {Stars}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4270 of file bibliography.bib
- : 
- : #     title = {Fast {Rise} of "{Neptune}-size" {Planets} (4-8 {R} ⊕) from {P}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4326 of file bibliography.bib
- : 
- : #     title = {An asteroseismic view of the radius valley: stripped cores, not
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4370 of file bibliography.bib
- : 
- : #     title = {Understanding the {Effects} of {Stellar} {Multiplicity} on the
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4419 of file bibliography.bib
- : 
- : #     title = {A new yield simulator for transiting planets and false positives:
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4460 of file bibliography.bib
- : 
- : #     title = {Observed {Properties} of {Exoplanets}: {Masses}, {Orbits}, and
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4505 of file bibliography.bib
- : 
- : #     title = {The {Keck} {Planet} {Search}: {Detectability} and the {Minimum}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4560 of file bibliography.bib
- : 
- : #     title = {The {HARPS} search for southern extra-solar planets {XXXIV}.
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4609 of file bibliography.bib
- : 
- : #     title = {The {Frequency} of {Hot} {Jupiters} in the {Galaxy}: {Results}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4650 of file bibliography.bib
- : 
- : #     title = {{CoRoT}: {Harvest} of the exoplanet program},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4683 of file bibliography.bib
- : 
- : #     title = {Revised {Stellar} {Properties} of {Kepler} {Targets} for the
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4731 of file bibliography.bib
- : 
- : #  title = {The {Densities} of {Planets} in {Multiple} {Stellar} {Systems}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4743 of file bibliography.bib
- : 
- : #  title = {Frequency of {Hot} {Jupiters} and {Very} {Hot} {Jupiters} from the {OGLE}-{III} {Transit} {Surveys} toward the {Galactic} {Bulge} and {Carina}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4780 of file bibliography.bib
- : 
- : #  title = {The {Planet}-{Metallicity} {Correlation}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4803 of file bibliography.bib
- : 
- : #  title = {The {Metallicity} {Distribution} and {Hot} {Jupiter} {Rate} of the {Kepler} {Field}: {Hectochelle} {High}-resolution {Spectroscopy} for 776 {Kepler} {Target} {Stars}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4844 of file bibliography.bib
- : 
- : #  title = {{THE} {FREQUENCY} {OF} {HOT} {JUPITERS} {ORBITING} {NEARBY} {SOLAR}-{TYPE} {STARS}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4859 of file bibliography.bib
- : 
- : #  title = {The {Exoplanet} {Census}: {A} {General} {Method} {Applied} to {Kepler}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4877 of file bibliography.bib
- : 
- : #  title = {Prevalence of {Earth}-size planets orbiting {Sun}-like stars},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4895 of file bibliography.bib
- : 
- : #  title = {The {California}-{Kepler} {Survey}. {II}. {Precise} {Physical} {Properties} of 2025 {Kepler} {Planets} and {Their} {Host} {Stars}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4907 of file bibliography.bib
- : 
- : #  title = {The {California}-{Kepler} {Survey}. {I}. {High} {Resolution} {Spectroscopy} of 1305 {Stars} {Hosting} {Kepler} {Transiting} {Planets}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4919 of file bibliography.bib
- : 
- : #  title = {{THE} {TRANSITING} {EXOPLANET} {SURVEY} {SATELLITE}: {SIMULATIONS} {OF} {PLANET} {DETECTIONS} {AND} {ASTROPHYSICAL} {FALSE} {POSITIVES}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4936 of file bibliography.bib
- : 
- : #  title = {{HATSouth}: {A} {Global} {Network} of {Fully} {Automated} {Identical} {Wide}-{Field} {Telescopes}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4954 of file bibliography.bib
- : 
- : #  title = {Long-{Term} {Stability} of {Planets} in {Binary} {Systems}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 4970 of file bibliography.bib
- : 
- : #  title = {Influence of {Stellar} {Multiplicity} on {Planet} {Formation}. {I}. {Evidence} of {Suppressed} {Planet} {Formation} due to {Stellar} {Companions} within 20 {AU} and {Validation} of {Four} {Planets} from the {Kepler} {Multiple} {Planet} {Candidates}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5010 of file bibliography.bib
- : 
- : #  title = {{THE} {IMPACT} {OF} {STELLAR} {MULTIPLICITY} {ON} {PLANETARY} {SYSTEMS}. {I}. {THE} {RUINOUS} {INFLUENCE} {OF} {CLOSE} {BINARY} {COMPANIONS}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5027 of file bibliography.bib
- : 
- : #     title = {The {California}-{Kepler} {Survey}. {IV}. {Metal}-rich {Stars}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5075 of file bibliography.bib
- : 
- : #     title = {Robo-{AO} {Kepler} {Survey} {IV}: the effect of nearby stars on
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5116 of file bibliography.bib
- : 
- : #     title = {Transiting {Exoplanet} {Survey} {Satellite}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5153 of file bibliography.bib
- : 
- : #     title = {Selection, {Prioritization}, and {Characteristics} of {Kepler} {Target} {Stars}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5186 of file bibliography.bib
- : 
- : #     title = {The {NASA} {Exoplanet} {Archive}: {Data} and {Tools} for
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5226 of file bibliography.bib
- : 
- : #     title = {Measuring {Transit} {Signal} {Recovery} in the {Kepler}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5277 of file bibliography.bib
- : 
- : #     title = {{SOPHIE} velocimetry of {Kepler} transit candidates. {VII}. {A}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5328 of file bibliography.bib
- : 
- : #     title = {Binarity in {Brown} {Dwarfs}: {T} {Dwarf} {Binaries} {Discovered}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5388 of file bibliography.bib
- : 
- : #     title = {Some {Tests} to {Establish} {Confidence} in {Planets}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5430 of file bibliography.bib
- : 
- : #     title = {Radial {Velocity} {Variations} of {Photometrically} {Quiet},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5483 of file bibliography.bib
- : 
- : #     title = {Exploring exoplanet populations with {NASA}'s {Kepler} {Mission}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5517 of file bibliography.bib
- : 
- : #     title = {Inferring binary and trinary stellar populations},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5552 of file bibliography.bib
- : 
- : #     title = {Assessing the {Effect} of {Stellar} {Companions} from
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5604 of file bibliography.bib
- : 
- : #  title = {Understanding exoplanet populations with simulation-based methods},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5616 of file bibliography.bib
- : 
- : #     title = {The {Role} of {Core} {Mass} in {Controlling} {Evaporation}: {The}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5630 of file bibliography.bib
- : 
- : #     title = {Kepler {Planets}: {A} {Tale} of {Evaporation}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5642 of file bibliography.bib
- : 
- : #     title = {Improving the {Accuracy} of {Planet} {Occurrence} {Rates} from
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 5654 of file bibliography.bib
- : 
- : #  author = {{Gaia Collaboration} and {Prusti}, T. and {de Bruijne}, J.~H.~J.
-(Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sullivan_2015
@@ -404,45 +34,45 @@ Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sulliva
 while executing---line 1561 of file yahapj.bst
 Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sullivan_2015
 while executing---line 1561 of file yahapj.bst
-You've used 142 entries,
+You've used 126 entries,
             3215 wiz_defined-function locations,
-            1646 strings with 71667 characters,
-and the built_in function-call counts, 94551 in all, are:
-= -- 6087
-> -- 9573
-< -- 51
-+ -- 3489
-- -- 3332
-* -- 9622
-:= -- 17882
-add.period$ -- 142
-call.type$ -- 142
-change.case$ -- 936
-chr.to.int$ -- 140
-cite$ -- 143
-duplicate$ -- 3805
-empty$ -- 4916
-format.name$ -- 3503
-if$ -- 18125
-int.to.chr$ -- 3
+            1543 strings with 70058 characters,
+and the built_in function-call counts, 87737 in all, are:
+= -- 5307
+> -- 9450
+< -- 50
++ -- 3413
+- -- 3251
+* -- 9161
+:= -- 16808
+add.period$ -- 126
+call.type$ -- 126
+change.case$ -- 795
+chr.to.int$ -- 123
+cite$ -- 127
+duplicate$ -- 3377
+empty$ -- 4372
+format.name$ -- 3414
+if$ -- 16654
+int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 135
-newline$ -- 431
-num.names$ -- 569
-pop$ -- 1460
+missing$ -- 118
+newline$ -- 383
+num.names$ -- 506
+pop$ -- 1255
 preamble$ -- 1
-purify$ -- 928
+purify$ -- 788
 quote$ -- 0
-skip$ -- 2245
+skip$ -- 1998
 stack$ -- 0
-substring$ -- 3418
-swap$ -- 132
-text.length$ -- 0
+substring$ -- 3048
+swap$ -- 120
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1272
+type$ -- 1128
 warning$ -- 1
-while$ -- 646
+while$ -- 569
 width$ -- 0
-write$ -- 1422
-(There were 83 error messages)
+write$ -- 1263
+(There were 9 error messages)
