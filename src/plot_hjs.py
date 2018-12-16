@@ -129,10 +129,9 @@ def plot_hjs():
 
     plnames=['WASP-4b','WASP-5b','WASP-6b','WASP-18b','WASP-46b']
     periodguesses = [1.33823204, 1.6284246, 3.36100208, 0.94145299, 1.4303700]
-    manualkdebandwidths = [1.5, 0.5, 1.5, 0.5, 0.8]
 
-    for plname, ax, P_guess, bw in zip(
-        plnames, axs, periodguesses, manualkdebandwidths
+    for plname, ax, P_guess in zip(
+        plnames, axs, periodguesses
     ):
 
         # get difference between observed TESS time and expectation, in seconds
@@ -146,38 +145,20 @@ def plot_hjs():
 
         x = diff_seconds
 
-        if plname=='WASP-4b':
-            binned_tess_measurement_sigma = 5.20 # cf /src/plot_O_minus_C.py output
-            prediction_precision = 9.4 # seconds, cf. elsewhere in this figure
-            quoted_err =  np.sqrt(prediction_precision**2  +
-                                  binned_tess_measurement_sigma**2)
+        mean = np.average(x, weights=1/tess_err_tmid**2)
+        std_of_OmC = np.std(x)
+        uncert_in_mean = std_of_OmC / (len(x)-1)**(1/2)
+        x_d = np.linspace(-20*std_of_OmC, 20*std_of_OmC, num=1000)
 
-            print('\n')
-            print('*'*42)
-            print('WASP-4b transits arrived {:.2f} +/- {:.2f} seconds early'.format(
-                np.average(x, weights=1/err_prediction_seconds**2), quoted_err
-            ))
-            print('*'*42)
-            print('\n')
+        # plot binned tess time distribution.
+        ax.plot(x_d, norm.pdf(x_d, loc=mean, scale=uncert_in_mean),
+                color='#1f77b4', zorder=6, lw=0.5)
+        l1 = ax.fill_between(
+            x_d, norm.pdf(x_d, loc=mean, scale=uncert_in_mean), alpha=0.3,
+            label='binned TESS time', color='#1f77b4', zorder=4, linewidth=0
+        )
 
-        bw = bw*np.mean(err_prediction_seconds)
-
-        # instantiate and fit the KDE model
-        kde = KernelDensity(bandwidth=bw, kernel='gaussian')
-        kde.fit(x[:, None])
-
-        # score_samples returns the log of the probability density
-        meanerr = np.mean(err_prediction_seconds)
-        x_d = np.linspace(-20*meanerr, 20*meanerr, num=1000)
-        logprob = kde.score_samples(x_d[:, None])
-
-        ax.plot(x_d, np.exp(logprob), color='#1f77b4', zorder=6,
-                lw=0.5)
-        l1 = ax.fill_between(x_d, np.exp(logprob), alpha=0.3,
-                             label='KDE from TESS times',
-                             color='#1f77b4', zorder=4, linewidth=0)
-
-        # x coords are data, y coords are axes
+        # plot the observed ticks. x coords are data, y coords are axes
         trans = transforms.blended_transform_factory(
                 ax.transData, ax.transAxes)
         l2 = ax.scatter(x, np.full_like(x, 0.033), marker='|',
@@ -186,25 +167,32 @@ def plot_hjs():
                         label='observed TESS times', zorder=7,
                         linewidth=0.2, transform=trans)
 
+        # plot predicted distribution.
         ax.plot(
-            x_d, norm.pdf(x_d, loc=0, scale=meanerr),
+            x_d, norm.pdf(x_d, loc=0, scale=np.mean(err_prediction_seconds)),
             color='#ff7f0e',
             zorder=5, lw=0.5
         )
         l3 = ax.fill_between(
-            x_d, norm.pdf(x_d, loc=0, scale=meanerr),
+            x_d, norm.pdf(x_d, loc=0, scale=np.mean(err_prediction_seconds)),
             color='#ff7f0e', alpha=0.3,
             label='predicted transit time'.
-            format(meanerr),
+            format(std_of_OmC),
             zorder=3, linewidth=0
         )
 
-        print(plname, meanerr)
+        print(plname, std_of_OmC)
+        # hard-coded unicode hyphen insanity
         sigtxt = (
-            '$\sigma_{\mathrm{predicted}}$: '+
-            '{:.1f} sec'.format(meanerr)
+            r'$\sigma_{\mathrm{pre'+u"\u2010"+'\! TESS}}$: '+
+            '{:.1f} s'.format(np.mean(err_prediction_seconds))
         )
-        txt = '{:s}\n{:s}'.format(plname, sigtxt)
+        muobstxt = '$\mu_{\mathrm{TESS}}$: '+'{:.1f} s'.format(mean)
+        sigobstxt = '$\sigma_{\mathrm{TESS}}$: '+'{:.1f} s'.format(uncert_in_mean)
+        txt = (
+            '{:s}\n{:s}\n{:s}\n{:s}'.format(
+                plname, sigtxt, muobstxt, sigobstxt)
+        )
         if plname=='WASP-5b':
             xpos = -0.05
         else:
@@ -216,7 +204,7 @@ def plot_hjs():
         ax.set_xlim([np.mean(x)-10*np.std(x), np.mean(x)+10*np.std(x)])
 
     fig.legend((l1,l2,l3),
-               ('KDE from TESS', 'observed TESS',
+               ('TESS binned', 'TESS individual',
                 'pre-TESS prediction'),
                loc='upper right',
                bbox_to_anchor=(0.98, 0.42),
@@ -238,7 +226,7 @@ def plot_hjs():
 
     for savname in ['../results/hjs.png', '../paper/f7.png',
                     '../results/hjs.pdf', '../paper/f7.pdf']:
-       fig.savefig(savname, dpi=400, bbox_inches='tight')
+       fig.savefig(savname, dpi=500, bbox_inches='tight')
        print('saved {:s}'.format(savname))
 
 if __name__=="__main__":

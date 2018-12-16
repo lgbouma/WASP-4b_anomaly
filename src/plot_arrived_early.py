@@ -28,7 +28,7 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None, ylim1=None):
     (lsfit_t0, lsfit_t0_err, lsfit_period, lsfit_period_err,
     epoch, tmid, err_tmid,
     tess_epoch, tess_tmid, tess_err_tmid, diff_seconds,
-    err_prediction_seconds ) = (
+    _ ) = (
         calculate_timing_accuracy(
             plname=plname, period_guess=period_guess)
     )
@@ -93,7 +93,11 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None, ylim1=None):
         tess_tmid-linear_model(lsfit_t0, lsfit_period, tess_epoch)),
         weights=1/tess_err_tmid**2
     )
-    bin_tess_err_tmid = np.mean(tess_err_tmid)/len(tess_tmid)**(1/2)
+    bin_tess_err_tmid = (
+        np.std(tess_tmid-linear_model(lsfit_t0, lsfit_period, tess_epoch))
+        /
+        (len(tess_tmid)-1)**(1/2)
+    )
 
     tess_yval = nparr(tess_tmid -
                       linear_model(lsfit_t0, lsfit_period, tess_epoch))*24*60
