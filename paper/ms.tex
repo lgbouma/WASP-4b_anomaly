@@ -7,7 +7,6 @@
 \usepackage{graphics,graphicx}
 \usepackage{hyperref}
 \usepackage{comment}
-\usepackage{todonotes}
 
 \renewcommand*{\sectionautorefname}{Section} %for \autoref
 \renewcommand*{\subsectionautorefname}{Section} %for \autoref
@@ -148,12 +147,12 @@ Street, Cambridge, MA 02138, USA }
 \begin{abstract}
     The Transiting Exoplanet Survey Satellite (TESS) recently observed
     18 transits of the hot Jupiter WASP-4b.  The sequence of transits
-    occurred $81.5 \pm 11.8$~seconds earlier than had been predicted,
+    occurred $81.5 \pm 11.7$~seconds earlier than had been predicted,
     based on earlier data stretching back to 2007.  This is unlikely
     to be the result of a clock error, because TESS observations of
     other hot Jupiters (WASP-6b, 18b, and 46b) are compatible with a
     constant period, ruling out an 81.5-second offset at the
-    6.3$\sigma$ level.  The 1.3-day orbital period of WASP-4b appears
+    6.4$\sigma$ level.  The 1.3-day orbital period of WASP-4b appears
     to be decreasing at a rate of $\dot{P} = -12.6 \pm 1.2$
     milliseconds per year.  This might be caused by tidal orbital
     decay or apsidal precession, although both interpretations have
@@ -170,6 +169,8 @@ Street, Cambridge, MA 02138, USA }
   binaries: close
 }
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:intro}
 
@@ -243,12 +244,14 @@ data products.  We found this possibility to be unlikely because none
 of the other hot Jupiters we examined show a timing offset with the
 same amplitude as was seen for WASP-4.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{New transits and system parameters}
 \label{sec:observations}
 
-\begin{figure}[t!]
+\begin{figure}[t]
     \begin{center}
-        \includegraphics[width=0.49\textwidth]{f2.png}
+        \includegraphics[width=0.49\textwidth]{f1.png}
     \end{center}
     \vspace{-0.5cm}
     \caption{
@@ -262,9 +265,9 @@ same amplitude as was seen for WASP-4.
     }
 \end{figure}
 
-\begin{figure}[t!]
+\begin{figure}[t]
     \begin{center}
-        \includegraphics[width=0.49\textwidth]{f1.png}
+        \includegraphics[width=0.49\textwidth]{f2.png}
     \end{center}
     \vspace{-0.5cm}
     \caption{
@@ -332,26 +335,6 @@ as described below.
 \subsection{Measuring the transit times}
 \label{sec:measurement}
 
-\begin{figure}[t!]
-    \begin{center}
-        \leavevmode
-        \includegraphics[width=0.49\textwidth]{f3.pdf}
-    \end{center}
-    \vspace{-0.6cm}
-    \caption{ {\bf TESS saw WASP-4b transit earlier than expected.}
-      Both plots show the deviations between the observed and
-      calculated transit times, where the calculation is based only on
-      the pre-TESS data and assumes a constant period.  The blue bands
-      depict the $\pm$$1\sigma$ credible interval of the predicted
-      times.  {\it Top:} The full timing dataset spans 10 years. The
-      darkest points correspond to the most precise data.  {\it
-        Bottom:} Close-up of the TESS observations. The red band shows
-      the average deviation of the TESS data, which is $81.5 \pm
-      11.8\ {\rm seconds}$.
-        \label{fig:arrived_early}
-    }
-\end{figure}
-
 Using the cleaned PDC lightcurve, we used the Box Least Squares
 algorithm \citep{kovacs_box-fitting_2002} to estimate the orbital
 period, transit duration, and a reference epoch using the TESS data
@@ -364,10 +347,6 @@ the planet to star radius ratio $R_{\rm p}/R_\star$, the orbital
 distance to stellar radius ratio $a/R_\star$, the inclination $i$, two
 quadratic limb-darkening coefficients $(u_{\rm linear}, u_{\rm
   quad})$, and the orbital period $P$.
-% JNW: Luke, didn't you also have to fit a linear trend for each transit?
-% Otherwise the fit would be poor, for each transit, even if the
-% trends tend to cancel out in the phase folded light curve.
-% And, did you assign the photometric uncertainties as described below?
 
 We sampled the posterior probability distribution for all the
 parameters using the algorithm proposed by
@@ -395,14 +374,15 @@ would expect $\chi^2 16 \pm 5.7$.  Visually inspecting the residuals
 showed that the error variance had been overestimated, so we
 multiplied the measured TESS errors by a factor $f=0.76$, forcing a
 reduced $\chi^2$ of unity.  This lowered the mean uncertainty of the
-transit midtimes from $29.8$ to $22.6$ seconds.
+transit midtimes from $29.8$ to $22.6$ seconds.  We verified that
+omitting this step did not appreciably alter any of our conclusions.
 
 Figure~\ref{fig:lightcurves} shows the lightcurve of each transit, the
 best-fit models, and the residuals.  Table~2 reports the mid-transit
 times and their uncertainties.  After binning the residuals to 1-hour
 windows, the lightcurves have an rms scatter of 586\,{\rm ppm}.  The
-pre-launch TESS noise model \citep{winn_photonflux_2013,Sullivan_2015}
-\footnote{\url{github.com/lgbouma/tnm}} would have predicted an error
+pre-launch TESS noise model\footnote{\url{github.com/lgbouma/tnm}} \citep{winn_photonflux_2013,Sullivan_2015}
+would have predicted an error
 budget consisting of the following terms added in quadrature:
 410\,{\rm ppm} from photon-counting noise, 202\,{\rm ppm} from
 detector read noise, and 673\,{\rm ppm} from the zodiacal background
@@ -494,10 +474,32 @@ the outputs of the Yonsei-Yale stellar-evolutionary models, we found
 that WASP-4 is a main-sequence star with an age of approximately
 $7\,{\rm Gyr}$.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Timing analysis}
 \label{sec:timing}
 
-\begin{figure*}[t!]
+\begin{figure}[t]
+    \begin{center}
+        \leavevmode
+        \includegraphics[width=0.49\textwidth]{f3.pdf}
+    \end{center}
+    \vspace{-0.6cm}
+    \caption{ {\bf TESS saw WASP-4b transit earlier than expected.}
+      Both plots show the deviations between the observed and
+      calculated transit times, where the calculation is based only on
+      the pre-TESS data and assumes a constant period.  The blue bands
+      depict the $\pm$$1\sigma$ credible interval of the predicted
+      times.  {\it Top:} The full timing dataset spans 10 years. The
+      darkest points correspond to the most precise data.  {\it
+        Bottom:} Close-up of the TESS observations. The red band shows
+      the average deviation of the TESS data, which is $81.5 \pm
+      11.7\ {\rm seconds}$.
+        \label{fig:arrived_early}
+    }
+\end{figure}
+
+\begin{figure*}[t]
 	\begin{center}
 		\leavevmode
 		\includegraphics[width=0.9\textwidth]{f4.pdf}
@@ -516,6 +518,7 @@ $7\,{\rm Gyr}$.
 		\label{fig:times}
 	}
 \end{figure*}
+
 
 \subsection{Pre-TESS timing measurements}
 \label{subsec:times}
@@ -594,10 +597,9 @@ The first model assumes a constant orbital period on a circular orbit:
   t_{\rm tra}(E) &= t_0 + PE,\\
   t_{\rm occ}(E) &= t_0 + \frac{P}{2} + PE,
 \end{align}
-where $E$ is the epoch number.
-We defined the epoch numbers such that
-$E=0$ is near the weighted average of the observed times.
-This helps to reduce the covariance between $t_0$ and $P$.
+where $E$ is the epoch number.  We defined the epoch numbers such that
+$E=0$ is near the weighted average of the observed times.  This helps
+to reduce the covariance between $t_0$ and $P$.
 
 The second model assumes the period is changing at a steady rate:
 \begin{align}
@@ -691,12 +693,14 @@ period is $26^{+9}_{-7}$ years.  All of the best-fitting parameters
 (the medians of the posterior distributions) and the 68\% credible
 intervals are reported in Table~4.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Interpretation}
 \label{sec:implications}
 
-\begin{figure}[!t]
+\begin{figure}[t]
   \begin{center}
-    \includegraphics[width=0.40\textwidth]{f5.pdf}
+    \includegraphics[width=0.38\textwidth]{f5.pdf}
   \end{center}
   \vspace{-0.5cm}
   \caption{
@@ -725,7 +729,6 @@ intervals are reported in Table~4.
   }
 \end{figure}
 
- 
 \subsection{Orbital decay}
 
 If the timing variation is being caused caused entirely by orbital
@@ -981,6 +984,7 @@ the required value of $\sim$$10^{-3}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Applegate effect}
+
 Some eclipsing binaries exhibit period modulations with amplitudes of
 $\lesssim 0.05\,{\rm days}$ over timescales of decades \citep[{\it
     e.g.},][]{soderhjelm_geometry_1980,hall_relation_1989}.
@@ -1047,21 +1051,23 @@ observed apsidal precession. The corresponding period change is
 $\dot{P} \sim (P\mu)^2/2\pi$, which is on the order of $10^{-21}$ for
 WASP-4, too small to be of any consequence.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Call for additional observations}
 \label{sec:future}
 
-\begin{figure}[!t]
+\begin{figure}[t]
 	\begin{center}
 		\leavevmode
 		\includegraphics[width=0.49\textwidth]{f6.pdf}
 	\end{center}
-  \vspace{-0.5cm}
+	\vspace{-0.5cm}
 	\caption{
     {\bf Further observations will be needed to confirm and understand
-    the timing variations of WASP-4b.}
-    Dots are as in Figure~\ref{fig:times}.  Lines are 100 random draws
-    from the posteriors of the apsidal precession model (orange), and
-    the orbital decay model (blue).    
+    the timing variations of WASP-4b.} Dots are as in
+    Figure~\ref{fig:times}.  Lines are 100 random draws from the
+    posteriors of the apsidal precession model (orange), and the
+    orbital decay model (blue).    
 		\label{fig:future}
 	}
 \end{figure}
@@ -1157,8 +1163,8 @@ Agreement.
   \texttt{scipy} \citep{jones_scipy_2001}.
 }
 
-\clearpage
-\newpage
+%\clearpage
+%\newpage
 \input{WASP-4b_transit_time_table.tex}
 
 %\clearpage
@@ -1179,6 +1185,7 @@ Agreement.
 
 \appendix
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Verifying the TESS Time Stamps}
 \label{sec:verify_tess}
 
@@ -1223,21 +1230,17 @@ that are delivered with the TESS data products.
     times and the barycentric reference.} While the WASP-4b transits
     fell about 82 seconds earlier than expected, other well-observed
     hot Jupiters, in particular WASP-6b and WASP-18b, arrived on time.
-    Ticks are observed TESS transit midtimes; the blue distribution is
-    a kernel density estimate; the orange distribution is a gaussian
-    centered on zero with standard deviation ($\sigma_{\rm
-    predicted}$) calculated from the pre-TESS transit times.
+    Ticks are observed TESS transit midtimes; the orange distribution
+    is a gaussian centered on zero with standard deviation
+    ($\sigma_{\rm predicted}$) calculated from the pre-TESS transit
+    times.  The blue distribution is a gaussian centered on the
+    weighted average of the TESS times, with width equal to the
+    uncertainty in the mean, {\it i.e.}, the standard deviation
+    of the TESS residual times divided by $\sqrt{N-1}$, with $N$ the
+    number of transits.
     \label{fig:hjs}
   }
 \end{figure*}
-% JNW: I think the KDE needs to be removed and perhaps replaced with something
-% else.  It gives the impression that the WASP-4 anomaly is only at
-% the 2-sigma level, which is false.  The KDE illustrates the spread
-% in values, but what is relevant is the standard deviation of the
-% mean of the measurements, which is narrower than the KDE implies.
-% I suggest replacing it with a Gaussian with a mean equal to the mean of the
-% deviations, and a width equal to the uncertainty in the mean, i.e., the
-% standard deviation divided by sqrt(N-1).
 
 If the observed timing delay in WASP-4b were caused by a systematic
 global offset between the TESS time system and the ${\rm BJD}_{\rm
@@ -1250,7 +1253,7 @@ because of our greater familiarity with the data.
 We repeated all the data reduction and analysis steps described in
 this paper for other hot Jupiters observed by TESS for which timing
 data exists spanning many years.  First, we checked which hot Jupiters
-were observed over the first two TESS sectors using a combination of
+were observed over the first three TESS sectors using a combination of
 \texttt{tessmaps}\footnote{\url{github.com/lgbouma/tessmaps}} and
 TEPCat \citep{southworth_homogeneous_2011}.  We then selected hot
 Jupiters for which there were at least five distinct epochs reported
@@ -1292,13 +1295,13 @@ For each planet, we asked: what fraction of the posterior for $t_{\rm
 offset}$ is consistent with an offset worse than $81.5$ seconds?  For
 WASP-4b, the answer is unsurprisingly 50\%.  For WASP-6b, the most
 constraining object, about 1 sample in 2 million is consistent with
-such a timing offset ($4.9\sigma$).  For WASP-18b, 1 in 80 samples
-would be consistent with this timing offset ($2.2\sigma$), and in
-WASP-46b, the limit is 1 in 44 samples ($2.0\sigma$).  For WASP-5b,
+such a timing offset ($4.9\sigma$).  For WASP-18b, 1 in 103 samples
+would be consistent with this timing offset ($2.3\sigma$), and in
+WASP-46b, the limit is 1 in 49 samples ($2.0\sigma$).  For WASP-5b,
 the predicted time is too imprecise to rule out timing offsets at the
 necessary amplitude.  Multiplying the three independent probabilities
 for WASP-5b, 6b, and 18b, we can rule out $t_{\rm offset} < -81.5\
-{\rm seconds}$ at $6.3\sigma$, or about about 1 part in 8 billion.
+{\rm seconds}$ at $6.4\sigma$, or about about 1 part in 11 billion.
 
 %\clearpage
 %\newpage
