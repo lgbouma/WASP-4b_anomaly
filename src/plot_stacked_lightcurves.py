@@ -108,8 +108,8 @@ def plot_stacked_lightcurves(
 
     f.tight_layout(h_pad=0, w_pad=0.3)
     resultspng = '../results/{:d}_stacked_lightcurves.png'.format(ticid)
-    paperpng = '../paper/f2.png'
-    paperpdf = '../paper/f2.pdf'
+    paperpng = '../paper/f1.png'
+    paperpdf = '../paper/f1.pdf'
     f.savefig(resultspng, dpi=400, bbox_inches='tight')
     print('saved {:s}'.format(resultspng))
     f.savefig(paperpng, dpi=400, bbox_inches='tight')
@@ -202,8 +202,8 @@ def plot_stacked_lightcurves_single_col(
 
     f.tight_layout(h_pad=0, w_pad=0)
     resultspng = '../results/{:d}_stacked_lightcurves.png'.format(ticid)
-    paperpng = '../paper/f2.png'
-    paperpdf = '../paper/f2.pdf'
+    paperpng = '../paper/f1.png'
+    paperpdf = '../paper/f1.pdf'
     f.savefig(resultspng, dpi=400, bbox_inches='tight')
     print('saved {:s}'.format(resultspng))
     f.savefig(paperpng, dpi=400, bbox_inches='tight')

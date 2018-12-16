@@ -99,8 +99,8 @@ def plot_phasefold(picklepath, xlim=None, ylim0=None, ylim1=None):
     savpath = '../results/phasefold.png'
     f.savefig(savpath, dpi=350, bbox_inches='tight')
     print('made {}'.format(savpath))
-    copyfile(savpath, '../paper/f1.png')
-    print('saved ../paper/f1.png')
+    copyfile(savpath, '../paper/f2.png')
+    print('saved ../paper/f2.png')
 
 
 if __name__=="__main__":
