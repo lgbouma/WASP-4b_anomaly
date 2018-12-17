@@ -23,7 +23,7 @@ hoyer_params = [i_hoyer13, a_by_Rs_hoyer13, a_by_Rs_perr_hoyer13,
 
 # get parameters from fit to phase-folded lightcurve
 picklepath = ('/home/luke/Dropbox/proj/tessorbitaldecay/results/'
-              'tess_lightcurve_fit_parameters/402026209/'
+              'tess_lightcurve_fit_parameters/402026209/sector_2/'
               '402026209_phased_mandelagol_fit_empiricalerrs.pickle' )
 
 d = pickle.load(open(picklepath, 'rb'))
@@ -202,5 +202,5 @@ Rs_calcd = (Rstar_by_dist * dist_pc).to(u.Rsun)
 
 print(
     'dist = {:.2f}'.format(dist_pc)+
-    '\nRstar = {:.3f}'.format(Rs_calcd)
+    '\nmy Rstar (but use Keivan\'s) = {:.3f}'.format(Rs_calcd)
 )
