@@ -547,3 +547,25 @@ Sun Dec 16 14:54:13 2018
 - send JNW individual transit fits, and responses
 
 
+==========================================
+Mon 17 Dec 2018 09:36:37 AM EST
+
+- fix the log-likelihood transit "period" vs "per" bug lines 1571 and 1613 of
+  lcfit.py
+
+  - rerun the fits
+
+  - push a PR to astrobase
+  
+  x probably also add an assertion to force correct key names in passed
+    dictionaries.
+
+- push tessorbitaldecay updates (incl WASP-18 update push for Shporer which he
+  may or may not use)
+
+- final text read-through before send-off.
+
+- fix coauthor list order(?)
+- draft the emails
+
+
