@@ -148,7 +148,7 @@ Street, Cambridge, MA 02138, USA }
     The Transiting Exoplanet Survey Satellite (TESS) recently observed
     18 transits of the hot Jupiter WASP-4b.  The sequence of transits
     occurred $81.5 \pm 11.7$~seconds earlier than had been predicted,
-    based on earlier data stretching back to 2007.  This is unlikely
+    based on data stretching back to 2007.  This is unlikely
     to be the result of a clock error, because TESS observations of
     other hot Jupiters (WASP-6b, 18b, and 46b) are compatible with a
     constant period, ruling out an 81.5-second offset at the
@@ -157,7 +157,7 @@ Street, Cambridge, MA 02138, USA }
     milliseconds per year.  This might be caused by tidal orbital
     decay or apsidal precession, although both interpretations have
     shortcomings.  The gravitational influence of a third body is another
-    possibility, although at present there is scant evidence for such a
+    possibility, although at present there is no evidence for such a
     body. Further observations are needed to confirm and
     understand the timing variation.
 \end{abstract}
@@ -209,7 +209,7 @@ and systems with multiple interacting giant planets (Kepler-108
 \citealt{masuda_eccentric_2017}).  Apsidal precession is not regularly
 observed in hot Jupiter systems because their orbits are nearly
 circular, which may itself be a consequence of star-planet tides.  If
-it could be observed, then \citep{ragozzine_probing_2009} showed that
+it could be observed, then \citet{ragozzine_probing_2009} showed that
 it would be possible to measure the planet's Love number, which would
 be a valuable constraint on the planet's interior.
 
@@ -275,7 +275,7 @@ same amplitude as was seen for WASP-4.
         TESS data. Yellow points are binned measurements.  The bottom
         panel shows the residuals.  The fit to the phase-folded
         transit (blue line) is used when measuring mid-transit times for
-        the individual transits (Figure~\ref{fig:lightcurves}).
+        the individual transits (see text).
         \label{fig:phasefold}
     }
 \end{figure}
@@ -310,9 +310,8 @@ spacecraft pointing, cosmic rays, and other annoyances
 within the first and last hours of both orbits, because of ramp-like
 systematic effects that appear during those time ranges. We also
 removed the data that might have been adversely affected by ``momentum
-dumps,'' the firing of thrusters and resetting of reaction wheels that
-took place every 2.5 days during sector
-2.\footnote{\url{archive.stsci.edu/hlsps/tess-data-alerts/hlsp_tess-data-alerts_tess_phot_s01_tess_v1_release-notes.pdf}}.
+dumps,'' the firing of thrusters and resetting of reaction wheels\footnote{\url{archive.stsci.edu/hlsps/tess-data-alerts/hlsp_tess-data-alerts_tess_phot_s01_tess_v1_release-notes.pdf}}
+that took place every 2.5 days during sector 2.
 The data during these events were assigned quality flags corresponding
 to ``Reaction Wheel Desaturation Event'' and ``Manual Exclude''.  For
 WASP-4, these flags were simultaneously set for 54 distinct cadences,
@@ -339,38 +338,43 @@ Using the cleaned PDC lightcurve, we used the Box Least Squares
 algorithm \citep{kovacs_box-fitting_2002} to estimate the orbital
 period, transit duration, and a reference epoch using the TESS data
 alone.  Based on the results, we isolated the data within 4 transit
-durations of each transit midpoint.  We then fitted all of the transit
-data using the analytic formulae given by \citet{mandel_analytic_2002}
-and implemented by \citet{kreidberg_batman_2015}.  We assumed the
-orbit to be circular. The free parameters were the reference epoch,
-the planet to star radius ratio $R_{\rm p}/R_\star$, the orbital
-distance to stellar radius ratio $a/R_\star$, the inclination $i$, two
-quadratic limb-darkening coefficients $(u_{\rm linear}, u_{\rm
-  quad})$, and the orbital period $P$.
+durations of each transit midpoint.  To find the transit parameters
+that best fit the data, we first fitted a line to the out-of-transit
+flux measurements surrounding each transit, and divided it out.  We
+then created a phase-folded lightcurve and fitted a standard transit
+model using the analytic formulae given by
+\citet{mandel_analytic_2002} and implemented by
+\citet{kreidberg_batman_2015}.  We assumed the orbit to be circular.
+The free parameters were the reference epoch, the planet to star
+radius ratio $R_{\rm p}/R_\star$, the orbital distance to stellar
+radius ratio $a/R_\star$, the inclination $i$, two quadratic
+limb-darkening coefficients $(u_{\rm linear}, u_{\rm quad})$, and the
+orbital period $P$.
 
 We sampled the posterior probability distribution for all the
 parameters using the algorithm proposed by
 \citet{goodman_ensemble_2010} and implemented by
 \citet{foreman-mackey_emcee_2013}.  Table~1 gives the results, which
 are in reasonable agreement with the parameters reported by {\it
-  e.g.}, \citet{southworth_high-precision_2009} and
+e.g.}, \citet{southworth_high-precision_2009} and
 \citet{huitson_gemini_2017}.  Figure~\ref{fig:phasefold} shows the
 phase-folded lightcurve.
 
-To measure the transit times, we fitted each transit separately, with
+To measure the transit times, we returned to the `cleaned' PDC time
+series and fitted the data surrounding each transit separately, with
 four free parameters: the time of mid-transit $t_{\rm tra}$, the
 planet-to-star radius ratio, and the slope and intercept of a linear
 trend to account for any slow variations unrelated to the transit.  We
 fixed the remaining parameters at the values that had been determined
-from the phase-folded TESS lightcurve.  The uncertainty in each
-data point was set equal to the root-mean-square (rms) level of the
+from the phase-folded TESS lightcurve.  The uncertainty in each data
+point was set equal to the root-mean-square (rms) level of the
 out-of-transit data.
 
 To verify that the measured uncertainties are plausible, we computed
 the reduced $\chi^2$ for a linear ephemeris fit to the measured TESS
 transit times.  We found that $\chi^2 = 9.2$, with $n=16$ degrees of
 freedom.  The variance of the $\chi^2$ distribution is $2n$, so we
-would expect $\chi^2 16 \pm 5.7$.  Visually inspecting the residuals
+would expect $\chi^2 = 16 \pm 5.7$.  Visually inspecting the residuals
 showed that the error variance had been overestimated, so we
 multiplied the measured TESS errors by a factor $f=0.76$, forcing a
 reduced $\chi^2$ of unity.  This lowered the mean uncertainty of the
@@ -403,11 +407,11 @@ overestimated.
 
 \startdata
 {\it Transit/RV parameters:} & & & \\
-  $R_{\rm p}/R_\star$                        & $0.15117$              & $+0.00047$, $-0.00037$      & A \\
-  $i$~[deg]                                  & $88.85$                & $+0.77$, $-0.90$            & A \\
-  $a/R_\star$                                & $5.457$                & $+0.030$, $-0.066$          & A \\
-  $u_{\rm linear}$                           & $0.388$                & ---                         & A \\
-  $u_{\rm quad}$                             & $0.212$                & ---                         & A \\
+  $R_{\rm p}/R_\star$                        & $0.15201$              & $+0.00040$, $-0.00033$      & A \\
+  $i$~[deg]                                  & $89.06$                & $+0.65$, $-0.84$            & A \\
+  $a/R_\star$                                & $5.451$                & $+0.023$, $-0.052$          & A \\
+  $u_{\rm linear}$                           & $0.382$                & ---                         & A \\
+  $u_{\rm quad}$                             & $0.210$                & ---                         & A \\
   $K$~[m~s$^{-1}$]                           & $241.1$                & $+2.8$, $-3.1$              & B \\
 {\it Stellar parameters:} & & & \\
   $T_{\rm eff}$~[K]                          & $5400$                 & $\pm 90$                    & C \\
@@ -416,13 +420,13 @@ overestimated.
   $F_{\rm bol}$~[erg~cm$^{-2}$~s$^{-1}$]     & $2.802\times10^{-10}$  & $\pm 0.076\times10^{-10}$   & D \\
   $\pi$~[mas]                                & $3.7145$               & $0.0517$                    & F \\
   $R_\star$~[R$_{\odot}$]                    & $0.893$                & $\pm 0.034$                 & E \\
-  $\rho_\star$~[g~cm$^{-3}$]                 & $1.717$                & $+0.029$, $-0.062$          & E \\
-  $M_\star$~[M$_{\odot}$]                    & $0.867$                & $+0.087$, $-0.097$          & E \\
+  $\rho_\star$~[g~cm$^{-3}$]                 & $1.711$                & $+0.022$, $-0.048$          & E \\
+  $M_\star$~[M$_{\odot}$]                    & $0.864$                & $+0.084$, $-0.090$          & E \\
   $T$ magnitude                              & $11.778$               & $\pm 0.018$                 & G \\
 {\it Planetary parameters:} & & & \\
-  $a$~[AU]                                   & $0.0227$               & $\pm 0.0008$                & E \\
-  $M_p$~[M$_{\rm Jup}$]                      & $1.189$                & $+0.093$, $-0.104$          & E \\
-  $R_p$~[R$_{\rm Jup}$]                      & $1.314$                & $\pm 0.039$                 & E \\
+  $a$~[AU]                                   & $0.0226$               & $+0.0007$, $-0.0008$        & E \\
+  $M_p$~[M$_{\rm Jup}$]                      & $1.186$                & $+0.090$, $-0.098$          & E \\
+  $R_p$~[R$_{\rm Jup}$]                      & $1.321$                & $\pm 0.039$                 & E \\
 \enddata
 
 \tablecomments{
@@ -444,7 +448,7 @@ We calculated the stellar and planetary parameters in the following
 way.  We computed the star's spectral energy distribution based on the
 {\it Gaia} DR2 parallax (after making the small correction advocated
 by \citealt{stassun_evidence_2018}) and the broadband magnitudes from
-all the available all-sky catalogs: $G$ from {\it Gaia\/} DR2, $B_T$
+the available all-sky catalogs: $G$ from {\it Gaia\/} DR2, $B_T$
 and $V_T$ from {\it Tycho-2}, $BVgri$ from {\it APASS}, $JHK_S$ from
 {\it 2MASS}, and the {\it WISE}~1--4 passbands, thus spanning the
 wavelength range 0.4--22~$\mu$m.  We adopted the effective temperature
@@ -490,11 +494,11 @@ $7\,{\rm Gyr}$.
       calculated transit times, where the calculation is based only on
       the pre-TESS data and assumes a constant period.  The blue bands
       depict the $\pm$$1\sigma$ credible interval of the predicted
-      times.  {\it Top:} The full timing dataset spans 10 years. The
+      times.  {\it Top:} The full timing dataset spans 11 years. The
       darkest points correspond to the most precise data.  {\it
         Bottom:} Close-up of the TESS observations. The red band shows
-      the average deviation of the TESS data, which is $81.5 \pm
-      11.7\ {\rm seconds}$.
+      the average deviation of the TESS transits, which arrived $81.5 \pm
+      11.7\ {\rm seconds}$ earlier than predicted.
         \label{fig:arrived_early}
     }
 \end{figure}
@@ -564,7 +568,7 @@ the time standard.  We assumed the standard was UTC, and performed the
 appropriate corrections to convert to BJD$_{\rm TDB}$.  We
 also verified that none of our conclusions would be changed if this
 assumption was mistaken. Finally, \citet{zhou_secondary_2015} observed an
-occultation with the the Anglo-Australian Telescope.  They did not
+occultation with the Anglo-Australian Telescope.  They did not
 report the observed midpoint, but they did report a result for
 $e\cos\omega$ based upon the observed midpoint.  We calculated the
 implied midpoint using the formula \citep[{\it
@@ -675,7 +679,7 @@ In the decreasing-period model, the period derivative is
 \begin{equation}
 \dot{P}
   = - (3.98 \pm 0.38)\times 10^{-10}
-  = - (12.6 \pm 1.2)~{\rm ms}\,{\rm yr}^{-1}.
+  = - 12.6 \pm 1.2~{\rm ms}\,{\rm yr}^{-1}.
   \label{eq:dP_dt_obs}
 \end{equation}
 For comparison, the best-fitting period derivative of WASP-12b is
@@ -700,7 +704,7 @@ intervals are reported in Table~4.
 
 \begin{figure}[t]
   \begin{center}
-    \includegraphics[width=0.38\textwidth]{f5.pdf}
+    \includegraphics[width=0.385\textwidth]{f5.pdf}
   \end{center}
   \vspace{-0.5cm}
   \caption{
@@ -719,7 +723,7 @@ intervals are reported in Table~4.
     {\bf \it Middle:} 
     Plotted are the key parameters relevant to orbital decay.  Lines
     of constant decay timescale are drawn based on
-    Equation~\ref{eq:da_dt}), assuming $Q_\star' = 10^7$.  WASP-4b has
+    Equation~\ref{eq:da_dt}, assuming $Q_\star' = 10^7$.  WASP-4b has
     a relatively short orbital decay timescale, although it is not as
     extreme a case in this regard as it is for eccentricity damping.
     {\bf \it Bottom:}
