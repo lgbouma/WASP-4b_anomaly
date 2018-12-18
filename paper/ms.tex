@@ -68,6 +68,11 @@ Riverside, CA 92521, USA}
 6301 Stevenson Center Lane, Nashville, TN 37235, USA}
 \affiliation{Fisk University, Department of Physics, 1000 17th Avenue
 N., Nashville, TN 37208, USA}
+%
+\author{J. Villasenor}
+\affiliation{ Department of Physics and Kavli Institute for Astrophysics
+and Space Research, Massachusetts Institute of Technology, Cambridge, MA
+02139, USA }
 % 
 %-------------------------------------
 % TESS Mission Architects:
@@ -75,7 +80,7 @@ N., Nashville, TN 37208, USA}
 % see https://spacebook.mit.edu/pages/viewpage.action?pageId=24543276
 %-------------------------------------
 %
-\author{G. R. Ricker} % grr@space.mit.edu WAITING
+\author{G. R. Ricker} % grr@space.mit.edu CONFIRMED
 \affiliation{ Department of Physics and Kavli Institute for Astrophysics
 and Space Research, Massachusetts Institute of Technology, Cambridge, MA
 02139, USA }
@@ -121,10 +126,12 @@ Astrophysics Laboratory (Code 667), Greenbelt, MD 20771, USA}
 and Space Research, Massachusetts Institute of Technology, Cambridge, MA
 02139, USA }
 %
-\author[0000-0002-5322-2315]{A. Glidden} % aglidden@mit.edu WAITING
+\author[0000-0002-5322-2315]{Ana Glidden} % aglidden@mit.edu CONFIRMED
 \affiliation{ Department of Physics and Kavli Institute for Astrophysics
 and Space Research, Massachusetts Institute of Technology, Cambridge, MA
 02139, USA }
+\affiliation{ Department of Earth, Atmospheric, and Planetary Sciences,
+Massachusetts Institute of Technology, Cambridge, MA 02139, USA }
 %
 \author{N. Guerrero} % nmg@mit.edu WAITING
 \affiliation{ Department of Physics and Kavli Institute for Astrophysics
@@ -287,8 +294,9 @@ WASP-4 was observed by TESS with Camera 2 from August 23 to September
 star is designated as TIC 402026209 in the TESS Input Catalog
 \citep{stassun_TIC_2018}.  The pixel data for an $11\times11$ array
 surrounding WASP-4 were averaged into 2-minute stacks by the onboard
-computer.  The data were downlinked via the Deep Space Network. The
-timestamps from the spacecraft clock were then transformed by the
+computer.  The data were downlinked via the Deep Space Network, and the
+spacecraft time stamps were calibrated against the ground-station clocks.
+The spacecraft clock times were then transformed by the
 Payload Operations Center into the {\it Temps Dynamique Barycentrique}
 (TDB) reference system.  The images were then reduced to lightcurves
 by the Science Processing Operations Center (SPOC) at NASA
@@ -1107,8 +1115,8 @@ PLATO \citep{rauer_plato_2014} will also extend
 the time baseline of transit timing for a large number of systems.
 
 \acknowledgements
-L.G.B.\ gladly acknowledges helpful discussions with
-A.~Bailey, F.~Dai and V.~Van Eylen, and is grateful to the
+L.G.B.\ and J.N.W.\ gladly acknowledge helpful discussions with
+A.~Bailey, F.~Dai, K.~Patra and V.~Van Eylen, and are grateful to the
 people who have turned TESS from an idea into reality.
 %
 J.N.W.\ thanks the TESS project and the Heising-Simons foundation for
@@ -1193,14 +1201,37 @@ Agreement.
 \section{Verifying the TESS Time Stamps}
 \label{sec:verify_tess}
 
+\begin{figure*}[t!]
+	\begin{center}
+		\leavevmode
+		\includegraphics[width=0.9\textwidth]{f7.pdf}
+	\end{center}
+	\vspace{-0.5cm}
+	\caption{
+		{\bf There is no evidence for a systematic offset between TESS
+			times and the barycentric reference.} While the WASP-4b transits
+		fell about 82 seconds earlier than expected, other well-observed
+		hot Jupiters, in particular WASP-6b and WASP-18b, arrived on time.
+		Ticks are observed TESS transit midtimes; the orange distribution
+		is a gaussian centered on zero with standard deviation
+		($\sigma_{\rm predicted}$) calculated from the pre-TESS transit
+		times.  The blue distribution is a gaussian centered on the
+		weighted average of the TESS times, with width equal to the
+		uncertainty in the mean, {\it i.e.}, the standard deviation
+		of the TESS residual times divided by $\sqrt{N-1}$, with $N$ the
+		number of transits.
+		\label{fig:hjs}
+	}
+\end{figure*}
+
 An obvious concern that one might have about the WASP-4 timing anomaly
 is that there might be a systematic offset between the TESS time
 system and the time system in which the previous observations have
 been reported.  There is a precedent for this type of error: data from
 the Kepler mission was afflicted by a systematic timing error that was
 corrected only late in the mission~\citep[][Section
-  3.4]{kepler_DR19_2013}. We performed two checks on the calibration
-of the TESS time system, described below.
+  3.4]{kepler_DR19_2013}. We performed two checks on the calibration of 
+the TESS time system, described below.
 
 \subsection{Checking for consistency in the headers of the lightcurve files}
 \label{sec:headers}
@@ -1212,7 +1243,7 @@ lightcurve files that ${\rm JD}_{\rm UTC}$ lagged behind ${\rm
 JD}_{\rm TDB}$ by the expected $32.184 + N\,{\rm seconds}$, where $N$
 is the number of leap-seconds since 1961. For the relevant observation
 time, $N=37$, and the offset was as expected.  Then, using the ${\rm
-JD}_{\rm UTC}$ timestamp, we calculated the barycentric correction
+JD}_{\rm UTC}$ time stamp, we calculated the barycentric correction
 using the software written by \citealt{eastman_achieving_2010}.  (For
 simplicity, we assumed the TESS spacecraft was located at the Earth's
 geocenter, because the light-travel time between the geocenter and the
@@ -1222,29 +1253,6 @@ that are delivered with the TESS data products.
 
 \subsection{Checking for timing anomalies in other hot Jupiter systems}
 \label{sec:hj_verification}
-
-\begin{figure*}[ht!]
-  \begin{center}
-    \leavevmode
-    \includegraphics[width=0.9\textwidth]{f7.pdf}
-  \end{center}
-  \vspace{-0.5cm}
-  \caption{
-    {\bf There is no evidence for a systematic offset between TESS
-    times and the barycentric reference.} While the WASP-4b transits
-    fell about 82 seconds earlier than expected, other well-observed
-    hot Jupiters, in particular WASP-6b and WASP-18b, arrived on time.
-    Ticks are observed TESS transit midtimes; the orange distribution
-    is a gaussian centered on zero with standard deviation
-    ($\sigma_{\rm predicted}$) calculated from the pre-TESS transit
-    times.  The blue distribution is a gaussian centered on the
-    weighted average of the TESS times, with width equal to the
-    uncertainty in the mean, {\it i.e.}, the standard deviation
-    of the TESS residual times divided by $\sqrt{N-1}$, with $N$ the
-    number of transits.
-    \label{fig:hjs}
-  }
-\end{figure*}
 
 If the observed timing delay in WASP-4b were caused by a systematic
 global offset between the TESS time system and the ${\rm BJD}_{\rm
@@ -1283,7 +1291,7 @@ offset, for each hot Jupiter we considered the model
   t_{\rm tra}(E) = t_0 + PE + t_{\rm offset},
 \end{equation}
 for $t_{\rm offset}$ a systematic constant offset between the reported
-timestamps and the true ${\rm BJD}_{\rm TDB}$ reference.  Our priors
+time stamps and the true ${\rm BJD}_{\rm TDB}$ reference.  Our priors
 were
 \begin{align}
   t_0 &\sim \mathcal{N}[t_0', \sigma_{t_0'}], \\
@@ -1306,6 +1314,7 @@ the predicted time is too imprecise to rule out timing offsets at the
 necessary amplitude.  Multiplying the three independent probabilities
 for WASP-5b, 6b, and 18b, we can rule out $t_{\rm offset} < -81.6\
 {\rm seconds}$ at $6.4\sigma$, or about about 1 part in 11 billion.
+
 
 %\clearpage
 %\newpage
@@ -1336,7 +1345,7 @@ for WASP-5b, 6b, and 18b, we can rule out $t_{\rm offset} < -81.6\
 %   }
 % \end{figure*}
 % 
-% The preceding analysis shows that the TESS timestamps are consistent
+% The preceding analysis shows that the TESS time stamps are consistent
 % at the requisite level with the ${\rm BJD}_{\rm TDB}$ reference.
 % Another explanation for the WASP-4b timing variation could be
 % incorrect archival times.
@@ -1367,8 +1376,8 @@ for WASP-5b, 6b, and 18b, we can rule out $t_{\rm offset} < -81.6\
 % produced lightcurves of extremely high quality, we included their times
 % in our analysis.  From private correspondence with
 % \citealt{huitson_gemini_2017}, the authors also stand by their
-% timestamps. Since the ETD data come from
-% heterogeneous sources, their timestamps are less clearly documented,
+% time stamps. Since the ETD data come from
+% heterogeneous sources, their time stamps are less clearly documented,
 % and the times are thus more prone to systematic errors, we
 % categorically omit them from consideration.
 % 
