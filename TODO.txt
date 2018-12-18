@@ -3,30 +3,6 @@ MOST PRESSING
 
 TODO:
 
-- fix local detrending problem JNW points out for the phase-folded lightcurve
-
-  - when constructing the phase-folded light curve, fit a line to the OOT flux
-    data, and use the parameters of the best-fitting line to "rectify" each
-    lightcurve.
-
-  - add this description to the text
-    - check by JNW
-
-  - run fits again once you fix this local detrending problem JNW is pointing
-    out from the entire lightcurve.
-
-    - measure times
-    - python retrieve_measured_times.py --ticid 402026209
-    - python make_parameter_vs_epoch_plots.py
-    - python compute_planet_star_parameters.py
-      - update table accordingly
-    * python model_comparison_linear_quadratic_precession.py | tee ../results/model_comparison/WASP-4b/model_comparison_output.txt
-    * ./make_all
-
-  * push the result through all the numbers in the text.
-
-* request feedback from collaborators
-
 * submit: once you hear back from collaborators.
 
 * post to arxiv: once you have an editor
