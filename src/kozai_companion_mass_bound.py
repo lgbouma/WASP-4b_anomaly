@@ -9,11 +9,10 @@ import numpy as np
 from astropy import units as u, constants as const
 
 # parameters from my table
-a_b = 0.0227*u.au
 M_star, R_star, M_b, R_b = (
-    0.867*u.Msun, 0.893*u.Rsun, 1.189*u.Mjup, 1.314*u.Rjup
+    0.864*u.Msun, 0.893*u.Rsun, 1.186*u.Mjup, 1.321*u.Rjup
 )
-
+a_b = 0.0226*u.au
 
 # This number is made up, but similar to Jupiter's from Juno (Wahl+ 2016).
 k_2b = 0.6

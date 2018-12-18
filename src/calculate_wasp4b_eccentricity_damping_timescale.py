@@ -13,9 +13,9 @@ P = 1.33823251*u.day
 
 #Mstar, Rstar, Mplanet, Rplanet = 0.867, 0.893, 1.189, 1.314 # USED: my table 1
 Mstar, Rstar, Mplanet, Rplanet = (
-    0.867*u.Msun, 0.893*u.Rsun, 1.189*u.Mjup, 1.314*u.Rjup
+    0.864*u.Msun, 0.893*u.Rsun, 1.186*u.Mjup, 1.321*u.Rjup
 )
-sma = 0.0227*u.au
+sma = 0.0226*u.au
 
 Qplanetprime = 1e5
 
