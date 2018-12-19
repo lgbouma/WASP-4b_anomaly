@@ -8,19 +8,19 @@ Repeated entry---line 2410 of file bibliography.bib
  :                                   ,
 I'm skipping whatever remains of this entry
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Repeated entry---line 2982 of file bibliography.bib
+Repeated entry---line 2981 of file bibliography.bib
  : @article{southworth_high-precision_2009
  :                                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3022 of file bibliography.bib
+Repeated entry---line 3021 of file bibliography.bib
  : @article{sanchis-ojeda_starspots_2011
  :                                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3084 of file bibliography.bib
+Repeated entry---line 3083 of file bibliography.bib
  : @article{hoyer_tramos_2013
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3117 of file bibliography.bib
+Repeated entry---line 3116 of file bibliography.bib
  : @article{petrucci_no_2013
  :                          ,
 I'm skipping whatever remains of this entry
@@ -36,34 +36,34 @@ Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sulliva
 while executing---line 1561 of file yahapj.bst
 You've used 126 entries,
             3215 wiz_defined-function locations,
-            1543 strings with 70058 characters,
-and the built_in function-call counts, 87737 in all, are:
+            1543 strings with 70063 characters,
+and the built_in function-call counts, 87743 in all, are:
 = -- 5307
 > -- 9450
 < -- 50
 + -- 3413
 - -- 3251
-* -- 9161
-:= -- 16808
+* -- 9164
+:= -- 16806
 add.period$ -- 126
 call.type$ -- 126
-change.case$ -- 795
+change.case$ -- 796
 chr.to.int$ -- 123
 cite$ -- 127
 duplicate$ -- 3377
 empty$ -- 4372
-format.name$ -- 3414
+format.name$ -- 3415
 if$ -- 16654
 int.to.chr$ -- 4
 int.to.str$ -- 0
 missing$ -- 118
 newline$ -- 383
 num.names$ -- 506
-pop$ -- 1255
+pop$ -- 1258
 preamble$ -- 1
-purify$ -- 788
+purify$ -- 789
 quote$ -- 0
-skip$ -- 1998
+skip$ -- 1997
 stack$ -- 0
 substring$ -- 3048
 swap$ -- 120

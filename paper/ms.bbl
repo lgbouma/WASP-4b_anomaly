@@ -504,11 +504,6 @@ Mandel, K., \& Agol, E. 2002,
   \href{http://dx.doi.org/10.1086/345520}{\JournalTitle{The Astrophysical
   Journal}, 580, L171}, arXiv: astro-ph/0210099
 
-\bibitem[{Mansouri-Samani {et~al.}(2018)}]{tess_data_product_description_2018}
-Mansouri-Samani, M., {et~al.} 2018, TESS Science Data Products Description
-  Document, EXP-TESS-ARC-ICD-0014,
-  \url{https://archive.stsci.edu/missions/tess/doc/EXP-TESS-ARC-ICD-TM-0014.pdf}
-
 \bibitem[{Mardling(2007)}]{mardling_long-term_2007}
 Mardling, R.~A. 2007,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2007.12500.x}{\JournalTitle{Monthly
@@ -812,6 +807,11 @@ Szab\'o, G.~M., P\'al, A., Derekas, A., {et~al.} 2012,
 Szab\'o, G.~M., Simon, A., \& Kiss, L.~L. 2014,
   \href{http://dx.doi.org/10.1093/mnras/stt1724}{\JournalTitle{Monthly Notices
   of the Royal Astronomical Society}, 437, 1045}
+
+\bibitem[{Tenenbaum \& Jenkins(2018)}]{tess_data_product_description_2018}
+Tenenbaum, P., \& Jenkins, J. 2018, TESS Science Data Products Description
+  Document, EXP-TESS-ARC-ICD-0014 Rev D,
+  \url{https://archive.stsci.edu/missions/tess/doc/EXP-TESS-ARC-ICD-TM-0014.pdf}
 
 \bibitem[{Thompson {et~al.}(2013)}]{kepler_DR19_2013}
 Thompson, S., {et~al.} 2013, Kepler Data Release 19 Notes Q14, KSCI-19059-001,
