@@ -1230,29 +1230,7 @@ system and the time system in which the previous observations have
 been reported.  There is a precedent for this type of error: data from
 the Kepler mission was afflicted by a systematic timing error that was
 corrected only late in the mission~\citep[][Section
-  3.4]{kepler_DR19_2013}. We performed two checks on the calibration of 
-the TESS time system, described below.
-
-\subsection{Checking for consistency in the headers of the lightcurve files}
-\label{sec:headers}
-
-The TESS lightcurve files provide observation start and end times in
-three different time systems: ${\rm JD}_{\rm UTC}$, ${\rm JD}_{\rm
-TDB}$, and ${\rm BJD}_{\rm TDB}$.  First, we verified for a few select
-lightcurve files that ${\rm JD}_{\rm UTC}$ lagged behind ${\rm
-JD}_{\rm TDB}$ by the expected $32.184 + N\,{\rm seconds}$, where $N$
-is the number of leap-seconds since 1961. For the relevant observation
-time, $N=37$, and the offset was as expected.  Then, using the ${\rm
-JD}_{\rm UTC}$ time stamp, we calculated the barycentric correction
-using the software written by \citealt{eastman_achieving_2010}.  (For
-simplicity, we assumed the TESS spacecraft was located at the Earth's
-geocenter, because the light-travel time between the geocenter and the
-spacecraft is on the order of only one second.)  This gave us times in
-${\rm BJD}_{\rm TDB}$ that agreed with the ${\rm BJD}_{\rm TDB}$ times
-that are delivered with the TESS data products.
-
-\subsection{Checking for timing anomalies in other hot Jupiter systems}
-\label{sec:hj_verification}
+  3.4]{kepler_DR19_2013}.
 
 If the observed timing delay in WASP-4b were caused by a systematic
 global offset between the TESS time system and the ${\rm BJD}_{\rm
@@ -1267,13 +1245,16 @@ this paper for other hot Jupiters observed by TESS for which timing
 data exists spanning many years.  First, we checked which hot Jupiters
 were observed over the first three TESS sectors using a combination of
 \texttt{tessmaps}\footnote{\url{github.com/lgbouma/tessmaps}} and
-TEPCat \citep{southworth_homogeneous_2011}.  We then selected hot
-Jupiters for which there were at least five distinct epochs reported
-in the peer-reviewed literature.  We required that each observation be
-of a single transit, that the midpoint be fit as a free parameter, and
-that the time system be clearly documented.  Our final hot Jupiter
-sample included WASP-4b, 5b, 6b, 18b, and 46b.  The collected and
-measured times are given in Tables~5, 6, 7, and 8 for each.
+TEPCat \citep{southworth_homogeneous_2011}.  We recalculated the
+barycentric corrections using the \citet{eastman_achieving_2010} code,
+and found values that agreed with the lightcurve headers to within
+about 1 second.  We then selected hot Jupiters for which there were at
+least five distinct epochs reported in the peer-reviewed literature.
+We required that each observation be of a single transit, that the
+midpoint be fit as a free parameter, and that the time system be
+clearly documented.  Our final hot Jupiter sample included WASP-4b,
+5b, 6b, 18b, and 46b.  The collected and measured times are given in
+Tables~5, 6, 7, and 8 for each.
 
 We determined the best-fitting constant-period ephemeris based on the
 pre-TESS data. Then we used the parameters and uncertainties in the
@@ -1323,6 +1304,8 @@ for WASP-5b, 6b, and 18b, we can rule out $t_{\rm offset} < -81.6\
 \input{WASP-18b_transit_time_table.tex}
 \input{WASP-46b_transit_time_table.tex}
 
+%\clearpage
+%\newpage
 
 
 
