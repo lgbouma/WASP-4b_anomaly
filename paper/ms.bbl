@@ -492,10 +492,10 @@ Lidov, M.~L. 1962,
   \href{http://dx.doi.org/10.1016/0032-0633(62)90129-0}{\JournalTitle{Planetary
   and Space Science}, 9, 719}
 
-\bibitem[{Maciejewski {et~al.}(2016)Maciejewski, Dimitrov, Fernández, Sota,
+\bibitem[{Maciejewski {et~al.}(2016)Maciejewski, Dimitrov, Fern\'andez, Sota,
   Nowak, Ohlert, Nikolov, Bukowiecki, Hinse, Pallé, Tingley, Kjurkchieva, Lee,
   \& Lee}]{maciejewski_departure_2016}
-Maciejewski, G., Dimitrov, D., Fernández, M., {et~al.} 2016,
+Maciejewski, G., Dimitrov, D., Fern\'andez, M., {et~al.} 2016,
   \href{http://dx.doi.org/10.1051/0004-6361/201628312}{\JournalTitle{Astronomy
   and Astrophysics}, 588, L6}
 
@@ -594,6 +594,11 @@ Nikolov, N., Sing, D.~K., Burrows, A.~S., {et~al.} 2015,
 Ogilvie, G.~I. 2014,
   \href{http://dx.doi.org/10.1146/annurev-astro-081913-035941}{\JournalTitle{Annual
   Review of Astronomy and Astrophysics}, 52, 171}, arXiv: 1406.2207
+
+\bibitem[{P\'al \& Kocsis(2008)}]{pal_periastron_2008}
+P\'al, A., \& Kocsis, B. 2008,
+  \href{http://dx.doi.org/10.1111/j.1365-2966.2008.13512.x}{\JournalTitle{Monthly
+  Notices of the Royal Astronomical Society}, 389, 191}
 
 \bibitem[{Patra {et~al.}(2017)Patra, Winn, Holman, Yu, Deming, \&
   Dai}]{patra_2017}
