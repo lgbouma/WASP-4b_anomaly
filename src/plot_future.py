@@ -140,7 +140,12 @@ def plot_future(
                     - linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1],
                 zorder=-3, alpha=0.17, c='#ff7f0e')
 
-    a0.legend(loc='lower left', fontsize='x-small')
+    a0.text(0.02, 0.04, 'Transits', transform=a0.transAxes, ha='left',
+            va='bottom')
+    a1.text(0.02, 0.04, 'Occultations', transform=a1.transAxes, ha='left',
+            va='bottom')
+
+    a0.legend(loc='lower center', fontsize='x-small')
     for ax in (a0,a1):
         ax.get_yaxis().set_tick_params(which='both', direction='in')
         ax.get_xaxis().set_tick_params(which='both', direction='in')

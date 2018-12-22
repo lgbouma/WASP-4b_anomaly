@@ -357,7 +357,7 @@ def plot_HJs_HR_diagram(catpath, ax):
     ax.scatter(x, y, marker='s', s=5, zorder=2,
                facecolors='none', edgecolors='k', lw=0.4, alpha=0.3)
 
-    marker = itertools.cycle(('o', 'v', '>', 'd', 's', 'P'))
+    marker = itertools.cycle(('o', 'v', '>', 'D', 's', 'P'))
     for tesspl in plnames:
         if tesspl=='WASP-4b':
             s=56

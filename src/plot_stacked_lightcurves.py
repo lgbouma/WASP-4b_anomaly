@@ -110,9 +110,9 @@ def plot_stacked_lightcurves(
     resultspng = '../results/{:d}_stacked_lightcurves.png'.format(ticid)
     paperpng = '../paper/f1.png'
     paperpdf = '../paper/f1.pdf'
-    f.savefig(resultspng, dpi=400, bbox_inches='tight')
+    f.savefig(resultspng, dpi=600, bbox_inches='tight')
     print('saved {:s}'.format(resultspng))
-    f.savefig(paperpng, dpi=400, bbox_inches='tight')
+    f.savefig(paperpng, dpi=600, bbox_inches='tight')
     print('saved {:s}'.format(paperpng))
     f.savefig(paperpdf, bbox_inches='tight')
     print('saved {:s}'.format(paperpdf))

@@ -58,27 +58,27 @@ def plot_phasefold(picklepath, xlim=None, ylim0=None, ylim1=None):
                                figsize=(0.8*6,0.8*4), gridspec_kw=
                                {'height_ratios':[3, 1]})
 
-    a0.scatter(phase*fit_period*24, phz_flux, c='k', alpha=0.15, label='data',
+    a0.scatter(phase*fit_period*24, phz_flux, c='k', alpha=0.12, label='data',
                zorder=1, s=10, rasterized=True, linewidths=0)
     a0.plot(bin_phase*fit_period*24, bin_fluxs, alpha=1, mew=0.5,
             zorder=8, label='binned', markerfacecolor='yellow',
             markersize=8, marker='.', color='black', lw=0, rasterized=True)
     a0.plot(
-        phase*fit_period*24, fit_phz_flux, c='b',
-        zorder=0, rasterized=True, lw=2, alpha=0.4,
+        phase*fit_period*24, fit_phz_flux, c='#4346ff',
+        zorder=2, rasterized=True, lw=1.5, alpha=0.7,
         label='model'
     )
 
     a1.scatter(
-        phase*fit_period*24, phz_flux-fit_phz_flux, c='k', alpha=0.15,
-        rasterized=True, s=10, linewidths=0
+        phase*fit_period*24, phz_flux-fit_phz_flux, c='k', alpha=0.12,
+        rasterized=True, s=10, linewidths=0, zorder=1
     )
     a1.plot(bin_phase*fit_period*24, bin_fluxs-fit_bin_fluxs, alpha=1, mew=0.5,
             zorder=8, markerfacecolor='yellow', markersize=8,
             marker='.', color='black', lw=0, rasterized=True)
     a1.plot(
-        phase*fit_period*24, fit_phz_flux-fit_phz_flux, c='b',
-        zorder=0, rasterized=True, lw=2, alpha=0.4
+        phase*fit_period*24, fit_phz_flux-fit_phz_flux, c='#4346ff',
+        zorder=2, rasterized=True, lw=1.5, alpha=0.7
     )
 
     a1.set_xlabel('Time from mid-transit [hours]')
@@ -97,7 +97,7 @@ def plot_phasefold(picklepath, xlim=None, ylim0=None, ylim1=None):
 
     f.tight_layout(h_pad=-.3, w_pad=0)
     savpath = '../results/phasefold.png'
-    f.savefig(savpath, dpi=350, bbox_inches='tight')
+    f.savefig(savpath, dpi=600, bbox_inches='tight')
     print('made {}'.format(savpath))
     copyfile(savpath, '../paper/f2.png')
     print('saved ../paper/f2.png')
