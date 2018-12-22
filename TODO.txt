@@ -3,26 +3,12 @@ MOST PRESSING
 
 TODO:
 
-* submit: once you hear back from collaborators.
-
+* let collaborators know (mass email)
 * post to arxiv: once you have an editor
-
-* send draft to jeremy.
-
-* check whether not doing the f=0.76 fudge factor changes anything (probably
-  just inflates uncertainties). --> would it appreciably reduce certainty of
-  period decay? if so, would bear mentioning!
 
 
 PUBLISHING
 ----------
-
-* inform architects (tess-architects@mit.edu) and contributors,
-  including a draft, asking for response within three business days,
-  with the statement:
-
-  "I have read the paper “Title”, and I agree with the methods and
-  conclusions. I wish to be included as a co-author." 
 
 * step 4: once complete draft is ready, post draft to TESS wiki
   contributed paper page.

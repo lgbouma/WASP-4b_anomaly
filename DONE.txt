@@ -593,4 +593,24 @@ Mon 17 Dec 2018 09:36:37 AM EST
 
   - write the result through all the numbers in the text.
 
+- send draft to jeremy.
 
+- check whether not doing the f=0.76 fudge factor changes anything (probably
+  just inflates uncertainties). --> would it appreciably reduce certainty of
+  period decay? if so, would bear mentioning!
+
+- skim jemery's comments
+
+- remove the unused appendix
+
+- inform architects (tess-architects@mit.edu) and contributors,
+  including a draft, asking for response within three business days,
+  with the statement:
+
+  "I have read the paper “Title”, and I agree with the methods and
+  conclusions. I wish to be included as a co-author." 
+
+- submit
+  - choose the appropriate collaborator names depending on when you hear.
+  - do it on saturday.
+ 
