@@ -1,0 +1,286 @@
+Referee Report 
+
+Reviewer's Comments:
+
+The authors present a number of new and high-quality transit observations of
+the hot Jupiter WASP-4b observed by TESS. After comparing the predicted
+mid-transit times (obtained only considering the pre-existing transits in the
+literature) with the measured values from the TESS light curves, the authors
+conclude that the TESS transits occur ~ 82 seconds earlier than predicted. They
+examine different possibilities and find that the 2 most favored scenarios to
+explain this deviation are orbital decay and apsidal precession. However, the
+authors caution that more observations are needed to confirm these results.
+Also, they redetermine various parameters of the system, finding them in
+general agreement with literature values. 
+
+* TODO: add more weight to the distant companion idea.
+* ADD: our own analysis of the RV data, and the resulting implied period
+  derivative.
+* ADD: RV analysis emphasis (!!).
+
+In general, the manuscript is scientifically accurate and the results presented
+in it certainly will be of interest to other investigators in
+the field. Then, I consider this paper worthy of being published after the
+concerns described below be addressed. 
+
+Below are my comments, beginning with the major points. I recommend the authors
+take them into consideration when revising their manuscript.
+
+-- Major points:
+
+1) In section 3.1, the authors claim "..We included data from peer-reviewed
+literature for which the analysis was based on observations of a single,
+complete transit,..". However, the transits listed in Table 2 corresponding to
+the epochs E=-827 (ttra= 2454697.79817; Winn et al. 2009), E=-804 (ttra=
+2454728.57767; Hoyer et al. 2013), E=-537 (ttra= 2455085.88418; Dragomir et al.
+2011), E=-208 (ttra= 2455526.16356; Ranjan et al. 2014) are incomplete light
+curves, and those from the epochs E=-795 (2454740.62125; Hoyer et al. 2013),
+E=-251 (2455468.61943; Hoyer et al. 2013) and E=21 (2455832.61815; Hoyer et al.
+2013) present scarcity of after ingress/before egress data-points. On one hand,
+given that several partial light curves have been included in their study, the
+use of the word "complete" to indicate the characteristics of the transits in
+their sample, must be avoided. 
+On the other hand, at least two other transits included in their sample show
+visible anomalies, probably produced by the pass of the planet in front of one
+or several cold spots during transit (E=-561, ttra=2455053.76774 and E=-526,
+ttra=2455100.60595, both from Sanchis-Ojeda et al. 2011). Different studies
+have proven that mid transit-times measured from partial light curves (Sada et
+al. 2012, Barros et al. 2013, Nikolov et al. 2015, Mancini et al. 2018) or
+light curves with anomalies due to the presence of spots (Oshagh et al. 2013,
+Mazeh et al. 2015, Ioannidis et al. 2016), usually present larger uncertainties
+and untrustable values. Taking in consideration the conclusions of these
+previous works, it is possible that the exclusion of incomplete/with anomalies
+transits might affect the outcome of their analysis and conclusions,
+particularly with respect to orbital decay and apsidal precession. Then, in
+order to warrant confident results, I would like to see the same analysis but
+without including partial transits or with visible spot-crossing events on
+them.
+
+* USE: best-judgement.
+* ENSURE: do not include partial transits.
+* OMITTING THE ONES WITH VISIBLE SPOT-CROSSINGS: meh. Maybe focus on the ones
+  with excess reisduals during partial phases.
+
+2) As mentioned in 1), another possible interpretation for explaining the
+deviation from a linear ephemeris of the TESS mid-transit times could be the
+presence of anomalies in the light curves due to stellar activity. It has been
+well established that WASP-4 is an active star with a rotation period (P) in
+between 20-40 days (P ~ 22 days and P ~ 34 days were determined by
+Sanchis-Ojeda et al. 2011 and Hoyer et al. 2013, respectively), which is
+expected for a main-sequence G7 star. Given that the TESS mid-transits span
+around 30 days, wouldn't it be possible that these measurements be affected by
+the existence of unseen stellar spots? Regarding this point, I would like to
+see an extra paragraph in the Section "Interpretation" with a discussion about
+this scenario.
+
+* ONE IDEA: consider ADDING the spots (e.g., from the hubble data, at the
+  observed amplitude). Run it through the lightcurves, over a full transit
+  phase. QUANITFY: How much does the transit mid-time change?
+* ALSO QUANTIFY: what is the peak-to-peak stellar variability? (Can we confirm
+  the previously measured rotation periods?)
+* The period is the same order of time as the observations...
+
+
+-- Minor points:
+
+0. TITLE: 
+
+i) As it is, the title implies a very strong asseveration. It would be more
+appropriate "Possible Early Arrival of WASP-4b for the TESS Mission" or
+something similar. 
+
+* Pending spot studies: no.
+
+
+1. INTRODUCTION:
+
+i) Please, include here a reference for TESS.
+
+* Fine
+
+
+2. NEW TRANSITS AND SYSTEM PARAMETERS:
+
+Section 2.1:
+
+i) It could be informative to provide a reference for the "Deep Space Network". 
+
+ii) barycentric Julian date --> Barycentric Julian Date
+
+iii) For the casual reader, it would be important to briefly specify what
+"Threshold Crossing Events" means, and what the flags "Reaction Wheel
+Desaturation Event" and "Manual Exclude" represent. Footnotes including this
+information would be appropriate. Also, could the authors describe what a
+"Presearch Data Conditioning" lightcurve is?
+
+iv) It might be worthwhile to mention what "ramp-like systematic effects" are
+and also include a reference.
+
+v) It would be important to include in this section an explanation of how
+photometric data-point errors are estimated.
+
+
+Section 2.2:
+
+i) Could the authors explicitly indicate, in the first paragraph, the number of
+transits observed by TESS finally used to create the phase-folded light curve?
+Furthermore, the manuscript would be more readable if the main text refers
+first to Figure 1 instead of Figure 2. 
+
+ii) The authors say that the phase-folded lightcurve was fitted by using the
+implementation of Kreidberg (2015) of the analytic model of Mandel & Agol
+(2002). Is this referring to the BATMAN code? If it is so, It would be good to
+mention the code's name in the text. Also, I would appreciate if, in the main
+text, the authors clarify from which source are the values used as initial
+photometric parameters (planet to star radius ratio, orbital distance to
+stellar radius ratio, inclination, etc). On the other hand, for highlighting
+the results obtained with TESS data, it would be important to visualize all the
+transit parameters derived from section 2.2 in an independent table.
+Furthermore, to see the agreement between the transit parameters reported in
+previous studies and those resulting from this work, it would be useful to
+present together the values obtained in both cases.
+
+* Can say no to the latter.
+
+iii) In the caption of Figure 2, it would be important to specify which is the
+bin size used to determine the yellow points. Furthermore, in Figure 2, the
+photometric error of the unbinned data-points should be included. 
+
+* add a representative error bar, bottom right
+
+iv) To estimate transit times for each individual lightcurve, did the authors
+use the same code as for the phase-folded light curve? In this case, how were
+the mid-transit times' uncertainties determined?
+
+v) Is χ^2=9.2 the reduced chi-square? If it is so, It should be clarified by
+using a different symbol or by adding a sub-index, for example. Please, fix
+this in the rest of the manuscript when necessary. 
+
+vi) χ^2 = 16 {plus minus} 5.7 --> χ^2 = 9.2 {plus minus} 5.7
+
+vii) The note at the end of Table 2 explains what the parameter sigmat0
+represents, but it's not clear which is its relation with the mid-transit
+times' measurements presented in the same table. 
+
+
+Section 2.3:
+
+i) The authors should include the references for each of the mentioned catalogs
+and also for the Yonsei Yale isochrones.
+
+ii) How did the authors estimate the errors of the stellar and planet
+parameters?
+
+3. TIMING ANALYSIS 
+
+Section 3.1:
+
+i) The sentence "..Since those data points carry significant weight in the
+analysis, we checked that the timestamps in their data represent mid-exposure
+times, that the barycentric correction was performed correctly, and that the
+time system of the final results was BJD(TDB).." is confusing, because seems to
+imply that these checks were only performed on the Huitson et al. mid-transit
+times and not in all the literature mid-transit times. It would be
+recommendable to clarify this point.
+
+* This is what we meant.
+* We can't go this deep for all of them.
+
+ii) Could the authors specify what is the meaning of each of the variables in
+Equation (1)?
+
+Section 3.2:
+
+i) How did you fit the mid times of the preTESS measurements? Did you use a
+weighted least-square fit? 
+
+* Yes (be sure in text)
+
+ii) Figure 3:
+I would recommend changing the "title" indicated in bold font in the caption,
+by a more explicit sentence about what is shown in the plot. To give an
+example, a possibility could be "Observed minus predicted mid-transit times". 
+Also: ii-1) In the legends of both panels, could the authors specify which is
+the bin size of the TESS light curves? (Please, fix this in all the
+manuscript).
+ii-2) "The red band shows the average deviation of the TESS transits,..." -->
+"The red band shows the average deviation of the TESS transits {plus
+minus}1σ,..." 
+
+iii) It would be important to introduce references for equations (4) and (5).
+Also, for the casual reader, It might be informative to give a brief
+explanation of what sidereal and anomalistic periods are.
+
+iv) Figure 4: In the caption, could the authors explicitly indicate what the
+plot shows in each of its panels (top and bottom)?
+
+v) Similar to i) How did you fit the mid-transit times and occultations shown
+in Figure 4?
+
+vi) In the caption of Table 4, please be more explicit, "Best-fit model
+parameters" of what?
+
+vii) Given that the mid-transit times values used in this work are taken from
+different authors with different methodologies to perform the fitting and
+detrending of the light curves, could the authors mention how this could affect
+their results?
+
+* We are trusting that people fit transits.
+* (Maybe cite some of the Espinoza studies about detailed transit fitting
+  systematics)
+
+4. INTERPRETATION
+
+Sectio 4.1:
+
+i) First line: The word "caused" is repeated twice.
+
+ii) In the caption of Figure 5 should be indicated what open circles represent. 
+
+iii) The characteristic timescale value calculated in equation (13), is it
+computed by considering a theoretical dP/dt value or from the one estimated
+through the observations?
+
+iv) The authors mention that there are about 20 Hot Jupiters for which the
+theoretical timescale is shorter, where are the timescale values obtained from?
+Are they estimated from equation (13)? If this is the case, how do the
+theoretical dP/dts are computed?
+
+v) In the top panels of Figures 4 and 6, the orbital decay model evolution
+shows that at the beginning the O-C values increase until, at some point, they
+reach a maximum and after that, they start decreasing. What is the physical
+explanation for that behavior? If the orbital period is diminishing, wouldn't
+it be expected to see only a decreasing in the O-C values? Why the O-C values
+would increase at these first epochs? 
+
+Section 4.2:
+
+i) It might be informative to explicitly include the equation (14) of Ragozzine
+& Wolf (2009) to see of which parameters is depending on.
+
+ii) Similar to Figure 3, I would recommend changing the title indicated in bold
+font in Figure 6, by a more explicit sentence about what is shown in the plot.
+For eample "Different apsidal precession and orbital decay models for the O-C
+values" or something like that.
+
+iii) Mb is indicated as the mass of the hypothetical planet WASP-4c, however,
+the Mb symbol is not present in equation (19).
+
+iv) Why do the authors assume k2b = 0.6 for the Love number? Is this value
+randomly chosen? 
+
+v) Would it be possible to introduce a definition of the reduced mass presented
+in equation 21? Also, could the authors specify which values they used for L,
+Mc, and Rc and provide references?
+
+
+Section Appendix:
+
+i) "WASP-4 timing anomaly" --> "WASP-4b timing anomaly"
+
+> Corrected.
+
+ii) In the caption of Figure 7: "with standard deviation (σpredicted)" -->
+"with standard deviation (σpre-TESS)"
+
+> Corrected, thank you!
