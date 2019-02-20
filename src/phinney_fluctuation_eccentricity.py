@@ -32,17 +32,18 @@ def mean_ecc(L, M_planet, M_star, R_conv, M_conv, period, sma):
         ( L**2 * R_conv**2 * M_conv )**(1/6)
     ).cgs
 
-# Petrucci+ 2013 table 3, for the star.
-Rstar = 0.92*u.Rsun
-Mstar = 0.89*u.Msun
-Teff = 5436*u.K
-age = 7*u.Gyr
-Fe_by_H = -0.05
+# Me, table 1, for the star.
+Rstar = 0.893*u.Rsun
+Mstar = 0.864*u.Msun
+Teff = 5400*u.K
+age = 8*u.Gyr   # used in matching MESA
+Fe_by_H = -0.05 # used in matching MESA
 
 Lstar = ( ( c.sigma_sb * Teff**4 ) * 4*np.pi*Rstar**2 ).to(u.Lsun)
 
-# from my R_tachocline_vs_t_varM_merged.pdf plot
-log10_R_tacholine = -0.2
+# from my R_tachocline_vs_t_varM_merged.pdf plot, fit with WebPlotDigitizer.
+# origin is MESA / MIST tracks. I could simply cite the MIST tracks here too.
+log10_R_tacholine = -0.25
 R_tachocline = 10**(log10_R_tacholine)*u.Rsun
 assert Rstar > R_tachocline
 R_env_star = Rstar - R_tachocline
@@ -51,14 +52,15 @@ R_env_star = Rstar - R_tachocline
 log10_I_conv = -5
 I_conv = 10**log10_I_conv * u.Msun * u.Rsun**2
 M_env_star = ( I_conv / (R_env_star**2) ).to(u.Msun)
+M_env_star = 1e-4 * u.Msun
 
 ##########
 period = 1.3382351*u.day
 sma = 0.0228*u.au
 
 # What if the planet were the driver?
-Rplanet = 1.33*u.Rjup
-Mplanet = 1.216*u.Mjup
+Rplanet = 1.32*u.Rjup
+Mplanet = 1.186*u.Mjup
 Teqplanet = 1664*u.K
 
 Lplanet = ( ( c.sigma_sb * Teqplanet**4 ) * 4*np.pi*Rplanet**2 ).to(u.Lsun)
@@ -76,7 +78,7 @@ print('Mstar: {}'.format(Mstar))
 print('Lstar: {}'.format(Lstar))
 print('R_tachocline/Rstar: {}'.format(R_tachocline/Rstar))
 print('R_env_star: {}'.format(R_env_star))
-print('(guess) M_env_star: {}'.format(R_env_star))
+print('(guess) M_env_star: {}'.format(M_env_star))
 print('<e^2>^(1/2): {}'.format(
     mean_ecc(Lstar, Mplanet, Mstar, R_env_star, M_env_star, period, sma))
 )

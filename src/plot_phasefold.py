@@ -15,6 +15,8 @@ from shutil import copyfile
 from astrobase.lcmath import phase_magseries
 from astrobase.lcmath import phase_bin_magseries
 
+import matplotlib.transforms as transforms
+
 def plot_phasefold(picklepath, xlim=None, ylim0=None, ylim1=None):
 
     # d['magseries'].keys()
@@ -29,6 +31,7 @@ def plot_phasefold(picklepath, xlim=None, ylim0=None, ylim1=None):
     times = d['magseries']['times']
     fluxs = d['magseries']['mags']
     fitfluxs = d['fitinfo']['fitmags']
+    errs = d['magseries']['errs']
 
     fit_t0 = d['fitinfo']['finalparams']['t0']
     # NOTE: might want to use the best-fit value from the tables, instead of
@@ -67,6 +70,19 @@ def plot_phasefold(picklepath, xlim=None, ylim0=None, ylim1=None):
         phase*fit_period*24, fit_phz_flux, c='#4346ff',
         zorder=2, rasterized=True, lw=1.5, alpha=0.7,
         label='model'
+    )
+
+    trans = transforms.blended_transform_factory(
+            a0.transAxes, a0.transData)
+    a0.errorbar(
+        0.88,
+        0.97,
+        yerr=np.median(errs),
+        fmt='none',
+        ecolor='gray',
+        elinewidth=1,
+        capsize=2,
+        transform=trans
     )
 
     a1.scatter(

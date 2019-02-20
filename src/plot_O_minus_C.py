@@ -185,10 +185,15 @@ def plot_O_minus_C(
                         fmt='.', color='g', ecolor='g', zorder=1,
                         alpha=1, mew=1, elinewidth=1)
             a0.text(0.96,0.02,
-                    'select ETD times, & epoch from W+08\n'+
+                    'Bixel+ 2018 IMACS\n'+
                     '(overplot; not included in fits)',
                    transform=a0.transAxes, color='g', fontsize='x-small',
                     va='bottom', ha='right')
+            #a0.text(0.96,0.02,
+            #        'select ETD times, & epoch from W+08\n'+
+            #        '(overplot; not included in fits)',
+            #       transform=a0.transAxes, color='g', fontsize='x-small',
+            #        va='bottom', ha='right')
 
             # binned ETD point
             etd_bin = (x_extra > 0)
@@ -203,12 +208,13 @@ def plot_O_minus_C(
             bin_etd_sigma_y = np.std(etd_sigma_y)
             bin_etd_x = np.median(etd_x)
 
-            a0.errorbar(bin_etd_x,
-                        bin_etd_y,
-                        bin_etd_sigma_y,
-                        fmt='.', color='red', ecolor='red',
-                        alpha=1, mew=1, elinewidth=1, zorder=8,
-                        label='binned ETD time')
+            # NOTE: sometimes might want to show!
+            #a0.errorbar(bin_etd_x,
+            #            bin_etd_y,
+            #            bin_etd_sigma_y,
+            #            fmt='.', color='red', ecolor='red',
+            #            alpha=1, mew=1, elinewidth=1, zorder=8,
+            #            label='binned ETD time')
 
         a0.plot(xfit,
                 quadratic_fit(theta_quadratic, xfit)
@@ -499,7 +505,7 @@ if __name__=="__main__":
     main(plname, xlim=xlim, ylim=ylim, include_all_points=False, ylim1=ylim1)
 
     # with all points
-    ylim = [-4,2]
+    ylim = [-1.6,1.3]
     xlim = [-1100,2000]
     ylim1 = [-5,4.2]
     main(plname, xlim=xlim, ylim=ylim, include_all_points=True, ylim1=ylim1)
