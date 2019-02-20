@@ -1,0 +1,69 @@
+2019/01/24, frantically at 5pm
+
+"In the plot of the residuals, the blue line slopes downward from +30 to -30
+km/s over about 2000 days.  That’s a rate of 0.03 m/s/day, which is three times
+larger than the value we quote in Eq. 23 of our paper.  And that’s the best
+fitting slope - I would guess that the 2-sigma limit is in the neighborhood of
+0.05 m/s/day."
+
+...
+
+The value Knutson+2014 quote for this (using Wilson 08 CORALIE + Husnoo 12
+HARPS + HIRES) is
+
+gamma_dot = -0.0099 + 0.0052, - 0.0054 m/s/day.
+corresponding 2-sigma limit: -0.0207 m/s/day
+
+...
+
+The value Michelle Hill found in her initial analysis (using the same RV
+dataset) was
+
+gamma_dot = -0.0191 + 0.0068 - 0.0069 m/s/day.
+corresponding 2-sigma limit: -0.0329 m/s/day.
+
+These are the values that I considered when I made the assessment that we
+wouldn't include our own RV analysis.
+
+However, later in our correspondence, I requested that Michelle include the
+out-of-transit HARPS RVs from Triaud 2010 HARPS (new data). If I look at the
+table of RVs she used (Table 4 in the attached), it appears that these
+additional points were included.  
+
+The output of this second fit gave a slightly higher gamma-dot:
+
+gamma_dot = -0.0253 + 0.0073 - 0.0084 m/s/day.
+corresponding 2-sigma limit: -0.0421 m/s/day.
+
+When I look at the initial analysis, it also looks like there might have been
+some fudging of the RV uncertainty values.  I will inquire with Michelle about
+this.
+
+Also confusing in Table 4 is that from "2454720.58900" to "2454763.72600", the
+points are marked as CORALIE, but I believe they are actually the Triaud
+points, because they are the new points that were not included in the old
+analysis. I will inquire with Michelle about this as well.
+
+...
+
+Anyway yes. The dot(P) limit from acceleration along the line of sight scales
+linearly, and this increases 
+
+====================
+
+Fri Jan 25 18:30:24 2019
+
+Michelle's reanalysis with the full timeseries gives:
+
+gamma_dot = -0.0123 + 0.0087 - 0.0081 m/s/day.
+2 sigma limit = -0.0285 m/s/day.
+
+Fei's analysis, with identitcal data, give:
+
+gamma_dot = -0.00337 + 0.022 - 0.010 m/s/day.
+2 sigma limit = -0.02337 m/s/day.
+
+Fei emphasizes: "Because all 3 instruments only covered limited baseline, the
+radial velocity drift is very degenerate with the offsets between the
+instruments (I allowed all 3 instruments to have independent offsets)."
+
