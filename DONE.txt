@@ -614,3 +614,21 @@ Mon 17 Dec 2018 09:36:37 AM EST
   - choose the appropriate collaborator names depending on when you hear.
   - do it on saturday.
  
+- let collaborators know (mass email)
+
+- step 4: once complete draft is ready, post draft to TESS wiki contributed
+  paper page.
+
+- notify Erin May of the result, ask if they would be willing to share
+
+- ditto for Bixel et al. Would they be willing to share?
+
+- Email Caceres after submitting. plz confirm UTC, not TDB.
+  - Claudio Caceres, now at universidad andres bello, in santiago. no freakin
+    email address.
+  - it's obviously not TDB. nobody would ever correct for leap-seconds, and
+    then not write it into the text. literally nobody.
+
+- respond to Bixel updating him on what to do (once hearing from Josh)
+
+

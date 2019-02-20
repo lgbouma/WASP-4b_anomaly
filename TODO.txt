@@ -3,42 +3,53 @@ MOST PRESSING
 
 TODO:
 
-* let collaborators know (mass email)
-* post to arxiv: once you have an editor
+* add the Pdotdot model
 
+* add Caldwell, Guerrero, Wohler as coauthors
 
-PUBLISHING
+* add Fei Dai as coauthor for RV analysis
+
+* add acknowledgement of Bixel and his efforts
+
+* decide whether to include Bixel's three points. 
+
+  * assess Bixel's "fudge factor of 2". Why 2? Why not 4? Or 10?  ...
+
+  * what sort of systematics are in the LC extraction process for them? ...
+    could I just measure the times, from their LCs, please? ... (at least then
+    I might trust the error bars...)
+
+  * how does this compare to ETD uncertainties
+
+* if include, rerun fits with Bixel's three points. how do they change things,
+  if at all?
+
+  * add paragraph to summarize the process that produced them...
+
+* if do not include, then include mention in the acknowledgements.
+
+* cite Buhler+ 2016 somewhere in text (perhaps).
+  * what is the story of HAT-P-13? how did they get k_love,p? and core mass?
+  ... should be aware!!
+
 ----------
 
-* step 4: once complete draft is ready, post draft to TESS wiki
-  contributed paper page.
+* post to arxiv: once you have a response
 
-===============================================================================
-
-ONCE PAPER IS SUBMITTED
-----------
 * notify Princeton media office of result.
-
-* notify Erin May of the result, ask if they would be willing to share
-
-* ditto for Bixel et al. Would they be willing to share?
-
-* Email Caceres after submitting. plz confirm UTC, not TDB.
+  - send email to hear about what options there are
+  * once hear back from referee: reach out again
 
 * Consider contacting Andrew Howard, to get a few HIRES RV observations, to
   extend the linear trend pointed out by Knutson et al 2014. i don't think new
   ones have been taken in a while.  (a planet should be there...)
 
   * ... is WASP-4 up soon from Hawaii?
+    - not great. usually terrible seeing time.
+
+  * get HARPS RVs over the summer, via KESPRINT.
+    * will Winn impose it? or should I?
 
 * schedule in further ground-based follow-up next season.
   * get some magellan time to observe an occultation / transit?
-
-
-EVENTUAL READING
-----------
-* Verbunt and Phinney ~1995
-* Zhan 1978 -- relative rates of tidal dissipation around evolved stars vs
-  not-evolved stars.  Explains why more evolved stars -> more dissipation.
-* what is "slow Kozai" (Petrovich 2015)
 
