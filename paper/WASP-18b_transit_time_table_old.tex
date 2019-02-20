@@ -1,0 +1,116 @@
+%% \begin{deluxetable}{} command tell LaTeX how many columns
+%% there are and how to align them.
+\startlongtable
+\begin{deluxetable}{ccccc}
+    
+%% Keep a portrait orientation
+
+%% Over-ride the default font size
+%% Use Default (12pt)
+\tabletypesize{\scriptsize}
+%% Use \tablewidth{?pt} to over-ride the default table width.
+%% If you are unhappy with the default look at the end of the
+%% *.log file to see what the default was set at before adjusting
+%% this value.
+
+%% This is the title of the table.
+\tablecaption{WASP-18b transit times, uncertainties, and references.}
+\label{tab:WASP-18b}
+
+%% This command over-rides LaTeX's natural table count
+%% and replaces it with this number.  LaTeX will increment 
+%% all other tables after this table based on this number
+\tablenum{7}
+
+%% The \tablehead gives provides the column headers.  It
+%% is currently set up so that the column labels are on the
+%% top line and the units surrounded by ()s are in the 
+%% bottom line.  You may add more header information by writing
+%% another line between these lines. For each column that requries
+%% extra information be sure to include a \colhead{text} command
+%% and remember to end any extra lines with \\ and include the 
+%% correct number of &s.
+\tablehead{
+  \colhead{$t_{\rm tra}$ [BJD$_\mathrm{TDB}$]} &
+  \colhead{$\sigma_{t_{\rm tra}}$ [days]} &
+  \colhead{Epoch} & 
+  \colhead{Reference}
+}
+
+%% All data must appear between the \startdata and \enddata commands
+\startdata
+ 2454221.48163 &      0.00038 &   -4037 &    \citet{hellier_orbital_2009} \\
+ 2455221.30420 &      0.00010 &   -2975 &     \citet{maxted_spitzer_2013} \\
+ 2455432.18970 &      0.00010 &   -2751 &     \citet{maxted_spitzer_2013} \\
+ 2455470.78850 &      0.00040 &   -2710 &     \citet{maxted_spitzer_2013} \\
+ 2455473.61440 &      0.00090 &   -2707 &     \citet{maxted_spitzer_2013} \\
+ 2455554.57860 &      0.00050 &   -2621 &     \citet{maxted_spitzer_2013} \\
+ 2455570.58400 &      0.00048 &   -2604 &     \citet{maxted_spitzer_2013} \\
+ 2455876.55590 &      0.00130 &   -2279 &     \citet{maxted_spitzer_2013} \\
+ 2456896.14780 &      0.00080 &   -1196 &  \citet{wilkins_searching_2017} \\
+ 2457255.78320 &      0.00030 &    -814 &  \citet{wilkins_searching_2017} \\
+ 2457319.80100 &      0.00039 &    -746 &  \citet{wilkins_searching_2017} \\
+ 2458354.45782 &      0.00016 &     353 &                       This work \\
+ 2458355.39933 &      0.00015 &     354 &                       This work \\
+ 2458356.34070 &      0.00018 &     355 &                       This work \\
+ 2458357.28229 &      0.00018 &     356 &                       This work \\
+ 2458358.22348 &      0.00018 &     357 &                       This work \\
+ 2458359.16523 &      0.00020 &     358 &                       This work \\
+ 2458360.10661 &      0.00017 &     359 &                       This work \\
+ 2458361.04810 &      0.00017 &     360 &                       This work \\
+ 2458361.98968 &      0.00016 &     361 &                       This work \\
+ 2458362.93130 &      0.00018 &     362 &                       This work \\
+ 2458363.87267 &      0.00018 &     363 &                       This work \\
+ 2458364.81374 &      0.00017 &     364 &                       This work \\
+ 2458365.75525 &      0.00019 &     365 &                       This work \\
+ 2458366.69709 &      0.00018 &     366 &                       This work \\
+ 2458369.52128 &      0.00017 &     369 &                       This work \\
+ 2458370.46281 &      0.00017 &     370 &                       This work \\
+ 2458371.40407 &      0.00017 &     371 &                       This work \\
+ 2458372.34537 &      0.00018 &     372 &                       This work \\
+ 2458373.28728 &      0.00018 &     373 &                       This work \\
+ 2458374.22818 &      0.00016 &     374 &                       This work \\
+ 2458375.16977 &      0.00017 &     375 &                       This work \\
+ 2458376.11132 &      0.00018 &     376 &                       This work \\
+ 2458377.05267 &      0.00017 &     377 &                       This work \\
+ 2458377.99444 &      0.00018 &     378 &                       This work \\
+ 2458378.93573 &      0.00016 &     379 &                       This work \\
+ 2458379.87722 &      0.00017 &     380 &                       This work \\
+ 2458380.81889 &      0.00018 &     381 &                       This work \\
+ 2458386.46729 &      0.00016 &     387 &                       This work \\
+ 2458387.40888 &      0.00017 &     388 &                       This work \\
+ 2458388.35021 &      0.00016 &     389 &                       This work \\
+ 2458389.29161 &      0.00015 &     390 &                       This work \\
+ 2458390.23334 &      0.00016 &     391 &                       This work \\
+ 2458391.17452 &      0.00016 &     392 &                       This work \\
+ 2458392.11593 &      0.00016 &     393 &                       This work \\
+ 2458393.05748 &      0.00015 &     394 &                       This work \\
+ 2458393.99898 &      0.00016 &     395 &                       This work \\
+ 2458394.94024 &      0.00017 &     396 &                       This work \\
+ 2458396.82309 &      0.00015 &     398 &                       This work \\
+ 2458397.76450 &      0.00015 &     399 &                       This work \\
+ 2458398.70656 &      0.00016 &     400 &                       This work \\
+ 2458399.64748 &      0.00015 &     401 &                       This work \\
+ 2458399.64748 &      0.00015 &     401 &                       This work \\
+ 2458400.58898 &      0.00017 &     402 &                       This work \\
+ 2458401.53083 &      0.00016 &     403 &                       This work \\
+ 2458402.47209 &      0.00017 &     404 &                       This work \\
+ 2458403.41360 &      0.00016 &     405 &                       This work \\
+ 2458404.35492 &      0.00017 &     406 &                       This work \\
+\enddata
+
+%% Include any \tablenotetext{key}{text}, \tablerefs{ref list},
+%% or \tablecomments{text} between the \enddata and 
+%% \end{deluxetable} commands
+
+%% General table comment marker
+\tablecomments{
+    $t_{\rm tra}$ is the measured transit midtime, and $\sigma_{t_{\rm tra}}$ is its
+    $1\sigma$ uncertainty.
+    The ``Reference'' column refers to the work describing the
+    original observations.
+    All the literature times are from the homogeneous
+    \citet{wilkins_searching_2017} analysis.
+}
+
+\end{deluxetable}

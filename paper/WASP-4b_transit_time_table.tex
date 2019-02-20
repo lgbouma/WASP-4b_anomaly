@@ -111,9 +111,12 @@
 \tablecomments{
   $t_{\rm tra}$ is the measured transit midtime, and $\sigma_{t_{\rm
   tra}}$ is its $1\sigma$ uncertainty.
-  $\sigma_{t_0}$ was evaluated from the sampled posteriors by taking
+  \replaced{$\sigma_{t_0}$}{$\sigma_{t_{\rm tra}}$} was evaluated from the 
+  sampled posteriors by taking
   the maximum of the difference between the 84th percentile
   minus the median, and the median minus the 16th percentile.
+  \added{The resulting error variances appeared to have been overestimated, so 
+  we lowered the uncertainties as described in \S~\ref{sec:measurement}.}
   The ``Reference'' column refers to the work describing the
   original observations.
   The ``H13?'' column is 1 if the mid-time value was taken from

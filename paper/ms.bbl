@@ -67,6 +67,12 @@ C\'aceres, C., Ivanov, V.~D., Minniti, D., {et~al.} 2011,
   \href{http://dx.doi.org/10.1051/0004-6361/201016231}{\JournalTitle{Astronomy
   and Astrophysics}, 530, A5}
 
+\bibitem[{Choi {et~al.}(2016)Choi, Dotter, Conroy, Cantiello, Paxton, \&
+  Johnson}]{choi_mesa_2016}
+Choi, J., Dotter, A., Conroy, C., {et~al.} 2016,
+  \href{http://dx.doi.org/10.3847/0004-637X/823/2/102}{\JournalTitle{The
+  Astrophysical Journal}, 823, 102}, arXiv: 1604.08592
+
 \bibitem[{Ciceri {et~al.}(2016{\natexlab{a}})Ciceri, Mancini, Henning, Bakos,
   Penev, Brahm, Zhou, Hartman, Bayliss, Jordán, Csubry, de~Val-Borro, Bhatti,
   Rabus, Espinoza, Suc, Schmidt, Noyes, Howard, Fulton, Isaacson, Marcy,
@@ -123,6 +129,16 @@ Collier~Cameron, A., \& Jardine, M. 2018,
 Counselman, C.~C. 1973,
   \href{http://dx.doi.org/10.1086/151964}{\JournalTitle{The Astrophysical
   Journal}, 180, 307}
+
+\bibitem[{Demarque {et~al.}(2004)Demarque, Woo, Kim, \& Yi}]{demarque_y2_2004}
+Demarque, P., Woo, J.-H., Kim, Y.-C., \& Yi, S.~K. 2004,
+  \href{http://dx.doi.org/10.1086/424966}{\JournalTitle{The Astrophysical
+  Journal Supplement Series}, 155, 667}
+
+\bibitem[{Dotter(2016)}]{dotter_mesa_2016}
+Dotter, A. 2016,
+  \href{http://dx.doi.org/10.3847/0067-0049/222/1/8}{\JournalTitle{The
+  Astrophysical Journal Supplement Series}, 222, 8}
 
 \bibitem[{Doyle {et~al.}(2013)Doyle, Smalley, Maxted, Anderson, Cameron,
   Gillon, Hellier, Pollacco, Queloz, Triaud, \& West}]{doyle_accurate_2013}
@@ -605,6 +621,26 @@ P\'al, A., \& Kocsis, B. 2008,
 Patra, K.~C., Winn, J.~N., Holman, M.~J., {et~al.} 2017,
   \href{http://dx.doi.org/10.3847/1538-3881/aa6d75}{\JournalTitle{The
   Astronomical Journal}, 154, 4}
+
+\bibitem[{Paxton {et~al.}(2011)Paxton, Bildsten, Dotter, Herwig, Lesaffre, \&
+  Timmes}]{paxton_modules_2011}
+Paxton, B., Bildsten, L., Dotter, A., {et~al.} 2011,
+  \href{http://dx.doi.org/10.1088/0067-0049/192/1/3}{\JournalTitle{The
+  Astrophysical Journal Supplement Series}, 192, 3}
+
+\bibitem[{Paxton {et~al.}(2013)Paxton, Cantiello, Arras, Bildsten, Brown,
+  Dotter, Mankovich, Montgomery, Stello, Timmes, \&
+  Townsend}]{paxton_modules_2013}
+Paxton, B., Cantiello, M., Arras, P., {et~al.} 2013,
+  \href{http://dx.doi.org/10.1088/0067-0049/208/1/4}{\JournalTitle{The
+  Astrophysical Journal Supplement Series}, 208, 4}
+
+\bibitem[{Paxton {et~al.}(2015)Paxton, Marchant, Schwab, Bauer, Bildsten,
+  Cantiello, Dessart, Farmer, Hu, Langer, Townsend, Townsley, \&
+  Timmes}]{paxton_modules_2015}
+Paxton, B., Marchant, P., Schwab, J., {et~al.} 2015,
+  \href{http://dx.doi.org/10.1088/0067-0049/220/1/15}{\JournalTitle{The
+  Astrophysical Journal Supplement Series}, 220, 15}
 
 \bibitem[{Pedregosa {et~al.}(2011)Pedregosa, Varoquaux, Gramfort, Michel,
   Thirion, Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
