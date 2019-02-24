@@ -595,12 +595,12 @@ $7\,{\rm Gyr}$ \added{\citep{demarque_y2_2004}}.
 
 Table~2 gives the transit times we used in our analysis. We included
 data from peer-reviewed literature for which the analysis was based on
-observations of a single, complete transit, and for which the midpoint
-was allowed to be a free parameter. We also required that the time
-system be clearly documented. Many of the times were previously
-compiled by \citet{hoyer_tramos_2013}. We confirmed that the times in
-that paper were in agreement with the original sources and that
-barycentric corrections had been performed when needed.
+observations of a single\deleted{, complete} transit, and for which
+the midpoint was allowed to be a free parameter. We also required that
+the time system be clearly documented. Many of the times were
+previously compiled by \citet{hoyer_tramos_2013}. We confirmed that
+the times in that paper were in agreement with the original sources
+and that barycentric corrections had been performed when needed.
 
 The earliest epoch is from EulerCam on the 1.2-m Euler telescope
 \citep{wilson_wasp-4b_2008}.  The second epoch is based on $z$-band
@@ -650,6 +650,7 @@ formula \citep[{\it e.g.},][]{winn_exoplanet_2010}
 \added{for $E$ the transit number, $t_0$ the reference epoch, 
 $e$ the eccentricity, and $\omega$ the argument of pericenter.}
 In total, there are four \added{available} occultation times.
+
 
 \subsection{Analysis}
 
@@ -769,12 +770,33 @@ the rate of WASP-12b.  In the precession model, the best-fit
 eccentricity is
 \begin{equation}
   e = (1.92^{+ 1.93}_{- 0.76})\times10^{-3}
+  \label{eq:e_obs}
 \end{equation}
 The longitude of periastron advances by $\dot{\omega} =
 13.6^{+4.7}_{-3.6}\ {\rm degrees}\,{\rm yr}^{-1}$, and the precession
 period is $27^{+10}_{-7}$ years.  All of the best-fitting parameters
 (the medians of the posterior distributions) and the 68\% credible
 intervals are reported in Table~4.
+
+\added{
+To assess the robustness of these results, we considered a few
+possible systematic effects in the timing dataset.  One concern in the
+pre-TESS timing measurements was incomplete phase coverage: a handful
+of the transit times in Table~2 are from lightcurves with partial
+gaps.  A separate issue is the effect of spot-crossing anomalies on
+mid-transit time measurements.  Both effects lead to lightcurve
+asymmetries which skew transit-time measurements.
+
+We repeated the analysis desribed above, but omitted epochs -827,
+-804, -537, and -208 because of gaps in their coverage.  We also
+omitted epochs -526 and -561 because of visible spot anomalies during
+the transits. (All epoch numbers are as in Table~2.)  The resulting
+best-fit transit timing model parameters were all within $1\sigma$ of
+the values quoted in Table~4.  The confidence intervals,
+goodness-of-fit statistics $\chi^2$, and model comparison statistics
+$(AIC, BIC)$ did not appreciably change.
+}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1112,6 +1134,7 @@ seconds, depending on the modulation period of the stellar dynamo.
 If this
 analysis is accurate, then the Applegate mechanism cannot explain the
 majority our observed $82$ second variation.
+
 
 \subsection{Other possible explanations}
 
