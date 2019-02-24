@@ -387,9 +387,12 @@ plot shows in each of its panels (top and bottom)?
 v) Similar to i) How did you fit the mid-transit times and occultations shown
 in Figure 4?
 
-  > Response: We have added the following sentence in Section 3.2:
-  > "We fit each model by assuming a Gaussian likelihood and
-  > sampling over the posterior probability distributions."
+  > Response: We have added the following sentences in Section 3.2:
+  > "We fit each model by assuming a Gaussian likelihood and sampling over the
+  > posterior probability distributions. The prior for the quadratic model
+  > allowed the period derivative to have any sign." We have clarified the
+  > wording throughout from "decreasing-period model" to "quadratic model" to
+  > reflect the latter point.
 
 vi) In the caption of Table 4, please be more explicit, "Best-fit model
 parameters" of what?
@@ -511,3 +514,10 @@ ii) In the caption of Figure 7: "with standard deviation (σpredicted)" -->
 "with standard deviation (σpre-TESS)"
 
   > Response: Corrected.
+
+
+********************************************************************************
+Other changes:
+
+* Added the following coauthors: Fei Dai, Natalia Guerrero, Bill Wohler,
+  Douglas Caldwell.
