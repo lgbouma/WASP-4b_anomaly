@@ -631,4 +631,46 @@ Mon 17 Dec 2018 09:36:37 AM EST
 
 - respond to Bixel updating him on what to do (once hearing from Josh)
 
+------------------------------------------
+Fri 22 Feb 2019 04:41:48 PM EST
+
+- add Fei Dai as coauthor for RV analysis
+  -Guerrero,
+  -Wohler 
+
+
+- add acknowledgement of Bixel / his efforts. ditto for May.
+
+x decide whether to include Bixel's three points. 
+
+  x assess Bixel's "fudge factor of 2". Why 2? Why not 4? Or 10?  ...
+
+  x what sort of systematics are in the LC extraction process for them? ...
+    could I just measure the times, from their LCs, please? ... (at least then
+    I might trust the error bars...)
+
+  x how does this compare to ETD uncertainties
+
+  - the suggested "fudge factor of 2" on the timing measurements is worrisome.
+  - why not 3? 5? 10?
+  - the first transit is not usable. the middle two have large gaps because of
+    the spot crossings. (worrisome)
+  - they all have this worry about "spectral extraction" systematics.
+  - never got independent confirmation from Nestor.
+  - the point of "we're only doing published data" is important IMO.
+
+  - an EXTREMELY worrying point: Erin May got a time that fell 7 minutes from
+    the expected time, with data that look just as good as the Bixel times.
+    (With the same instrument, and with the same degree of certainty concerning
+      the observing setup, timestamps, etc.)
+    --> casts doubt on the setup, and that the measurement is systematically
+    OK.
+
+x if include, rerun fits with Bixel's three points. how do they change things,
+  if at all?
+
+  x add paragraph to summarize the process that produced them...
+
+- if do not include, then include mention in the acknowledgements.
+
 

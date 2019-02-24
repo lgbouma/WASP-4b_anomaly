@@ -5,28 +5,8 @@ TODO:
 
 * add the Pdotdot model
 
-* add Caldwell, Guerrero, Wohler as coauthors
-
-* add Fei Dai as coauthor for RV analysis
-
-* add acknowledgement of Bixel and his efforts
-
-* decide whether to include Bixel's three points. 
-
-  * assess Bixel's "fudge factor of 2". Why 2? Why not 4? Or 10?  ...
-
-  * what sort of systematics are in the LC extraction process for them? ...
-    could I just measure the times, from their LCs, please? ... (at least then
-    I might trust the error bars...)
-
-  * how does this compare to ETD uncertainties
-
-* if include, rerun fits with Bixel's three points. how do they change things,
-  if at all?
-
-  * add paragraph to summarize the process that produced them...
-
-* if do not include, then include mention in the acknowledgements.
+* add
+  *Caldwell,as coauthors
 
 * cite Buhler+ 2016 somewhere in text (perhaps).
   * what is the story of HAT-P-13? how did they get k_love,p? and core mass?
