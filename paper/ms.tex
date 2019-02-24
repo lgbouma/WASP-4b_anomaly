@@ -47,6 +47,12 @@ University, 4 Ivy Lane, Princeton, NJ 08540, USA}
 \affiliation{ Department of Astrophysical Sciences, Princeton
 University, 4 Ivy Lane, Princeton, NJ 08540, USA}
 %
+\added{
+\author[0000-0002-8958-0683]{F. Dai}
+\affiliation{ Department of Astrophysical Sciences, Princeton
+University, 4 Ivy Lane, Princeton, NJ 08540, USA}
+}
+%
 \author[0000-0002-6939-9211]{T. Daylan}
 \affiliation{ Department of Physics and Kavli Institute for Astrophysics
 and Space Research, Massachusetts Institute of Technology, Cambridge, MA
@@ -718,18 +724,19 @@ sidereal period, the eccentricity, the argument of pericenter at the
 reference epoch, and the angular velocity of the line of apsides.
 
 \added{We fit each model by assuming a Gaussian likelihood and sampling over 
-the posterior probability distributions.}
+the posterior probability distributions. The prior for the quadratic
+model allowed the period derivative to have any sign.}
 Figure~\ref{fig:times} shows the residuals with respect to the
 constant-period model.  The best-fitting constant-period model has
 $\chi^2 = 174$ and 61 degrees of freedom.  The best-fitting
-decreasing-period model has $\chi^2 = 62.6$ and 60 degrees of freedom.
+\replaced{decreasing-period}{quadratic} model has $\chi^2 = 62.6$ and 60 degrees of freedom.
 The best-fitting precession model has $\chi^2 = 64.3$ and 58 degrees
 of freedom.  Either of the latter two models provides a much better
 fit than the constant-period model.  The difference in $\chi^2$
 between the first and second models corresponds to $p \approx
 10^{-26}$.
 
-The decreasing-period model provides a slightly better fit to the data
+The \replaced{decreasing-period}{quadratic} model provides a slightly better fit to the data
 than the precession model.  It is favored by $\Delta \chi^2 = 1.7$,
 and has two fewer free parameters.  A useful heuristic for model
 comparison is the Bayesian Information Criterion (BIC),
@@ -747,7 +754,7 @@ evidence'' that one model is a better description of the data than the
 other \citep{kass_bayes_1995}, although we prefer to reserve judgment
 until more data can be obtained.
 
-In the decreasing-period model, the period derivative is
+In the \replaced{decreasing-period}{quadratic} model, the period derivative is
 \begin{equation}
 \dot{P}
   = - (4.00 \pm 0.38)\times 10^{-10}
@@ -1210,6 +1217,8 @@ the time baseline of transit timing for a large number of systems.
 L.G.B.\ and J.N.W.\ gladly acknowledge helpful discussions with
 A.~Bailey, F.~Dai, J.~Goodman, K.~Patra and V.~Van Eylen, and are
 grateful to the people who have turned TESS from an idea into reality.
+\added{L.G.B. thanks A.~Bixel and E.~May for clarifying details
+concerning the available IMACS lightcurves.}
 %
 WASP-4 was included on the ``short-cadence'' target list thanks to the
 Guest Investigator programs of J.\ Southworth and S.\ Kane (G011112
