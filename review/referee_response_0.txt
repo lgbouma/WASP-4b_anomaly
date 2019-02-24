@@ -71,11 +71,58 @@ order to warrant confident results, I would like to see the same analysis but
 without including partial transits or with visible spot-crossing events on
 them.
 
-TODO TODO TODO
-* USE: best-judgement.
-* ENSURE: do not include partial transits.
-* OMITTING THE ONES WITH VISIBLE SPOT-CROSSINGS: meh. Maybe focus on the ones
-  with excess reisduals during partial phases.
+  > Response: We thank the referee for this suggestion.  We have removed
+  > the word "complete" when describing the transit timing dataset.  We
+  > have performed the check requested: We repeated the analysis, but
+  > omitting epochs -827, -804, -537, and -208 because of gaps in their
+  > coverage.  We also omitted epochs -526 and -561 because of the
+  > visible spot anomalies during the transits.
+  > 
+  > The resulting best-fit transit timing model parameters were all
+  > within $1\sigma$ of the values quoted in Table 4.  The confidence
+  > intervals, goodness-of-fit statistics $\chi^2$, and model comparison
+  > statistics $(AIC, BIC)$ did not appreciably change. 
+  > 
+  > The most important of these statistics are summarized below for the
+  > referee's inspection, and this exercise is described in the text
+  > at the end of Section 3.
+  > 
+  > ORIGINAL NUMBERS:
+  > ##########################################
+  > 
+  > quadratic model:
+  > dP/dt = -4.001e-10 +(3.748e-11) -(3.812e-11)
+  > dP/dt = -12.62 +(1.18) -(1.20) millisec/yr
+  > 
+  > -----chi2 values for best fit parameters-----
+  > 
+  > linear model:	    chi2: 174.446	dof: 61	AIC: 1.78e+02	BIC: 1.83e+02
+  > quadratic model:	chi2: 62.5811	dof: 60	AIC: 6.86e+01	BIC: 7.50e+01
+  > precession model: chi2: 64.329	dof: 58	AIC: 7.43e+01	BIC: 8.50e+01
+  > 
+  > -----quad vs precession-----
+  > delta_AIC = AIC_prec-AIC_quad = 5.75
+  > delta_BIC = BIC_prec-BIC_quad = 10.03
+  > approx Bayes Factor = exp(deltaBIC/2) = 1.14e+04
+  > 
+  > 
+  > NUMBERS WHEN OMITTING PARTIAL TRANSITS AND OBVIOUS SPOT CROSSINGS:
+  > ##########################################
+  > 
+  > quadratic model:
+  > dP/dt = -4.098e-10 +(3.909e-11) -(3.862e-11)
+  > dP/dt = -12.93 +(1.23) -(1.22) millisec/yr
+  > 
+  > -----chi2 values for best fit parameters-----
+  > 
+  > linear model:	     chi2: 163.285	dof: 55	AIC: 1.67e+02	BIC: 1.71e+02
+  > quadratic model:	 chi2: 53.5164	dof: 54	AIC: 5.95e+01	BIC: 6.56e+01
+  > precession model:  chi2: 56.4648	dof: 52	AIC: 6.65e+01	BIC: 7.67e+01
+  > 
+  > -----quad vs precession-----
+  > delta_AIC = AIC_prec-AIC_quad = 6.95
+  > delta_BIC = BIC_prec-BIC_quad = 11.03
+  > approx Bayes Factor = exp(deltaBIC/2) = 3.10e+04
 
 2) As mentioned in 1), another possible interpretation for explaining the
 deviation from a linear ephemeris of the TESS mid-transit times could be the
