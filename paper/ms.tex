@@ -784,20 +784,48 @@ possible systematic effects in the timing dataset.  One concern in the
 pre-TESS timing measurements was incomplete phase coverage: a handful
 of the transit times in Table~2 are from lightcurves with partial
 gaps.  A separate issue is the effect of spot-crossing anomalies on
-mid-transit time measurements.  Both effects lead to lightcurve
-asymmetries which skew transit-time measurements.
+mid-transit time measurements.  Both effects can lead to lightcurve
+asymmetries, and skewed transit-time measurements.
 
-We repeated the analysis desribed above, but omitted epochs -827,
+We repeated the model-fitting desribed above, but omitted epochs -827,
 -804, -537, and -208 because of gaps in their coverage.  We also
 omitted epochs -526 and -561 because of visible spot anomalies during
 the transits. (All epoch numbers are as in Table~2.)  The resulting
 best-fit transit timing model parameters were all within $1\sigma$ of
-the values quoted in Table~4.  The confidence intervals,
-goodness-of-fit statistics $\chi^2$, and model comparison statistics
-$(AIC, BIC)$ did not appreciably change.
+the values quoted in Table~4.  The uncertainties, goodness-of-fit
+statistics $\chi^2$, and model comparison statistics $(AIC, BIC)$ did
+not appreciably change.
+
+To explore the effect of possible spot-crossing events on the TESS
+transit time measurements, we performed a separate test.  We injected
+triangular spot-anomalies with amplitude $0.03\%$ and duration 30
+minutes at random phases into each transit.  The amplitudes were
+larger than the spot-crossing anomalies observed by
+\citet{southworth_high-precision_2009} and
+\citet{sanchis-ojeda_starspots_2011}, and the durations were
+comparable.  Spots of these amplitudes would be visible in
+the lightcurve residuals, and resemble the anomalies present in
+transits ``1360.54'' and ``1372.58'' (Figure \ref{fig:lightcurves}).
+
+With spots injected, we repeated our measurement of the transit times.
+On average, the meaured transit times did not change with spots
+injected, because the flux deviations are symmetric about the transit
+minimum.  For individual transits, there were no cases for which the
+timing deviation was larger than one minute, but about one-eighth of
+the measured transit times were shifted by more than 30 seconds early.
+For the TESS observations to all be skewed early, it would be
+necessary for spot-crossing events to occur in the latter half of
+every transit \citep[{\it e.g.},][]{ioannidis_how_2016}.  The
+lightcurve residuals are on average symmetric, and do not support this
+possibility (Figure~\ref{fig:lightcurves}).  Further, since the
+stellar rotation period is between 20 and 40 days
+\citep{sanchis-ojeda_starspots_2011,hoyer_tramos_2013}, and the TESS
+data span one lunar month, the spot distribution required by this
+hypothesis is also rather convoluted.  We conclude that neither
+spot-crossing events nor incomplete phase coverage seem to explain the
+observed timing variations, and proceed by considering the
+astrophysical implications.
 }
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Interpretation}
