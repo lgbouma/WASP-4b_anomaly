@@ -14,7 +14,7 @@ Luke Bouma
 
 ********************************************************************************
 
-Referee comment:
+REFEREE COMMENT:
 
 The authors present a number of new and high-quality transit observations of
 the hot Jupiter WASP-4b observed by TESS. After comparing the predicted
@@ -27,23 +27,35 @@ authors caution that more observations are needed to confirm these results.
 Also, they redetermine various parameters of the system, finding them in
 general agreement with literature values. 
 
-TODO TODO TODO
-* TODO: add more weight to the distant companion idea.
-* ADD: our own analysis of the RV data, and the resulting implied period
-  derivative.
-* ADD: RV analysis emphasis (!!).
-
 In general, the manuscript is scientifically accurate and the results presented
-in it certainly will be of interest to other investigators in
-the field. Then, I consider this paper worthy of being published after the
-concerns described below be addressed. 
+in it certainly will be of interest to other investigators in the field. Then,
+I consider this paper worthy of being published after the concerns described
+below be addressed. 
 
 Below are my comments, beginning with the major points. I recommend the authors
 take them into consideration when revising their manuscript.
 
-COMMENT: 
+  > RESPONSE: We thank the referee for this summary. In our revision, we
+  > have added weight to a third possible explanation that we previously
+  > mentioned but did not sufficiently emphasize: a massive outer
+  > companion, perhaps on an eccentric orbit, might be able to explain
+  > both the transit and radial velocity observations. We have
+  > emphasized this possibility throughout the text where appropriate.
+  > We have opted against developing a joint model (transits+RVs) for
+  > the putative 3-body system, because the RV data show only a weak
+  > linear trend. Detection of a periastron passage or any curvature in
+  > the radial velocities would be needed for this scenario to be truly
+  > convincing.  Instead, we added our own re-analysis of the RV data
+  > (now section 4.3, and figure 6) which confirms the Knutson et al
+  > (2014) result that the star's acceleration towards our line of sight
+  > is only weakly detected, and is an order of magnitude too small to
+  > explain the observed period derivative from the transit times.
 
--- Major points:
+********************************************************************************
+
+REFEREE COMMENT: 
+
+Major points:
 
 1) In section 3.1, the authors claim "..We included data from peer-reviewed
 literature for which the analysis was based on observations of a single,
@@ -57,6 +69,7 @@ E=-251 (2455468.61943; Hoyer et al. 2013) and E=21 (2455832.61815; Hoyer et al.
 given that several partial light curves have been included in their study, the
 use of the word "complete" to indicate the characteristics of the transits in
 their sample, must be avoided. 
+
 On the other hand, at least two other transits included in their sample show
 visible anomalies, probably produced by the pass of the planet in front of one
 or several cold spots during transit (E=-561, ttra=2455053.76774 and E=-526,
@@ -86,8 +99,8 @@ them.
   > statistics $(AIC, BIC)$ did not appreciably change. 
   > 
   > The most important of these statistics are summarized below for the
-  > referee's inspection, and this exercise is described in the text
-  > at the end of Section 3.
+  > referee's inspection, and this exercise is described in the new
+  > subsection "Systematic Concerns" at the end of Section 3.
   > 
   > ORIGINAL NUMBERS:
   > ##########################################
@@ -126,6 +139,8 @@ them.
   > delta_BIC = BIC_prec-BIC_quad = 11.03
   > approx Bayes Factor = exp(deltaBIC/2) = 3.10e+04
 
+REFEREE COMMENT
+
 2) As mentioned in 1), another possible interpretation for explaining the
 deviation from a linear ephemeris of the TESS mid-transit times could be the
 presence of anomalies in the light curves due to stellar activity. It has been
@@ -138,43 +153,43 @@ the existence of unseen stellar spots? Regarding this point, I would like to
 see an extra paragraph in the Section "Interpretation" with a discussion about
 this scenario.
 
-%FIXME: put in however long the time is!!
-
   > RESPONSE: We have considered this possibility, and have now added
-  > the following text in Section 3.2:
+  > the following text in Section 3.3:
 
   > To explore the effect of possible spot-crossing events on the TESS
-  > transit time measurements, we performed a separate test.  We
-  > injected triangular spot-anomalies with amplitude $0.03\%$ and
-  > duration 30 minutes at random phases into each transit.  The
-  > amplitudes were larger than the spot-crossing anomalies observed
-  > by \citet{southworth_high-precision_2009} and
+  > transit time measurements, we performed a separate test.  We injected
+  > triangular spot-anomalies with amplitude $0.03\%$ and duration 30
+  > minutes at random phases into each transit.  The amplitudes were
+  > larger than the spot-crossing anomalies observed by
+  > \citet{southworth_high-precision_2009} and
   > \citet{sanchis-ojeda_starspots_2011}, and the durations were
-  > comparable.  Spots of these amplitudes would be visible
-  > in the lightcurve residuals, and resemble the anomalies present in
-  > transits ``1360.54'' and ``1372.58'' (Figure
-  > \ref{fig:lightcurves}).
+  > comparable.  Spots of these amplitudes resemble the anomalies present
+  > in transits ``1360.54'' and ``1372.58'' of Figure
+  > \ref{fig:lightcurves}: they are visible, but at low confidence.
   > 
-  > With spots injected, we repeated our measurement of the transit
-  > times.  On average, the meaured transit times did not change with
-  > spots injected, because the flux deviations are symmetric about
-  > the transit minimum.  For individual transits, there were no cases
-  > for which the timing deviation was larger than one minute, but
-  > about one-eighth of the measured transit times were shifted by
-  > more than 30 seconds early.  For the TESS observations to all be
-  > skewed early, it would be necessary for spot-crossing events to
-  > occur in the latter half of every transit \citep[{\it
-  > e.g.},][]{ioannidis_how_2016}.  The lightcurve residuals are on
-  > average symmetric, and do not support this possibility
-  > (Figure~\ref{fig:lightcurves}).  Further, since the stellar
-  > rotation period is between 20 and 40 days
-  > \citep{sanchis-ojeda_starspots_2011,hoyer_tramos_2013}, and the
-  > TESS data span one lunar month, the spot distribution required by
-  > this hypothesis is also rather convoluted.  We conclude that
-  > neither spot-crossing events nor incomplete phase coverage seem to
-  > explain the observed timing variations, and proceed to possible
-  > astrophysical implications.
+  > With spots injected, we repeated our measurement of the transit times.
+  > On average, the measured transit times did not change with spots
+  > injected, because the flux deviations are symmetric about the transit
+  > minimum.  For individual transits, there were no cases for which the
+  > timing deviation was larger than one minute.  The most concerning
+  > shift occurs when the spot anomaly occurs during transit ingress, in
+  > which case the measured mid-time is shifted late by between 30 and 50
+  > seconds \citep[qualitatively similar to results found
+  > by][]{ioannidis_how_2016}.
+  > 
+  > Therefore the TESS observations could hypothetically all be skewed
+  > late if there were spot-crossing events during every ingress.  Two
+  > arguments rule out this possibility.  (1) The lightcurve residuals do
+  > not show evidence for these events.  (2) The stellar rotation period
+  > is between 20 and 40 days, and the sky-projected stellar obliquity is
+  > less than 10 degrees
+  > \citep{triaud_spin-orbit_2010,sanchis-ojeda_starspots_2011,hoyer_tramos_2013}.
+  > Since the planet orbits every 1.3 days, requiring that spot anomalies
+  > always occur during ingress would be equivalent to requiring a stellar
+  > spot distribution that is exquisitely selected to match the planet
+  > ingress times.  Such a spot distribution is rather implausible.
 
+REFEREE COMMENT
 
 -- Minor points:
 
@@ -184,14 +199,19 @@ i) As it is, the title implies a very strong asseveration. It would be more
 appropriate "Possible Early Arrival of WASP-4b for the TESS Mission" or
 something similar. 
 
-TODO TODO TODO
-* Pending spot studies: no.
+  > RESPONSE: The main result of the paper is that TESS saw WASP-4b
+  > transit 81.6 +/- 11.7 seconds early (~= 7 sigma). Given the
+  > statistical significance, we would prefer to keep the title as-is.
+
+REFEREE COMMENT
 
 1. INTRODUCTION:
 
 i) Please, include here a reference for TESS.
 
   > RESPONSE: Done.
+
+REFEREE COMMENT
 
 2. NEW TRANSITS AND SYSTEM PARAMETERS:
 
@@ -202,9 +222,13 @@ i) It could be informative to provide a reference for the "Deep Space Network".
   > RESPONSE: Barring any specific suggestion by the referee, we will leave
   > this one for the reader to pursue at their leisure.
 
+REFEREE COMMENT
+
 ii) barycentric Julian date --> Barycentric Julian Date
 
   > RESPONSE: Done.
+
+REFEREE COMMENT
 
 iii) For the casual reader, it would be important to briefly specify what
 "Threshold Crossing Events" means, and what the flags "Reaction Wheel
@@ -212,20 +236,22 @@ Desaturation Event" and "Manual Exclude" represent. Footnotes including this
 information would be appropriate. Also, could the authors describe what a
 "Presearch Data Conditioning" lightcurve is?
 
-  > RESPONSE: We have clarified that a "Presearch Data
-  > Conditioning" lightcurve is at a stage of process in which
-  > systematic trends have been removed through the decorrelation
-  > process described by Smith et al (2017).
+  > RESPONSE: We have clarified that a "Presearch Data Conditioning"
+  > lightcurve is at a stage of process in which systematic trends
+  > have been removed through the decorrelation process described by
+  > Smith et al (2017).
   >
   > We now omit explicit mention of "Treshold Crossing Events" in
   > favor of a more qualitative description.
   >
-  > As described in the text, the flags "Reaction Wheel
-  > Desaturation Event" and "Manual Exclude" together mean that the
-  > data are potentially of poor quality due to "momentum dumps".
-  > We referred the reader to the data release notes for an
-  > explanation of what a "momentum dump" is, and have added text
-  > to this footnote to improve its clarity.
+  > As described in the text, the flags "Reaction Wheel Desaturation
+  > Event" and "Manual Exclude" together mean that the data are
+  > potentially of poor quality due to "momentum dumps".  We referred
+  > the reader to the data release notes for an explanation of what a
+  > "momentum dump" is, and have added text to this footnote to
+  > improve its clarity.
+
+REFEREE COMMENT
 
 iv) It might be worthwhile to mention what "ramp-like systematic effects" are
 and also include a reference.
@@ -233,6 +259,8 @@ and also include a reference.
   > RESPONSE: We have changed the wording from "ramp-like
   > systematic effects" to "correlated red noise". No reference is
   > needed.
+
+REFEREE COMMENT
 
 v) It would be important to include in this section an explanation of how
 photometric data-point errors are estimated.
@@ -242,6 +270,8 @@ photometric data-point errors are estimated.
   > root-mean-square (rms) level of the out-of-transit data." We
   > have added the word "photometric" to the above sentence, to
   > clarify that we mean the photometric data points.
+
+REFEREE COMMENT
 
 Section 2.2:
 
@@ -253,6 +283,8 @@ first to Figure 1 instead of Figure 2.
   > RESPONSE: We have clarified that the phase-folded lightcurve
   > comes from 18 transits.  We have left the figure ordering
   > as-is.
+
+REFEREE COMMENT
 
 ii) The authors say that the phase-folded lightcurve was fitted by using the
 implementation of Kreidberg (2015) of the analytic model of Mandel & Agol
@@ -271,32 +303,36 @@ present together the values obtained in both cases.
   > "emcee".
   >
   > We did not explicitly describe our choice for the initial
-  > parameters, because the converged best-fit values from the
-  > chain do not depend on them.  For reproducibility purposes,
-  > similar best-fit values can be obtained independent of initial
-  > parameter choices. Barring an overruling request from the
-  > referee, we will not mention our explicit choice in the text
-  > (it was to use values from Hoyer et al., 2013).
+  > parameters, because the converged best-fit values from the chain
+  > do not depend on them.  For reproducibility purposes, similar
+  > best-fit values can be obtained independent of initial parameter
+  > choices. Barring an overruling request from the referee, we will
+  > not mention our explicit choice in the text (it was to use values
+  > from Hoyer et al., 2013).
   >
   > The transit parameters from the phase-folded fit: Rp/Rstar,
-  > inclination, a/Rstar, and limb darkening parameters are given
-  > in the first five lines of Table 1.
+  > inclination, a/Rstar, and limb darkening parameters are given in
+  > the first five lines of Table 1.
   >
   > The transit mid-times from the independent fits to each transit
   > are given in Table 2.
   >
   > The parameters which are not reported are the depths of the
   > individual transits, and the linear fit parameters. Since the
-  > focus of this study is the transit times, we would prefer to
-  > omit these additional parameters for the sake of concision.
+  > focus of this study is the transit times, we omitted these
+  > additional parameters for the sake of concision.
   >
-  > For the same reason, we leave the interested reader to explore
-  > differences in the stellar and planetary parameters by citing
-  > relevant work in the last paragraph of Section 2.3. From e.g.,
-  > Table 8 of Southworth+2009, we see that our values agree with
-  > those of previous studies, and so do not merit further
-  > attention, given the main focus of the present work.
+  > Regarding the suggestion to add a table comparing our
+  > stellar/planet parameters with those found by other investigators:
+  > again, because the focus of the paper is the transit times, we
+  > have left the interested reader to explore these differences by
+  > pointing them to the relevant studies in the last paragraph of
+  > Section 2.3. From e.g., Table 8 of Southworth+2009, we see that
+  > our values do agree with those of previous studies, and so do not
+  > merit further attention, given the main focus of the present work.
   
+REFEREE COMMENT
+
 iii) In the caption of Figure 2, it would be important to specify which is the
 bin size used to determine the yellow points. Furthermore, in Figure 2, the
 photometric error of the unbinned data-points should be included. 
@@ -307,6 +343,8 @@ photometric error of the unbinned data-points should be included.
   > We have opted to not explicitly specify the bin size. It can be
   > inferred from inspection of the plot, and is only relevant for
   > visualization purposes.
+
+REFEREE COMMENT
 
 iv) To estimate transit times for each individual lightcurve, did the authors
 use the same code as for the phase-folded light curve? In this case, how were
@@ -343,18 +381,24 @@ the mid-transit times' uncertainties determined?
   > determining the mid-transit time uncertainties is also
   > described.
 
+REFEREE COMMENT
+
 v) Is χ^2=9.2 the reduced chi-square? If it is so, It should be clarified by
 using a different symbol or by adding a sub-index, for example. Please, fix
 this in the rest of the manuscript when necessary. 
 
   > RESPONSE: $\chi^2 = 9.2$ is the $\chi^2$ value. We have
   > corrected the typo in the text, in which we wrote "reduced
-  > $\chi^2$'.
+  > $\chi^2$", which likely led to the confusion!
+
+REFEREE COMMENT
 
 vi) χ^2 = 16 {plus minus} 5.7 --> χ^2 = 9.2 {plus minus} 5.7
 
   > RESPONSE: For 18 transits, and 2 degrees of freedom, we
   > would expect $\chi^2 = 16 \pm 5.7$.
+
+REFEREE COMMENT
 
 vii) The note at the end of Table 2 explains what the parameter sigmat0
 represents, but it's not clear which is its relation with the mid-transit
@@ -364,12 +408,16 @@ times' measurements presented in the same table.
   > $\sigma_{t_{\rm tra}}$. We have added a sentence to summarize
   > the complete procedure in the note at the end of Table 2.
 
+REFEREE COMMENT
+
 Section 2.3:
 
 i) The authors should include the references for each of the mentioned catalogs
 and also for the Yonsei Yale isochrones.
 
   > RESPONSE: Done, thank you.
+
+REFEREE COMMENT
 
 ii) How did the authors estimate the errors of the stellar and planet
 parameters?
@@ -379,6 +427,8 @@ parameters?
   > stellar and planetary parameters are propagated according to
   > standard analytic formulae, under the assumption of
   > uncorrelated and normally distributed initial measurements."
+
+REFEREE COMMENT
 
 3. TIMING ANALYSIS 
 
@@ -405,10 +455,14 @@ recommendable to clarify this point.
   > made an particular extra effort to confirm their accuracy with the original
   > authors.
 
+REFEREE COMMENT
+
 ii) Could the authors specify what is the meaning of each of the variables in
 Equation (1)?
 
   > RESPONSE: Done.
+
+REFEREE COMMENT
 
 Section 3.2:
 
@@ -417,6 +471,8 @@ weighted least-square fit?
 
   > RESPONSE: Yes, this was through weighted least-squares. We have changed the
   > wording accordingly.
+
+REFEREE COMMENT
 
 ii) Figure 3:
 
@@ -429,6 +485,8 @@ example, a possibility could be "Observed minus predicted mid-transit times".
   > ephemeris, based only on the pre-TESS times) is sufficient that we find it
   > to be better left in the body of the caption.
 
+REFEREE COMMENT
+
 Also: ii-1) In the legends of both panels, could the authors specify which is
 the bin size of the TESS light curves? (Please, fix this in all the
 manuscript).
@@ -439,38 +497,50 @@ manuscript).
   > "Symbols" in the caption of Figure 6 in order to clarify this for the
   > reader.
 
+REFEREE COMMENT
+
 ii-2) "The red band shows the average deviation of the TESS transits,..." -->
 "The red band shows the average deviation of the TESS transits {plus
 minus}1σ,..." 
 
   > RESPONSE: Done.
 
+REFEREE COMMENT
+
 iii) It would be important to introduce references for equations (4) and (5).
 Also, for the casual reader, It might be informative to give a brief
 explanation of what sidereal and anomalistic periods are.
 
-  > RESPONSE: Equations (4) and (5) are generic equations for the Taylor series
-  > expansion of the transit and occultation times as a function of epoch, and
-  > do not require references.  We have added the following sentence to describe the
-  > sidereal and anomalistic periods: "The sidereal period is the duration
-  > required to return to the same orientation with respect to the stars; the
-  > slightly longer anomalistic period is the duration required to reach a
-  > fixed longitude with respect to the rotating line of apsides."
+  > RESPONSE: Equations (4) and (5) are generic equations for the
+  > Taylor series expansion of the transit and occultation times as a
+  > function of epoch, and so do not require references.  We have
+  > added the following sentence to describe the sidereal and
+  > anomalistic periods: "The sidereal period is the duration required
+  > to return to the same orientation with respect to the stars; the
+  > slightly longer anomalistic period is the duration required to
+  > reach a fixed longitude with respect to the rotating line of
+  > apsides."
+
+REFEREE COMMENT
 
 iv) Figure 4: In the caption, could the authors explicitly indicate what the
 plot shows in each of its panels (top and bottom)?
 
   > RESPONSE: Done.
 
+REFEREE COMMENT
+
 v) Similar to i) How did you fit the mid-transit times and occultations shown
 in Figure 4?
 
   > RESPONSE: We have added the following sentences in Section 3.2:
-  > "We fit each model by assuming a Gaussian likelihood and sampling over the
-  > posterior probability distributions. The prior for the quadratic model
-  > allowed the period derivative to have any sign." We have clarified the
-  > wording throughout from "decreasing-period model" to "quadratic model" to
-  > reflect the latter point.
+  > "We fit each model by assuming a Gaussian likelihood and sampling
+  > over the posterior probability distributions. The prior for the
+  > quadratic model allowed the period derivative to have any sign."
+  > We have clarified the wording throughout from "decreasing-period
+  > model" to "quadratic model" to reflect the latter point.
+
+REFEREE COMMENT
 
 vi) In the caption of Table 4, please be more explicit, "Best-fit model
 parameters" of what?
@@ -478,17 +548,40 @@ parameters" of what?
   > RESPONSE: The caption now reads "Best-fit transit timing model
   > parameters".
 
+REFEREE COMMENT
+
 vii) Given that the mid-transit times values used in this work are taken from
 different authors with different methodologies to perform the fitting and
 detrending of the light curves, could the authors mention how this could affect
 their results?
 
-TODO TODO TODO
-* We are trusting that people fit transits.
-* (Maybe cite some of the Espinoza studies about detailed transit fitting
-  systematics)
+  > RESPONSE: We have added the following paragraph at the end of
+  > Section 3.3:
+  
+  > There is a final systematic concern in our global methodology.  We
+  > have opted to use mid-transit time values derived by different
+  > authors, who used heterogeneous methods to fit and detrend their
+  > lightcurves.  One important assumption is of course that these authors
+  > have correctly documented their time systems.  Further, though many
+  > assumptions in transit-fitting ({\it e.g.}, concering limb-darkening
+  > and eccentricity) do not affect transit-time measurements, different
+  > detrending approaches can asymmetrically warp transits and shift
+  > mid-transit times.  The magnitude of this systematic effect is hard to
+  > quantify, but the situation is fairly clear from
+  > Figure~\ref{fig:times}.  Many independent authors provided transit
+  > measurements shortly after WASP-4b's discovery, so the data should on
+  > average be acceptable.  \citet{huitson_gemini_2017} provided the most
+  > important data from epochs 0-1000, and so if their data were
+  > systematically affected by detrending choices at the level of many
+  > times their reported uncertainties, our reported timing anomaly would
+  > be suspect.  For this reason, we have paid extra attention to the
+  > \citet{huitson_gemini_2017} data set, corresponding with the authors
+  > to confirm that such systematic concerns would not affect their
+  > results at the many-$\sigma$ level.
 
-********************************************************************************
+
+REFEREE COMMENT
+
 4. INTERPRETATION
 
 Referee comment:
@@ -497,17 +590,23 @@ Section 4.1:
 
 i) First line: The word "caused" is repeated twice.
 
-  > RESPONSE: Corrected.
+  > RESPONSE: Corrected, thank you.
+
+REFEREE COMMENT: 
 
 ii) In the caption of Figure 5 should be indicated what open circles represent. 
 
   > RESPONSE: Done.
+
+REFEREE COMMENT: 
 
 iii) The characteristic timescale value calculated in equation (13), is it
 computed by considering a theoretical dP/dt value or from the one estimated
 through the observations?
 
   > RESPONSE: Changed wording to remove any ambiguity.
+
+REFEREE COMMENT: 
 
 iv) The authors mention that there are about 20 Hot Jupiters for which the
 theoretical timescale is shorter, where are the timescale values obtained from?
@@ -517,6 +616,8 @@ theoretical dP/dts are computed?
   > RESPONSE: As noted in the caption of Figure 5, the decay timescale values
   > are obtained from Equation 15, assuming Qstar'=10^7.  We have slightly
   > modified the text for clarity on this point.
+
+REFEREE COMMENT: 
 
 v) In the top panels of Figures 4 and 6, the orbital decay model evolution
 shows that at the beginning the O-C values increase until, at some point, they
@@ -540,6 +641,8 @@ would increase at these first epochs?
   > the latest epochs, the best-fit period is an overestimate, so you see the
   > decrease.
 
+REFEREE COMMENT: 
+
 Section 4.2:
 
 i) It might be informative to explicitly include the equation (14) of Ragozzine
@@ -547,6 +650,8 @@ i) It might be informative to explicitly include the equation (14) of Ragozzine
 
   > RESPONSE: we have opted against this suggestion, chiefly to encourage the
   > interested reader to refer to the original study!
+
+REFEREE COMMENT: 
 
 ii) Similar to Figure 3, I would recommend changing the title indicated in bold
 font in Figure 6, by a more explicit sentence about what is shown in the plot.
@@ -557,10 +662,14 @@ values" or something like that.
   > keep the "title" as is. We have appended the sentence "The two models may
   > begin to diverge in the mid-2020s" as further clarification for the reader.
 
+REFEREE COMMENT: 
+
 iii) Mb is indicated as the mass of the hypothetical planet WASP-4c, however,
 the Mb symbol is not present in equation (19).
 
   > RESPONSE: We have correcly the wording accordingly.
+
+REFEREE COMMENT: 
 
 iv) Why do the authors assume k2b = 0.6 for the Love number? Is this value
 randomly chosen? 
@@ -568,6 +677,8 @@ randomly chosen?
   > RESPONSE: We have added the phrase "similar to Jupiter". Section 4.2
   > already notes that our measured value for k_2p under the precession
   > hypothesis (Equation 18) is imprecise.
+
+REFEREE COMMENT: 
 
 v) Would it be possible to introduce a definition of the reduced mass presented
 in equation 21? Also, could the authors specify which values they used for L,
@@ -580,13 +691,13 @@ Mc, and Rc and provide references?
   > omission.  We have opted to not explicitly define the reduced mass, as it
   > is standard knowledge in the gravitational two-body problem.
 
-********************************************************************************
-
-Referee comment:
+REFEREE COMMENT: 
 
 i) "WASP-4 timing anomaly" --> "WASP-4b timing anomaly"
 
   > RESPONSE: Corrected.
+
+REFEREE COMMENT: 
 
 ii) In the caption of Figure 7: "with standard deviation (σpredicted)" -->
 "with standard deviation (σpre-TESS)"
@@ -595,7 +706,12 @@ ii) In the caption of Figure 7: "with standard deviation (σpredicted)" -->
 
 
 ********************************************************************************
-Other changes:
+OTHER CHANGES:
 
 * Added the following coauthors: Fei Dai, Natalia Guerrero, Bill Wohler,
   Douglas Caldwell.
+
+* Minor edits in text throughout, as indicated with the \added{},
+  \deleted{}, and \replaced{}{} commands.
+
+* Minor tweaks to figures.
