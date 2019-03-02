@@ -76,6 +76,40 @@ outpath = '../data/RVs_all_WASP4b.csv'
 outdf.to_csv(outpath, index=False)
 print('made {}'.format(outpath))
 
+
+# now make RVs_all_WASP4b_for_fitting.csv
+# rename instrument strings and columns. subtract mean velocity from each.
+k14['RV'] -= k14['RV'].mean()
+p11['RV'] -= p11['RV'].mean()
+
+# convert everything to m/s. subtract the means from individual instruments.
+t10['RV'] *= 1e3
+t10['e_RV'] *= 1e3
+k14['RV'] *= 1e3
+k14['e_RV'] *= 1e3
+p11['RV'] *= 1e3
+p11['e_RV'] *= 1e3
+
+# remove all HARPS measurements from Triaud+2010, b/c they're offset
+# from everything!!
+sel_t10 = (
+    (t10['Inst']=='C1') #|
+    #(t10['BJD']==2454747.809113) |
+    #(t10['BJD']==2454750.744196)
+)
+cut_t10 = t10[sel_t10]
+cut_t10['RV'] -= cut_t10['RV'].mean()
+
+fitdf = pd.concat((cut_t10, k14, p11))
+fitdf['Inst'] = (
+    fitdf['Inst'].str.replace('C1','CORALIE').str.replace('H2','HARPS')
+)
+fitdf.columns = ['time','tel','Name','mnvel','Source','errvel']
+
+fitpath = '../data/RVs_all_WASP4b_for_fitting.csv'
+fitdf.to_csv(fitpath, index=False)
+print('made {}'.format(fitpath))
+
 # there are overlapping points between w08 and t10. how different are they?
 w08['BJD'] = w08['BJD_minus_2450000'] + 2450000
 
