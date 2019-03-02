@@ -1,30 +1,30 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ms.aux
 The style file: yahapj.bst
 Database file #1: bibliography.bib
-Repeated entry---line 880 of file bibliography.bib
+Repeated entry---line 954 of file bibliography.bib
  : @article{pal_periastron_2008
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2683 of file bibliography.bib
+Repeated entry---line 2757 of file bibliography.bib
  : @article{husnoo_observational_2012
  :                                   ,
 I'm skipping whatever remains of this entry
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Repeated entry---line 3254 of file bibliography.bib
+Repeated entry---line 3328 of file bibliography.bib
  : @article{southworth_high-precision_2009
  :                                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3294 of file bibliography.bib
+Repeated entry---line 3368 of file bibliography.bib
  : @article{sanchis-ojeda_starspots_2011
  :                                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3356 of file bibliography.bib
+Repeated entry---line 3430 of file bibliography.bib
  : @article{hoyer_tramos_2013
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3389 of file bibliography.bib
+Repeated entry---line 3463 of file bibliography.bib
  : @article{petrucci_no_2013
  :                          ,
 I'm skipping whatever remains of this entry
@@ -38,45 +38,45 @@ Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sulliva
 while executing---line 1561 of file yahapj.bst
 Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sullivan_2015
 while executing---line 1561 of file yahapj.bst
-You've used 133 entries,
+You've used 127 entries,
             3215 wiz_defined-function locations,
-            1589 strings with 72197 characters,
-and the built_in function-call counts, 91518 in all, are:
-= -- 5610
-> -- 9724
-< -- 52
-+ -- 3512
-- -- 3352
-* -- 9510
-:= -- 17487
-add.period$ -- 133
-call.type$ -- 133
-change.case$ -- 846
-chr.to.int$ -- 130
-cite$ -- 134
-duplicate$ -- 3558
-empty$ -- 4610
-format.name$ -- 3523
-if$ -- 17409
+            1550 strings with 70062 characters,
+and the built_in function-call counts, 88303 in all, are:
+= -- 5366
+> -- 9493
+< -- 49
++ -- 3426
+- -- 3273
+* -- 9218
+:= -- 16904
+add.period$ -- 127
+call.type$ -- 127
+change.case$ -- 812
+chr.to.int$ -- 124
+cite$ -- 128
+duplicate$ -- 3394
+empty$ -- 4400
+format.name$ -- 3435
+if$ -- 16765
 int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 125
-newline$ -- 404
-num.names$ -- 534
-pop$ -- 1333
+missing$ -- 119
+newline$ -- 386
+num.names$ -- 510
+pop$ -- 1275
 preamble$ -- 1
-purify$ -- 838
+purify$ -- 803
 quote$ -- 0
-skip$ -- 2103
+skip$ -- 2007
 stack$ -- 0
-substring$ -- 3197
-swap$ -- 127
+substring$ -- 3051
+swap$ -- 121
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1191
+type$ -- 1137
 warning$ -- 1
-while$ -- 602
+while$ -- 572
 width$ -- 0
-write$ -- 1334
+write$ -- 1274
 (There were 10 error messages)
