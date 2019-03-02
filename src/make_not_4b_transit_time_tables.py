@@ -129,6 +129,7 @@ def make_temp_table(plname):
 if __name__=="__main__":
 
     plnames = ['WASP-5b', 'WASP-6b', 'WASP-18b', 'WASP-46b']
+    #plnames = ['WASP-18b'] # NOTE for avi's wasp-18 paper, use this
 
     for plname in plnames:
         temppath = make_temp_table(plname)
