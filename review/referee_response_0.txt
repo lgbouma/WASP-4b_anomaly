@@ -111,9 +111,9 @@ them.
   > 
   > -----chi2 values for best fit parameters-----
   > 
-  > linear model:	    chi2: 174.446	dof: 61	AIC: 1.78e+02	BIC: 1.83e+02
-  > quadratic model:	chi2: 62.5811	dof: 60	AIC: 6.86e+01	BIC: 7.50e+01
-  > precession model: chi2: 64.329	dof: 58	AIC: 7.43e+01	BIC: 8.50e+01
+  > linear model:     chi2: 174.446 dof: 61 AIC: 1.78e+02 BIC: 1.83e+02
+  > quadratic model:  chi2: 62.5811 dof: 60 AIC: 6.86e+01 BIC: 7.50e+01
+  > precession model: chi2: 64.329  dof: 58 AIC: 7.43e+01 BIC: 8.50e+01
   > 
   > -----quad vs precession-----
   > delta_AIC = AIC_prec-AIC_quad = 5.75
@@ -130,9 +130,9 @@ them.
   > 
   > -----chi2 values for best fit parameters-----
   > 
-  > linear model:	     chi2: 163.285	dof: 55	AIC: 1.67e+02	BIC: 1.71e+02
-  > quadratic model:	 chi2: 53.5164	dof: 54	AIC: 5.95e+01	BIC: 6.56e+01
-  > precession model:  chi2: 56.4648	dof: 52	AIC: 6.65e+01	BIC: 7.67e+01
+  > linear model:      chi2: 163.285 dof: 55 AIC: 1.67e+02 BIC: 1.71e+02
+  > quadratic model:   chi2: 53.5164 dof: 54 AIC: 5.95e+01 BIC: 6.56e+01
+  > precession model:  chi2: 56.4648 dof: 52 AIC: 6.65e+01 BIC: 7.67e+01
   > 
   > -----quad vs precession-----
   > delta_AIC = AIC_prec-AIC_quad = 6.95
@@ -172,22 +172,22 @@ this scenario.
   > injected, because the flux deviations are symmetric about the transit
   > minimum.  For individual transits, there were no cases for which the
   > timing deviation was larger than one minute.  The most concerning
-  > shift occurs when the spot anomaly occurs during transit ingress, in
-  > which case the measured mid-time is shifted late by between 30 and 50
+  > shift occurs when the spot anomaly occurs during transit egress, in
+  > which case the measured mid-time is shifted early by between 30 and 50
   > seconds \citep[qualitatively similar to results found
   > by][]{ioannidis_how_2016}.
   > 
   > Therefore the TESS observations could hypothetically all be skewed
-  > late if there were spot-crossing events during every ingress.  Two
+  > early if there were spot-crossing events during every egress.  Two
   > arguments rule out this possibility.  (1) The lightcurve residuals do
   > not show evidence for these events.  (2) The stellar rotation period
   > is between 20 and 40 days, and the sky-projected stellar obliquity is
   > less than 10 degrees
   > \citep{triaud_spin-orbit_2010,sanchis-ojeda_starspots_2011,hoyer_tramos_2013}.
   > Since the planet orbits every 1.3 days, requiring that spot anomalies
-  > always occur during ingress would be equivalent to requiring a stellar
-  > spot distribution that is exquisitely selected to match the planet
-  > ingress times.  Such a spot distribution is rather implausible.
+  > always occur during egress would be equivalent to requiring a stellar
+  > spot distribution that is exquisitely (and thus implausibly)
+  > distributed to match the planet egress times.
 
 REFEREE COMMENT
 
@@ -425,8 +425,8 @@ parameters?
   > RESPONSE: We have added the following sentence in the last
   > paragraph of Section 2.3: "The uncertainties in our derived
   > stellar and planetary parameters are propagated according to
-  > standard analytic formulae, under the assumption of
-  > uncorrelated and normally distributed initial measurements."
+  > standard analytic formulae, under the assumption of uncorrelated
+  > and normally distributed initial measurements."
 
 REFEREE COMMENT
 
@@ -442,18 +442,19 @@ imply that these checks were only performed on the Huitson et al. mid-transit
 times and not in all the literature mid-transit times. It would be
 recommendable to clarify this point.
 
-  > RESPONSE: we have modified the wording slightly to clarify. The point is
-  > that for these Gemini South observations, we confirmed with the authors
-  > through back and forth correspondence that the details of their
-  > time-keeping were sound.  We made this extra effort because of the weight
-  > of the Huitson+(2017) times in the analysis.
+  > RESPONSE: we have modified the wording slightly to clarify. The
+  > point is that for these Gemini South observations, we confirmed
+  > with the authors through back and forth correspondence that the
+  > details of their time-keeping were sound.  We made this extra
+  > effort because of the weight of the Huitson+(2017) times in the
+  > analysis.
   >
-  > For the remaining data points, we used the references stated in Section 3.1
-  > and Table 2 to confirm that we were using with mid-exposure times, and
-  > corrected from HJD_UTC to BJD_TDB as appropriate. However the point is
-  > indeed that because of the weight of the Huitson et al (2017) times, we
-  > made an particular extra effort to confirm their accuracy with the original
-  > authors.
+  > For the remaining data points, we used the references stated in
+  > Section 3.1 and Table 2 to confirm that we were using with
+  > mid-exposure times, and corrected from HJD_UTC to BJD_TDB as
+  > appropriate. However the point is indeed that because of the
+  > weight of the Huitson et al (2017) times, we made an particular
+  > extra effort to confirm their accuracy with the original authors.
 
 REFEREE COMMENT
 
@@ -480,10 +481,11 @@ I would recommend changing the "title" indicated in bold font in the caption,
 by a more explicit sentence about what is shown in the plot. To give an
 example, a possibility could be "Observed minus predicted mid-transit times". 
 
-  > RESPONSE: Though we appreciate the suggestion, we have opted to keep the
-  > "title" as is. The nuance of what "predicted" means for this plot (a linear
-  > ephemeris, based only on the pre-TESS times) is sufficient that we find it
-  > to be better left in the body of the caption.
+  > RESPONSE: Though we appreciate the suggestion, we have opted to
+  > keep the "title" as is. The nuance of what "predicted" means for
+  > this plot (a linear ephemeris, based only on the pre-TESS times)
+  > is sufficient that we find it to be better left in the body of the
+  > caption.
 
 REFEREE COMMENT
 
@@ -491,11 +493,11 @@ Also: ii-1) In the legends of both panels, could the authors specify which is
 the bin size of the TESS light curves? (Please, fix this in all the
 manuscript).
 
-  > RESPONSE: We have added the following sentence in the caption: "The binned
-  > TESS point is the weighted average of 18 TESS transits".  The caption of
-  > Figure 4 already stated the same.  We have changed the words "Dots" to
-  > "Symbols" in the caption of Figure 6 in order to clarify this for the
-  > reader.
+  > RESPONSE: We have added the following sentence in the caption:
+  > "The binned TESS point is the weighted average of 18 TESS
+  > transits".  The caption of Figure 4 already stated the same.  We
+  > have changed the words "Dots" to "Symbols" in the caption of
+  > Figure 6 in order to clarify this for the reader.
 
 REFEREE COMMENT
 
@@ -555,29 +557,35 @@ different authors with different methodologies to perform the fitting and
 detrending of the light curves, could the authors mention how this could affect
 their results?
 
-  > RESPONSE: We have added the following paragraph at the end of
+  > RESPONSE: We have added the following paragraphs at the end of
   > Section 3.3:
   
   > There is a final systematic concern in our global methodology.  We
   > have opted to use mid-transit time values derived by different
   > authors, who used heterogeneous methods to fit and detrend their
-  > lightcurves.  One important assumption is of course that these authors
-  > have correctly documented their time systems.  Further, though many
-  > assumptions in transit-fitting ({\it e.g.}, concering limb-darkening
-  > and eccentricity) do not affect transit-time measurements, different
-  > detrending approaches can asymmetrically warp transits and shift
-  > mid-transit times.  The magnitude of this systematic effect is hard to
-  > quantify, but the situation is fairly clear from
-  > Figure~\ref{fig:times}.  Many independent authors provided transit
-  > measurements shortly after WASP-4b's discovery, so the data should on
-  > average be acceptable.  \citet{huitson_gemini_2017} provided the most
-  > important data from epochs 0-1000, and so if their data were
-  > systematically affected by detrending choices at the level of many
-  > times their reported uncertainties, our reported timing anomaly would
-  > be suspect.  For this reason, we have paid extra attention to the
-  > \citet{huitson_gemini_2017} data set, corresponding with the authors
-  > to confirm that such systematic concerns would not affect their
-  > results at the many-$\sigma$ level.
+  > lightcurves.  This of course assumes that these authors have
+  > correctly documented their time systems.  Further, though many
+  > choices in transit-fitting ({\it e.g.}, parametrization of
+  > limb-darkening and eccentricity) do not affect transit mid-time
+  > measurements, different detrending approaches can asymmetrically
+  > warp transits and shift mid-transit times.  The magnitude of this
+  > systematic effect is hard to quantify, but the situation is fairly
+  > clear from Figure~\ref{fig:times}.  Many independent authors
+  > provided transit measurements shortly after WASP-4b's discovery,
+  > so the data should on average be acceptable.
+  > \citet{huitson_gemini_2017} provided the most important data from
+  > epochs 0-1000, and so if their data were systematically affected
+  > by detrending choices at the level of many times their reported
+  > uncertainties, our timing anomaly would be suspect.  For this
+  > reason, we paid careful attention to the
+  > \citet{huitson_gemini_2017} data set, and corresponded with the
+  > authors to confirm that their results are not affected by
+  > systematic effects of the required amplitude.
+  > 
+  > None of the concerns mentioned in this subsection are likely
+  > explanations for the observed timing variations. We proceed by
+  > considering possible astrophysical explanations.
+
 
 
 REFEREE COMMENT
@@ -626,19 +634,21 @@ explanation for that behavior? If the orbital period is diminishing, wouldn't
 it be expected to see only a decreasing in the O-C values? Why the O-C values
 would increase at these first epochs? 
 
-  > RESPONSE: To make Figure 4 and 6, we start with the observed transit and
-  > occultation mid-times, as a function of epoch number.  We then fit a line
-  > to these data.  If the data were generated by a constant period orbit (with
-  > gaussian uncertainties) the residuals to such a fit would show no
-  > correlation with epoch number.  However if the data were generated by a
-  > planet with a constant period derivative (with gaussian uncertainties), the
-  > residuals to such a fit would always be a parabola.  This is because the
-  > linear fit to the data will have contributions from the beginning, middle,
-  > and end of the transit timeseries. Thus the best-fit linear ephemeris (to
-  > data that actually have a decreasing period) has a best-fit period
-  > somewhere between the minimum and maximum period. At the earliest epochs,
-  > the best-fit period is an underestimate, so you see the increase in O-C. At
-  > the latest epochs, the best-fit period is an overestimate, so you see the
+  > RESPONSE: To make Figure 4 and 6, we start with the observed
+  > transit and occultation mid-times, as a function of epoch number.
+  > We then fit a line to these data.  If the data were generated by a
+  > constant period orbit (with gaussian uncertainties) the residuals
+  > to such a fit would show no correlation with epoch number.
+  > However if the data were generated by a planet with a constant
+  > period derivative (with gaussian uncertainties), the residuals to
+  > such a fit would always be a parabola.  This is because the linear
+  > fit to the data will have contributions from the beginning,
+  > middle, and end of the transit timeseries. Thus the best-fit
+  > linear ephemeris (to data that actually have a decreasing period)
+  > has a best-fit period somewhere between the minimum and maximum
+  > period. At the earliest epochs, the best-fit period is an
+  > underestimate, so you see the increase in O-C. At the latest
+  > epochs, the best-fit period is an overestimate, so you see the
   > decrease.
 
 REFEREE COMMENT: 
@@ -648,8 +658,8 @@ Section 4.2:
 i) It might be informative to explicitly include the equation (14) of Ragozzine
 & Wolf (2009) to see of which parameters is depending on.
 
-  > RESPONSE: we have opted against this suggestion, chiefly to encourage the
-  > interested reader to refer to the original study!
+  > RESPONSE: we have opted against this suggestion, chiefly to
+  > encourage the interested reader to refer to the original study!
 
 REFEREE COMMENT: 
 
@@ -658,9 +668,10 @@ font in Figure 6, by a more explicit sentence about what is shown in the plot.
 For eample "Different apsidal precession and orbital decay models for the O-C
 values" or something like that.
 
-  > RESPONSE: As in Figure 3, we appreciate the suggestion, but have opted to
-  > keep the "title" as is. We have appended the sentence "The two models may
-  > begin to diverge in the mid-2020s" as further clarification for the reader.
+  > RESPONSE: As in Figure 3, we appreciate the suggestion, but have
+  > opted to keep the "title" as is. We have appended the sentence
+  > "The two models may begin to diverge in the mid-2020s" as further
+  > clarification for the reader.
 
 REFEREE COMMENT: 
 
@@ -684,12 +695,13 @@ v) Would it be possible to introduce a definition of the reduced mass presented
 in equation 21? Also, could the authors specify which values they used for L,
 Mc, and Rc and provide references?
 
-  > RESPONSE: We have clarified the origin of the values used when evaluating
-  > Equation 21.  The tricky ones -- the mass and radius of the convective
-  > envelope -- came from the MESA/MIST projects, for which we have added
-  > appropriate citations.  Our thanks to the referee for pointing out this
-  > omission.  We have opted to not explicitly define the reduced mass, as it
-  > is standard knowledge in the gravitational two-body problem.
+  > RESPONSE: We have clarified the origin of the values used when
+  > evaluating Equation 21.  The tricky ones -- the mass and radius of
+  > the convective envelope -- came from the MESA/MIST projects, for
+  > which we have added appropriate citations.  Our thanks to the
+  > referee for pointing out this omission.  We have opted to not
+  > explicitly define the reduced mass, as it is standard knowledge in
+  > the gravitational two-body problem.
 
 REFEREE COMMENT: 
 

@@ -13,6 +13,11 @@ authors caution that more observations are needed to confirm these results.
 Also, they redetermine various parameters of the system, finding them in
 general agreement with literature values. 
 
+* TODO: add more weight to the distant companion idea.
+* ADD: our own analysis of the RV data, and the resulting implied period
+  derivative.
+* ADD: RV analysis emphasis (!!).
+
 In general, the manuscript is scientifically accurate and the results presented
 in it certainly will be of interest to other investigators in
 the field. Then, I consider this paper worthy of being published after the
@@ -51,6 +56,11 @@ order to warrant confident results, I would like to see the same analysis but
 without including partial transits or with visible spot-crossing events on
 them.
 
+* USE: best-judgement.
+* ENSURE: do not include partial transits.
+* OMITTING THE ONES WITH VISIBLE SPOT-CROSSINGS: meh. Maybe focus on the ones
+  with excess reisduals during partial phases.
+
 2) As mentioned in 1), another possible interpretation for explaining the
 deviation from a linear ephemeris of the TESS mid-transit times could be the
 presence of anomalies in the light curves due to stellar activity. It has been
@@ -63,6 +73,14 @@ the existence of unseen stellar spots? Regarding this point, I would like to
 see an extra paragraph in the Section "Interpretation" with a discussion about
 this scenario.
 
+* ONE IDEA: consider ADDING the spots (e.g., from the hubble data, at the
+  observed amplitude). Run it through the lightcurves, over a full transit
+  phase. QUANITFY: How much does the transit mid-time change?
+* ALSO QUANTIFY: what is the peak-to-peak stellar variability? (Can we confirm
+  the previously measured rotation periods?)
+* The period is the same order of time as the observations...
+
+
 -- Minor points:
 
 0. TITLE: 
@@ -71,9 +89,15 @@ i) As it is, the title implies a very strong asseveration. It would be more
 appropriate "Possible Early Arrival of WASP-4b for the TESS Mission" or
 something similar. 
 
+* Pending spot studies: no.
+
+
 1. INTRODUCTION:
 
 i) Please, include here a reference for TESS.
+
+* Fine
+
 
 2. NEW TRANSITS AND SYSTEM PARAMETERS:
 
@@ -116,9 +140,13 @@ Furthermore, to see the agreement between the transit parameters reported in
 previous studies and those resulting from this work, it would be useful to
 present together the values obtained in both cases.
 
+* Can say no to the latter.
+
 iii) In the caption of Figure 2, it would be important to specify which is the
 bin size used to determine the yellow points. Furthermore, in Figure 2, the
 photometric error of the unbinned data-points should be included. 
+
+* add a representative error bar, bottom right
 
 iv) To estimate transit times for each individual lightcurve, did the authors
 use the same code as for the phase-folded light curve? In this case, how were
@@ -155,6 +183,9 @@ imply that these checks were only performed on the Huitson et al. mid-transit
 times and not in all the literature mid-transit times. It would be
 recommendable to clarify this point.
 
+* This is what we meant.
+* We can't go this deep for all of them.
+
 ii) Could the authors specify what is the meaning of each of the variables in
 Equation (1)?
 
@@ -162,6 +193,8 @@ Section 3.2:
 
 i) How did you fit the mid times of the preTESS measurements? Did you use a
 weighted least-square fit? 
+
+* Yes (be sure in text)
 
 ii) Figure 3:
 I would recommend changing the "title" indicated in bold font in the caption,
@@ -192,9 +225,13 @@ different authors with different methodologies to perform the fitting and
 detrending of the light curves, could the authors mention how this could affect
 their results?
 
+* We are trusting that people fit transits.
+* (Maybe cite some of the Espinoza studies about detailed transit fitting
+  systematics)
+
 4. INTERPRETATION
 
-Section 4.1:
+Sectio 4.1:
 
 i) First line: The word "caused" is repeated twice.
 
@@ -241,5 +278,9 @@ Section Appendix:
 
 i) "WASP-4 timing anomaly" --> "WASP-4b timing anomaly"
 
+> Corrected.
+
 ii) In the caption of Figure 7: "with standard deviation (σpredicted)" -->
 "with standard deviation (σpre-TESS)"
+
+> Corrected, thank you!
