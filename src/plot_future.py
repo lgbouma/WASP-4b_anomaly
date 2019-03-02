@@ -267,15 +267,15 @@ def main(plname, xlim=None, ylim=None, savname=None, ylim1=None):
         refs,
         tcol, tcol_occ,
         savpath=savpath,
-        xlabel='Gregorian year',
+        xlabel='Year',
         ylabel='Deviation from constant period [minutes]',
         xlim=xlim, ylim=ylim, ylim1=ylim1)
 
     if savpath == os.path.join(pkldir, 'future.png'):
-        copyfile(savpath, '../paper/f6.png')
-        print('saved ../paper/f6.png')
-        copyfile(savpath.replace('.png','.pdf'), '../paper/f6.pdf')
-        print('saved ../paper/f6.pdf')
+        copyfile(savpath, '../paper/f7.png')
+        print('saved ../paper/f7.png')
+        copyfile(savpath.replace('.png','.pdf'), '../paper/f7.pdf')
+        print('saved ../paper/f7.pdf')
 
 
 if __name__=="__main__":

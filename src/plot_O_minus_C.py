@@ -14,6 +14,9 @@ import os, pickle
 
 from numpy import array as nparr
 
+from astropy.time import Time
+from astropy import units as units, constants as const
+
 def get_data(
     datacsv='../data/WASP-18b_transits_and_TESS_times_O-C_vs_epoch_selected.csv',
     is_occultation=False
@@ -252,6 +255,16 @@ def plot_O_minus_C(
         a1.text(0.98,0.05, 'Occultations', transform=a1.transAxes, color='k',
                 fontsize='medium', va='bottom', ha='right')
 
+        # add "time" axis on top
+        # make twin axis to show year on top
+        period = 1.338231466*units.day
+        t0 = 2455804.515752*units.day
+        transittimes = x*period + t0
+        times = Time(transittimes, format='jd', scale='tdb')
+        a_top = a0.twiny()
+        a_top.scatter(times.decimalyear, np.zeros_like(times), s=0)
+        a_top.set_xlabel('Year', fontsize='large')
+
         # hidden point for a1 legend
         #a1.plot(1500, 3, alpha=1, mew=0.5,
         #        zorder=-3, label='binned TESS time', markerfacecolor='yellow',
@@ -266,11 +279,13 @@ def plot_O_minus_C(
             ax.get_yaxis().set_tick_params(which='both', direction='in')
             ax.get_xaxis().set_tick_params(which='both', direction='in')
             ax.set_xlim(xlim)
+        a_top.get_yaxis().set_tick_params(which='both', direction='in')
+        a_top.get_xaxis().set_tick_params(which='both', direction='in')
         a0.set_ylim(ylim)
         a1.set_ylim(ylim1)
 
-        fig.text(0.5,0, xlabel, ha='center')
-        fig.text(-0.025,0.5, ylabel, va='center', rotation=90)
+        fig.text(0.5,0, xlabel, ha='center', fontsize='large')
+        fig.text(-0.02,0.5, ylabel, va='center', rotation=90, fontsize='large')
 
         fig.tight_layout(h_pad=0, w_pad=0)
         fig.savefig(savpath, bbox_inches='tight', dpi=400)
@@ -487,10 +502,10 @@ def main(plname, xlim=None, ylim=None, include_all_points=False, ylim1=None):
         copyfile(savpath.replace('.png','.pdf'), '../paper/f4.pdf')
         print('saved ../paper/f4.pdf')
     else:
-        copyfile(savpath, '../paper/f8.png')
-        print('saved ../paper/f8.png')
-        copyfile(savpath.replace('.png','.pdf'), '../paper/f8.pdf')
-        print('saved ../paper/f8.pdf')
+        copyfile(savpath, '../paper/f9.png')
+        print('saved ../paper/f9.png')
+        copyfile(savpath.replace('.png','.pdf'), '../paper/f9.pdf')
+        print('saved ../paper/f9.pdf')
 
 
 if __name__=="__main__":

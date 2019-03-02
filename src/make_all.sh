@@ -20,6 +20,8 @@ python plot_O_minus_C.py
 
 python plot_population_vs_wasp4.py
 
+python plot_rvs.py
+
 python plot_future.py
 
 python plot_hjs.py
