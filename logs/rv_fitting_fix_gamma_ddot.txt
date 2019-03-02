@@ -1,0 +1,93 @@
+Performing maximum a posteriori fitting for WASP4
+Initial loglikelihood = -2162.763463
+Performing maximum a posteriori fit...
+Final loglikelihood = -157.176833
+Best-fit parameters:
+parameter                     value      vary
+per1                        1.33823       True
+tc1                         5804.52       True
+dvdt                    -0.00803385       True
+curv                              0      False
+gamma_CORALIE              -7.75649       True
+gamma_HARPS                -44.8206       True
+gamma_HIRES                -81.2623       True
+jit_CORALIE                 10.6697       True
+jit_HARPS                   10.1583       True
+jit_HIRES                   2.14798       True
+secosw1                           0      False
+sesinw1                           0      False
+logk1                       5.46126       True
+tp1                         5804.18           
+e1                                0           
+w1                                0           
+k1                          235.393           
+
+Priors
+------
+e1 constrained to be < 0.99
+Gaussian prior on per1, mu=1.338231466, sigma=2.3e-08
+Gaussian prior on tc1, mu=2455804.515752, sigma=2.4e-05
+Gaussian prior on dvdt, mu=0.0, sigma=0.5
+Bounded prior on jit_CORALIE, min=0.0, max=50.0
+Bounded prior on jit_HARPS, min=0.0, max=30.0
+Bounded prior on jit_HIRES, min=0.0, max=10.0
+
+Creating rv plot for WASP4
+RV multi-panel plot saved to /home/luke/Dropbox/proj/WASP-4b_decay/results/rv_fitting/t10onlytwo_LGB_20190228_fix_gammaddot/WASP4_rv_multipanel.pdf
+Loading starting positions from previous MAP fit
+Running MCMC for WASP4, N_walkers = 50, N_steps = 10000, N_ensembles = 16, Max G-R = 1.01, Min Tz = 1000 ...
+40000/8000000 (0.5%) steps complete; Running 8006.55 steps/s; Mean acceptance rate = 35.6%; Min Tz = -1.0; Max G-R =   inf      80000/8000000 (1.0%) steps complete; Running 8486.03 steps/s; Mean acceptance rate = 38.5%; Min Tz = -1.0; Max G-R =   inf      120000/8000000 (1.5%) steps complete; Running 8474.58 steps/s; Mean acceptance rate = 40.3%; Min Tz = -1.0; Max G-R =   inf      160000/8000000 (2.0%) steps complete; Running 8486.63 steps/s; Mean acceptance rate = 41.0%; Min Tz = -1.0; Max G-R =   inf      200000/8000000 (2.5%) steps complete; Running 8466.02 steps/s; Mean acceptance rate = 41.0%; Min Tz = -1.0; Max G-R =   inf      240000/8000000 (3.0%) steps complete; Running 8438.60 steps/s; Mean acceptance rate = 40.9%; Min Tz = -1.0; Max G-R =   inf      280000/8000000 (3.5%) steps complete; Running 7930.22 steps/s; Mean acceptance rate = 40.5%; Min Tz = -1.0; Max G-R =   inf      320000/8000000 (4.0%) steps complete; Running 7921.94 steps/s; Mean acceptance rate = 40.1%; Min Tz = -1.0; Max G-R =   inf      360000/8000000 (4.5%) steps complete; Running 8125.93 steps/s; Mean acceptance rate = 39.6%; Min Tz = -1.0; Max G-R =   inf      400000/8000000 (5.0%) steps complete; Running 8033.38 steps/s; Mean acceptance rate = 39.3%; Min Tz = 10417.3; Max G-R = 1.012      
+Discarding burn-in now that the chains are marginally well-mixed
+
+440000/8000000 (5.5%) steps complete; Running 7860.94 steps/s; Mean acceptance rate = 35.1%; Min Tz = 1933.5; Max G-R = 1.068      480000/8000000 (6.0%) steps complete; Running 8109.98 steps/s; Mean acceptance rate = 38.4%; Min Tz = 1242.1; Max G-R = 1.113      520000/8000000 (6.5%) steps complete; Running 8396.54 steps/s; Mean acceptance rate = 40.4%; Min Tz = 3170.8; Max G-R = 1.040      560000/8000000 (7.0%) steps complete; Running 8363.07 steps/s; Mean acceptance rate = 40.9%; Min Tz = 4990.1; Max G-R = 1.025      600000/8000000 (7.5%) steps complete; Running 8191.13 steps/s; Mean acceptance rate = 41.0%; Min Tz = 7479.1; Max G-R = 1.016      640000/8000000 (8.0%) steps complete; Running 8195.66 steps/s; Mean acceptance rate = 40.8%; Min Tz = 10358.3; Max G-R = 1.012      680000/8000000 (8.5%) steps complete; Running 8329.92 steps/s; Mean acceptance rate = 40.4%; Min Tz = 11955.4; Max G-R = 1.010      720000/8000000 (9.0%) steps complete; Running 7983.59 steps/s; Mean acceptance rate = 40.0%; Min Tz = 13344.0; Max G-R = 1.009      760000/8000000 (9.5%) steps complete; Running 7966.64 steps/s; Mean acceptance rate = 39.6%; Min Tz = 15201.6; Max G-R = 1.008      800000/8000000 (10.0%) steps complete; Running 8282.96 steps/s; Mean acceptance rate = 39.2%; Min Tz = 18167.4; Max G-R = 1.007      840000/8000000 (10.5%) steps complete; Running 7905.42 steps/s; Mean acceptance rate = 38.9%; Min Tz = 22789.7; Max G-R = 1.005      880000/8000000 (11.0%) steps complete; Running 7985.19 steps/s; Mean acceptance rate = 38.8%; Min Tz = 26923.6; Max G-R = 1.004      
+Chains are well-mixed after 880000 steps! MCMC completed in 1.8 minutes
+
+
+Performing post-MCMC maximum likelihood fit...
+Calculating uncertainties...
+Final loglikelihood = -157.176866
+Final RMS = 17.550742
+Final reduced chi-square = 1.3005202063239751
+Best-fit parameters:
+parameter                     value       +/-      vary
+per1                        1.33823   3.3e-08      True
+tc1                         5804.52   3.2e-05      True
+secosw1                           0         0     False
+sesinw1                           0         0     False
+logk1                       5.46162     0.015      True
+dvdt                    -0.00822662     0.005      True
+curv                              0         0     False
+gamma_CORALIE              -7.93858       5.7      True
+gamma_HARPS                 -44.982       5.1      True
+gamma_HIRES                -81.1859       4.1      True
+jit_CORALIE                 10.6113        11      True
+jit_HARPS                   10.1726       2.3      True
+jit_HIRES                   2.22405         4      True
+tp1                         5804.18   3.2e-05          
+e1                                0         0          
+w1                                0         0          
+k1                          235.479       3.6          
+
+Priors
+------
+e1 constrained to be < 0.99
+Gaussian prior on per1, mu=1.338231466, sigma=2.3e-08
+Gaussian prior on tc1, mu=2455804.515752, sigma=2.4e-05
+Gaussian prior on dvdt, mu=0.0, sigma=0.5
+Bounded prior on jit_CORALIE, min=0.0, max=50.0
+Bounded prior on jit_HARPS, min=0.0, max=30.0
+Bounded prior on jit_HIRES, min=0.0, max=10.0
+
+Saving output files...
+Creating rv plot for WASP4
+RV multi-panel plot saved to /home/luke/Dropbox/proj/WASP-4b_decay/results/rv_fitting/t10onlytwo_LGB_20190228_fix_gammaddot/WASP4_rv_multipanel.pdf
+Creating corner plot for WASP4
+Corner plot saved to /home/luke/Dropbox/proj/WASP-4b_decay/results/rv_fitting/t10onlytwo_LGB_20190228_fix_gammaddot/WASP4_corner.pdf
+Creating trend plot for WASP4
+Trend plot saved to /home/luke/Dropbox/proj/WASP-4b_decay/results/rv_fitting/t10onlytwo_LGB_20190228_fix_gammaddot/WASP4_trends.pdf
+Multiplying mcmc chains by physical parameters for WASP4
+WARNING: mpsini=369.31 violates the implicit assumption that Mp<<Mstar. Interpret results with caution.
+Derived parameters: ['mpsini1', 'a1', 'musini1']
+Creating derived plot for WASP4
+Derived plot saved to /home/luke/Dropbox/proj/WASP-4b_decay/results/rv_fitting/t10onlytwo_LGB_20190228_fix_gammaddot/WASP4_corner_derived_pars.pdf
+Assembling report for WASP4
