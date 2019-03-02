@@ -34,6 +34,12 @@ gamma_dot_preferred = gamma_dot_value * (u.m/u.s)/u.day
 gamma_dot_limit = (gamma_dot_value - 2*gamma_dot_sig) * (u.m/u.s)/u.day
 
 dP_dt_preferred = gamma_dot_preferred * P / c.c
+dP_dt_plus1sigma = (
+    (gamma_dot_value + gamma_dot_sig)* (u.m/u.s)/u.day * P / c.c - dP_dt_preferred
+)
+dP_dt_minus1sigma = (
+    (gamma_dot_value - gamma_dot_sig)* (u.m/u.s)/u.day * P / c.c - dP_dt_preferred
+)
 dP_dt_limit = gamma_dot_limit * P / c.c
 dP_dt_measured = -4.00e-10
 dP_dt_measured_err = 3.8e-10
@@ -43,6 +49,8 @@ print('Knutson+ 2014 reported {:d} CPS data points, and used {:d} data sets'.
      format(N_CPS, N_data))
 print('gamma_dot_value: {:.6g} +/-({:.6g}) --> gamma_dot_limit: {:.6g}'.
       format(gamma_dot_value, gamma_dot_sig, gamma_dot_limit))
+print('dP/dt_Dopplerquoted = {:.6g} +{:.6g}, -{:.6g}'.
+      format(dP_dt_preferred, dP_dt_plus1sigma, np.abs(dP_dt_minus1sigma)))
 print('2σ upper limit on dP/dt change from Doppler shift: {:.6g}'.format(dP_dt_limit.cgs))
 print('dP/dt measured: {:.6g}, +/-({:.6g})'.
       format(dP_dt_measured, dP_dt_measured_err))
