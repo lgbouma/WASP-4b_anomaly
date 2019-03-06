@@ -1,4 +1,4 @@
-Dear Dr. Endl,
+bDear Dr. Endl,
 
 We thank you for organizing the review of our paper, and thank the
 referee for constructive criticism.  We have considered the referee's
@@ -40,13 +40,9 @@ take them into consideration when revising their manuscript.
   > mentioned but did not sufficiently emphasize: a massive outer
   > companion, perhaps on an eccentric orbit, might be able to explain
   > both the transit and radial velocity observations. We have
-  > emphasized this possibility throughout the text where appropriate.
-  > We have opted against developing a joint model (transits+RVs) for
-  > the putative 3-body system, because the RV data show only a weak
-  > linear trend. Detection of a periastron passage or any curvature in
-  > the radial velocities would be needed for this scenario to be truly
-  > convincing.  Instead, we added our own re-analysis of the RV data
-  > (now section 4.3, and figure 6) which confirms the Knutson et al
+  > described this possibility throughout the text where appropriate.
+  > We also added our own re-analysis of the extant RV data
+  > (now section 4.3, and figure 6) to check on the Knutson et al
   > (2014) result that the star's acceleration towards our line of sight
   > is only weakly detected, and is an order of magnitude too small to
   > explain the observed period derivative from the transit times.
@@ -219,8 +215,8 @@ Section 2.1:
 
 i) It could be informative to provide a reference for the "Deep Space Network". 
 
-  > RESPONSE: Barring any specific suggestion by the referee, we will leave
-  > this one for the reader to pursue at their leisure.
+  > RESPONSE: We are not aware of any paper that suits the purpose here,
+  > so we added a citation to the URL of the Deep Space Network.
 
 REFEREE COMMENT
 
@@ -375,7 +371,7 @@ the mid-transit times' uncertainties determined?
     > $22.6$ seconds.  We verified that omitting this step did not
     > appreciably alter any of our conclusions."""
 
-  > So yes, we used the same transit model as before (the BATMAN
+  > In short, we used the same transit model as before (the BATMAN
   > code), but with the addition of the slope and intercept of a
   > linear trend as free parameters.  Our proceduring for
   > determining the mid-transit time uncertainties is also
