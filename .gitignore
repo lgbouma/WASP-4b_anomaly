@@ -9,3 +9,4 @@ src/template.txt
 *.log
 *.aux
 *personal*
+*DS_Store

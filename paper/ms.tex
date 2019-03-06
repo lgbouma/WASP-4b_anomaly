@@ -347,7 +347,7 @@ star is designated as TIC 402026209 in the TESS Input Catalog
 \citep{stassun_TIC_2018}.  The pixel data for an $11\times11$ array
 surrounding WASP-4 were averaged into 2-minute stacks by the onboard
 computer.  The data were downlinked via the Deep Space
-Network\footnote{\url{https://deepspace.jpl.nasa.gov}}, and the
+Network\footnote{\url{deepspace.jpl.nasa.gov}}, and the
 spacecraft timestamps were calibrated against the ground-station
 clocks.  The spacecraft clock times were then transformed by the
 Payload Operations Center into the {\it Temps Dynamique Barycentrique}
@@ -463,7 +463,7 @@ transit, the best-fit models, and the residuals.  Table~2 reports the
 mid-transit times and their uncertainties.  After binning the
 residuals to 1-hour windows, the lightcurves have an rms scatter of
 586\,{\rm ppm}.  The pre-launch TESS noise
-model\footnote{\url{github.com/lgbouma/tnm}}
+model\footnote{\url{github.com/lgbouma/tnm}, commit \texttt{be06f09}}
 (\citealt{winn_photonflux_2013}, \citealt{Sullivan_2015} Section 6.4)
 would have predicted an error budget consisting of the following terms
 added in quadrature: 410\,{\rm ppm} from photon-counting noise,
@@ -1398,7 +1398,7 @@ timing for a large number of systems.
 
 \acknowledgements
 L.G.B.\ and J.N.W.\ gladly acknowledge helpful discussions with
-A.~Bailey, F.~Dai, J.~Goodman, K.~Patra and V.~Van Eylen, and are
+A.~Bailey, J.~Goodman, K.~Patra and V.~Van Eylen, and are
 grateful to the people who have turned TESS from an idea into reality.
 \added{L.G.B. thanks A.~Bixel and E.~May for clarifying details
 concerning the available IMACS lightcurves.}
@@ -1542,7 +1542,8 @@ We repeated all the data reduction and analysis steps described in
 this paper for other hot Jupiters observed by TESS for which timing
 data exists spanning many years.  First, we checked which hot Jupiters
 were observed over the first three TESS sectors using a combination of
-\texttt{tessmaps}\footnote{\url{github.com/lgbouma/tessmaps}} and
+\texttt{tessmaps}\footnote{\url{github.com/lgbouma/tessmaps}, 
+	commit \texttt{569bbc2}} and
 TEPCat \citep{southworth_homogeneous_2011}.  We recalculated the
 barycentric corrections using the \citet{eastman_achieving_2010} code,
 and found values that agreed with the lightcurve headers to within
