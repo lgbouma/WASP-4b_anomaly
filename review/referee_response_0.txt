@@ -153,37 +153,38 @@ this scenario.
   > the following text in Section 3.3:
 
   > To explore the effect of possible spot-crossing events on the TESS
-  > transit time measurements, we performed a separate test.  We injected
-  > triangular spot-anomalies with amplitude $0.03\%$ and duration 30
-  > minutes at random phases into each transit.  The amplitudes were
-  > larger than the spot-crossing anomalies observed by
-  > \citet{southworth_high-precision_2009} and
+  > transit time measurements, we performed a separate test.  We
+  > injected triangular spot-anomalies with amplitude $0.03\%$ and
+  > duration 30 minutes at random phases into each transit.  The
+  > amplitudes were larger than the spot-crossing anomalies observed
+  > by \citet{southworth_high-precision_2009} and
   > \citet{sanchis-ojeda_starspots_2011}, and the durations were
-  > comparable.  Spots of these amplitudes resemble the anomalies present
-  > in transits ``1360.54'' and ``1372.58'' of Figure
+  > comparable.  Spots of these amplitudes resemble the anomalies
+  > present in transits ``1360.54'' and ``1372.58'' of Figure
   > \ref{fig:lightcurves}: they are visible, but at low confidence.
   > 
-  > With spots injected, we repeated our measurement of the transit times.
-  > On average, the measured transit times did not change with spots
-  > injected, because the flux deviations are symmetric about the transit
-  > minimum.  For individual transits, there were no cases for which the
-  > timing deviation was larger than one minute.  The most concerning
-  > shift occurs when the spot anomaly occurs during transit egress, in
-  > which case the measured mid-time is shifted early by between 30 and 50
-  > seconds \citep[qualitatively similar to results found
-  > by][]{ioannidis_how_2016}.
+  > With spots injected, we repeated our measurement of the transit
+  > times.  On average, the measured transit times did not change
+  > after injecting spots, because the flux deviations are equally
+  > likely to occur in the first and second halves of the transit.
+  > For individual transits, there were no cases for which the timing
+  > deviation was larger than one minute.  The largest shifts occur
+  > when the spot anomaly occurs during transit ingress or egress, in
+  > which case the measured mid-time is shifted either late or early
+  > by between 30 and 50 seconds \citep[qualitatively similar to
+  > results found by][]{ioannidis_how_2016}.
   > 
   > Therefore the TESS observations could hypothetically all be skewed
   > early if there were spot-crossing events during every egress.  Two
-  > arguments rule out this possibility.  (1) The lightcurve residuals do
-  > not show evidence for these events.  (2) The stellar rotation period
-  > is between 20 and 40 days, and the sky-projected stellar obliquity is
-  > less than 10 degrees
+  > arguments rule out this possibility.  (1) The lightcurve residuals
+  > do not show evidence for these events.  (2) The stellar rotation
+  > period is between 20 and 40 days, and the sky-projected stellar
+  > obliquity is less than 10 degrees
   > \citep{triaud_spin-orbit_2010,sanchis-ojeda_starspots_2011,hoyer_tramos_2013}.
-  > Since the planet orbits every 1.3 days, requiring that spot anomalies
-  > always occur during egress would be equivalent to requiring a stellar
-  > spot distribution that is exquisitely (and thus implausibly)
-  > distributed to match the planet egress times.
+  > Since the planet orbits every 1.3 days, requiring that spot
+  > anomalies always occur during egress would be equivalent to
+  > requiring a stellar spot distribution that is exquisitely (and
+  > thus implausibly) distributed to match the planet egress times.
 
 REFEREE COMMENT
 
@@ -555,34 +556,32 @@ their results?
 
   > RESPONSE: We have added the following paragraphs at the end of
   > Section 3.3:
-  
-  > There is a final systematic concern in our global methodology.  We
-  > have opted to use mid-transit time values derived by different
-  > authors, who used heterogeneous methods to fit and detrend their
-  > lightcurves.  This of course assumes that these authors have
-  > correctly documented their time systems.  Further, though many
-  > choices in transit-fitting ({\it e.g.}, parametrization of
-  > limb-darkening and eccentricity) do not affect transit mid-time
-  > measurements, different detrending approaches can asymmetrically
-  > warp transits and shift mid-transit times.  The magnitude of this
-  > systematic effect is hard to quantify, but the situation is fairly
-  > clear from Figure~\ref{fig:times}.  Many independent authors
-  > provided transit measurements shortly after WASP-4b's discovery,
-  > so the data should on average be acceptable.
-  > \citet{huitson_gemini_2017} provided the most important data from
-  > epochs 0-1000, and so if their data were systematically affected
-  > by detrending choices at the level of many times their reported
-  > uncertainties, our timing anomaly would be suspect.  For this
-  > reason, we paid careful attention to the
+
+  > There is a final concern that is difficult to address.  We collected
+  > the mid-transit time values derived by different authors, who used
+  > heterogeneous methods to fit and detrend their lightcurves.  We have
+  > also assumed that these authors have correctly documented the time
+  > systems in which the data are reported.  Further, though many choices
+  > in transit-fitting ({\it e.g.}, parametrization of limb-darkening and
+  > eccentricity) do not affect transit mid-time measurements, different
+  > detrending approaches can asymmetrically warp transits and shift
+  > mid-transit times.  The magnitude of this systematic effect is hard to
+  > quantify, but the situation is fairly clear from
+  > Figure~\ref{fig:times}.  Many independent authors provided transit
+  > measurements shortly after WASP-4b's discovery, and the data are
+  > consistent with each other. \citet{huitson_gemini_2017} provided the
+  > most important data from epochs 0-1000. If their data were
+  > systematically affected by detrending choices or time-system confusion
+  > at the level of several times their reported uncertainties, then it
+  > possible that the orbital period is constant despite the evidence in
+  > the TESS data.  For this reason, we paid careful attention to the
   > \citet{huitson_gemini_2017} data set, and corresponded with the
-  > authors to confirm that their results are not affected by
-  > systematic effects of the required amplitude.
+  > authors to confirm that their results are not affected by systematic
+  > effects of the required amplitude.
   > 
-  > None of the concerns mentioned in this subsection are likely
-  > explanations for the observed timing variations. We proceed by
-  > considering possible astrophysical explanations.
-
-
+  > None of the concerns mentioned in this subsection seem likely to
+  > explain the observed timing variations. We proceed by considering
+  > possible astrophysical explanations.
 
 REFEREE COMMENT
 
