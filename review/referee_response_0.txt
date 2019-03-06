@@ -1,4 +1,4 @@
-bDear Dr. Endl,
+Dear Dr. Endl,
 
 We thank you for organizing the review of our paper, and thank the
 referee for constructive criticism.  We have considered the referee's
@@ -35,16 +35,16 @@ below be addressed.
 Below are my comments, beginning with the major points. I recommend the authors
 take them into consideration when revising their manuscript.
 
-  > RESPONSE: We thank the referee for this summary. In our revision, we
-  > have added weight to a third possible explanation that we previously
-  > mentioned but did not sufficiently emphasize: a massive outer
-  > companion, perhaps on an eccentric orbit, might be able to explain
-  > both the transit and radial velocity observations. We have
+  > RESPONSE: We thank the referee for this summary. In our revision,
+  > we have added weight to a third possible explanation that we
+  > previously mentioned but did not sufficiently emphasize: a massive
+  > outer companion, perhaps on an eccentric orbit, might be able to
+  > explain both the transit and radial velocity observations. We have
   > described this possibility throughout the text where appropriate.
-  > We also added our own re-analysis of the extant RV data
-  > (now section 4.3, and figure 6) to check on the Knutson et al
-  > (2014) result that the star's acceleration towards our line of sight
-  > is only weakly detected, and is an order of magnitude too small to
+  > We also added our own re-analysis of the extant RV data (now
+  > section 4.3, and figure 6) to check on the Knutson et al (2014)
+  > result that the star's acceleration towards our line of sight is
+  > only weakly detected, and is an order of magnitude too small to
   > explain the observed period derivative from the transit times.
 
 ********************************************************************************
@@ -215,8 +215,8 @@ Section 2.1:
 
 i) It could be informative to provide a reference for the "Deep Space Network". 
 
-  > RESPONSE: We are not aware of any paper that suits the purpose here,
-  > so we added a citation to the URL of the Deep Space Network.
+  > RESPONSE: We are not aware of any paper that suits the purpose
+  > here, so we added a citation to the URL of the Deep Space Network.
 
 REFEREE COMMENT
 
