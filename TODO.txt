@@ -3,19 +3,6 @@ MOST PRESSING
 
 TODO:
 
-* add the Pdotdot model
-
-* add
-  *Caldwell,as coauthors
-
-* cite Buhler+ 2016 somewhere in text (perhaps).
-  * what is the story of HAT-P-13? how did they get k_love,p? and core mass?
-  ... should be aware!!
-
-----------
-
-* post to arxiv: once you have a response
-
 * notify Princeton media office of result.
   - send email to hear about what options there are
   * once hear back from referee: reach out again
@@ -25,11 +12,10 @@ TODO:
   ones have been taken in a while.  (a planet should be there...)
 
   * ... is WASP-4 up soon from Hawaii?
-    - not great. usually terrible seeing time.
+    rises from hawaii in May. Sets in December.
 
   * get HARPS RVs over the summer, via KESPRINT.
     * will Winn impose it? or should I?
 
 * schedule in further ground-based follow-up next season.
   * get some magellan time to observe an occultation / transit?
-

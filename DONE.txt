@@ -674,3 +674,23 @@ x if include, rerun fits with Bixel's three points. how do they change things,
 - if do not include, then include mention in the acknowledgements.
 
 
+------------------------------------------
+Wed 06 Mar 2019 01:56:17 PM EST
+
+x add the Pdotdot model
+
+* add
+  x Caldwell,as coauthors
+  - no response -> nope!
+
+x cite Buhler+ 2016 somewhere in text (perhaps).
+  x what is the story of HAT-P-13? how did they get k_love,p? and core mass?
+  ... should be aware!!
+
+  somewhat obscure!
+
+- post to arxiv: once you have a response
+
+----------
+
+
