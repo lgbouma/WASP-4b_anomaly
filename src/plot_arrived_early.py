@@ -36,6 +36,18 @@ def plot_arrived_early(plname, xlim=None, ylim=None, savpath=None, ylim1=None):
     model_epoch = np.arange(-1000,3000,1)
     model_tmid = lsfit_t0 + model_epoch*lsfit_period
 
+    ##########
+    # write the data for future reference (& to send to j. southworth)
+    sw_df = pd.DataFrame(
+        {'epoch':epoch,'tmid':tmid,'err_tmid':err_tmid}
+    )
+    sw_df.to_csv('../southworth_fig3a_preTESS_data.csv',index=False)
+    sw_df1 = pd.DataFrame(
+        {'tess_epoch':tess_epoch,'tess_tmid':tess_tmid,'tess_err_tmid':tess_err_tmid}
+    )
+    sw_df1.to_csv('../southworth_fig3a_tess_data.csv',index=False)
+    ##########
+
     model_tmid_upper = np.maximum(
         (lsfit_t0+lsfit_t0_err) + model_epoch*(lsfit_period+lsfit_period_err),
         (lsfit_t0+lsfit_t0_err) + model_epoch*(lsfit_period-lsfit_period_err)
