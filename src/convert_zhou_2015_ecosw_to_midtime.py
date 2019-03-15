@@ -57,3 +57,7 @@ print('tocc %s' % tocc)
 print('tocc_upper %s' % tocc_upper)
 print('tocc_lower %s' % tocc_lower)
 print('(tocc_upper-tocc) in minutes {:.2f}'.format((tocc_upper-tocc)*24*60))
+
+# there's then a 22.8 second 2a/c light travel time effect
+tocc_ltt_corrected = tocc - 22.8/(60*60*24)
+print('tocc_ltt_corrected %s' % tocc_ltt_corrected)
