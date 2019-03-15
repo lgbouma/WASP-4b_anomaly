@@ -5,7 +5,8 @@ TODO:
 
 * notify Princeton media office of result.
   - send email to hear about what options there are
-  * once hear back from referee: reach out again
+  * once you've resubmitted (and are waiting to go to proofing stage): reach
+    out again
 
 * Consider contacting Andrew Howard, to get a few HIRES RV observations, to
   extend the linear trend pointed out by Knutson et al 2014. i don't think new
