@@ -322,7 +322,7 @@ same amplitude as was seen for WASP-4.
 
 \begin{figure*}[t]
     \begin{center}
-        \includegraphics[width=0.9\textwidth]{f2.png}
+        \includegraphics[width=0.7\textwidth]{f2.png}
     \end{center}
     \vspace{-0.7cm}
     \caption{
@@ -676,6 +676,7 @@ there are four \added{available} occultation times.
 
 
 \subsection{Analysis}
+\label{subsec:analysis}
 
 First, we \replaced{fitted}{performed a weighted least-squares fit of}
 a constant-period model (\added{a }``linear ephemeris'') to the
@@ -748,29 +749,38 @@ epoch, and the angular velocity of the line of apsides.
 
 \added{We fitted each model by assuming a Gaussian likelihood and
 sampling over the posterior probability distributions. The prior for
-the quadratic model allowed the period derivative to have any sign.}
+the quadratic model allowed the period derivative to have any sign.
+We considered two possible priors for the precession model: the first
+is a wide prior that allows non-physical values of the planetary
+Love number (Equation~\ref{eq:love_number}). The second requires
+that the planetary Love number is less than that of a sphere with a
+homogeneous density profile.  }
+
 Figure~\ref{fig:times} shows the residuals with respect to the
 constant-period model.  The best-fitting constant-period model has
 $\chi^2 = 174$ and 61 degrees of freedom.  The best-fitting
 \replaced{decreasing-period}{quadratic} model has $\chi^2 = 62.6$ and
-60 degrees of freedom.  The best-fitting precession model has $\chi^2
-= 64.3$ and 58 degrees of freedom.  Either of the latter two models
-provides a much better fit than the constant-period model.  The
-difference in $\chi^2$ between the first and second models corresponds
-to $p \approx 10^{-26}$.
+60 degrees of freedom.  The best-fitting precession model \added{under
+the wide prior} has \replaced{$\chi^2 = 64.3$}{$\chi^2 = 64.0$} and 58
+degrees of freedom.\added{ Under the physical prior, the fit is slightly
+worse, with $\chi^2=64.8$}. The precession and quadratic models both
+provide much better fits than the constant-period model.  The
+difference in $\chi^2$ between the linear and quadratic models
+corresponds to $p \approx 10^{-26}$.
 
 The \replaced{decreasing-period}{quadratic} model provides a slightly
 better fit to the data than the precession model.  It is favored by
-$\Delta \chi^2 = 1.7$, and has two fewer free parameters.  A useful
-heuristic for model comparison is the Bayesian Information Criterion
-(BIC),
+\replaced{$\Delta \chi^2 = 1.7$}{$\Delta \chi^2 = 1.4$}, and has two
+fewer free parameters.  A useful heuristic for model comparison is the
+Bayesian Information Criterion,
 \begin{equation}
   {\rm BIC} = \chi^2 + k\log n,
 \end{equation}
 where $k$ is the number of free parameters, and $n$ is the number of
 data points. In this case, $n=62$.  The difference in the BIC between
 the precession and decay models is $\Delta {\rm BIC} = {\rm BIC}_{\rm
-prec} - {\rm BIC}_{\rm quad} = 10$, corresponding to a Bayes factor of
+prec} - {\rm BIC}_{\rm quad} = 10$\added{, assuming a wide prior for
+the precession model}. This corresponds to a Bayes factor of
 $1.1\times 10^{4}$.  Likewise, the Akaike Information Criterion favors
 the constant-period-derivative model by $\Delta {\rm AIC} = 5.8$.
 Differences of this magnitude are traditionally deemed ``strong
@@ -803,11 +813,12 @@ period is $27^{+10}_{-7}$ years.  All of the best-fitting parameters
 (the medians of the posterior distributions) and the 68\% credible
 intervals are reported in Table~4.
 
+
 \explain{The following subsection has been added since the original
 submission, per the referee's suggestions.}
 \subsection{Possible systematic errors}
 
-To assess the robustness of these results, we considered a few
+To assess the overall robustness of our results, we considered a few
 possible systematic effects in the timing dataset.  
 
 \paragraph{Suspect pre-TESS light curves}
@@ -842,12 +853,10 @@ first and second halves of the transit.  For individual transits,
 there were no cases for which the timing deviation was larger than one
 minute.  The largest shifts occur when the spot anomaly occurs during
 transit ingress or egress, in which case the measured mid-time is
-shifted either late or early by between 30 and 50 seconds
-\citep[qualitatively similar to results found
-by][]{ioannidis_how_2016}.
+shifted either late or early by between 30 and 50 seconds.
 
-Therefore the TESS observations could hypothetically all be skewed
-early if there were spot-crossing events during every egress.  Two
+The TESS observations could therefore be skewed
+early if there were spot-crossing events during {\it every} egress.  Two
 arguments rule out this possibility.  (1) The lightcurve residuals do
 not show evidence for these events.  (2) The stellar rotation period
 is between 20 and 40 days, and the sky-projected stellar obliquity is
@@ -1065,6 +1074,16 @@ through planetary obliquity tides.
 \subsection{Apsidal precession}
 \label{sec:apsidal_precession}
 
+\explain{The result given in Equation~\ref{eq:love_number} has been
+corrected from the submitted version. The previously stated result, k2
+= $1.5^{+2.1}_{-1.1}$ had a whopping three errors. The first was a
+typo that led to printing of 84th and 16th percentiles, instead of the
+difference of these percentiles from the median. The second was an
+insufficiently precise specification of the assumed priors, which are
+now described.  The third was ignoring the uncertainty in the planet
+radius and semimajor axis, which enter at the fifth power and are now
+included.  }
+
 If instead the observed timing variation is just a small portion of an
 apsidal precession cycle, then the orbital eccentricity is a few times
 $10^{-3}$, and the full precession period is about 27 years.
@@ -1078,27 +1097,48 @@ and tidal bulges contribute at the 10\% level at most.  Thus, a
 measurement of the precession rate can be used to determine the
 planet's Love number.  From their Equation 14, the implied Love number
 for WASP-4b is
-\begin{equation}
-k_{2,{\rm p}} = 1.5^{+0.5}_{-0.4}.
-\end{equation}
-For comparison, the Love number of Jupiter is about 0.55
-\citep{wahl_tidal_2016,ni_empirical_2018}, and a uniform density
-sphere has $k_2 = 1.5$. The uncertainty in $k_{2,{\rm p}}$ for WASP-4b
-is large because the eccentricity, reference time, and ${\rm
-d}\omega/{\rm d}E$ have strongly correlated errors, and the measured
-occultation times only barely constrain these parameters
+\begin{align}
+  k_{2,{\rm p}} &= 1.59^{+0.70}_{-0.47}
+    \quad{\rm (wide\ prior),} \\
+  k_{2,{\rm p}} &=  1.20^{+0.20}_{-0.26}
+    \quad(k_{2,{\rm p}} \sim \mathcal{U}[0.015, 1.5])
+  \label{eq:love_number}
+\end{align}
+where the uncertainties in the semimajor axis and planet radius have been
+propagated through our Markov chains, and $\mathcal{U}$ denotes the uniform 
+distribution.  For comparison, the Love number
+of Jupiter is about 0.55 \citep{wahl_tidal_2016,ni_empirical_2018},
+and a uniform density sphere has $k_2 = 1.5$. The uncertainty in
+$k_{2,{\rm p}}$ for WASP-4b is large because the eccentricity,
+reference time, and ${\rm d}\omega/{\rm d}E$ have strongly correlated
+errors, and the \added{four available}\deleted{measured} occultation
+times only weakly constrain these parameters
 (Figure~\ref{fig:future}).
 
-The main problem with the apsidal precession hypothesis is to explain
-why the eccentricity would be as large as $\sim$$10^{-3}$ despite
-rapid tidal circularization.  For WASP-4, Equation~\ref{eq:de_dt}
-gives $\tau_e = 0.29 (Q_{\rm p}'/10^5) \, {\rm Myr}$.  The star is
-several billion years old, so unless the planet arrived very recently,
-any initial eccentricity should have been lowered well below
-$\sim$$10^{-3}$.  The top panel of Figure~\ref{fig:context} compares
-the expected eccentricity damping time of WASP-4b with that of other
-transiting giant planets.  WASP-4b has one of the shortest known
-eccentricity damping times.
+\added{ The results under both priors are larger than the Love number
+of Jupiter, at weak statistical signifiance.  Imposing the
+physically-motivated prior truncates the allowed values of $k_{2,{\rm
+p}}$, and drives the precession period towards larger values.
+Different priors also change the predicted evolution of the
+orbit.  While the precession model matches the orbital decay model for
+the next two decades in transits (Figure~\ref{fig:future}), in
+occultations the precession model can deviate from the orbital decay
+model, particularly if one imposes stricter priors on the planetary
+Love number. This suggests that promptly obtaining occultation time
+measurements for the system could help rule out the apsidal precession
+model.  For the time being, the data are insufficient to make a
+stronger ruling.  }
+
+The main problem with the apsidal precession hypothesis \added{under
+either of the priors} is to explain why the eccentricity would be as
+large as $\sim$$10^{-3}$ despite rapid tidal circularization.  For
+WASP-4, Equation~\ref{eq:de_dt} gives $\tau_e = 0.29 (Q_{\rm p}'/10^5)
+\, {\rm Myr}$.  The star is several billion years old, so unless the
+planet arrived very recently, any initial eccentricity should have
+been lowered well below $\sim$$10^{-3}$.  The top panel of
+Figure~\ref{fig:context} compares the expected eccentricity damping
+time of WASP-4b with that of other transiting giant planets.  WASP-4b
+has one of the shortest known eccentricity damping times.
 
 \paragraph{Neighboring companion}
 One way to maintain a significant eccentricity is through the
@@ -1327,22 +1367,24 @@ observed $82$ second variation.
 
 
 \explain{The following subsection had material moved into the ``Timing
-variation due to line of sight acceleration'' subsection.}
+variation due to line of sight acceleration'' subsection. Figure 7 was
+updated to clarify the Love number prior for the precession model.}
 \subsection{Other possible explanations}
 
-\begin{figure*}[t]
+\begin{figure*}[!ht]
 	\begin{center}
 		\leavevmode
 		\includegraphics[width=0.9\textwidth]{f7.pdf}
 	\end{center}
 	\vspace{-0.7cm}
 	\caption{
-    {\bf Further observations will be needed to confirm and understand
+    {\bf Further observations are needed to confirm and understand
     the timing variations of WASP-4b.} \replaced{Dots}{Symbols} are as
     in Figure~\ref{fig:times}.  Lines are 100 random draws from the
     posteriors of the apsidal precession model (orange), and the
-    orbital decay model (blue).  \added{The two models may begin to
-    diverge in the mid-2020s}.    
+    orbital decay model (blue).  \added{The prior for the precession
+    model assumes $k_{2,{\rm p}} \sim \mathcal{U}[0.015, 1.5]$; dashed orange
+    lines emphasize samples with planetary Love numbers below 0.75}.    
 		\label{fig:future}
 	}
 \end{figure*}
@@ -1376,11 +1418,12 @@ massive outer companion --- would be the least exotic option, but
 nonetheless a valuable discovery.}
 
 If TESS is extended beyond its primary mission, it will likely observe
-additional transits of WASP-4b in the early 2020s
-(Figure~\ref{fig:future}).  High-precision transit observations with
+additional transits of WASP-4b in the early 2020s.
+High-precision transit observations with
 larger telescopes would also be useful.  In order to decide between
 orbital decay and apsidal precession, occultation measurements in both
-the near term and also in the mid-2020s will be needed.  More
+the near term and also in the mid-2020s will be needed 
+(Figure~\ref{fig:future}).  More
 radial-velocity data would help in the search for additional bodies
 that could be causing dynamical perturbations, or an overall
 acceleration of the host star.  The transit duration variations are
@@ -1398,10 +1441,10 @@ timing for a large number of systems.
 
 \acknowledgements
 L.G.B.\ and J.N.W.\ gladly acknowledge helpful discussions with
-A.~Bailey, J.~Goodman, K.~Patra and V.~Van Eylen, and are
-grateful to the people who have turned TESS from an idea into reality.
-\added{L.G.B. thanks A.~Bixel and E.~May for clarifying details
-concerning the available IMACS lightcurves.}
+A.~Bailey, J.~Goodman, K.~Patra\added{, D. Ragozzine,} and V.~Van
+Eylen, and are grateful to the people who have turned TESS from an
+idea into reality.  \added{L.G.B. thanks A.~Bixel and E.~May for
+clarifying details concerning the available IMACS lightcurves.}
 %
 WASP-4 was included on the ``short-cadence'' target list thanks to the
 Guest Investigator programs of J.\ Southworth and S.\ Kane (G011112
