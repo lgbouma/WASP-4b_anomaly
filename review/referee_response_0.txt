@@ -35,17 +35,26 @@ below be addressed.
 Below are my comments, beginning with the major points. I recommend the authors
 take them into consideration when revising their manuscript.
 
-  > RESPONSE: We thank the referee for this summary. In our revision,
-  > we have added weight to a third possible explanation that we
-  > previously mentioned but did not sufficiently emphasize: a massive
-  > outer companion, perhaps on an eccentric orbit, might be able to
-  > explain both the transit and radial velocity observations. We have
-  > described this possibility throughout the text where appropriate.
-  > We also added our own re-analysis of the extant RV data (now
+  > RESPONSE: We thank the referee for this summary. The major and minor
+  > points are addressed individually below. There are also three larger
+  > changes that we highlight here.
+  >
+  > 1) In our revision, we have added weight to a third possible
+  > explanation that we previously mentioned but did not sufficiently
+  > emphasize: a massive outer companion, perhaps on an eccentric orbit,
+  > might be able to explain both the transit and radial velocity
+  > observations. We have described this possibility throughout the text
+  > where appropriate.
+  >
+  > 2) We also added our own re-analysis of the extant RV data (now
   > section 4.3, and figure 6) to check on the Knutson et al (2014)
   > result that the star's acceleration towards our line of sight is
   > only weakly detected, and is an order of magnitude too small to
   > explain the observed period derivative from the transit times.
+  >
+  > 3) Finally, we have also added a more detailed exploration of how
+  > the assumed prior in the precession model affects the inferred Love
+  > number, and the predicted transit and occultation times.
 
 ********************************************************************************
 
@@ -156,23 +165,23 @@ this scenario.
   > transit time measurements, we performed a separate test.  We
   > injected triangular spot-anomalies with amplitude $0.03\%$ and
   > duration 30 minutes at random phases into each transit.  The
-  > amplitudes were larger than the spot-crossing anomalies observed
-  > by \citet{southworth_high-precision_2009} and
+  > amplitudes were larger than the spot-crossing anomalies observed by
+  > \citet{southworth_high-precision_2009} and
   > \citet{sanchis-ojeda_starspots_2011}, and the durations were
   > comparable.  Spots of these amplitudes resemble the anomalies
   > present in transits ``1360.54'' and ``1372.58'' of Figure
   > \ref{fig:lightcurves}: they are visible, but at low confidence.
   > 
   > With spots injected, we repeated our measurement of the transit
-  > times.  On average, the measured transit times did not change
-  > after injecting spots, because the flux deviations are equally
-  > likely to occur in the first and second halves of the transit.
-  > For individual transits, there were no cases for which the timing
-  > deviation was larger than one minute.  The largest shifts occur
-  > when the spot anomaly occurs during transit ingress or egress, in
-  > which case the measured mid-time is shifted either late or early
-  > by between 30 and 50 seconds \citep[qualitatively similar to
-  > results found by][]{ioannidis_how_2016}.
+  > times.  On average, the measured transit times did not change after
+  > injecting spots, because the flux deviations are equally likely to
+  > occur in the first and second halves of the transit.  For individual
+  > transits, there were no cases for which the timing deviation was
+  > larger than one minute.  The largest shifts occur when the spot
+  > anomaly occurs during transit ingress or egress, in which case the
+  > measured mid-time is shifted either late or early by between 30 and
+  > 50 seconds \citep[qualitatively similar to results found
+  > by][]{ioannidis_how_2016}.
   > 
   > Therefore the TESS observations could hypothetically all be skewed
   > early if there were spot-crossing events during every egress.  Two
@@ -183,8 +192,8 @@ this scenario.
   > \citep{triaud_spin-orbit_2010,sanchis-ojeda_starspots_2011,hoyer_tramos_2013}.
   > Since the planet orbits every 1.3 days, requiring that spot
   > anomalies always occur during egress would be equivalent to
-  > requiring a stellar spot distribution that is exquisitely (and
-  > thus implausibly) distributed to match the planet egress times.
+  > requiring a stellar spot distribution that is exquisitely (and thus
+  > implausibly) distributed to match the planet egress times.
 
 REFEREE COMMENT
 
@@ -234,28 +243,27 @@ information would be appropriate. Also, could the authors describe what a
 "Presearch Data Conditioning" lightcurve is?
 
   > RESPONSE: We have clarified that a "Presearch Data Conditioning"
-  > lightcurve is at a stage of process in which systematic trends
-  > have been removed through the decorrelation process described by
-  > Smith et al (2017).
+  > lightcurve is at a stage of process in which systematic trends have
+  > been removed through the decorrelation process described by Smith et
+  > al (2017).
   >
-  > We now omit explicit mention of "Treshold Crossing Events" in
-  > favor of a more qualitative description.
+  > We now omit explicit mention of "Treshold Crossing Events" in favor
+  > of a more qualitative description.
   >
   > As described in the text, the flags "Reaction Wheel Desaturation
   > Event" and "Manual Exclude" together mean that the data are
   > potentially of poor quality due to "momentum dumps".  We referred
   > the reader to the data release notes for an explanation of what a
-  > "momentum dump" is, and have added text to this footnote to
-  > improve its clarity.
+  > "momentum dump" is, and have added text to this footnote to improve
+  > its clarity.
 
 REFEREE COMMENT
 
 iv) It might be worthwhile to mention what "ramp-like systematic effects" are
 and also include a reference.
 
-  > RESPONSE: We have changed the wording from "ramp-like
-  > systematic effects" to "correlated red noise". No reference is
-  > needed.
+  > RESPONSE: We have changed the wording from "ramp-like systematic
+  > effects" to "correlated red noise". No reference is needed.
 
 REFEREE COMMENT
 
@@ -467,8 +475,8 @@ Section 3.2:
 i) How did you fit the mid times of the preTESS measurements? Did you use a
 weighted least-square fit? 
 
-  > RESPONSE: Yes, this was through weighted least-squares. We have changed the
-  > wording accordingly.
+  > RESPONSE: Yes, this was through weighted least-squares. We have
+  > changed the wording accordingly.
 
 REFEREE COMMENT
 
@@ -533,11 +541,16 @@ v) Similar to i) How did you fit the mid-transit times and occultations shown
 in Figure 4?
 
   > RESPONSE: We have added the following sentences in Section 3.2:
-  > "We fit each model by assuming a Gaussian likelihood and sampling
+  > """
+  > We fitted each model by assuming a Gaussian likelihood and sampling
   > over the posterior probability distributions. The prior for the
-  > quadratic model allowed the period derivative to have any sign."
-  > We have clarified the wording throughout from "decreasing-period
-  > model" to "quadratic model" to reflect the latter point.
+  > quadratic model allowed the period derivative to have any sign.  We
+  > considered two possible priors for the precession model: the first
+  > is a wide prior that allows non-physical values of the planetary
+  > Love number (Equation~\ref{eq:love_number}). The second requires
+  > that the planetary Love number is less than that of a sphere with a
+  > homogeneous density profile.  
+  > """
 
 REFEREE COMMENT
 
@@ -616,9 +629,9 @@ theoretical timescale is shorter, where are the timescale values obtained from?
 Are they estimated from equation (13)? If this is the case, how do the
 theoretical dP/dts are computed?
 
-  > RESPONSE: As noted in the caption of Figure 5, the decay timescale values
-  > are obtained from Equation 15, assuming Qstar'=10^7.  We have slightly
-  > modified the text for clarity on this point.
+  > RESPONSE: As noted in the caption of Figure 5, the decay timescale
+  > values are obtained from Equation 15, assuming Qstar'=10^7.  We have
+  > slightly modified the text for clarity on this point.
 
 REFEREE COMMENT: 
 
@@ -629,22 +642,21 @@ explanation for that behavior? If the orbital period is diminishing, wouldn't
 it be expected to see only a decreasing in the O-C values? Why the O-C values
 would increase at these first epochs? 
 
-  > RESPONSE: To make Figure 4 and 6, we start with the observed
+  > RESPONSE: To make Figure 4 and 6 (now 7), we start with the observed
   > transit and occultation mid-times, as a function of epoch number.
   > We then fit a line to these data.  If the data were generated by a
-  > constant period orbit (with gaussian uncertainties) the residuals
-  > to such a fit would show no correlation with epoch number.
-  > However if the data were generated by a planet with a constant
-  > period derivative (with gaussian uncertainties), the residuals to
-  > such a fit would always be a parabola.  This is because the linear
-  > fit to the data will have contributions from the beginning,
-  > middle, and end of the transit timeseries. Thus the best-fit
-  > linear ephemeris (to data that actually have a decreasing period)
-  > has a best-fit period somewhere between the minimum and maximum
-  > period. At the earliest epochs, the best-fit period is an
-  > underestimate, so you see the increase in O-C. At the latest
-  > epochs, the best-fit period is an overestimate, so you see the
-  > decrease.
+  > constant period orbit (with gaussian uncertainties) the residuals to
+  > such a fit would show no correlation with epoch number.  However if
+  > the data were generated by a planet with a constant period
+  > derivative (with gaussian uncertainties), the residuals to such a
+  > fit would always be a parabola.  This is because the linear fit to
+  > the data will have contributions from the beginning, middle, and end
+  > of the transit timeseries. Thus the best-fit linear ephemeris (to
+  > data that actually have a decreasing period) has a best-fit period
+  > somewhere between the minimum and maximum period. At the earliest
+  > epochs, the best-fit period is an underestimate, so you see the
+  > increase in O-C. At the latest epochs, the best-fit period is an
+  > overestimate, so you see the decrease.
 
 REFEREE COMMENT: 
 
@@ -713,7 +725,7 @@ ii) In the caption of Figure 7: "with standard deviation (σpredicted)" -->
 
 
 ********************************************************************************
-OTHER CHANGES:
+OTHER MINOR CHANGES:
 
 * Added the following coauthors: Fei Dai, Natalia Guerrero, Bill Wohler,
   Douglas Caldwell.
@@ -722,3 +734,8 @@ OTHER CHANGES:
   \deleted{}, and \replaced{}{} commands.
 
 * Minor tweaks to figures.
+
+* Added acknowledgement to D. Ragozzine.
+
+* Updated Figure 7 to use physical prior, and to show subset of samples
+  with k2 < 0.75.
