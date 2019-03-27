@@ -17,7 +17,9 @@ from astropy.time import Time
 
 from numpy import array as nparr
 
-from plot_O_minus_C import get_data, linear_fit, quadratic_fit, precession_fit
+from plot_O_minus_C import (
+    get_data, linear_fit, quadratic_fit, precession_fit, precession_fit_7param
+)
 
 def plot_future(
     x, y, sigma_y,
@@ -28,7 +30,8 @@ def plot_future(
     tcol, tcol_occ,
     savpath=None,
     xlabel='epoch', ylabel='deviation from constant period [min]',
-    xlim=None, ylim=None, ylim1=None):
+    xlim=None, ylim=None, ylim1=None,
+    ):
 
     xfit = np.linspace(10*np.min(x), 10*np.max(x), 10000)
     xfit_occ = np.linspace(10*np.min(x), 10*np.max(x), 10000)
@@ -83,30 +86,47 @@ def plot_future(
             zorder=8, label='binned TESS time', markerfacecolor='yellow',
             markersize=8, marker='*', color='black', lw=0)
 
-    # best-fit models
+    # best-fit models (originally were on-plot, decided i prefered
+    # not)
     a0.plot(tfit.decimalyear,
-            quadratic_fit(theta_quadratic, xfit)
+            -9999+ quadratic_fit(theta_quadratic, xfit)
                 - linear_fit(theta_linear, xfit),
-            label='orbital decay', zorder=-1, c='#1f77b4')
+            label='orbital decay', zorder=-1, c='C0')
     a0.plot(tfit.decimalyear,
-            precession_fit(theta_prec, xfit)
+            -9999+ precession_fit_7param(theta_prec, xfit)
                 - linear_fit(theta_linear, xfit),
-            label='apsidal precession', zorder=0, c='#ff7f0e')
+            label='apsidal precession ($k_2 < 1.5$)', zorder=0, c='C1')
+    a0.plot(tfit.decimalyear,
+            -9999+precession_fit_7param(theta_prec, xfit)
+                - linear_fit(theta_linear, xfit),
+            ls='--',
+            label='apsidal precession ($k_2 < 0.75$)', zorder=0, c='C1')
     a0.plot(tfit.decimalyear,
             linear_fit(theta_linear, xfit)
                 - linear_fit(theta_linear, xfit),
+            ls=':',
             label='constant period', zorder=-3, color='gray')
 
     for theta_quad_sample in theta_quad_samples:
         a0.plot(tfit.decimalyear,
                 quadratic_fit(theta_quad_sample, xfit)
                     - linear_fit(theta_linear, xfit),
-                zorder=-2, alpha=0.17, c='#1f77b4')
+                zorder=-2, alpha=0.17, c='C0')
     for theta_prec_sample in theta_prec_samples:
-        a0.plot(tfit.decimalyear,
-                precession_fit(theta_prec_sample, xfit)
-                    - linear_fit(theta_linear, xfit),
-                zorder=-3, alpha=0.17, c='#ff7f0e')
+        # overplot those in k2p from 0.3 to 0.75 in new color
+        k2p = theta_prec_sample[4]
+        if k2p < 0.75:
+            a0.plot(tfit.decimalyear,
+                    precession_fit_7param(theta_prec_sample, xfit)
+                        - linear_fit(theta_linear, xfit),
+                    ls='--',
+                    zorder=-3, alpha=0.8, c='C1')
+        else:
+            a0.plot(tfit.decimalyear,
+                    precession_fit_7param(theta_prec_sample, xfit)
+                        - linear_fit(theta_linear, xfit),
+                    zorder=-3, alpha=0.17, c='C1')
+
 
     ################
     # occultations #
@@ -117,28 +137,40 @@ def plot_future(
                 mew=1, elinewidth=1)
     # best-fit models
     a1.plot(tfit.decimalyear,
-            quadratic_fit(theta_quadratic, xfit, x_occ=xfit_occ)[1]
+            -9999+ quadratic_fit(theta_quadratic, xfit, x_occ=xfit_occ)[1]
                 - linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1],
-            label='best quadratic fit', zorder=-1, c='#1f77b4')
+            label='best quadratic fit', zorder=-1, c='C0')
     a1.plot(tfit.decimalyear,
-            precession_fit(theta_prec, xfit, x_occ=xfit_occ)[1]
+            -9999+ precession_fit_7param(theta_prec, xfit, x_occ=xfit_occ)[1]
                 - linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1],
-            label='best precession fit', zorder=0, c='#ff7f0e')
+            label='best precession fit', zorder=0, c='C1')
     a1.plot(tfit.decimalyear,
             linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1]
                 - linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1],
+            ls=':',
             label='best linear fit', zorder=-3, color='gray')
 
     for theta_quad_sample in theta_quad_samples:
         a1.plot(tfit.decimalyear,
                 quadratic_fit(theta_quad_sample, xfit, x_occ=xfit_occ)[1]
                     - linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1],
-                zorder=-2, alpha=0.17, c='#1f77b4')
+                zorder=-2, alpha=0.17, c='C0')
     for theta_prec_sample in theta_prec_samples:
-        a1.plot(tfit.decimalyear,
-                precession_fit(theta_prec_sample, xfit, x_occ=xfit_occ)[1]
-                    - linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1],
-                zorder=-3, alpha=0.17, c='#ff7f0e')
+        # overplot those in k2p from 0.3 to 0.75 in new color
+        k2p = theta_prec_sample[4]
+        if k2p < 0.75:
+            a1.plot(tfit.decimalyear,
+                    precession_fit_7param(theta_prec_sample, xfit,
+                                          x_occ=xfit_occ)[1]
+                    - linear_fit(theta_linear, xfit,
+                                 x_occ=xfit_occ)[1],
+                    ls='--',
+                    zorder=-3, alpha=0.8, c='C1')
+        else:
+            a1.plot(tfit.decimalyear,
+                    precession_fit_7param(theta_prec_sample, xfit, x_occ=xfit_occ)[1]
+                        - linear_fit(theta_linear, xfit, x_occ=xfit_occ)[1],
+                    zorder=-3, alpha=0.17, c='C1')
 
     a0.text(0.02, 0.04, 'Transits', transform=a0.transAxes, ha='left',
             va='bottom')
@@ -164,10 +196,11 @@ def plot_future(
     print('saved {:s}'.format(savpath))
 
 
-def main(plname, xlim=None, ylim=None, savname=None, ylim1=None):
+def main(plname, xlim=None, ylim=None, savname=None, ylim1=None,
+         imposephysprior=False):
 
     basedir = '/home/luke/Dropbox/proj/tessorbitaldecay/'
-    pkldir = basedir+'results/model_comparison/'+plname+'/'
+    pkldir = basedir+'results/model_comparison_3plus1/'+plname+'/'
     sampledir = '/home/luke/local/emcee_chains/'
     transitpath = (
         basedir+'data/{:s}_literature_and_TESS_times_O-C_vs_epoch_selected.csv'
@@ -186,10 +219,16 @@ def main(plname, xlim=None, ylim=None, savname=None, ylim1=None):
         sampledir,
         '{:s}_degree2_polynomial_timing_fit.h5'.format(plname)
     )
-    prec_samplepath = os.path.join(
-        sampledir,
-        '{:s}_precession_timing_fit.h5'.format(plname)
-    )
+    if imposephysprior:
+        prec_samplepath = os.path.join(
+            sampledir,
+            '{:s}_precession_timing_fit_physprior.h5'.format(plname)
+        )
+    else:
+        prec_samplepath = os.path.join(
+            sampledir,
+            '{:s}_precession_timing_fit_wideprior.h5'.format(plname)
+        )
     model_samplepaths = [linear_samplepath,
                          quad_samplepath,
                          prec_samplepath]
@@ -204,7 +243,10 @@ def main(plname, xlim=None, ylim=None, savname=None, ylim1=None):
     # get theta_linear, theta_quadratic from MCMC fits.
     fit_2d = pickle.load(open(pkldir+"fit_2d.pkl", 'rb'))
     fit_3d = pickle.load(open(pkldir+"fit_3d.pkl", 'rb'))
-    fit_prec = pickle.load(open(pkldir+"fit_precession.pkl", 'rb'))
+    if imposephysprior:
+        fit_prec = pickle.load(open(pkldir+"fit_prec_phys_prior.pkl", 'rb'))
+    else:
+        fit_prec = pickle.load(open(pkldir+"fit_prec_wide_prior.pkl", 'rb'))
 
     medianparams_2d = fit_2d['fitinfo']['medianparams']
     medianparams_3d = fit_3d['fitinfo']['medianparams']
@@ -223,7 +265,9 @@ def main(plname, xlim=None, ylim=None, savname=None, ylim1=None):
          medianparams_prec['P_side [min]'],
          medianparams_prec['e'],
          medianparams_prec['omega0'],
-         medianparams_prec['domega_dE']
+         medianparams_prec['k2p'],
+         medianparams_prec['Rp'],
+         medianparams_prec['a']
         ]
     )
 
@@ -253,7 +297,6 @@ def main(plname, xlim=None, ylim=None, savname=None, ylim1=None):
         elif ix==2:
             theta_prec_samples = sel_samples
 
-
     if savname:
         savpath = os.path.join(pkldir, savname)
     else:
@@ -280,15 +323,23 @@ def main(plname, xlim=None, ylim=None, savname=None, ylim1=None):
 
 if __name__=="__main__":
 
-    np.random.seed(42)
-
-    #FIXME maybe better to argparse this...
     ticid = 402026209
     plname = 'WASP-4b'
     xlim = [2005, 2030]
     ylim = [-10.5,2]
     ylim1 = [-10.5,4.2]
 
-    savname = None #'future_2005_to_2020.png'
+    np.random.seed(42)
+    savname = 'future_wideprior.png'
+    main(plname, xlim=xlim, ylim=ylim, savname=savname, ylim1=ylim1,
+         imposephysprior=False)
 
-    main(plname, xlim=xlim, ylim=ylim, savname=savname, ylim1=ylim1)
+    np.random.seed(42)
+    savname = 'future_physprior.png'
+    main(plname, xlim=xlim, ylim=ylim, savname=savname, ylim1=ylim1,
+         imposephysprior=True)
+
+    np.random.seed(42)
+    savname = None # this one goes to paper (2019/03/27, 7 param)
+    main(plname, xlim=xlim, ylim=ylim, savname=savname, ylim1=ylim1,
+         imposephysprior=True)
