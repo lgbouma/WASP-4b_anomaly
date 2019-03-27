@@ -111,6 +111,42 @@ def precession_fit(theta, x, x_occ=None):
             )
         )
 
+def precession_fit_7param(theta, x, x_occ=None, Mstar=0.864, Mplanet=1.186):
+    """
+    Precession model. Parameters (t0, P_s, e, ω0, k2p, Rp, semimaj).
+    Must pass transit times.
+
+    If x_occ is none, returns model t_tra array.
+    If x_occ is a numpy array, returns tuple of model t_tra and t_occ arrays.
+    """
+    t0, P_s, e, omega0, k2p, Rplanet, semimaj = theta
+
+    domega_by_dΕ = (
+        15*np.pi * k2p * ((Rplanet*units.Rjup/(semimaj*units.AU)).cgs.value)**5
+        * (Mstar*units.Msun/(Mplanet*units.Mjup)).cgs.value
+    )
+
+    P_a = P_s * (1 - domega_by_dΕ/(2*np.pi))**(-1)
+
+    if not isinstance(x_occ,np.ndarray):
+        return (
+            t0 + P_s*x -
+            ( (e/np.pi) * P_a *
+              np.cos( omega0 + domega_by_dΕ*x)
+            )
+        )
+    else:
+        return (
+            t0 + P_s*x -
+            ( (e/np.pi) * P_a *
+              np.cos( omega0 + domega_by_dΕ*x)
+            ),
+            t0 + P_a/2 + P_s*x_occ +
+            ( (e/np.pi) * P_a *
+              np.cos( omega0 + domega_by_dΕ*x_occ)
+            )
+        )
+
 
 def plot_O_minus_C(
     x, y, sigma_y, theta_linear, theta_quadratic, theta_prec,
