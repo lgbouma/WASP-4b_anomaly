@@ -727,8 +727,17 @@ ii) In the caption of Figure 7: "with standard deviation (σpredicted)" -->
 ********************************************************************************
 OTHER MINOR CHANGES:
 
-* Added the following coauthors: Fei Dai, Natalia Guerrero, Bill Wohler,
-  Douglas Caldwell.
+* Added the following coauthors: Fei Dai, Natalia Guerrero, Bill Wohler.
+
+  - Fei Dai contributed an independent analysis of the RV dataset.
+
+  - Natalia Guerrero is a member of the TESS Science Office at MIT, and has
+    been included in accordance with the TESS collaboration's coauthor listing
+    policy, and for contributions to the manuscript.
+
+  - Bill Wohler is a member of the Science Processing Operations Center at NASA
+    Ames, and has been included in accordance with the TESS collaboration's
+    coauthor listing policy, and for contributions to the manuscript.
 
 * Minor edits in text throughout, as indicated with the \added{},
   \deleted{}, and \replaced{}{} commands.
