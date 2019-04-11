@@ -405,6 +405,18 @@ Hellier, C., Anderson, D.~R., Collier~Cameron, A., {et~al.} 2009,
   \href{http://dx.doi.org/10.1038/nature08245}{\JournalTitle{Nature}, 460,
   1098}
 
+\bibitem[{Henden {et~al.}(2012)Henden, Levine, Terrell, Smith, \&
+  Welch}]{henden_data_2012}
+Henden, A.~A., Levine, S.~E., Terrell, D., Smith, T.~C., \& Welch, D. 2012,
+  \href{https://ui.adsabs.harvard.edu/abs/2012JAVSO..40..430H/abstract}{\JournalTitle{Journal
+  of the American Association of Variable Star Observers (JAAVSO)}, 40, 430}
+
+\bibitem[{H{\o}g {et~al.}(2000)H{\o}g, Fabricius, Makarov, Urban, Corbin,
+  Wycoff, Bastian, Schwekendiek, \& Wicenec}]{hog_tycho-2_2000}
+H{\o}g, E., Fabricius, C., Makarov, V.~V., {et~al.} 2000,
+  \href{https://ui.adsabs.harvard.edu/abs/2000A%26A...355L..27H/abstract}{\JournalTitle{Astronomy
+  and Astrophysics}, 355, L27}
+
 \bibitem[{Hoyer {et~al.}(2012)Hoyer, Rojo, \&
   L\'opez-Morales}]{hoyer_transit_2012}
 Hoyer, S., Rojo, P., \& L\'opez-Morales, M. 2012,
@@ -437,12 +449,6 @@ Husnoo, N., Pont, F., Mazeh, T., {et~al.} 2012,
 Hut, P. 1980,
   \href{http://adsabs.harvard.edu/abs/1980A%26A....92..167H}{\JournalTitle{Astronomy
   and Astrophysics}, 92, 167}
-
-\bibitem[{Ioannidis {et~al.}(2016)Ioannidis, Huber, \&
-  Schmitt}]{ioannidis_how_2016}
-Ioannidis, P., Huber, K.~F., \& Schmitt, J. H. M.~M. 2016,
-  \href{http://dx.doi.org/10.1051/0004-6361/201527184}{\JournalTitle{Astronomy
-  and Astrophysics}, 585, A72}
 
 \bibitem[{Jackson {et~al.}(2009)Jackson, Barnes, \&
   Greenberg}]{jackson_observational_2009}
@@ -776,6 +782,15 @@ Shklovskii, I.~S. 1970,
   \href{http://adsabs.harvard.edu/abs/1970SvA....13..562S}{\JournalTitle{Soviet
   Astronomy}, 13, 562}
 
+\bibitem[{Skrutskie {et~al.}(2006)Skrutskie, Cutri, Stiening, Weinberg,
+  Schneider, Carpenter, Beichman, Capps, Chester, Elias, Huchra, Liebert,
+  Lonsdale, Monet, Price, Seitzer, Jarrett, Kirkpatrick, Gizis, Howard, Evans,
+  Fowler, Fullmer, Hurt, Light, Kopan, Marsh, McCallon, Tam, Van~Dyk, \&
+  Wheelock}]{skrutskie_two_2006}
+Skrutskie, M.~F., Cutri, R.~M., Stiening, R., {et~al.} 2006,
+  \href{http://dx.doi.org/10.1086/498708}{\JournalTitle{The Astronomical
+  Journal}, 131, 1163}
+
 \bibitem[{Smith {et~al.}(2017{\natexlab{a}})Smith, Morris, Jenkins, Bryson,
   Caldwell, \& Girouard}]{smith_kepler_apertures_2017}
 Smith, J.~C., Morris, R.~L., Jenkins, J.~M., {et~al.} 2017{\natexlab{a}},
@@ -926,6 +941,16 @@ Winn, J.~N. 2010,
 Winn, J.~N., Holman, M.~J., Carter, J.~A., {et~al.} 2009,
   \href{http://dx.doi.org/10.1088/0004-6256/137/4/3826}{\JournalTitle{The
   Astronomical Journal}, 137, 3826}
+
+\bibitem[{Wright {et~al.}(2010)Wright, Eisenhardt, Mainzer, Ressler, Cutri,
+  Jarrett, Kirkpatrick, Padgett, McMillan, Skrutskie, Stanford, Cohen, Walker,
+  Mather, Leisawitz, Gautier, McLean, Benford, Lonsdale, Blain, Mendez, Irace,
+  Duval, Liu, Royer, Heinrichsen, Howard, Shannon, Kendall, Walsh, Larsen,
+  Cardon, Schick, Schwalm, Abid, Fabinsky, Naes, \&
+  Tsai}]{wright_wide-field_2010}
+Wright, E.~L., Eisenhardt, P. R.~M., Mainzer, A.~K., {et~al.} 2010,
+  \href{http://dx.doi.org/10.1088/0004-6256/140/6/1868}{\JournalTitle{The
+  Astronomical Journal}, 140, 1868}
 
 \bibitem[{Zahn(1977)}]{zahn_tidal_1977}
 Zahn, J.-P. 1977,

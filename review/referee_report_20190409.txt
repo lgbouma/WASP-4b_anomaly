@@ -1,0 +1,50 @@
+Dear Dr. Endl,
+
+We thank you for your continued consideration of our paper. We are also
+appreciative that the referee has found our revisions sufficient to merit
+publication, and thank them for their detailed responses.
+
+Below, we have reproduced the referee's second set of comments, along with our
+point-by-point responses.  We have performed two of the referee's three
+suggestions; the third is no longer applicable given the nature of the revision
+performed in our first iteration.
+
+Best regards,
+
+Luke Bouma
+
+
+###############################################################################
+
+Reviewer's Comments:
+
+I would like to thank the authors for addressing my major concerns. The
+unchanged conclusion, regarding the best-fitting model to the measured minimum
+times, after analyzing the influence of non-full phase coverage transits and
+with spot-crossing events have provided much more confident in the final
+results. I believe the paper is of sufficient quality in science to be
+published in AJ. I do not need to see a final version of the manuscript, but I
+would appreciate if the authors could address the following 3 minor concerns:
+
+1) In Section 2.3, the reference for the Yonsei Yale isochrones was correctly
+incorporated in the text, but the references for Gaia DR2, Tycho-2, APASS,
+2MASS, and WISE catalogs are still missing. 
+
+  > These surveys / catalogs have now been cited in the "Facility" section at
+  > the end of the paper. Thank you.
+
+2) In the caption of Figure 4, it is recommendable to specify what "binned
+TESS" data mean by adding the same sentence that the authors added in Figure 3,
+"The binned TESS point is the weighted average of 18 TESS transits". 
+
+  > Done.
+
+3) The sentence "The two models may begin to diverge in the mid-2020s" that
+should appear in Caption of Figure 7 is missing.
+
+  > Between the first and second submissions, we added a set of dashed lines to
+  > Figure 7. The dashed lines show that a subset of the apsidal precession
+  > models -- those with k2<0.75 -- are already diverging in the occultation
+  > times.  This is described in paragraph 2 of section 4.2.  Given this
+  > nuance, we would prefer to keep this sentence omitted, as it is no longer
+  > the most immediately relevant point.

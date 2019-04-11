@@ -3,28 +3,28 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ms.aux
 The style file: yahapj.bst
 Database file #1: bibliography.bib
-Repeated entry---line 954 of file bibliography.bib
+Repeated entry---line 1085 of file bibliography.bib
  : @article{pal_periastron_2008
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2757 of file bibliography.bib
+Repeated entry---line 2888 of file bibliography.bib
  : @article{husnoo_observational_2012
  :                                   ,
 I'm skipping whatever remains of this entry
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
-Repeated entry---line 3328 of file bibliography.bib
+Repeated entry---line 3459 of file bibliography.bib
  : @article{southworth_high-precision_2009
  :                                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3368 of file bibliography.bib
+Repeated entry---line 3499 of file bibliography.bib
  : @article{sanchis-ojeda_starspots_2011
  :                                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3430 of file bibliography.bib
+Repeated entry---line 3561 of file bibliography.bib
  : @article{hoyer_tramos_2013
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3463 of file bibliography.bib
+Repeated entry---line 3594 of file bibliography.bib
  : @article{petrucci_no_2013
  :                          ,
 I'm skipping whatever remains of this entry
@@ -38,45 +38,45 @@ Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sulliva
 while executing---line 1561 of file yahapj.bst
 Name 1 in "Sullivan, P. W., and others" has a comma at the end for entry Sullivan_2015
 while executing---line 1561 of file yahapj.bst
-You've used 127 entries,
+You've used 130 entries,
             3215 wiz_defined-function locations,
-            1550 strings with 70062 characters,
-and the built_in function-call counts, 88303 in all, are:
-= -- 5366
-> -- 9493
+            1573 strings with 72075 characters,
+and the built_in function-call counts, 90803 in all, are:
+= -- 5502
+> -- 9794
 < -- 49
-+ -- 3426
-- -- 3273
-* -- 9218
-:= -- 16904
-add.period$ -- 127
-call.type$ -- 127
-change.case$ -- 812
-chr.to.int$ -- 124
-cite$ -- 128
-duplicate$ -- 3394
-empty$ -- 4400
-format.name$ -- 3435
-if$ -- 16765
++ -- 3537
+- -- 3380
+* -- 9499
+:= -- 17388
+add.period$ -- 130
+call.type$ -- 130
+change.case$ -- 829
+chr.to.int$ -- 127
+cite$ -- 131
+duplicate$ -- 3482
+empty$ -- 4509
+format.name$ -- 3543
+if$ -- 17232
 int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 119
-newline$ -- 386
-num.names$ -- 510
-pop$ -- 1275
+missing$ -- 122
+newline$ -- 395
+num.names$ -- 522
+pop$ -- 1306
 preamble$ -- 1
-purify$ -- 803
+purify$ -- 820
 quote$ -- 0
-skip$ -- 2007
+skip$ -- 2055
 stack$ -- 0
-substring$ -- 3051
-swap$ -- 121
+substring$ -- 3138
+swap$ -- 124
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1137
+type$ -- 1164
 warning$ -- 1
-while$ -- 572
+while$ -- 584
 width$ -- 0
-write$ -- 1274
+write$ -- 1304
 (There were 10 error messages)
