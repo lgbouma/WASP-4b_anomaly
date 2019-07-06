@@ -55,8 +55,8 @@ params['dvdt'].vary = True
 # Load radial velocity data, in this example the data is contained in
 # an ASCII file, must have 'time', 'mnvel', 'errvel', and 'tel' keys
 # the velocities are expected to be in m/s
-datadir = "/home/luke/Dropbox/proj/WASP-4b_decay/data"
-datapath = os.path.join(datadir,'RVs_all_WASP4b_for_fitting.csv')
+datadir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/data"
+datapath = os.path.join(datadir,'RVs_all_WASP4b_for_fitting_20190704.csv')
 data = pd.read_csv(datapath, sep=',')
 
 # Define prior shapes and widths here.

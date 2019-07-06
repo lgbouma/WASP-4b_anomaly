@@ -1,4 +1,8 @@
 from radvel import driver
+import os
+import emcee
+if not emcee.__version__ == "2.2.1":
+    raise AssertionError('radvel requires emcee v2')
 
 class args_object(object):
     """
@@ -14,9 +18,12 @@ class args_object(object):
         self.plotkw = {}
         self.gp = False
 
-setupfn = "/home/luke/Dropbox/proj/WASP-4b_decay/src/WASP4.py"
-#outputdir = "/home/luke/Dropbox/proj/WASP-4b_decay/results/rv_fitting/t10onlytwo_LGB_20190228_no_fix_gammaddot"
-outputdir = "/home/luke/Dropbox/proj/WASP-4b_decay/results/rv_fitting/t10onlytwo_LGB_20190228_fix_gammaddot"
+setupfn = "/home/luke/Dropbox/proj/WASP-4b_anomaly/src/WASP4.py"
+#outputdir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/results/rv_fitting/t10onlytwo_LGB_20190228_no_fix_gammaddot"
+#outputdir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/results/rv_fitting/t10onlytwo_LGB_20190228_fix_gammaddot"
+outputdir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/results/rv_fitting/LGB_20190704_fix_gammaddot"
+if not os.path.exists(outputdir):
+    os.mkdir(outputdir)
 
 args = args_object(setupfn, outputdir)
 
@@ -68,7 +75,7 @@ driver.plots(args)
 
 # # do model comparison. valid choices: ['nplanets', 'e', 'trend', 'jit', 'gp']
 # radvel ic -t nplanets e trend -s $basepath
-args.type = ['nplanets', 'trend', 'jit']
+args.type = ['nplanets', 'e', 'trend', 'jit']
 args.mixed = True      # flag to compare all models with the fixed parameters mixed and matched rather than treating each model comparison separately. This is the default.
 args.unmixed = False   # flag to treat each model comparison separately (without mixing them) rather than comparing all models with the fixed parameters mixed and matched.
 args.fixjitter = False # flag to fix the stellar jitters at the nominal model best-fit value
