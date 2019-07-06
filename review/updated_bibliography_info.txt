@@ -1,0 +1,336 @@
+-----------------------------------------------
+Bhatti et al 2018 bibtex info:
+
+@misc{waqas_bhatti_2018_1246769,
+  author       = {Bhatti, Waqas and
+                  Bouma, Luke and
+                  Wallace, Joshua and
+                  Price-Whelan, Adrian},
+  title        = {waqasbhatti/astrobase: astrobase v0.3.14},
+  month        = may,
+  year         = 2018,
+  doi          = {10.5281/zenodo.1246769},
+  url          = {https://doi.org/10.5281/zenodo.1246769}
+}
+
+-----------------------------------------------
+
+Jones et al 2001 can read:
+
+Jones, E., Oliphant, T., Peterson, P., et al. 2001, Open Source Scientific
+Tools for Python, https://www.scipy.org/
+
+-----------------------------------------------
+
+Ginsburg et al 2018 bibtex entry:
+
+@misc{adam_ginsburg_2018_1160627,
+  author       = {Adam Ginsburg and
+                  Brigitta Sipocz and
+                  Madhura Parikh and
+                  Julien Woillez and
+                  Austen Groener and
+                  Simon Liedtke and
+                  Thomas Robitaille and
+                  Christoph Deil and
+                  jcsegovia and
+                  Henrik Norman and
+                  Brian Svoboda and
+                  C. E. Brasseur and
+                  Erik Tollerud and
+                  Magnus Vilhelm Persson and
+                  adamginsburg and
+                  Loïc Séguin-Charbonneau and
+                  Caden Armstrong and
+                  Miguel de Val-Borro and
+                  Brett M. Morris and
+                  Jordan Mirocha and
+                  Ayush Yadav and
+                  Michael Seifert and
+                  Michael Droettboom and
+                  Fred Moolekamp and
+                  james-allen and
+                  Azalee Bostroem and
+                  Ricky Egeland and
+                  Leo Singer and
+                  Evert Rol and
+                  Frédéric Grollier},
+  title        = {astropy/astroquery: v0.3.7 release},
+  month        = jan,
+  year         = 2018,
+  doi          = {10.5281/zenodo.1160627},
+  url          = {https://doi.org/10.5281/zenodo.1160627}
+}
+
+-----------------------------------------------
+
+Winn 2013 must unfortunately still read as-is, since it is unpublished gray
+literature.
+
+Winn, J. N. 2013, TESS Science Memo No. 1, Version 2. Available Upon
+Request
+
+-----------------------------------------------
+
+Bibtex entries for Smith et al 2017a,b :
+
+@TECHREPORT{2017ksci.rept....7S,
+       author = {{Smith}, Jeffrey C. and {Morris}, Robert L. and {Jenkins}, Jon
+M. and
+         {Bryson}, Stephen T. and {Caldwell}, Douglas A. and
+         {Girouard}, Forrest R.},
+        title = "{Kepler Data Processing Handbook: Finding Optimal Apertures in
+Kepler Data}",
+      journal = {Kepler Science Document, KSCI-19081-002, Edited by Jon M.
+Jenkins.},
+     keywords = {Kepler},
+    booktitle = {Kepler Science Document},
+         year = "2017",
+        month = "Jan",
+        pages = {7},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017ksci.rept....7S},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@TECHREPORT{2017ksci.rept....8S,
+       author = {{Smith}, Jeffrey C. and {Stumpe}, Martin C. and {Jenkins}, Jon
+M. and
+         {Van Cleve}, Jeffrey E. and {Girouard}, Forrest R. and
+         {Kolodziejczak}, Jeffery J. and {McCauliff}, Sean D. and
+         {Morris}, Robert L. and {Twicken}, Joseph D.},
+        title = "{Kepler Data Processing Handbook: Presearch Data
+Conditioning}",
+      journal = {Kepler Science Document, KSCI-19081-002, Edited by Jon M.
+Jenkins.},
+     keywords = {Kepler},
+    booktitle = {Kepler Science Document},
+         year = "2017",
+        month = "Jan",
+        pages = {8},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2017ksci.rept....8S},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+-----------------------------------------------
+
+Inre Q6: Foreman-Mackey et al 2016 can have the bibtex entry
+
+
+@ARTICLE{2016JOSS....1...24F,
+   author = {{Foreman-Mackey}, D.},
+    title = "{corner.py: Scatterplot matrices in Python}",
+  journal = {The Journal of Open Source Software},
+     year = 2016,
+    month = jun,
+   volume = 1,
+      doi = {10.21105/joss.00024},
+   adsurl = {http://adsabs.harvard.edu/abs/2016JOSS....1...24F},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+-----------------------------------------------
+
+Inre Q7:
+
+Fulton et al 2018 becomes
+
+@ARTICLE{2018PASP..130d4504F,
+       author = {{Fulton}, Benjamin J. and {Petigura}, Erik A. and {Blunt},
+Sarah and
+         {Sinukoff}, Evan},
+        title = "{RadVel: The Radial Velocity Modeling Toolkit}",
+      journal = {\pasp},
+     keywords = {Astrophysics - Instrumentation and Methods for Astrophysics,
+Astrophysics - Earth and Planetary Astrophysics},
+         year = "2018",
+        month = "Apr",
+       volume = {130},
+       number = {986},
+        pages = {044504},
+          doi = {10.1088/1538-3873/aaaaa8},
+archivePrefix = {arXiv},
+       eprint = {1801.01947},
+ primaryClass = {astro-ph.IM},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018PASP..130d4504F},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+Milholland & Laughlin 2018 becomes
+
+@ARTICLE{2018ApJ...869L..15M,
+       author = {{Millholland}, Sarah and {Laughlin}, Gregory},
+        title = "{Obliquity Tides May Drive WASP-12b{\textquoteright}s Rapid
+Orbital Decay}",
+      journal = {\apj},
+     keywords = {planet─star interactions, planets and satellites: detection,
+planets and satellites: dynamical evolution and stability, planets and
+satellites: individual: WASP-12b, Astrophysics - Earth and Planetary
+Astrophysics},
+         year = "2018",
+        month = "Dec",
+       volume = {869},
+       number = {1},
+          eid = {L15},
+        pages = {L15},
+          doi = {10.3847/2041-8213/aaedb1},
+archivePrefix = {arXiv},
+       eprint = {1812.01624},
+ primaryClass = {astro-ph.EP},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2018ApJ...869L..15M},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+
+Astropy Collaboration 2018 becomes
+
+@ARTICLE{2018AJ....156..123A,
+   author = {{Astropy Collaboration} and {Price-Whelan}, A.~M. and {Sip{\H
+  o}cz}, B.~M. and {G{\"u}nther}, H.~M. and {Lim}, P.~L. and {Crawford}, S.~M.
+  and {Conseil}, S. and {Shupe}, D.~L. and {Craig}, M.~W. and {Dencheva}, N. and
+  {Ginsburg}, A. and {VanderPlas}, J.~T. and {Bradley}, L.~D. and
+  {P{\'e}rez-Su{\'a}rez}, D. and {de Val-Borro}, M. and {Aldcroft}, T.~L. and
+  {Cruz}, K.~L. and {Robitaille}, T.~P. and {Tollerud}, E.~J. and {Ardelean}, C.
+  and {Babej}, T. and {Bach}, Y.~P. and {Bachetti}, M. and {Bakanov}, A.~V. and
+  {Bamford}, S.~P. and {Barentsen}, G. and {Barmby}, P. and {Baumbach}, A. and
+  {Berry}, K.~L. and {Biscani}, F. and {Boquien}, M. and {Bostroem}, K.~A. and
+  {Bouma}, L.~G. and {Brammer}, G.~B.  and {Bray}, E.~M. and {Breytenbach}, H.
+  and {Buddelmeijer}, H. and {Burke}, D.~J. and {Calderone}, G. and {Cano
+  Rodr{\'{\i}}guez}, J.~L. and {Cara}, M. and {Cardoso}, J.~V.~M. and
+  {Cheedella}, S. and {Copin}, Y. and {Corrales}, L. and {Crichton}, D. and
+  {D'Avella}, D. and {Deil}, C. and {Depagne}, {\'E}. and {Dietrich}, J.~P. and
+  {Donath}, A. and {Droettboom}, M. and {Earl}, N. and {Erben}, T. and {Fabbro},
+  S. and {Ferreira}, L.~A. and {Finethy}, T. and {Fox}, R.~T. and {Garrison},
+  L.~H.  and {Gibbons}, S.~L.~J. and {Goldstein}, D.~A. and {Gommers}, R. and
+  {Greco}, J.~P. and {Greenfield}, P. and {Groener}, A.~M. and {Grollier}, F. and
+  {Hagen}, A. and {Hirst}, P. and {Homeier}, D. and {Horton}, A.~J. and
+  {Hosseinzadeh}, G. and {Hu}, L. and {Hunkeler}, J.~S. and {Ivezi{\'c}}, {\v Z}.
+  and {Jain}, A. and {Jenness}, T. and {Kanarek}, G. and {Kendrew}, S. and
+  {Kern}, N.~S. and {Kerzendorf}, W.~E. and {Khvalko}, A. and {King}, J. and
+  {Kirkby}, D. and {Kulkarni}, A.~M. and {Kumar}, A. and {Lee}, A. and {Lenz}, D.
+  and {Littlefair}, S.~P. and {Ma}, Z. and {Macleod}, D.~M. and {Mastropietro},
+  M. and {McCully}, C. and {Montagnac}, S. and {Morris}, B.~M. and {Mueller}, M.
+  and {Mumford}, S.~J.  and {Muna}, D. and {Murphy}, N.~A. and {Nelson}, S. and
+  {Nguyen}, G.~H. and {Ninan}, J.~P. and {N{\"o}the}, M. and {Ogaz}, S. and {Oh},
+  S. and {Parejko}, J.~K. and {Parley}, N. and {Pascual}, S. and {Patil}, R. and
+  {Patil}, A.~A. and {Plunkett}, A.~L. and {Prochaska}, J.~X. and {Rastogi}, T.
+  and {Reddy Janga}, V. and {Sabater}, J. and {Sakurikar}, P. and {Seifert}, M.
+  and {Sherbert}, L.~E. and {Sherwood-Taylor}, H. and {Shih}, A.~Y. and {Sick},
+  J. and {Silbiger}, M.~T. and {Singanamalla}, S. and {Singer}, L.~P. and
+  {Sladen}, P.~H. and {Sooley}, K.~A. and {Sornarajah}, S. and {Streicher}, O.
+  and {Teuben}, P. and {Thomas}, S.~W. and {Tremblay}, G.~R. and {Turner},
+  J.~E.~H. and {Terr{\'o}n}, V. and {van Kerkwijk}, M.~H. and {de la Vega}, A.
+  and {Watkins}, L.~L. and {Weaver}, B.~A. and {Whitmore}, J.~B. and {Woillez},
+  J. and {Zabalza}, V. and {Astropy Contributors}},
+    title = "{The Astropy Project: Building an Open-science Project and Status
+  of the v2.0 Core Package}",
+  journal = {\aj},
+   archivePrefix = "arXiv",
+   eprint = {1801.02634},
+   primaryClass = "astro-ph.IM",
+   keywords = {methods: data analysis, methods: miscellaneous, methods:
+   statistical, reference systems},
+     year = 2018,
+    month = sep,
+   volume = 156,
+      eid = {123},
+    pages = {123},
+      doi = {10.3847/1538-3881/aabc4f},
+   adsurl = {http://adsabs.harvard.edu/abs/2018AJ....156..123A},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+That is all the references that were arxiv citations.
+
+-----------------------------------------------
+
+Inre Q8:
+
+McKinney 2010 can be amended to:
+
+McKinney W. 2010, Proc. 9th Python in Science Conf. ed S. van der Walt and J.
+Millman (Washington, D.C.: IEEE) 51
+
+Mazeh 2008 can be amended to:
+
+@INPROCEEDINGS{2008EAS....29....1M,
+       author = {{Mazeh}, T.},
+        title = "{Observational Evidence for Tidal Interaction in Close Binary
+                  Systems}",
+     keywords = {Astrophysics},
+    booktitle = {EAS Publications Series},
+         year = "2008",
+       editor = {{Goupil}, M. -J. and {Zahn}, J. -P.},
+       series = {EAS Publications Series},
+       volume = {29},
+        month = "Jan",
+        pages = {1-65},
+          doi = {10.1051/eas:0829001},
+archivePrefix = {arXiv},
+       eprint = {0801.0134},
+ primaryClass = {astro-ph},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2008EAS....29....1M},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+-----------------------------------------------
+
+Inre Q9, the bibtex entries for Sullivan+2015 and Thompson+2013 are:
+
+@ARTICLE{2015ApJ...809...77S,
+       author = {{Sullivan}, Peter W. and {Winn}, Joshua N. and
+         {Berta-Thompson}, Zachory K. and {Charbonneau}, David and
+         {Deming}, Drake and {Dressing}, Courtney D. and {Latham}, David W. and
+         {Levine}, Alan M. and {McCullough}, Peter R. and {Morton}, Timothy and
+         {Ricker}, George R. and {Vanderspek}, Roland and {Woods}, Deborah},
+        title = "{The Transiting Exoplanet Survey Satellite: Simulations of Planet Detections and Astrophysical False Positives}",
+      journal = {\apj},
+     keywords = {planets and satellites: detection, space vehicles: instruments, surveys, Astrophysics - Earth and Planetary Astrophysics},
+         year = "2015",
+        month = "Aug",
+       volume = {809},
+       number = {1},
+          eid = {77},
+        pages = {77},
+          doi = {10.1088/0004-637X/809/1/77},
+archivePrefix = {arXiv},
+       eprint = {1506.03845},
+ primaryClass = {astro-ph.EP},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2015ApJ...809...77S},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@misc{kepler_DR19_2013,
+author = {S. E. Thompson and J. L. Christiansen and J. M. Jenkins and D. A.
+	Caldwell and T. Barclay and S.  T. Bryson and C. J. Burke and J. Catanzarite
+	and B. D. Clarke and J. Coughlin and F. Girouard and M. R. Haas and J. R. Hall
+	and K. Ibrahim and T. C. Klaus and J. J. Kolodziejczak and J. Li and S. D.
+	McCauliff and R. Morris and F.  Mullally and E. V. Quintana and J. Rowe and A.
+	Sabale and S. Seader and J. C.  Smith and M. D. Still and P. G. Tenenbaum and
+	J. D.  Twicken and A. K. Uddin },
+year = {2013},
+title = {Kepler Data Release 19 Notes Q14},
+howpublished= {KSCI-19059-001,
+  \url{https://archive.stsci.edu/kepler/release_notes/release_notes19/DataRelease_19_20130204.pdf}}
+}
+
+
+-----------------------------------------------
+
+Inre Q10, please update the BibTex entry to
+
+@incollection{winn_exoplanet_2010,
+  author      = "Winn, J. N.",
+  title       = "Exoplanet Transits and Occultations",
+  editor      = "Seager, S.",
+  booktitle   = "Exoplanets",
+  publisher   = "University of Arizona Press",
+  address     = "Tucson, AZ",
+  year        = 2010,
+  pages       = "55-78",
+  chapter     = 3,
+}
+
+
+-----------------------------------------------
+
+
+Thank you!!
