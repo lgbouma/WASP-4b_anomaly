@@ -20,7 +20,7 @@ bp_wasp4 = 12.7100
 plx_wasp4 = 3.7145
 
 xval_wasp4 = bp_wasp4 - rp_wasp4
-yval_wasp4 = g_wasp4 + 5*np.log10(plx_wasp4) + 5
+yval_wasp4 = g_wasp4 + 5*np.log10(plx_wasp4/1e3) + 5
 
 # took parallax SNR > 20, parallax with 0.1 mas of WASP-4, and galactic
 # latitude within 10 degrees. ran query on gaia archive.
@@ -38,7 +38,7 @@ t = tab.get_first_table().to_table()
 df = t.to_pandas()
 
 xval = nparr(df['phot_bp_mean_mag'] - df['phot_rp_mean_mag'])
-yval = nparr(df['phot_g_mean_mag'] + 5*np.log10(df['parallax']) + 5)
+yval = nparr(df['phot_g_mean_mag'] + 5*np.log10(df['parallax']/1e3) + 5)
 
 sel = ~pd.isnull(xval) & ~pd.isnull(yval)
 
@@ -67,13 +67,13 @@ ylim = ax.get_ylim()
 ax.set_ylim((max(ylim),min(ylim)))
 
 ax.set_xlim((0.3,3))
-ax.set_ylim((26.5,16))
+ax.set_ylim((11.5, 0))
 
 f.savefig('../results/photometric_binarity_check.png', dpi=450,
           bbox_inches='tight')
 
 ax.set_xlim((0.6,1.4))
-ax.set_ylim((22, 18))
+ax.set_ylim((7, 3))
 
 f.savefig('../results/photometric_binarity_check_zoom.png', dpi=450,
           bbox_inches='tight')
