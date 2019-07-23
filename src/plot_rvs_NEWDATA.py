@@ -120,131 +120,31 @@ def _hack_radvel_plots(args):
 # end of radvel hacks
 ##########################################
 
-
-def plot_rvs(
-        rvtimes, rvs, rverrs, resid, telvec,
-        dvdt, curv,
-        dvdt_merr, dvdt_perr,
-        time_base,
-        savpath='../paper/f6.png',
-        offset=2450000
-):
-
-    fig, (a0, a1) = plt.subplots(nrows=2, ncols=1, sharex=True,
-                               figsize=(0.8*6,0.8*5.5), gridspec_kw=
-                               {'height_ratios':[3, 2]})
-
-    utel = np.unique(telvec)
-    markers = ['o','s','^']
-    for ix, tel in enumerate(utel):
-        sel = (telvec == tel)
-        a0.errorbar(rvtimes[sel]-offset, rvs[sel], rverrs[sel], marker=markers[ix],
-                    ecolor='gray', zorder=10, mew=0, ms=4, elinewidth=1,
-                    color='C{}'.format(ix), label=tel, lw=0)
-
-        a1.errorbar(rvtimes[sel]-offset, resid[sel], rverrs[sel], marker=markers[ix],
-                    ecolor='gray', zorder=10, mew=0, ms=4, elinewidth=1,
-                    color='C{}'.format(ix), lw=0)
-
-    _times = np.linspace(np.min(rvtimes)-1000, np.max(rvtimes)+1000,
-                              num=1000)
-    assert curv==0
-    model_line = dvdt*(_times-time_base)# + curv*(_times-time_base)**2
-
-    model_merr = dvdt_merr*(_times-time_base)# + curv*(_times-time_base)**2
-    model_perr = dvdt_perr*(_times-time_base)# + curv*(_times-time_base)**2
-
-    a1.plot(_times-offset, model_line, label='Best-fit $\dot{v_r}$ from RVs',
-            color='black', zorder=-3, lw=0.5)
-    a1.fill_between(_times-offset, model_merr, model_perr, color='black',
-                    zorder=-4, alpha=0.2, lw=0)#label='$\pm 1\sigma$')
-
-    # what would explain the Pdot from transits?
-    period = 1.338231466*units.day
-    Pdot_tra = -4e-10
-    Pdot_tra_perr = -4e-10 + 0.4e-10
-    Pdot_tra_merr = -4e-10 - 0.4e-10
-    dvdt_tra = (Pdot_tra * const.c / period).to(
-        (units.m/units.s)/units.day).value
-    dvdt_tra_perr = (Pdot_tra_perr * const.c / period).to(
-        (units.m/units.s)/units.day).value
-    dvdt_tra_merr = (Pdot_tra_merr * const.c / period).to(
-        (units.m/units.s)/units.day).value
-
-    model_tra_line = dvdt_tra*(_times-time_base)
-    model_tra_merr = dvdt_tra_merr*(_times-time_base)# + curv*(_times-time_base)**2
-    model_tra_perr = dvdt_tra_perr*(_times-time_base)# + curv*(_times-time_base)**2
-
-    a1.plot(_times-offset, model_tra_line, label='Required $\dot{v_r}$ from transits',
-            color='C4', zorder=-3, lw=0.5, ls=':')
-    a1.fill_between(_times-offset, model_tra_merr, model_tra_perr, color='C4',
-                    zorder=-4, alpha=0.2, lw=0)#label='$\pm 1\sigma$')
-
-    a0.legend(loc='upper center', fontsize='medium')
-    a1.legend(loc='upper right', fontsize='medium')
-
-    a0.set_ylabel('Radial velocity [m/s]', fontsize='large')
-    a1.set_xlabel('JD'+' - {}'.format(offset),
-                  fontsize='large')
-    a1.set_ylabel('Residual [m/s]', fontsize='large')
-
-    # make twin axis to show year on top
-    times = Time(rvtimes, format='jd', scale='tdb')
-    a_top = a0.twiny()
-    a_top.scatter(times.decimalyear, rvs, s=0)
-    a_top.set_xlabel('Year', fontsize='large')
-
-    for a in [a0,a1]:
-        a.set_xlim(np.min(rvtimes)-50-offset, np.max(rvtimes)+50-offset)
-        a.get_yaxis().set_tick_params(which='both', direction='in')
-        a.get_xaxis().set_tick_params(which='both', direction='in')
-
-    a_top.get_yaxis().set_tick_params(which='both', direction='in')
-    a_top.get_xaxis().set_tick_params(which='both', direction='in')
-
-    a0.set_ylim((-410,410))
-
-    fig.tight_layout(h_pad=0.15, w_pad=0, pad=0)
-    fig.savefig(savpath, bbox_inches='tight', dpi=400)
-    print('saved {:s}'.format(savpath))
-    savpath = savpath.replace('.png','.pdf')
-    fig.savefig(savpath, bbox_inches='tight')
-    print('saved {:s}'.format(savpath))
-
-
-def main(hack_radvel_plots=0, make_my_plot=1):
-
-    # initialization script used to make the fix_gammadot fits
-    basedir = "/home/luke/Dropbox/proj/WASP-4b_decay/"
-    setupfn = os.path.join(basedir,"src/WASP4.py")
-    outputdir = os.path.join(
-        basedir, "results/rv_fitting/20190704_rv_results_fix_gammaddot")
+def _get_fit_results(setupfn, outputdir, hack_radvel_plots=0):
 
     args = args_object(setupfn, outputdir)
-    args.inputdir = os.path.join(
-        basedir,"results/rv_fitting/t10onlytwo_LGB_20190228_fix_gammaddot")
+    args.inputdir = outputdir
 
     # radvel plot -t rv -s $basepath
     args.type = ['rv']
     if hack_radvel_plots:
         _hack_radvel_plots(args)
 
-    # get residuals, RVs, error bars, etc.
+    # get residuals, RVs, error bars, etc from the fit that has been run..
     config_file = args.setupfn
     conf_base = os.path.basename(config_file).split('.')[0]
-    statfile = os.path.join(
-        args.inputdir, "{}_radvel.stat".format(conf_base)
-    )
+    statfile = os.path.join(args.inputdir, "{}_radvel.stat".format(conf_base))
 
     status = load_status(statfile)
 
-    assert status.getboolean('fit', 'run'), \
-        "Must perform max-liklihood fit before plotting"
+    if not status.getboolean('fit', 'run'):
+        raise AssertionError("Must perform max-liklihood fit before plotting")
+
     # initialize posterior object from the statfile that is passed.
     post = radvel.posterior.load(status.get('fit', 'postfile'))
 
     # update the posterior to match the median best-fit parameters.
-    summarycsv = "../results/rv_fitting/t10onlytwo_LGB_20190228_fix_gammaddot/WASP4_post_summary.csv"
+    summarycsv = os.path.join(outputdir, "WASP4_post_summary.csv")
     sdf = pd.read_csv(summarycsv)
     for param in [c for c in sdf.columns if 'Unnamed' not in c]:
         post.params[param] = radvel.Parameter(value=sdf.ix[1][param])
@@ -270,13 +170,138 @@ def main(hack_radvel_plots=0, make_my_plot=1):
         + post.params['curv'].value*(rvtimes-model.time_base)**2
     )
 
-    plot_rvs(
-        rvtimes, rvs, rverrs, resid, telvec,
-        post.params['dvdt'].value, post.params['curv'].value, dvdt_merr,
-        dvdt_perr, model.time_base
+    rvtimes, rvs, rverrs, resid, telvec = rvtimes, rvs, rverrs, resid, telvec
+    dvdt, curv = post.params['dvdt'].value, post.params['curv'].value
+    dvdt_merr, dvdt_perr = dvdt_merr, dvdt_perr
+    time_base = model.time_base
+
+    return (rvtimes, rvs, rverrs, resid, telvec, dvdt, curv, dvdt_merr,
+            dvdt_perr, time_base)
+
+
+
+
+def main(hack_radvel_plots=0, make_my_plot=1):
+    """
+    args:
+
+        hack_radvel_plots: debugging utility
+
+        make_my_plot: assumes you have run the radvel fit. reads in the output
+        values to plot.
+    """
+
+    # initialization script used to make the fix_gammadot fits
+    basedir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/"
+
+    setupfn = os.path.join(basedir,"src/WASP4.py")
+
+    with_minustwo=1
+    if with_minustwo:
+        outputdir = os.path.join(basedir,
+                                 "results/rv_fitting/LGB_20190716_fix_gammaddot_minustwo")
+        savpath='../results/20190716_minustwo_rv_fit.png'
+    else:
+        outputdir = os.path.join(basedir,
+                                 "results/rv_fitting/LGB_20190716_fix_gammaddot")
+        savpath='../results/20190716_rv_fit.png'
+
+    (rvtimes, rvs, rverrs, resid, telvec, dvdt,
+     curv, dvdt_merr, dvdt_perr, time_base) = _get_fit_results(
+         setupfn, outputdir
     )
 
+    #
+    # make the plot
+    #
+    offset=2450000
+
+    fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(4, 3))
+
+    utel = np.unique(telvec)
+    markers = ['o','s','^']
+    for ix, tel in enumerate(utel):
+        sel = (telvec == tel)
+
+        ax.errorbar(rvtimes[sel]-offset, resid[sel], rverrs[sel], marker=markers[ix],
+                    ecolor='gray', zorder=10, mew=0, ms=4, elinewidth=1,
+                    color='C{}'.format(ix), lw=0, label=tel)
+
+    _times = np.linspace(np.min(rvtimes)-5000, np.max(rvtimes)+5000, num=2000)
+
+    assert curv==0
+    model_line = dvdt*(_times-time_base)# + curv*(_times-time_base)**2
+
+    model_merr = dvdt_merr*(_times-time_base)# + curv*(_times-time_base)**2
+    model_perr = dvdt_perr*(_times-time_base)# + curv*(_times-time_base)**2
+
+    ax.plot(_times-offset, model_line, color='black', zorder=-3, lw=0.5)
+    ax.fill_between(_times-offset, model_merr, model_perr, color='black',
+                    zorder=-4, alpha=0.2, lw=0)#label='$\pm 1\sigma$')
+    ax.text(0.55, 0.54, 'Best-fit from RVs', va='bottom', ha='left',
+            transform=ax.transAxes, color='black')
+
+    # what would explain the Pdot from transits?
+    period = 1.338231466*units.day
+    Pdot_tra = -4e-10
+    Pdot_tra_perr = -4e-10 + 0.4e-10
+    Pdot_tra_merr = -4e-10 - 0.4e-10
+    dvdt_tra = (Pdot_tra * const.c / period).to(
+        (units.m/units.s)/units.day).value
+    dvdt_tra_perr = (Pdot_tra_perr * const.c / period).to(
+        (units.m/units.s)/units.day).value
+    dvdt_tra_merr = (Pdot_tra_merr * const.c / period).to(
+        (units.m/units.s)/units.day).value
+
+    # model times are now an arrow band
+    _mtimes = np.linspace(np.min(rvtimes)+500, np.min(rvtimes)+1500, num=2000)
+    _mbase = np.nanmedian(_mtimes)
+    model_tra_line = dvdt_tra*(_mtimes-_mbase)
+    model_tra_merr = dvdt_tra_merr*(_mtimes-_mbase)# + curv*(_times-time_base)**2
+    model_tra_perr = dvdt_tra_perr*(_mtimes-_mbase)# + curv*(_times-time_base)**2
+
+    ax.plot(_mtimes-offset, model_tra_line-150,
+            color='C4', zorder=-3, lw=0.5, ls=':')
+    ax.fill_between(_mtimes-offset, model_tra_merr-150, model_tra_perr-150, color='C4',
+                    zorder=-4, alpha=0.2, lw=0)#label='$\pm 1\sigma$')
+    ax.text(0.05, 0.08, 'Required from transits', va='bottom',
+            ha='left', transform=ax.transAxes, color='C4', alpha=0.7)
+
+    ax.legend(loc='upper right', fontsize='medium')
+
+    ax.set_xlabel('JD'+' - {}'.format(offset), fontsize='large')
+    ax.set_ylabel('RV obs. - calc. [m/s]', fontsize='large')
+
+    # make twin axis to show year on top
+    times = Time(rvtimes, format='jd', scale='tdb')
+    a_top = ax.twiny()
+    a_top.scatter(times.decimalyear, rvs, s=0)
+    a_top.set_xlabel('Year', fontsize='large')
+
+    ax.set_xlim((3950, 9050))
+    ax.set_ylim((-300, 300))
+
+    _times = np.linspace(np.min(rvtimes)-5000, np.max(rvtimes)+5000, num=2000)
+    a_top.set_xlim(
+        (Time( (3950+2450000), format='jd', scale='tdb').decimalyear,
+        Time( (9050+2450000), format='jd', scale='tdb').decimalyear)
+    )
+
+    ax.get_yaxis().set_tick_params(which='both', direction='in')
+    ax.get_xaxis().set_tick_params(which='both', direction='in')
+    a_top.get_yaxis().set_tick_params(which='both', direction='in')
+    a_top.get_xaxis().set_tick_params(which='both', direction='in')
+
+    fig.tight_layout(h_pad=0.15, w_pad=0, pad=0)
+    fig.savefig(savpath, bbox_inches='tight', dpi=400)
+    print('saved {:s}'.format(savpath))
+    savpath = savpath.replace('.png','.pdf')
+    fig.savefig(savpath, bbox_inches='tight')
+    print('saved {:s}'.format(savpath))
+
+
 if __name__=="__main__":
+
     hack_radvel_plots = 0
     make_my_plot = 1
     main(hack_radvel_plots=hack_radvel_plots, make_my_plot=make_my_plot)

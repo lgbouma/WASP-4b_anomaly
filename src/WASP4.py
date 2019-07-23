@@ -56,7 +56,8 @@ params['dvdt'].vary = True
 # an ASCII file, must have 'time', 'mnvel', 'errvel', and 'tel' keys
 # the velocities are expected to be in m/s
 datadir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/data"
-datapath = os.path.join(datadir,'RVs_all_WASP4b_for_fitting_20190704.csv')
+#datapath = os.path.join(datadir,'RVs_all_WASP4b_for_fitting_USEDINPAPER.csv')
+datapath = os.path.join(datadir,'RVs_all_minustwo_WASP4b_for_fitting_20190716.csv')
 data = pd.read_csv(datapath, sep=',')
 
 # Define prior shapes and widths here.
@@ -67,7 +68,7 @@ priors = [
     radvel.prior.Gaussian('dvdt', params['dvdt'].value, 0.5),  # Gaussian prior, width 0.5 m/s/day
     radvel.prior.HardBounds('jit_CORALIE', 0.0, 50.0),
     radvel.prior.HardBounds('jit_HARPS', 0.0, 30.0),
-    radvel.prior.HardBounds('jit_HIRES', 0.0, 10.0)
+    radvel.prior.HardBounds('jit_HIRES', 0.0, 20.0)
 ]
 
 # optional argument that can contain stellar mass in solar units (mstar) and

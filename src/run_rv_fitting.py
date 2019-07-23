@@ -21,7 +21,9 @@ class args_object(object):
 setupfn = "/home/luke/Dropbox/proj/WASP-4b_anomaly/src/WASP4.py"
 #outputdir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/results/rv_fitting/t10onlytwo_LGB_20190228_no_fix_gammaddot"
 #outputdir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/results/rv_fitting/t10onlytwo_LGB_20190228_fix_gammaddot"
-outputdir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/results/rv_fitting/LGB_20190704_fix_gammaddot"
+#outputdir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/results/rv_fitting/LGB_20190716_fix_gammaddot"
+#outputdir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/results/rv_fitting/LGB_20190716_fix_gammaddot_PAPERDATA"
+outputdir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/results/rv_fitting/LGB_20190716_fix_gammaddot_minustwo"
 if not os.path.exists(outputdir):
     os.mkdir(outputdir)
 
