@@ -196,7 +196,7 @@ def main(hack_radvel_plots=0, make_my_plot=1):
 
     setupfn = os.path.join(basedir,"src/WASP4.py")
 
-    with_minustwo=1
+    with_minustwo=0
     if with_minustwo:
         outputdir = os.path.join(basedir,
                                  "results/rv_fitting/LGB_20190716_fix_gammaddot_minustwo")
@@ -261,11 +261,11 @@ def main(hack_radvel_plots=0, make_my_plot=1):
     model_tra_perr = dvdt_tra_perr*(_mtimes-_mbase)# + curv*(_times-time_base)**2
 
     ax.plot(_mtimes-offset, model_tra_line-150,
-            color='C4', zorder=-3, lw=0.5, ls=':')
-    ax.fill_between(_mtimes-offset, model_tra_merr-150, model_tra_perr-150, color='C4',
-                    zorder=-4, alpha=0.2, lw=0)#label='$\pm 1\sigma$')
-    ax.text(0.05, 0.08, 'Required from transits', va='bottom',
-            ha='left', transform=ax.transAxes, color='C4', alpha=0.7)
+            color='purple', zorder=-3, lw=0.5, ls=':')
+    ax.fill_between(_mtimes-offset, model_tra_merr-150, model_tra_perr-150,
+                    color='purple', zorder=-4, alpha=0.4, lw=0)
+    ax.text(0.05, 0.12, 'Slope = $c\dot{P}/P$', va='bottom',
+            ha='left', transform=ax.transAxes, color='purple', alpha=0.9)
 
     ax.legend(loc='upper right', fontsize='medium')
 
