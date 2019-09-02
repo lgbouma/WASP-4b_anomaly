@@ -1,0 +1,51 @@
+\begin{thebibliography}{}
+\providecommand\natexlab[1]{#1}
+\providecommand\JournalTitle[1]{#1}
+
+\bibitem[{Baluev {et~al.}(2019)Baluev, Sokov, Jones, Shaidulin, Sokova,
+  Nielsen, Benni, Schneiter, D'Angelo, Fernández-Lajús, Di~Sisto, Baştürk,
+  Bretton, Wunsche, Hentunen, Shadick, Jongen, Kang, Kim, Pakštienė, Qvam,
+  Knight, Guerra, Marchini, Salvaggio, Papini, Evans, Salisbury, Garcia,
+  Molina, Garlitz, Esseiva, Ogmen, Karavaev, Rusov, Ibrahimov, \&
+  Karimov}]{baluev_homogeneously_2019}
+Baluev, R.~V., Sokov, E.~N., Jones, H. R.~A., {et~al.} 2019,
+  \href{http://arxiv.org/abs/1908.04505}{\JournalTitle{arXiv:1908.04505
+  [astro-ph]}}, arXiv: 1908.04505
+
+\bibitem[{Bouma {et~al.}(2019)Bouma, Winn, Baxter, Bhatti, Dai, Daylan,
+  Désert, Hill, Kane, Stassun, Villasenor, Ricker, Vanderspek, Latham, Seager,
+  Jenkins, Berta-Thompson, Colón, Fausnaugh, Glidden, Guerrero, Rodriguez,
+  Twicken, \& Wohler}]{bouma_wasp-4b_2019}
+Bouma, L.~G., Winn, J.~N., Baxter, C., {et~al.} 2019,
+  \href{http://dx.doi.org/10.3847/1538-3881/ab189f}{\JournalTitle{The
+  Astronomical Journal}, 157, 217}
+
+\bibitem[{Fulton {et~al.}(2018)Fulton, Petigura, Blunt, \&
+  Sinukoff}]{fulton_radvel_2018}
+Fulton, B.~J., Petigura, E.~A., Blunt, S., \& Sinukoff, E. 2018,
+  \href{http://arxiv.org/abs/1801.01947}{\JournalTitle{arXiv:1801.01947
+  [astro-ph]}}, arXiv: 1801.01947
+
+\bibitem[{Huitson {et~al.}(2017)Huitson, D\'esert, Bean, Fortney, Stevenson, \&
+  Bergmann}]{huitson_gemini_2017}
+Huitson, C.~M., D\'esert, J.-M., Bean, J.~L., {et~al.} 2017,
+  \href{http://dx.doi.org/10.3847/1538-3881/aa7f72}{\JournalTitle{The
+  Astronomical Journal}, 154, 95}
+
+\bibitem[{Knutson {et~al.}(2014)Knutson, Fulton, Montet, Kao, Ngo, Howard,
+  Crepp, Hinkley, Bakos, Batygin, Johnson, Morton, \&
+  Muirhead}]{knutson_friends_2014}
+Knutson, H.~A., Fulton, B.~J., Montet, B.~T., {et~al.} 2014,
+  \href{http://dx.doi.org/10.1088/0004-637X/785/2/126}{\JournalTitle{The
+  Astrophysical Journal}, 785, 126}
+
+\bibitem[{Southworth {et~al.}(2019)Southworth, Dominik, Jorgensen, Andersen,
+  Bozza, Burgdorf, D'Ago, Dib, Jaimes, Fujii, Gill, Haikala, Hinse,
+  Hundertmark, Khalouei, Korhonen, Longa-Pena, Mancini, Peixinho, Rabus,
+  Rahvar, Sajadian, Skottfelt, Snodgrass, Spyratos, Tregloan-Reed,
+  Unda-Sanzana, \& von Essen}]{southworth_transit_2019}
+Southworth, J., Dominik, M., Jorgensen, U.~G., {et~al.} 2019,
+  \href{http://arxiv.org/abs/1907.08269}{\JournalTitle{arXiv:1907.08269
+  [astro-ph]}}, arXiv: 1907.08269
+
+\end{thebibliography}
