@@ -1,5 +1,7 @@
 % TODO:
 %
+% * update the RV numbers
+% * redo the RV fit with the latest CKS points
 % * email to JNW
 % * email to full collaborator list
 % * add any missing CPS coauthors
@@ -55,7 +57,7 @@ CA 94720, USA}
 \section{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In recent work we showed that the TESS mission observed the hot
+In recent work we showed that the TESS spacecraft observed the hot
 Jupiter WASP-4b transit $\approx 82$ seconds earlier than expected,
 under the assumption of a constant orbital period
 \citep{bouma_wasp-4b_2019}.  This result was based on transit
@@ -76,11 +78,15 @@ an orbit being gravitationally perturbed by an outer companion.
 Thereafter, \citet{southworth_transit_2019} reported 22 new transit
 times for the system, and also found that the entire series of transit
 times was consistent with a quadratic ephemeris.  Their interpretation
-of the timing variations did not differ in any major aspects from our own.  A
-separate follow-up study by \citet{baluev_homogeneously_2019} also reported
-new light curves, and analyzed these plus light curves that were
-purposefully omitted from our analysis due to systematic uncertainties
-in the absolute time system.  \citeauthor{baluev_homogeneously_2019}
+of the timing variations did not differ in any major respects from our
+own, though with their additional data a lower best-fit decay rate was
+reported ($\dot{P} = -XX.X \pm X.X\,{\rm ms\ per\ year}$).
+
+A separate study by \citet{baluev_homogeneously_2019} also reported
+new light curves. \citeauthor{baluev_homogeneously_2019} analyzed
+their newly obtained light curves, along with archival light curves
+that were omitted from our analysis due to systematic uncertainties in
+the absolute time system.  \citeauthor{baluev_homogeneously_2019}
 found that when they used all the available TTV data, the need for a
 quadratic ephemeris was present ``at the high $\sim 5-7$ sigma
 level''.  However, they pointed out that if they used lower-precision
@@ -91,11 +97,11 @@ out that the precise transit times reported by
 Overall, \citeauthor{baluev_homogeneously_2019} were not convinced.
 
 We, too, wanted to confirm and understand the timing variation.  One
-of the lines of follow-up we originally mentioned
-was the need for additional radial velocity
-observations.  We acquired them this past season with Keck HIRES.
-After fitting out the hot Jupiter, the residuals now
-show a strong linear trend  (Figure~\ref{fig:rv_o_minus_c}).
+line of follow-up we mentioned was the need for additional radial
+velocity observations.  We acquired them this past season with Keck
+HIRES.
+After fitting out the hot Jupiter, the residuals now show a strong
+linear trend  (Figure~\ref{fig:rv_o_minus_c}).
 Specifically, the best-fit radial velocity derivative, $\dot{v}_{\rm
 r}$, is
 \begin{equation}
@@ -104,20 +110,23 @@ r}$, is
 This acceleration towards our line of sight is XXX times faster than 
 reported from the 5 points available during the Friends of Hot
 Jupiters project \citep{knutson_friends_2014}.
+%FoHJ: gammadot = -0.0099^{+0.0052}_{-0.0054}
 The updated radial velocity values are available in the
 data-behind-the-figure online version of this {\it Note}.
 
-Under the assumption of constant acceleration, the implied period
-derivative is $\dot{P} = \dot{v}_{\rm r} P / c$, yielding X.XX
-milliseconds per year for WASP-4.
+Under the assumption of constant acceleration, $\dot{P} = \dot{v}_{\rm
+r} P / c$, so the implied period decrease that should be seen in
+transits is $\approx$X.X milliseconds per year.
+All the available TTV data show a period decrease of $\approx
+8-12\,{\rm ms\ per\ year}$
+\citep{bouma_wasp-4b_2019,southworth_transit_2019,baluev_homogeneously_2019}.
 
-
-With respect to WASP-4b's quadratic ephemeris, it seems rather
-likely that this line of sight acceleration is at fault.
-Further radial velocity observations of the system should help in
-resolving the nature of the companion.
-
-%FIXME FIXME
+It seems quite likely that the line of sight acceleration is to blame
+for the apparent decrease of WASP-4b's orbital period.  While further
+radial velocity observations of the system should help clarify the
+mass and semi-major axis of the companion, it seems unlikely that
+further transit observations will yield near-term constraints on
+orbital decay.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
