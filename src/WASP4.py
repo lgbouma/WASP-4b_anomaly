@@ -57,7 +57,7 @@ params['dvdt'].vary = True
 # the velocities are expected to be in m/s
 datadir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/data"
 #datapath = os.path.join(datadir,'RVs_all_WASP4b_for_fitting_USEDINPAPER.csv')
-datapath = os.path.join(datadir,'RVs_all_minustwo_WASP4b_for_fitting_20190716.csv')
+datapath = os.path.join(datadir,'RVs_all_WASP4b_for_fitting_20190911.csv')
 data = pd.read_csv(datapath, sep=',')
 
 # Define prior shapes and widths here.

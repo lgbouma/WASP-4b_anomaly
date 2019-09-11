@@ -42,7 +42,7 @@ dP_dt_minus1sigma = (
 )
 dP_dt_limit = gamma_dot_limit * P / c.c
 dP_dt_measured = -4.00e-10
-dP_dt_measured_err = 3.8e-10
+dP_dt_measured_err = 3.8e-11
 
 print('\nfor WASP-4b')
 print('Knutson+ 2014 reported {:d} CPS data points, and used {:d} data sets'.
@@ -136,6 +136,43 @@ print('\nfor WASP-4b')
 print('Fei Dai\'s analysis gives...')
 print('gamma_dot_value: {:.6g} +/-({:.6g}) --> gamma_dot_limit: {:.6g}'.
       format(gamma_dot_value, gamma_dot_sig, gamma_dot_limit))
+print('2σ upper limit on dP/dt change from Doppler shift: {:.6g}'.format(dP_dt_limit.cgs))
+print('dP/dt measured: {:.6g}, +/-({:.6g})'.
+      format(dP_dt_measured, dP_dt_measured_err))
+print('(dP/dt_Dopplerlimit)/(dP/dt_measured): {:.6g}'.format(dP_dt_limit.cgs.value/dP_dt_measured))
+print('(dP/dt_Dopplerquoted)/(dP/dt_measured): {:.6g}'.format(dP_dt_preferred.cgs.value/dP_dt_measured))
+
+
+# WASP-4b. 2019/09/11 LGB analysis, for RNAAS
+P = 1.3382324*u.day
+gamma_dot_value, gamma_dot_sig = -0.0422, 0.0028
+
+gamma_dot_preferred = gamma_dot_value * (u.m/u.s)/u.day
+gamma_dot_limit = (gamma_dot_value - 2*gamma_dot_sig) * (u.m/u.s)/u.day
+
+gamma_dot_upper = (gamma_dot_value + gamma_dot_sig) * (u.m/u.s)/u.day
+gamma_dot_lower = (gamma_dot_value - gamma_dot_sig) * (u.m/u.s)/u.day
+
+dP_dt_preferred = gamma_dot_preferred * P / c.c
+dP_dt_upper = gamma_dot_upper * P / c.c
+dP_dt_lower = gamma_dot_lower * P / c.c
+dP_dt_limit = gamma_dot_limit * P / c.c
+
+print('\nfor WASP-4b')
+print('LGB\'s RNAAS analysis gives...')
+print('gamma_dot_value: {:.6g} +/-({:.6g}) --> gamma_dot_limit: {:.6g}'.
+      format(gamma_dot_value, gamma_dot_sig, gamma_dot_limit))
+print('dP/dt_RV = {:.3g} +{:.3g} - {:.3g}'.format(
+    dP_dt_preferred,
+    dP_dt_upper-dP_dt_preferred,
+    dP_dt_preferred-dP_dt_lower
+))
+print('dP/dt_RV = {:.3g} +{:.3g} - {:.3g}'.format(
+    dP_dt_preferred.to(u.millisecond/u.yr),
+    (dP_dt_upper-dP_dt_preferred).to(u.millisecond/u.yr),
+    (dP_dt_preferred-dP_dt_lower).to(u.millisecond/u.yr)
+))
+
 print('2σ upper limit on dP/dt change from Doppler shift: {:.6g}'.format(dP_dt_limit.cgs))
 print('dP/dt measured: {:.6g}, +/-({:.6g})'.
       format(dP_dt_measured, dP_dt_measured_err))

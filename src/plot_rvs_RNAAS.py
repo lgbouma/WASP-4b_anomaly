@@ -24,7 +24,7 @@ from radvel.driver import save_status, load_status
 import configparser
 
 ##########################################
-# a bunch of stuff needed to hack at radvel objects
+# stuff needed to hack at radvel objects
 
 class args_object(object):
     """
@@ -40,95 +40,16 @@ class args_object(object):
         self.plotkw = {}
         self.gp = False
 
-def _hack_radvel_plots(args):
-    """
-    Hacked version of radvel.driver.plots
-
-    Args:
-        args (ArgumentParser): command line arguments
-    """
-
-    config_file = args.setupfn
-    conf_base = os.path.basename(config_file).split('.')[0]
-    statfile = os.path.join(
-        args.inputdir, "{}_radvel.stat".format(conf_base)
-    )
-
-    status = load_status(statfile)
-
-    assert status.getboolean('fit', 'run'), \
-        "Must perform max-liklihood fit before plotting"
-    post = radvel.posterior.load(status.get('fit', 'postfile'))
-
-    # update the plotted posterior to match the median best-fit parameters.
-    summarycsv = "../results/rv_fitting/t10onlytwo_LGB_20190228_fix_gammaddot/WASP4_post_summary.csv"
-    sdf = pd.read_csv(summarycsv)
-    for param in [c for c in sdf.columns if 'Unnamed' not in c]:
-        post.params[param] = radvel.Parameter(value=sdf.ix[1][param])
-
-    for ptype in args.type:
-        print("Creating {} plot for {}".format(ptype, conf_base))
-
-        if ptype == 'rv':
-            args.plotkw['uparams'] = post.uparams
-            saveto = os.path.join(
-                args.outputdir,conf_base+'_rv_multipanel.pdf'
-            )
-            P, _ = radvel.utils.initialize_posterior(config_file)
-            if hasattr(P, 'bjd0'):
-                args.plotkw['epoch'] = P.bjd0
-
-            #FIXME FIXME: see line 103 of this for how to access residuals
-            model = post.likelihood.model
-            rvtimes = post.likelihood.x
-            rverr = post.likelihood.errorbars()
-            num_planets = model.num_planets
-
-            #FIXME FIXME
-            rawresid = post.likelihood.residuals()
-
-            resid = (
-                rawresid + post.params['dvdt'].value*(rvtimes-model.time_base)
-                + post.params['curv'].value*(rvtimes-model.time_base)**2
-            )
-
-            import IPython; IPython.embed()
-
-            RVPlot = orbit_plots.MultipanelPlot(
-                post, saveplot=saveto, **args.plotkw
-            )
-            RVPlot.plot_multipanel()
-
-            # check to make sure that Posterior is not GP, print warning if it is
-            if isinstance(post.likelihood, radvel.likelihood.CompositeLikelihood):
-                like_list = post.likelihood.like_list
-            else:
-                like_list = [post.likelihood]
-            for like in like_list:
-                if isinstance(like, radvel.likelihood.GPLikelihood):
-                    print("WARNING: GP Likelihood(s) detected."
-                          "You may want to use the '--gp' flag"
-                          "when making these plots.")
-                    break
-
-        else:
-            raise NotImplementedError('nope')
-
-        savestate = {'{}_plot'.format(ptype): os.path.relpath(saveto)}
-        save_status(statfile, 'plot', savestate)
-
 # end of radvel hacks
 ##########################################
 
-def _get_fit_results(setupfn, outputdir, hack_radvel_plots=0):
+def _get_fit_results(setupfn, outputdir):
 
     args = args_object(setupfn, outputdir)
     args.inputdir = outputdir
 
     # radvel plot -t rv -s $basepath
     args.type = ['rv']
-    if hack_radvel_plots:
-        _hack_radvel_plots(args)
 
     # get residuals, RVs, error bars, etc from the fit that has been run..
     config_file = args.setupfn
@@ -179,9 +100,7 @@ def _get_fit_results(setupfn, outputdir, hack_radvel_plots=0):
             dvdt_perr, time_base)
 
 
-
-
-def main(hack_radvel_plots=0, make_my_plot=1):
+def main(make_my_plot=1):
     """
     args:
 
@@ -196,19 +115,11 @@ def main(hack_radvel_plots=0, make_my_plot=1):
 
     setupfn = os.path.join(basedir,"src/WASP4.py")
 
-    with_minustwo=0
-    if with_minustwo:
-        outputdir = os.path.join(
-            basedir,
-            "results/rv_fitting/LGB_20190716_fix_gammaddot_minustwo"
-        )
-        savpath='../results/20190716_minustwo_rv_fit.png'
-    else:
-        outputdir = os.path.join(
-            basedir,
-            "results/rv_fitting/LGB_20190716_fix_gammaddot"
-        )
-        savpath='../results/20190716_rv_fit.png'
+    outputdir = os.path.join(
+        basedir,
+        "results/rv_fitting/LGB_20190911_fix_gammaddot"
+    )
+    savpath='../results/20190911_rv_fit.png'
 
     (rvtimes, rvs, rverrs, resid, telvec, dvdt,
      curv, dvdt_merr, dvdt_perr, time_base) = _get_fit_results(
@@ -306,6 +217,5 @@ def main(hack_radvel_plots=0, make_my_plot=1):
 
 if __name__=="__main__":
 
-    hack_radvel_plots = 0
     make_my_plot = 1
-    main(hack_radvel_plots=hack_radvel_plots, make_my_plot=make_my_plot)
+    main(make_my_plot=make_my_plot)
