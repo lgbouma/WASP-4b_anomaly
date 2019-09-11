@@ -3,45 +3,58 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: ms.aux
 The style file: yahapj.bst
 Database file #1: bibliography.bib
+Repeated entry---line 2932 of file bibliography.bib
+ : @article{husnoo_observational_2012
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3543 of file bibliography.bib
+ : @article{sanchis-ojeda_starspots_2011
+ :                                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3605 of file bibliography.bib
+ : @article{hoyer_tramos_2013
+ :                           ,
+I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 6 entries,
+You've used 19 entries,
             3215 wiz_defined-function locations,
-            701 strings with 7634 characters,
-and the built_in function-call counts, 4118 in all, are:
-= -- 247
-> -- 460
+            800 strings with 13462 characters,
+and the built_in function-call counts, 12779 in all, are:
+= -- 861
+> -- 1260
 < -- 0
-+ -- 157
-- -- 164
-* -- 446
-:= -- 804
-add.period$ -- 6
-call.type$ -- 6
-change.case$ -- 41
-chr.to.int$ -- 6
-cite$ -- 6
-duplicate$ -- 142
-empty$ -- 198
-format.name$ -- 168
-if$ -- 774
++ -- 459
+- -- 458
+* -- 1314
+:= -- 2406
+add.period$ -- 19
+call.type$ -- 19
+change.case$ -- 136
+chr.to.int$ -- 19
+cite$ -- 19
+duplicate$ -- 514
+empty$ -- 657
+format.name$ -- 469
+if$ -- 2455
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 6
-newline$ -- 23
-num.names$ -- 24
-pop$ -- 59
+missing$ -- 19
+newline$ -- 62
+num.names$ -- 76
+pop$ -- 210
 preamble$ -- 1
-purify$ -- 38
+purify$ -- 133
 quote$ -- 0
-skip$ -- 87
+skip$ -- 295
 stack$ -- 0
-substring$ -- 110
-swap$ -- 6
+substring$ -- 455
+swap$ -- 19
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 54
+type$ -- 171
 warning$ -- 0
-while$ -- 20
+while$ -- 78
 width$ -- 0
-write$ -- 64
+write$ -- 194
+(There were 3 error messages)
