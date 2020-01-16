@@ -127,9 +127,24 @@ observed.
 
 \section{WASP-4's acceleration towards the Earth}
 
-Caveats: we of course checked the RV vs bisector scatter diagram, as
-well as the RV vs other activity indicators, to ensure we weren't
-seeing a spurious multi-hundred meter per second change.
+
+\subsection{Trend due to stellar activity?}
+
+First, we considered whether the measured RV trend is correlated with
+WASP-4's emission in the Ca II H \& K lines, as quantified with the
+chromospheric $S$-index (CITE: Wright 2004).  We only analyzed the
+HIRES velocities for this step, since they are the main source of
+signal in our analysis.  First, we subtracted the orbital solution
+from the Keck-HIRES velocities.  Then, following CITE Bryan 2016 and
+2019, we calculated the Spearman rank correlation coefficient between
+the $S$-index and the orbit-subtracted velocities.  We found a
+correlation coefficient of 0.16, which weakly hints at a correlation,
+but is not statistically significant (the corresponding $p$-value is
+0.65).  We therefore do not think that the linear trend can be
+attributed to stellar activity.
+
+
+
 
 \section{Do other hot Jupiters show the Romer delay?}
 yes, HAT-P-7b. but omg utc to tdb.

@@ -111,7 +111,10 @@ def main(make_my_plot=1):
     """
 
     # initialization script used to make the fix_gammadot fits
-    basedir = "/home/luke/Dropbox/proj/WASP-4b_anomaly/"
+    basedir = os.path.join(
+        os.path.expanduser('~'),
+        "Dropbox/proj/WASP-4b_anomaly/"
+    )
 
     setupfn = os.path.join(basedir,"src/WASP4.py")
 
