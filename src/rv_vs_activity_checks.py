@@ -51,7 +51,7 @@ def check_rv_resid_vs_CaHK():
     f,ax = plt.subplots(nrows=1,ncols=1,figsize=(4,3))
 
     ax.errorbar(hires_rv_resid, hires_CaHK, xerr=hires_rv_err,
-                yerr=hires_CaHK_err, fmt='ko')
+                yerr=hires_CaHK_err, fmt='k.')
 
     ax.text(
         0.02, 0.98, 'Spearman R: {:.2f} (p={:.3f})'.format(r_value, p_value),
