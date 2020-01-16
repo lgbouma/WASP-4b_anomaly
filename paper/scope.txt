@@ -1,0 +1,45 @@
+A Note can be submitted to the Editorial Office in LaTeX (preferably with the
+RNAAS style option in AASTeX v6.2 and template package ), MS/Word, or prepared
+and submitted through the Overleaf online collaborative editor. Research Notes
+are free to read and currently carry no author publication charges.
+
+Submissions to RNAAS should be brief communications — 1,000 words or fewer,
+with no more than a single figure or table (but not both) — and should be
+written in a style similar to that of a traditional journal article, including
+references, where appropriate, but not including an abstract.
+
+The 1,000 word count limit includes title, headers, captions, and references.
+Easy though not entirely full proof ways to count the number of words in a
+Research Note are to use the texcount utility installed with most LaTeX
+installations, or by copying the words into MS/Word and using ”Word Count”
+under the Tool tab. The call texcount -v3 -merge -incbib -dir -sub=none -utf8
+-sum rnaas.tex includes the options to pick up references and provides a nice
+color-coded visual summary of which words are included; this produces a result
+consistent with the Overleaf word count. Please note that the original version
+of these instructions failed to add the -sum option for texcount, leading to
+inaccurate estimates of the total words in a TeX file. Also note that this
+texcount call includes authors and affiliations and often poorly parses
+equations. Thus, the AAS Editorial office’s word count is the final arbiter of
+the limit.
+
+Figures, Tables, & Data As mentioned above, a Research Note should include no
+more than a single figure or table (but not both), where appropriate. While
+table contents do not count against the word count of a Note, caption text
+will. The Note figure can be submitted in EPS, PDF, WMF, TIFF, GIF, JPEG, or
+BMP formats. Including the data behind the figure in a Note is encouraged, and
+the submitted data will be provided as a link in the published Note. Long
+tables should only show the first 5 – 10 data lines with the rest available in
+the machine readable format.
+
+References, Facilities, & Code Acknowledge people, facilities, and software in
+a Note but remember that these count against your 1000 word limit. Citations to
+the literature or to code should follow standard AAS Journal recommendations.
+
+....
+
+Review Unlike the other journals in the AAS portfolio, RNAAS publications are
+not peer reviewed; they are, however, reviewed by an editor for appropriateness
+and format before publication. If accepted, RNAAS submissions are typically
+published within 72 hours of manuscript receipt. Each RNAAS is issued a DOI and
+indexed by ADS to create a long-term, citable record of work.
+

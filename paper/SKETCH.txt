@@ -1,0 +1,24 @@
+INTRO
+
+* hunt for HJs has been happening for a long time, and it is gradually
+  beginning to work (WASP-12)
+
+* there will be annoying false positive as TESS data continues to come
+  down: RV accelerators (Romer effect)
+
+* this paper was prompted because we found Romer delay was a problem
+  for WASP-4, and we didn't have sufficient RV data to know for sure.
+
+* how big of a problem will this be, generally?
+  * using known gammadots from Knutson+14
+  * using population level expectations
+
+* we see positive Pdot for HAT-P-7b. any others?
+
+METHODS
+
+RESULTS
+
+DISCUSSION
+
+CONCLUSION

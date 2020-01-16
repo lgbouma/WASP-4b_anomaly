@@ -1,0 +1,307 @@
+% TODO:
+%
+% * email to full collaborator list
+% * add any missing CPS coauthors
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[RNAAS]{aastex62}
+\usepackage{amsmath,amstext,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{apjfonts}
+\usepackage[figure,figure*]{hypcap}
+\usepackage{graphics,graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+
+% NOTE: may want to improve title
+\title{WASP-4 is accelerating towards the Earth}
+
+\correspondingauthor{L. G. Bouma}
+\email{luke@astro.princeton.edu}
+
+%
+% key authors: presumably Rachel did the Zorro reductions?
+%
+\author[0000-0002-0514-5538]{L. G. Bouma}
+\affiliation{ Department of Astrophysical Sciences, Princeton
+University, 4 Ivy Lane, Princeton, NJ 08540, USA}
+%
+\author[0000-0002-4265-047X]{J. N. Winn}
+\affiliation{ Department of Astrophysical Sciences, Princeton
+University, 4 Ivy Lane, Princeton, NJ 08540, USA}
+%
+\author{R. A. Matson}
+\affiliation{NASA Ames Research Center, Moffett Field, CA 94035, USA}
+%
+
+%
+% contributing authors: alphabetical
+%
+\author[0000-0002-0531-1073]{H. Isaacson}
+\affiliation{Astronomy Department, University of California, Berkeley,
+CA 94720, USA}
+%
+\author[0000-0001-8638-0320]{A. W. Howard}
+\affiliation{Cahill Center for Astrophysics, California Institute of
+Technology, Pasadena, CA 91125, USA}
+%
+\author{S. B. Howell}
+\affiliation{NASA Ames Research Center, Moffett Field, CA 94035, USA}
+%
+\author{H. Knutson}
+\affiliation{Division of Geological and Planetary Sciences, California
+Institute of Technology, Pasadena, CA 91125, USA}
+%
+
+%% Note that RNAAS manuscripts DO NOT have abstracts.
+%% See the online documentation for the full list of available subject
+%% keywords and the rules for their use.
+\keywords{Exoplanet tides (497), Exoplanet dynamics (490), Radial velocity 
+(1332), Transit timing variation method (1710)}
+
+%% Start the main body of the article. If no sections in the 
+%% research note leave the \section call blank to make the title.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+Since the first discovery of transiting hot Jupiters, the hunt for
+tidal orbital decay has received much attention (CITE LIKE 20 PAPERS).
+These efforts are gradually beginning to yield fruit: by combining
+transit and occultation timing and radial velocity measurements, CITET
+Yee have shown that the data for the hot Jupiter WASP-12b are most
+compatible with orbital decay.
+
+This study highlights a point that, while obvious, has perhaps not
+yet received due attention.
+The point is that the hunt for orbital decay of hot Jupiters will be
+crippled without long-term radial velocity monitoring programs.
+The reason is simple: when the timescale of orbital period change far
+exceeds the observing baseline, the first
+deviation from constant periodicity is always quadratic in the transit
+number:
+\begin{align}
+  t_{\rm tra} = t_0 + P E + \frac{1}{2}\frac{dP}{dE}E^2,
+\end{align}
+where
+\begin{align}
+  \frac{dP}{dE} = P \frac{dP}{dt},
+\end{align}
+$E$ is the transit number, $P$ is the orbital period, $t_0$ is the
+reference epoch, and $t_{\rm tra}$ is the transt mid-time.
+
+There are ample reasons to expect orbital decay to be common
+(CITE).
+However there are reasons to expect the R\'omer delay to perhaps be
+even {\it more} common (CITE Knutson 14, Bryan 16).
+Both manifest to first order identically in transit times (up to the
+sign of the line-of-sight acceleration) -- as a non-zero period
+derivative.
+
+Specifically, \citet{knutson_friends_2014} showed that X\% of hot
+Jupiters show some form of radial acceleration in radial
+velocity time-series with baselines of YY years.
+Assuming a separation distribution of (WHATEVER), this implies that
+ZZ\% of hot Jupiters will {\it always} show a changing orbital period,
+over timescale of say 10 years.
+
+This is specific to hot Jupiters. The abundance of giant planets
+exterior to Super-Earth sized systems is also high (CITE Bryan 2019).
+
+The main example of this study is the hot Jupiter WASP-4b which has an
+orbital period that from transits appears to be decreasing by about 10
+milliseconds per year.
+After discovering the timing variations in the TESS data, we obtained
+N additional radial velocity measurements using Keck-HIRES,
+extending the RV baseline by Y years.
+Previously, the radial velocities were sparse and were consistent with
+not showing any linear trend.
+Our new measurements reveal a line of sight acceleration of
+$\dot{\gamma} = -XX {\rm m\,s^{-1}\,yr^{-1}}$.
+This translates to an expected period decrease simply from the light
+travel time effect of ZZ milliseconds per year --- about what is
+observed.
+
+\section{WASP-4's acceleration towards the Earth}
+
+Caveats: we of course checked the RV vs bisector scatter diagram, as
+well as the RV vs other activity indicators, to ensure we weren't
+seeing a spurious multi-hundred meter per second change.
+
+\section{Do other hot Jupiters show the Romer delay?}
+yes, HAT-P-7b. but omg utc to tdb.
+
+
+\section{What is the expected Pdot distribution?}
+
+
+
+
+
+
+SUMMARY OF LITERATURE
+
+This is a major challenge in the hunt for orbital decay.  The main
+example of this study is the hot Jupiter WASP-4b, which we recently
+showed transited $\approx$82 seconds early for the TESS spacecraft
+assuming a constant orbital period \citep{bouma_wasp-4b_2019}.  Our
+timing analysis included data from peer-reviewed literature for which
+the times were measured from a single transit, and for which the
+midpoint was allowed to be a free parameter. We also required the time
+system to be clearly documented\footnote{In other words, we needed to
+know whether any heliocentric or barycentric corrections had been
+performed, and whether the absolute time system was UTC or TDB.}. The
+transit times we analyzed spanned 2007 to 2019
+\citep{wilson_wasp-4b_2008,gillon_improved_2009,winn_transit_2009,dragomir_terms_2011,sanchis-ojeda_starspots_2011,nikolov_wasp-4b_2012,hoyer_tramos_2013,ranjan_atmospheric_2014,huitson_gemini_2017}.
+The combined timing data were best fit by an ephemeris with a constant
+negative period derivative; our best-fit decay rate was $\dot{P} =
+-12.6 \pm 1.2$ milliseconds per year.  Our interpretation was that the
+apparent period change could be caused by any of three scenarios: a
+decaying orbit, a precessing orbit, and an orbit being gravitationally
+perturbed by an outer companion.
+
+Thereafter, \citet{southworth_transit_2019} reported 22 new transit
+times for the system, and confirmed that the updated series of transit
+times was consistent with a quadratic ephemeris.  Their interpretation
+of the timing variations did not differ in any major respects from our
+own, though with additional data they found a lower best-fit decay
+rate of $\dot{P} = -XX.X \pm X.X$ milliseconds per year.
+
+A separate study by \citet{baluev_homogeneously_2019} reported
+additional light curves. \citeauthor{baluev_homogeneously_2019}
+analyzed their newly obtained photometry, along with archival light
+curves that we omitted from our analysis due to systematic
+uncertainties in the absolute time system.
+\citeauthor{baluev_homogeneously_2019} found that when they used all
+the available TTV data, the need for a quadratic ephemeris was present
+``at the high $\sim 5-7$ sigma level''.  However, they pointed out
+that if they used lower-precision subsets of the available timing
+data, the necessity for the quadratic term decreased.
+\citeauthor{baluev_homogeneously_2019} also pointed out that the
+precise transit times reported by \citet{huitson_gemini_2017} were
+quite important in the time-series.  Overall,
+\citeauthor{baluev_homogeneously_2019} did not find the claim of a
+period decrease convincing.
+
+One line of follow-up needed to confirm and understand the timing
+variation was additional radial velocity observations.  The longest RV
+baseline previously available was six observations acquired by
+\citet{knutson_friends_2014} and the CKS team on Keck HIRES from
+2010 to 2013.  This past season we acquired four additional
+observations with Keck HIRES. Even before fitting out the hot Jupiter,
+the residuals showed a strong linear trend.
+
+For completeness, in our analysis we included CORALIE measurements
+from \citet{wilson_wasp-4b_2008} and \citet{triaud_spin-orbit_2010},
+using the homogeneous velocities reported by the latter authors.  We
+included the HARPS values reported by \citet{pont_determining_2011},
+which are identical to those from \citet{husnoo_observational_2012}.
+We omitted the HARPS data points taken over three nights by
+\citet{triaud_spin-orbit_2010} for Rossiter-McLaughlin observations
+because they were calculated using a different pipeline than the
+longer-baseline \citeauthor{pont_determining_2011} measurements, and
+necessarily inclusion of an extra offset term would nullify their
+statistical value.
+
+We then fitted a single Keplerian orbit, plus instrument offsets,
+jitters, and a linear trend
+\citep[][\texttt{radvel}]{fulton_radvel_2018}.  We set Gaussian priors
+on the period and time of inferior conjunction using the values from
+\citet{bouma_wasp-4b_2019}, and fixed the eccentricity to zero,
+consistent with results from \citet{beerer_secondary_2011},
+\citet{knutson_friends_2014} and \citet{bonomo_gaps_2017}.  The
+remaining free parameters were the velocity semi-amplitude, the
+instrument zero-points, the instrument jitters (an additive white
+noise term for each instrument), and optionally a linear acceleration
+term ($\dot{v_{\rm r}}$).
+
+%FoHJ: gammadot = -0.0099^{+0.0052}_{-0.0054}
+The AIC and BIC strongly favored a model with a linear trend ($\Delta
+{\rm BIC}=73$ compared to a model without the linear trend).
+Figure~\ref{fig:rv_o_minus_c} shows the best-fitting model, with the
+orbit of WASP-4b subtracted.  The best-fit radial velocity derivative,
+$\dot{v}_{\rm r}$, is
+\begin{equation}
+  \dot{v}_{\rm r} = -0.0422^{+0.0028}_{-0.0027}\,{\rm m\,s^{-1}\,day^{-1}}.
+\end{equation}
+This acceleration towards our line of sight is 4.3 times faster than
+the $\approx$$2\sigma$ trend \citet{knutson_friends_2014}
+found from the shorter baseline.  The radial velocity values are
+available in the data-behind-the-figure online version of this {\it
+Note}.
+
+Under the assumption of constant acceleration, $\dot{P} = \dot{v}_{\rm
+r} P / c$, the implied period decrease that should be seen in
+transits is roughly $5.9 \pm 0.4$ milliseconds per year.  All the
+available TTV data show a period decrease of $\approx 8-12$
+milliseconds per year~\citep{bouma_wasp-4b_2019,southworth_transit_2019,baluev_homogeneously_2019}.
+
+Though the quantitative agreement is not perfect, Occam's razor would
+suggest that the line of sight acceleration is probably a sufficient
+explanation for the apparent decrease of WASP-4b's orbital period.
+While further radial velocity observations of the system should help
+in determining the mass and semi-major axis of the companion, it seems
+unlikely that additional transit observations will yield near-term
+constraints on orbital decay.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RNAAS: you get one figure.
+
+\begin{figure}
+    \begin{center}
+		\includegraphics{rv_fit.pdf}
+    \end{center}
+    \vspace{-0.8cm}
+    \caption{
+      {\bf Radial velocity observations of WASP-4.}
+      The orbit of WASP-4b has been subtracted.  The best-fit linear
+      trend from the RVs is shown with the black line, with $1\sigma$
+      errors in gray. The trend needed to produce the period decrease
+      of 12.6 milliseconds per year seen by \citet{bouma_wasp-4b_2019}
+      in transits is the purple dotted line in the bottom left.
+     \label{fig:rv_o_minus_c}
+    }
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\acknowledgements
+%
+This paper includes data collected by the TESS mission, which are
+publicly available from the Mikulski Archive for Space Telescopes
+(MAST).
+%
+Funding for the TESS mission is provided by NASA's Science Mission
+directorate.
+%
+This work made use of NASA's Astrophysics Data System Bibliographic
+Services.
+%
+This research has made use of the VizieR catalogue access tool, CDS,
+Strasbourg, France. The original description of the VizieR service was
+published in A\&AS 143, 23.
+%
+This work has made use of data from the European Space Agency (ESA)
+mission {\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed
+by the {\it Gaia} Data Processing and Analysis Consortium (DPAC,
+\url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding
+for the DPAC has been provided by national institutions, in particular
+the institutions participating in the {\it Gaia} Multilateral
+Agreement.
+%
+\newline
+%
+\software{
+	\texttt{astroplan} \citep{astroplan2018},
+  \texttt{radvel} \citep{fulton_radvel_2018}
+  %FIXME numerical python packages
+}
+
+\bibliographystyle{yahapj}                            
+\bibliography{bibliography} 
+
+\end{document}
