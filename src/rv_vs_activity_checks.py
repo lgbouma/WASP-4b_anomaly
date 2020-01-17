@@ -4,7 +4,7 @@
 import os
 import pandas as pd, numpy as np, matplotlib.pyplot as plt
 
-from plot_rvs_RNAAS import _get_fit_results
+from plot_rvs_2020 import _get_fit_results
 
 from scipy.stats import spearmanr
 
