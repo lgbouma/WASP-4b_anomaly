@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 """
 plot RV vs time, and residual (with best fit line model)
 """
-from __future__ import division, print_function
 
 import matplotlib as mpl
 mpl.use('Agg')
@@ -12,99 +10,15 @@ from glob import glob
 from shutil import copyfile
 import os, pickle
 
+from numpy import array as nparr
 from astropy.time import Time
 from astropy import units as units, constants as const
 
-from numpy import array as nparr
-
-import radvel
-from radvel.plot import orbit_plots, mcmc_plots
-from radvel.mcmc import statevars
-from radvel.driver import save_status, load_status
-import configparser
-
-##########################################
-# stuff needed to hack at radvel objects
-
-class args_object(object):
-    """
-    a minimal version of the "parser" object that lets you work with the
-    high-level radvel API from python. (without directly using the command line
-    interface)
-    """
-    def __init__(self, setupfn, outputdir):
-        # return args object with the following parameters set
-        self.setupfn = setupfn
-        self.outputdir = outputdir
-        self.decorr = False
-        self.plotkw = {}
-        self.gp = False
-
-# end of radvel hacks
-##########################################
-
-def _get_fit_results(setupfn, outputdir):
-
-    args = args_object(setupfn, outputdir)
-    args.inputdir = outputdir
-
-    # radvel plot -t rv -s $basepath
-    args.type = ['rv']
-
-    # get residuals, RVs, error bars, etc from the fit that has been run..
-    config_file = args.setupfn
-    conf_base = os.path.basename(config_file).split('.')[0]
-    statfile = os.path.join(args.inputdir, "{}_radvel.stat".format(conf_base))
-
-    status = load_status(statfile)
-
-    if not status.getboolean('fit', 'run'):
-        raise AssertionError("Must perform max-liklihood fit before plotting")
-
-    # initialize posterior object from the statfile that is passed.
-    post = radvel.posterior.load(status.get('fit', 'postfile'))
-
-    # update the posterior to match the median best-fit parameters.
-    summarycsv = os.path.join(outputdir, "WASP4_post_summary.csv")
-    sdf = pd.read_csv(summarycsv)
-    for param in [c for c in sdf.columns if 'Unnamed' not in c]:
-        post.params[param] = radvel.Parameter(value=sdf.ix[1][param])
-
-    P, _ = radvel.utils.initialize_posterior(config_file)
-    if hasattr(P, 'bjd0'):
-        args.plotkw['epoch'] = P.bjd0
-
-    model = post.likelihood.model
-    rvtimes = post.likelihood.x
-    rvs = post.likelihood.y
-    rverrs = post.likelihood.errorbars()
-    num_planets = model.num_planets
-    telvec = post.likelihood.telvec
-
-    dvdt_merr = sdf['dvdt'].iloc[0]
-    dvdt_perr = sdf['dvdt'].iloc[2]
-
-    rawresid = post.likelihood.residuals()
-
-    resid = (
-        rawresid + post.params['dvdt'].value*(rvtimes-model.time_base)
-        + post.params['curv'].value*(rvtimes-model.time_base)**2
-    )
-
-    rvtimes, rvs, rverrs, resid, telvec = rvtimes, rvs, rverrs, resid, telvec
-    dvdt, curv = post.params['dvdt'].value, post.params['curv'].value
-    dvdt_merr, dvdt_perr = dvdt_merr, dvdt_perr
-    time_base = model.time_base
-
-    return (rvtimes, rvs, rverrs, resid, telvec, dvdt, curv, dvdt_merr,
-            dvdt_perr, time_base)
-
+from radvel_utils import args_object, _get_fit_results
 
 def main(make_my_plot=1):
     """
     args:
-
-        hack_radvel_plots: debugging utility
 
         make_my_plot: assumes you have run the radvel fit. reads in the output
         values to plot.
