@@ -151,10 +151,6 @@ def initialize_sim_posterior(data, mass_c, sma_c, incl_c, ecc_c,
 
     k_c = semi_amplitude(Msini, period_c, Mtotal, ecc_c, Msini_units='jupiter')
 
-    if verbose:
-        print('period: {:.1f} days'.format(period_c))
-        print('k_c: {:.1f} m/s'.format(k_c))
-
     P = templateWASP4(data, period_c, ecc_c, k_c, tc_c=2455470,
                       w_c=0.42*np.pi/2, gammajit_dict=gammajit_dict)
 
