@@ -143,6 +143,53 @@ but is not statistically significant (the corresponding $p$-value is
 0.65).  We therefore do not think that the linear trend can be
 attributed to stellar activity.
 
+
+\subsection{Zorro imaging}
+
+Convinced that the linear trend warranted closer examination, we
+performed speckle imaging using Zorro at Gemini to attempt to detect
+any nearby companions.  To our knowledge, this is the first high
+resolution imaging that has been performed for WASP-4 (FIXME: IS THIS
+TRUE?).
+
+We observed WASP-4 twice with Gemini-South, 11/12 Sept. (8 sets of
+1000 frames each) and 28/29 Sept. (7 sets of 1000 frames each). The
+second set had better seeing and produced a slightly better result.
+The spatial scale is from the diffraction limit of Gemini at the
+wavelength observed to about 1.25'' plus a bit more.
+
+% TODO: might Howell suggest a paragraph for how the contrast ratios
+% were derived?
+To derive contrast ratios from these images, we did XXXXX.
+
+We would like to convert the contrast ratios obtained through the
+Zorro imaging to constraints on the masses of putative companions, and
+their separations from the host star.
+
+To do this, we followed the methodology of CITE Montet+2014, and opted
+to employ the CITE Baraffe+2003 models for substellar mass objects and
+the MESA isochrones for stellar mass objects (CITE Choi et al XXXX).
+In the intermediate regime, near 100 Mjup, we interpolated between the
+two sets of models.
+
+We assumed that companions would have contracted, and asserted the
+system age to be 5 Gyr.
+
+Due to the narrow-band filters of the Zorro imager, we further assumed
+that all sources had blackbody spectra. While this is clearly false,
+we do not readily have access to the planetary and stellar atmosphere
+models needed for the correct calculation. However, the CITE
+Baraffe+2003 and MESA models do report effective temperatures and
+bolometric luminosities.  We opt to use these theoretical quantities,
+combined with the measured Zorro filter wheels, to the absolute
+magnitudes in the 562 and 832 nm Zorro bandpasses.  The apparent
+magnitudes follow from information about the distance of the star.
+
+Applying the same assumption to WASP-4 itself, we compute its apparent
+magnitude in each of the Zorro filters, and finally derive the
+transformation from contrast to companion mass.
+
+
 \subsection{Constraints on companion masses and semi-major axes}
 
 Given a linear radial velocity trend, we can place limits on the mass
