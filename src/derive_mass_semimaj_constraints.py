@@ -81,7 +81,7 @@ def derive_mass_semimaj_constraints(
     )
 
     n_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
-    n_injections_per_cell = 10 # want: 500
+    n_injections_per_cell = 500 # want: 500
 
     mass_grid = (
         np.logspace(np.log10(1), np.log10(300), num=n_grid_edges)*u.Mjup
