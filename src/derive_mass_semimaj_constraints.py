@@ -37,10 +37,11 @@ The distribution is shown in {\bf Figure~X}.
 ###########
 
 import os, pickle
-import numpy as np, pandas as pd
+import numpy as np, pandas as pd, matplotlib.pyplot as plt
 from astropy import units as u, constants as c
 from itertools import product
 from numpy import array as nparr
+from datetime import datetime
 
 import radvel
 from radvel.mcmc import statevars
@@ -56,6 +57,9 @@ from scipy.stats import beta
 
 from WASP4 import time_base
 
+from cdips.plotting import savefig
+import matplotlib as mpl
+
 ##########
 # driver #
 ##########
@@ -64,7 +68,7 @@ def loguniform(low=0, high=1, size=None, base=10):
     return np.power(base, np.random.uniform(low, high, size))
 
 def derive_mass_semimaj_constraints(
-    setupfn, rvfitdir, chainpath, verbose=True
+    setupfn, rvfitdir, chainpath, verbose=False
     ):
 
     np.random.seed(42)
@@ -77,7 +81,7 @@ def derive_mass_semimaj_constraints(
     )
 
     n_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
-    n_injections_per_cell = 500 # want: 500
+    n_injections_per_cell = 10 # want: 500
 
     mass_grid = (
         np.logspace(np.log10(1), np.log10(300), num=n_grid_edges)*u.Mjup
@@ -108,8 +112,12 @@ def derive_mass_semimaj_constraints(
             mass_lower = mass_grid[mass_left_ind].squeeze()
             sma_lower = sma_grid[sma_left_ind].squeeze()
 
-            if verbose:
-                print(mass_lower, mass_upper, sma_lower, sma_upper)
+            pstr = (
+                '{:s} {:.2f}, {:.2f}, {:.2f}, {:.2f}'.
+                format(datetime.now().isoformat(),
+                       mass_lower, mass_upper, sma_lower, sma_upper)
+            )
+            print(pstr)
 
             # sample the models from the chain
             rv_model_single_planet_and_linear_trend, chain_sample_params = (
@@ -184,13 +192,44 @@ def derive_mass_semimaj_constraints(
 
         log_like_arr = pickle.load(open(outpath, 'rb'))
 
-    log_like = log_like_arr.mean(axis=2)
+    #
+    # Convert log-likelihood values to relative probability by taking the exp.
+    # Then average out the "sample" dimension (mass, sma, eccentricity, etc).
+    #
+    log_like = np.log(np.exp(log_like_arr).mean(axis=2))
 
+    # -2*logprob == chi^2
+    # Convert likelihood values to a normalized probability via
+    #   P ~ -exp(-chi^2/2)
     prob_arr = np.exp(log_like)/np.exp(log_like).sum().sum()
 
-    import IPython; IPython.embed()
+    return prob_arr, mass_grid, sma_grid
 
 
+def plot_mass_semimaj_constraints(prob_arr, mass_grid, sma_grid):
+
+    fig, ax = plt.subplots(figsize=(4,3))
+
+    X,Y = np.meshgrid(sma_grid[:-1].value, mass_grid[:-1].value)
+
+    norm = mpl.colors.Normalize(vmin=np.log(prob_arr).max(), vmax=-30)
+
+    im = ax.pcolor(X, Y, np.log(prob_arr), cmap='gray_r', norm=norm)
+
+    ax.set_xscale('log')
+    ax.set_yscale('log')
+
+    ax.set_xlabel('Semi-major axis [AU]')
+    ax.set_ylabel('Companion mass [M$_\mathrm{{jup}}$]')
+
+    fig.colorbar(im, orientation='vertical', extend='min')
+
+    ax.get_yaxis().set_tick_params(which='both', direction='in')
+    ax.get_xaxis().set_tick_params(which='both', direction='in')
+    fig.tight_layout(h_pad=0, w_pad=0)
+
+    figpath = '../results/mass_semimaj_constraints.png'
+    savefig(fig, figpath)
 
 
 if __name__=="__main__":
@@ -210,4 +249,8 @@ if __name__=="__main__":
 
     chainpath = os.path.join(rvfitdir, 'WASP4_chains.csv.tar.bz2')
 
-    derive_mass_semimaj_constraints(setupfn, rvfitdir, chainpath)
+    prob_arr, mass_grid, sma_grid = (
+        derive_mass_semimaj_constraints(setupfn, rvfitdir, chainpath)
+    )
+
+    plot_mass_semimaj_constraints(prob_arr, mass_grid, sma_grid)
