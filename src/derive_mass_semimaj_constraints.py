@@ -1,41 +1,42 @@
 """
 For this study, we closely follow the procedure of \citet{bryan_excess_2019}.
 
-We begin by defining a $50\times50$ grid in true planetary mass and
-semimajor axis, evenly spaced from 1 to 300$\,$$M_{\rm Jup}$ and 3 to
-500$\,$${\rm AU}$.
+We begin by defining a $50\times50$ grid in true planetary mass and semimajor
+axis, evenly spaced from 1 to 300$\,$$M_{\rm Jup}$ and 3 to 500$\,$${\rm AU}$.
 
-In each cell, we inject 500 simulated companions.
+We then consider the possibility that an additional companion in any particular
+cell can explain the observed linear trend.
 
-For each companion, we first draw a sample from our initial model of WASP-4b,
-the linear trend, and the instrument jitter and offset parameters.
-The orbital solution is subtracted, leaving the linear trend.
+In each cell, we consider 500 hypothetical companions.
 
-We then draw a mass and semimajor axis from log-uniform
-distributions within the grid cell. We draw the inclination from a uniform distribution in
-$\cos i$.
-The eccentricity is drawn from \citet{kipping_beta_2013}'s long-period
-exoplanet Beta distribution ($a=1.12$, $b=3.09$).
+We assign each companion a mass and semimajor axis from log-uniform
+distributions within the grid cell. We draw the inclination from a uniform
+distribution in $\cos i$.  The eccentricity is drawn from
+\citet{kipping_beta_2013}'s long-period exoplanet Beta distribution ($a=1.12$,
+$b=3.09$).
 
-Given $(a_{\rm c}, M_{\rm c}, e_{\rm c}$ for each simulation companion, and the
-fixed instrument offsets and jitters from the sample, we then perform a maximum
-likelihood fit for the time and argument of periastron.
+For each simulated companion, we then draw a sample from the converged chains
+of our initial model of WASP-4b, plus its linear trend. We subtract
+the planet's orbital solution, leaving the linear trend.
 
-We then calculate the log-likelihood value of the best-fit solution.
+Given $(a_{\rm c}, M_{\rm c}, e_{\rm c}$ for each simulated outer companion,
+and the fixed instrument offsets and jitters from the MCMC chains, we then
+perform a maximum likelihood fit for the time and argument of periastron of the
+outer simulated companion.
 
-We convert the resulting $50\times50\times500$ cube of log-likelihood
-values to probability, and marginalize over the samples in each grid
-cell to derive a probability distribution in mass and semi-major axis.
+We then convert the resulting $50\times50\times500$ cube of best-fit
+log-likelihood values to probabilities, and average over the samples in
+each grid cell to derive a probability distribution in mass and semi-major
+axis.
 
 The distribution is shown in {\bf Figure~X}.
-
 """
 
 ###########
 # imports #
 ###########
 
-import os
+import os, pickle
 import numpy as np, pandas as pd
 from astropy import units as u, constants as c
 from itertools import product
@@ -62,7 +63,9 @@ from WASP4 import time_base
 def loguniform(low=0, high=1, size=None, base=10):
     return np.power(base, np.random.uniform(low, high, size))
 
-def derive_mass_semimaj_constraints(setupfn, rvfitdir, chainpath):
+def derive_mass_semimaj_constraints(
+    setupfn, rvfitdir, chainpath, verbose=True
+    ):
 
     np.random.seed(42)
 
@@ -73,79 +76,119 @@ def derive_mass_semimaj_constraints(setupfn, rvfitdir, chainpath):
          setupfn, rvfitdir
     )
 
-    n_grid_edges = 5 # a 4x4 grid has 5 edges. want: 51
-    n_injections_per_cell = 5 # want: 500
+    n_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
+    n_injections_per_cell = 500 # want: 500
 
-    mass_grid = np.logspace(np.log10(1), np.log10(300), num=n_grid_edges)*u.Mjup
+    mass_grid = (
+        np.logspace(np.log10(1), np.log10(300), num=n_grid_edges)*u.Mjup
+    )
+    sma_grid = (
+        np.logspace(np.log10(3), np.log10(500), num=n_grid_edges)*u.AU
+    )
 
-    sma_grid = np.logspace(np.log10(3), np.log10(500), num=n_grid_edges)*u.AU
+    log_like_arr = np.zeros(
+        (n_grid_edges-1, n_grid_edges-1, n_injections_per_cell)
+    )
 
-    for mass_upper, sma_upper in product(mass_grid[1:], sma_grid[1:]):
+    sizestr = '{}x{}x{}'.format(n_grid_edges-1,
+                                n_grid_edges-1,
+                                n_injections_per_cell)
+    outpath = (
+        '../data/rv_simulations/mass_semimaj_loglikearr_{}.pickle'.
+        format(sizestr)
+    )
 
-        mass_lower = mass_grid[np.argwhere(mass_grid == mass_upper)-1].squeeze()
-        sma_lower = sma_grid[np.argwhere(sma_grid == sma_upper)-1].squeeze()
+    if not os.path.exists(outpath):
 
-        print(mass_lower, mass_upper, sma_lower, sma_upper)
+        for mass_upper, sma_upper in product(mass_grid[1:], sma_grid[1:]):
 
-        # sample the models from the chain
-        rv_model_single_planet_and_linear_trend, chain_sample_params = (
-            draw_models(setupfn, rvfitdir, chaindf, rvtimes,
-                        n_samples=n_injections_per_cell)
-        )
+            mass_left_ind = np.argwhere(mass_grid == mass_upper)-1
+            sma_left_ind = np.argwhere(sma_grid == sma_upper)-1
 
-        # n_sample x n_rvs array of the "RV - 1 planet" model (leaving in the
-        # linear trend).
-        # note: if there were a curvature term, it wuld go in here too.
-        full_resid = (
-            rvs - rv_model_single_planet_and_linear_trend
-            + nparr(chain_sample_params.dvdt)[:,None]*(rvtimes[None,:] -time_base)
-        )
+            mass_lower = mass_grid[mass_left_ind].squeeze()
+            sma_lower = sma_grid[sma_left_ind].squeeze()
 
+            if verbose:
+                print(mass_lower, mass_upper, sma_lower, sma_upper)
 
-        # draw (a_c, M_c, e_c) for each simulated companion
-        mass_c = loguniform(low=np.log10(mass_lower.value),
-                            high=np.log10(mass_upper.value),
-                            size=n_injections_per_cell)
-        sma_c = loguniform(low=np.log10(sma_lower.value),
-                           high=np.log10(sma_upper.value),
-                           size=n_injections_per_cell)
-        cos_incl_c = np.random.uniform(0, 1, size=n_injections_per_cell)
-        incl_c = np.rad2deg(np.arccos(cos_incl_c))
+            # sample the models from the chain
+            rv_model_single_planet_and_linear_trend, chain_sample_params = (
+                draw_models(setupfn, rvfitdir, chaindf, rvtimes,
+                            n_samples=n_injections_per_cell)
+            )
 
-        a, b = 1.12, 3.09
-        ecc_c = beta.rvs(a, b, size=n_injections_per_cell)
+            # n_sample x n_rvs array of the "RV - 1 planet" model (leaving in the
+            # linear trend).
+            # note: if there were a curvature term, it wuld go in here too.
+            full_resid = (
+                rvs - rv_model_single_planet_and_linear_trend
+                + (
+                    nparr(chain_sample_params.dvdt)[:,None]
+                    *
+                    (rvtimes[None,:] -time_base)
+                )
+            )
 
-        #
-        # do a max-likelihood fit
-        # for time and argument of periastron, and velocity zero-points.
-        # 
-        for ix in range(n_injections_per_cell):
+            # draw (a_c, M_c, e_c) for each simulated companion
+            mass_c = loguniform(low=np.log10(mass_lower.value),
+                                high=np.log10(mass_upper.value),
+                                size=n_injections_per_cell)
+            sma_c = loguniform(low=np.log10(sma_lower.value),
+                               high=np.log10(sma_upper.value),
+                               size=n_injections_per_cell)
+            cos_incl_c = np.random.uniform(0, 1, size=n_injections_per_cell)
+            incl_c = np.rad2deg(np.arccos(cos_incl_c))
 
-            data = pd.DataFrame({
-                'time': rvtimes,
-                'tel': telvec,
-                'mnvel': full_resid[ix, :],
-                'errvel': rverrs
-            })
+            a, b = 1.12, 3.09
+            ecc_c = beta.rvs(a, b, size=n_injections_per_cell)
 
-            gammajit_dict = {k:chain_sample_params.iloc[ix][k]
-                             for k in chain_sample_params.columns
-                             if 'gamma' in k or 'jit' in k}
+            #
+            # do a max-likelihood fit for time and argument of periastron.
+            # 
+            log_like_values = []
+            for ix in range(n_injections_per_cell):
 
-            P, post = initialize_sim_posterior(data, mass_c[ix]*u.Mjup,
-                                               sma_c[ix]*u.AU, incl_c[ix],
-                                               ecc_c[ix], gammajit_dict)
+                data = pd.DataFrame({
+                    'time': rvtimes,
+                    'tel': telvec,
+                    'mnvel': full_resid[ix, :],
+                    'errvel': rverrs
+                })
 
-            # print(post)
-            verbose = False
-            post = radvel.fitting.maxlike_fitting(post, verbose=verbose)
+                gammajit_dict = {k:chain_sample_params.iloc[ix][k]
+                                 for k in chain_sample_params.columns
+                                 if 'gamma' in k or 'jit' in k}
 
-            #FIXME: something is wrong. only a tiny fraction are converging.
+                P, post = initialize_sim_posterior(
+                    data, mass_c[ix]*u.Mjup, sma_c[ix]*u.AU,
+                    incl_c[ix], ecc_c[ix], gammajit_dict
+                )
 
-            if post.logprob() != -np.inf:
-                import IPython; IPython.embed()
-            else:
-                print(post.logprob())
+                post = radvel.fitting.maxlike_fitting(post, verbose=False)
+
+                if verbose:
+                    print(post.logprob())
+
+                log_like_values.append(post.logprob())
+
+            log_like_arr[mass_left_ind, sma_left_ind, :] = (
+                np.array(log_like_values)
+            )
+
+        with open(outpath, 'wb') as outf:
+            pickle.dump(log_like_arr, outf, protocol=pickle.HIGHEST_PROTOCOL)
+
+        print('saved {}'.format(outpath))
+
+    else:
+
+        log_like_arr = pickle.load(open(outpath, 'rb'))
+
+    log_like = log_like_arr.mean(axis=2)
+
+    prob_arr = np.exp(log_like)/np.exp(log_like).sum().sum()
+
+    import IPython; IPython.embed()
 
 
 
