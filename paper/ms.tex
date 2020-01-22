@@ -5,7 +5,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[RNAAS]{aastex62}
+\documentclass[12pt,twocolumn,tighten]{aastex62}
 \usepackage{amsmath,amstext,amssymb}
 \usepackage[T1]{fontenc}
 \usepackage{apjfonts}
@@ -13,9 +13,20 @@
 \usepackage{graphics,graphicx}
 \usepackage{hyperref}
 
+\renewcommand*{\sectionautorefname}{Section} %for \autoref
+\renewcommand*{\subsectionautorefname}{Section} %for \autoref
+
+%% Reintroduced the \received and \accepted commands from AASTeX v5.2.
+%% Add "Submitted to " argument.
+\received{\today}
+\revised{---}
+\accepted{---}
+\submitjournal{AAS journals.}
+\shorttitle{WASP-4 is accelerating towards the Earth}
+
 \begin{document}
 
-% NOTE: may want to improve title
+% TODO: may want to improve title
 \title{WASP-4 is accelerating towards the Earth}
 
 \correspondingauthor{L. G. Bouma}
@@ -55,14 +66,29 @@ Technology, Pasadena, CA 91125, USA}
 Institute of Technology, Pasadena, CA 91125, USA}
 %
 
-%% Note that RNAAS manuscripts DO NOT have abstracts.
-%% See the online documentation for the full list of available subject
-%% keywords and the rules for their use.
+\begin{abstract}
+  We recently noted that combining measurements from the Transiting
+  Exoplanet Survey Satellite (TESS) with ground-based transit
+  observations, the orbital period of WASP-4b seemed to be decreasing.
+  Possible explanations included tidal orbital decay, orbital
+  precession, and light-travel time effects.
+  In this work we present new observations of the radial velocity of
+  WASP-4, acquired with Keck-HIRES.
+  They show that the system is accelerating towards our line of sight,
+  at $\dot{\gamma} = X.XX \pm Y.YY\ {\rm m}\,{\rm s}^{-1}\,{\rm
+  yr}^{-1}$.
+  This implies a period decrease of X.XX milliseconds per year,
+  compared to the observed value of Y.YY.
+  Combining the radial velocities with new speckle imaging from
+  Gemini-Zorro, we show that the acceleration is best explained by a
+  10-200$\,M_{\rm Jup}$ companion between 10 and 100$\,$AU.
+  We encourage further long-term monitoring of hot Jupiter radial
+  velocities; these observations are critical in the ongoing hunt
+  for tidal orbital decay.
+\end{abstract}
+
 \keywords{Exoplanet tides (497), Exoplanet dynamics (490), Radial velocity 
 (1332), Transit timing variation method (1710)}
-
-%% Start the main body of the article. If no sections in the 
-%% research note leave the \section call blank to make the title.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -71,18 +97,17 @@ Institute of Technology, Pasadena, CA 91125, USA}
 Since the first discovery of transiting hot Jupiters, the hunt for
 tidal orbital decay has received much attention (CITE LIKE 20 PAPERS).
 These efforts are gradually beginning to yield fruit: by combining
-transit and occultation timing and radial velocity measurements, CITET
-Yee have shown that the data for the hot Jupiter WASP-12b are most
-compatible with orbital decay.
+transit and occultation timing and radial velocity measurements, CITE
+Yee et al{.} have shown that the data for the hot Jupiter WASP-12b are
+most compatible with orbital decay.
 
-This study highlights a point that, while obvious, has perhaps not
-yet received due attention.
-The point is that the hunt for orbital decay of hot Jupiters will be
-crippled without long-term radial velocity monitoring programs.
+The present study highlights a point that, while obvious, has perhaps
+not yet received due attention.  The point is that the hunt for
+orbital decay of hot Jupiters will be crippled without long-term
+radial velocity monitoring programs.
 The reason is simple: when the timescale of orbital period change far
-exceeds the observing baseline, the first
-deviation from constant periodicity is always quadratic in the transit
-number:
+exceeds the observing baseline, the first deviation from constant
+periodicity is always quadratic in the transit number:
 \begin{align}
   t_{\rm tra} = t_0 + P E + \frac{1}{2}\frac{dP}{dE}E^2,
 \end{align}
@@ -111,12 +136,12 @@ over timescale of say 10 years.
 This is specific to hot Jupiters. The abundance of giant planets
 exterior to Super-Earth sized systems is also high (CITE Bryan 2019).
 
-The main example of this study is the hot Jupiter WASP-4b which has an
+The main focus of this study is the hot Jupiter WASP-4b, which has an
 orbital period that from transits appears to be decreasing by about 10
 milliseconds per year.
-After discovering the timing variations in the TESS data, we obtained
-N additional radial velocity measurements using Keck-HIRES,
-extending the RV baseline by Y years.
+After discovering the timing variations in the TESS data (CITE Bouma
+2019), we obtained N additional radial velocity measurements using
+Keck-HIRES, extending the RV baseline by Y years.
 Previously, the radial velocities were sparse and were consistent with
 not showing any linear trend.
 Our new measurements reveal a line of sight acceleration of
@@ -125,7 +150,15 @@ This translates to an expected period decrease simply from the light
 travel time effect of ZZ milliseconds per year --- about what is
 observed.
 
+% FIXME: figure out correct sections
+\S~\ref{sec:observations} presents the new observations...
+\S~\ref{sec:timing} describes our timing analysis...
+\S~\ref{sec:implications} ...
+\S~\ref{sec:future}...
+
+
 \section{WASP-4's acceleration towards the Earth}
+\label{sec:observations}
 
 
 \subsection{Trend due to stellar activity?}
