@@ -143,7 +143,7 @@ print('(dP/dt_Dopplerlimit)/(dP/dt_measured): {:.6g}'.format(dP_dt_limit.cgs.val
 print('(dP/dt_Dopplerquoted)/(dP/dt_measured): {:.6g}'.format(dP_dt_preferred.cgs.value/dP_dt_measured))
 
 
-# WASP-4b. 2019/09/11 LGB analysis, for RNAAS
+# WASP-4b. 2019/09/11 LGB analysis, for paper #2
 P = 1.3382324*u.day
 gamma_dot_value, gamma_dot_sig = -0.0422, 0.0028
 
