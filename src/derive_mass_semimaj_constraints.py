@@ -60,6 +60,8 @@ from WASP4 import time_base
 from cdips.plotting import savefig
 import matplotlib as mpl
 
+from plot_mass_semimaj_constraints import plot_mass_semimaj_constraints
+
 ##########
 # driver #
 ##########
@@ -204,32 +206,6 @@ def derive_mass_semimaj_constraints(
     prob_arr = np.exp(log_like)/np.exp(log_like).sum().sum()
 
     return prob_arr, mass_grid, sma_grid
-
-
-def plot_mass_semimaj_constraints(prob_arr, mass_grid, sma_grid):
-
-    fig, ax = plt.subplots(figsize=(4,3))
-
-    X,Y = np.meshgrid(sma_grid[:-1].value, mass_grid[:-1].value)
-
-    norm = mpl.colors.Normalize(vmin=np.log(prob_arr).max(), vmax=-30)
-
-    im = ax.pcolor(X, Y, np.log(prob_arr), cmap='gray_r', norm=norm)
-
-    ax.set_xscale('log')
-    ax.set_yscale('log')
-
-    ax.set_xlabel('Semi-major axis [AU]')
-    ax.set_ylabel('Companion mass [M$_\mathrm{{jup}}$]')
-
-    fig.colorbar(im, orientation='vertical', extend='min')
-
-    ax.get_yaxis().set_tick_params(which='both', direction='in')
-    ax.get_xaxis().set_tick_params(which='both', direction='in')
-    fig.tight_layout(h_pad=0, w_pad=0)
-
-    figpath = '../results/mass_semimaj_constraints.png'
-    savefig(fig, figpath)
 
 
 if __name__=="__main__":
