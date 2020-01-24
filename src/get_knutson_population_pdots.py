@@ -18,10 +18,14 @@ from astrobase.services.tesslightcurves import (
 
 def main():
 
-    fdf = calculate_and_format_knutson_pdot_table()
-    tdf = check_tess_visibility_and_availability(fdf)
+    k14_table = 1
+    tess_vis = 0
 
-    import IPython; IPython.embed()
+    if k14_table:
+        fdf = calculate_and_format_knutson_pdot_table()
+    if tess_vis:
+        tdf = check_tess_visibility_and_availability(fdf)
+
 
 def check_tess_visibility_and_availability(fdf):
 
@@ -60,12 +64,32 @@ def check_tess_visibility_and_availability(fdf):
     return fdf
 
 
-
-
 def calculate_and_format_knutson_pdot_table():
 
     sig_df = calculate_pdots(signifiant_trends=1)
     limit_df = calculate_pdots(signifiant_trends=0)
+
+    #
+    # update WASP-4 -- add it to significant table!
+    #
+    limit_df = limit_df.drop(22, axis=0)
+
+    w4_dict = {
+        'planet': 'WASP-4 b',
+        'gammadot': -0.0422,
+        'gammadot_pluserr': 0.0028,
+        'gammadot_minuserr': 0.0027,
+        'comment': 'NaN',
+        'pl_name': 'WASP-4 b',
+        'pl_orbper': 1.338231466,
+        'Pdot': -5.94,
+        'Pdot_upper_limit': -5.94+0.39,
+        'Pdot_lower_limit': -5.94-0.39,
+        'Pdot_perr': 0.39,
+        'Pdot_merr': 0.39
+    }
+    w4_df = pd.DataFrame(w4_dict, index=[0])
+    sig_df = pd.concat((sig_df, w4_df))
 
     sig_df['abs_Pdot'] = np.abs(sig_df.Pdot)
     sig_df['K14_significant'] = True
@@ -80,6 +104,7 @@ def calculate_and_format_knutson_pdot_table():
 
     return fdf
 
+
 def calculate_pdots(signifiant_trends=1):
 
     if signifiant_trends:
@@ -93,8 +118,8 @@ def calculate_pdots(signifiant_trends=1):
     gamma_dot_value = nparr(df.gammadot) * (u.m/u.s)/u.day
     gamma_dot_perr = nparr(df.gammadot_pluserr) * (u.m/u.s)/u.day
     gamma_dot_merr = nparr(df.gammadot_minuserr) * (u.m/u.s)/u.day
-    gamma_dot_upper_limit = (gamma_dot_value + 2*gamma_dot_perr)
-    gamma_dot_lower_limit = (gamma_dot_value - 2*gamma_dot_merr)
+    gamma_dot_upper_limit = (gamma_dot_value + 1*gamma_dot_perr)
+    gamma_dot_lower_limit = (gamma_dot_value - 1*gamma_dot_merr)
 
     #
     # get orbital periods for all the planets
@@ -132,6 +157,16 @@ def calculate_pdots(signifiant_trends=1):
     mdf['Pdot'] = dP_dt_value.to(u.millisecond/u.year)
     mdf['Pdot_upper_limit'] = dP_dt_upper_limit.to(u.millisecond/u.year)
     mdf['Pdot_lower_limit'] = dP_dt_lower_limit.to(u.millisecond/u.year)
+    mdf['Pdot_perr'] = (
+        dP_dt_upper_limit.to(u.millisecond/u.year)
+        -
+        dP_dt_value.to(u.millisecond/u.year)
+    )
+    mdf['Pdot_merr'] = (
+        dP_dt_value.to(u.millisecond/u.year)
+        -
+        dP_dt_lower_limit.to(u.millisecond/u.year)
+    )
 
     if signifiant_trends:
         outpath = '../results/knutson_significant_population_pdots.csv'
@@ -141,6 +176,7 @@ def calculate_pdots(signifiant_trends=1):
     print('made {}'.format(outpath))
 
     return mdf
+
 
 if __name__ == "__main__":
     main()
