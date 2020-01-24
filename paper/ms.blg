@@ -3,55 +3,55 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ms.aux
 The style file: yahapj.bst
 Database file #1: bibliography.bib
-Repeated entry---line 3213 of file bibliography.bib
+Repeated entry---line 3223 of file bibliography.bib
  : @article{husnoo_observational_2012
  :                                   ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "baluev_homogeneously_2019"
+Warning--I didn't find a database entry for "foreman-mackey_emcee_2013"
 Warning--I didn't find a database entry for "bouma_wasp-4b_2019"
+Warning--I didn't find a database entry for "baluev_homogeneously_2019"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Warning--no book title in vogt_hires_1994
-`booktitle' is a missing field, not a string, for entry vogt_hires_1994
-while executing---line 1561 of file yahapj.bst
-You've used 43 entries,
+Warning--can't use both author and editor fields in vogt_hires_1994
+Warning--empty publisher in vogt_hires_1994
+You've used 41 entries,
             3215 wiz_defined-function locations,
-            971 strings with 22896 characters,
-and the built_in function-call counts, 26884 in all, are:
-= -- 1818
-> -- 2579
+            960 strings with 22110 characters,
+and the built_in function-call counts, 25765 in all, are:
+= -- 1720
+> -- 2500
 < -- 10
-+ -- 934
-- -- 919
-* -- 2689
-:= -- 5054
-add.period$ -- 43
-call.type$ -- 43
-change.case$ -- 285
-chr.to.int$ -- 43
-cite$ -- 44
-duplicate$ -- 1105
-empty$ -- 1457
-format.name$ -- 959
-if$ -- 5191
++ -- 903
+- -- 887
+* -- 2588
+:= -- 4859
+add.period$ -- 41
+call.type$ -- 41
+change.case$ -- 267
+chr.to.int$ -- 41
+cite$ -- 43
+duplicate$ -- 1050
+empty$ -- 1391
+format.name$ -- 928
+if$ -- 4967
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 38
-newline$ -- 134
-num.names$ -- 173
-pop$ -- 442
+missing$ -- 37
+newline$ -- 128
+num.names$ -- 166
+pop$ -- 418
 preamble$ -- 1
-purify$ -- 280
+purify$ -- 262
 quote$ -- 0
-skip$ -- 656
+skip$ -- 626
 stack$ -- 0
-substring$ -- 945
-swap$ -- 38
+substring$ -- 899
+swap$ -- 37
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 387
-warning$ -- 1
-while$ -- 182
+type$ -- 366
+warning$ -- 2
+while$ -- 173
 width$ -- 0
-write$ -- 432
-(There were 2 error messages)
+write$ -- 412
+(There was 1 error message)
