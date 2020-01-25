@@ -520,29 +520,47 @@ the cross-hatched region in Figure~\ref{fig:mass_sma}.
 \paragraph{Radial velocity constraints}
 
 To derive constraints on possible companion masses and separations
-from the radial velocities, we followed the procedure of
-\citet{bryan_excess_2019}.  We began by defining a $75\times50$ grid
-in true planetary mass and semimajor axis, with even logarithmic
-spacing from 1 to 900$\,$$M_{\rm Jup}$ and 3 to 500$\,$${\rm AU}$.  We
-then considered the possibility that an additional companion in any
-particular cell could explain the observed linear trend.  In each
-cell, we simulated 500 hypothetical companions.
+from the radial velocities, we mostly followed the procedure of
+\citet{bryan_excess_2019}. 
 
+We began by defining a $75\times50$ grid in true planetary mass and
+semimajor axis, with even logarithmic spacing from 1 to 900$\,$$M_{\rm
+Jup}$ and 3 to 500$\,$${\rm AU}$.  We then considered the possibility
+that an additional companion in any particular cell could explain the
+observed linear trend.  In each cell, we simulated 500 hypothetical
+companions.
+
+%FIXME: may want to verify that changing the cutoff location, to say
+%80Mjup or whatever the minimum BD mass is doesn't drastically alter
+%the posterior
 We assigned each companion a mass and semimajor axis from log-uniform
 distributions within the grid cell. We drew the inclination from a
-uniform distribution in $\cos i$.  The eccentricity was drawn from
+uniform distribution in $\cos i$.  For companion masses less than
+$10\,M_{\rm Jup}$, we drew the eccentricity from
 \citet{kipping_beta_2013}'s long-period exoplanet Beta distribution
-($a=1.12$, $b=3.09$).  For each simulated companion, we then drew a
-sample from the converged chains of our initial model of WASP-4b, plus
-its linear trend. We subtracted the planet's orbital solution, leaving
-the linear trend.  Given $(a_{\rm c}, M_{\rm c}, e_{\rm c}$ for each
-simulated outer companion, and the fixed instrument offsets and
-jitters from the MCMC chains, we then performed a maximum likelihood
-fit for the time and argument of periastron of the outer simulated
-companion.  We converted the resulting $50\times50\times500$ cube of
-best-fit log-likelihood values to probabilities, and averaged over the
-samples in each grid cell to derive a probability distribution in mass
-and semi-major axis.
+($a=1.12$, $b=3.09$).  If the companion mass exceeded $10\,M_{\rm
+Jup}$, we drew the eccentricity distribution from the power-law $p_e
+\propto e^\eta$ reported by \citet{moe_mind_2017} in their
+Equation~17.  We emphasize that the long-period exoplanet and
+long-period binary distributions are quite different: the exoplanet
+distribution is ``bottom-heavy'', with eccentricities preferentially
+close to zero. The binary star distribution is ``top-heavy'', with
+more eccentricities close to one.  We chose a mass cutoff of
+$10\,M_{\rm Jup}$ based on the bound observed by
+\citet{schlaufman_evidence_2018} between giant planets, presumably
+formed through core accretion, and brown dwarfs, presumably formed via
+gravitational instability.
+
+For each simulated companion, we then drew a sample from the converged
+chains of our initial model of WASP-4b, plus its linear trend. We
+subtracted the planet's orbital solution, leaving the linear trend.
+Given $(a_{\rm c}, M_{\rm c}, e_{\rm c}$ for each simulated outer
+companion, and the fixed instrument offsets and jitters from the MCMC
+chains, we then performed a maximum likelihood fit for the time and
+argument of periastron of the outer simulated companion.  We converted
+the resulting $75\times50\times500$ cube of best-fit log-likelihood
+values to probabilities, and averaged over the samples in each grid
+cell to derive a probability distribution in mass and semi-major axis.
 
 The result is shown as grayscale background in
 Figure~\ref{fig:mass_sma}.
