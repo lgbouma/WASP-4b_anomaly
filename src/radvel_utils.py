@@ -229,7 +229,8 @@ def initialize_sim_posterior(data, mass_c, sma_c, incl_c, ecc_c,
     post = radvel.posterior.Posterior(like)
     post.priors = P.priors
 
-    return P, post
+    #return P, post
+    return post
 
 
 class templateWASP4(object):

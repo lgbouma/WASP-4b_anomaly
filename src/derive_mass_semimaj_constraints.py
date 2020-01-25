@@ -42,6 +42,7 @@ from astropy import units as u, constants as const
 from itertools import product
 from numpy import array as nparr
 from datetime import datetime
+import multiprocessing as mp
 
 import radvel
 from radvel.mcmc import statevars
@@ -69,8 +70,22 @@ from plot_mass_semimaj_constraints import plot_mass_semimaj_constraints
 def loguniform(low=0, high=1, size=None, base=10):
     return np.power(base, np.random.uniform(low, high, size))
 
+
+def maxlike_worker(task):
+
+    data, gammajit_dict, mass, sma, incl, ecc = task
+
+    post = initialize_sim_posterior(data, mass*u.Mjup, sma*u.AU, incl, ecc,
+                                    gammajit_dict)
+
+    post = radvel.fitting.maxlike_fitting(post, verbose=False)
+
+    return post.logprob()
+
+
 def derive_mass_semimaj_constraints(
-    setupfn, rvfitdir, chainpath, verbose=False
+    setupfn, rvfitdir, chainpath, verbose=False,
+    multiprocess=True
     ):
 
     np.random.seed(42)
@@ -82,9 +97,9 @@ def derive_mass_semimaj_constraints(
          setupfn, rvfitdir
     )
 
-    n_mass_grid_edges = 76 # a 4x4 grid has 5 edges. want: 51
+    n_mass_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
     n_sma_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
-    n_injections_per_cell = 500 # 500 # want: 500
+    n_injections_per_cell = 512 # 500 # want: 500
 
     mass_grid = (
         np.logspace(np.log10(1), np.log10(900), num=n_mass_grid_edges)*u.Mjup
@@ -179,33 +194,54 @@ def derive_mass_semimaj_constraints(
             # do a max-likelihood fit for time and argument of periastron.
             # 
 
-            #FIXME : might as well multiprocess??? seems not too bad.
-            log_like_values = []
-            for ix in range(n_injections_per_cell):
+            if multiprocess:
+                tasks = [(
+                    pd.DataFrame({'time': rvtimes, 'tel': telvec, 'mnvel':
+                                  full_resid[ix, :], 'errvel': rverrs }),
+                    {k: chain_sample_params.iloc[ix][k] for k in
+                     chain_sample_params.columns if 'gamma' in k or 'jit' in k},
+                    mass_c[ix],
+                    sma_c[ix],
+                    incl_c[ix],
+                    ecc_c[ix]) for ix in range(n_injections_per_cell)
+                ]
 
-                data = pd.DataFrame({
-                    'time': rvtimes,
-                    'tel': telvec,
-                    'mnvel': full_resid[ix, :],
-                    'errvel': rverrs
-                })
+                nworkers = mp.cpu_count()
+                maxworkertasks = 1000
+                pool = mp.Pool(nworkers, maxtasksperchild=maxworkertasks)
 
-                gammajit_dict = {k: chain_sample_params.iloc[ix][k]
-                                 for k in chain_sample_params.columns
-                                 if 'gamma' in k or 'jit' in k}
+                log_like_values = pool.map(maxlike_worker, tasks)
 
-                P, post = initialize_sim_posterior(
-                    data, mass_c[ix]*u.Mjup, sma_c[ix]*u.AU,
-                    incl_c[ix], ecc_c[ix], gammajit_dict
-                )
+                pool.close()
+                pool.join()
 
-                post = radvel.fitting.maxlike_fitting(post, verbose=False)
+            if not multiprocess:
+                # serial approach
+                log_like_values = []
+                for ix in range(n_injections_per_cell):
 
-                if verbose:
-                    print(post.logprob())
+                    data = pd.DataFrame({
+                        'time': rvtimes,
+                        'tel': telvec,
+                        'mnvel': full_resid[ix, :],
+                        'errvel': rverrs
+                    })
 
-                log_like_values.append(post.logprob())
-            #FIXME
+                    gammajit_dict = {k: chain_sample_params.iloc[ix][k]
+                                     for k in chain_sample_params.columns
+                                     if 'gamma' in k or 'jit' in k}
+
+                    post = initialize_sim_posterior(
+                        data, mass_c[ix]*u.Mjup, sma_c[ix]*u.AU,
+                        incl_c[ix], ecc_c[ix], gammajit_dict
+                    )
+
+                    post = radvel.fitting.maxlike_fitting(post, verbose=False)
+
+                    if verbose:
+                        print(post.logprob())
+
+                    log_like_values.append(post.logprob())
 
             log_like_arr[mass_left_ind, sma_left_ind, :] = (
                 np.array(log_like_values)

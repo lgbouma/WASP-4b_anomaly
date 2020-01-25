@@ -11,9 +11,9 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
 
     if prob_arr is None:
 
-        n_mass_grid_edges = 76 # a 4x4 grid has 5 edges. want: 51
-        n_sma_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
-        n_injections_per_cell = 1 # 500 # want: 500
+        n_mass_grid_edges = 26 # a 4x4 grid has 5 edges. want: 51
+        n_sma_grid_edges = 26 # a 4x4 grid has 5 edges. want: 51
+        n_injections_per_cell = 16 # 500 # want: 500
 
         mass_grid = (
             np.logspace(np.log10(1), np.log10(900), num=n_mass_grid_edges)*u.Mjup
