@@ -82,22 +82,23 @@ def derive_mass_semimaj_constraints(
          setupfn, rvfitdir
     )
 
-    n_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
-    n_injections_per_cell = 500 # want: 500
+    n_mass_grid_edges = 76 # a 4x4 grid has 5 edges. want: 51
+    n_sma_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
+    n_injections_per_cell = 1 # 500 # want: 500
 
     mass_grid = (
-        np.logspace(np.log10(1), np.log10(300), num=n_grid_edges)*u.Mjup
+        np.logspace(np.log10(1), np.log10(900), num=n_mass_grid_edges)*u.Mjup
     )
     sma_grid = (
-        np.logspace(np.log10(3), np.log10(500), num=n_grid_edges)*u.AU
+        np.logspace(np.log10(3), np.log10(500), num=n_sma_grid_edges)*u.AU
     )
 
     log_like_arr = np.zeros(
-        (n_grid_edges-1, n_grid_edges-1, n_injections_per_cell)
+        (n_mass_grid_edges-1, n_sma_grid_edges-1, n_injections_per_cell)
     )
 
-    sizestr = '{}x{}x{}'.format(n_grid_edges-1,
-                                n_grid_edges-1,
+    sizestr = '{}x{}x{}'.format(n_mass_grid_edges-1,
+                                n_sma_grid_edges-1,
                                 n_injections_per_cell)
     outpath = (
         '../data/rv_simulations/mass_semimaj_loglikearr_{}.pickle'.
