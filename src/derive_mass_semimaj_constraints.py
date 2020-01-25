@@ -38,7 +38,7 @@ The distribution is shown in {\bf Figure~X}.
 
 import os, pickle
 import numpy as np, pandas as pd, matplotlib.pyplot as plt
-from astropy import units as u, constants as c
+from astropy import units as u, constants as const
 from itertools import product
 from numpy import array as nparr
 from datetime import datetime
@@ -53,7 +53,7 @@ import configparser
 from radvel_utils import (
     draw_models, _get_fit_results, args_object, initialize_sim_posterior
 )
-from scipy.stats import beta
+from scipy.stats import beta, powerlaw
 
 from WASP4 import time_base
 
@@ -84,7 +84,7 @@ def derive_mass_semimaj_constraints(
 
     n_mass_grid_edges = 76 # a 4x4 grid has 5 edges. want: 51
     n_sma_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
-    n_injections_per_cell = 1 # 500 # want: 500
+    n_injections_per_cell = 500 # 500 # want: 500
 
     mass_grid = (
         np.logspace(np.log10(1), np.log10(900), num=n_mass_grid_edges)*u.Mjup
@@ -150,12 +150,36 @@ def derive_mass_semimaj_constraints(
             cos_incl_c = np.random.uniform(0, 1, size=n_injections_per_cell)
             incl_c = np.rad2deg(np.arccos(cos_incl_c))
 
+            ecc_c = np.zeros(n_injections_per_cell)
+
+            # case: companion is a planet. use Kipping (2013).
             a, b = 1.12, 3.09
-            ecc_c = beta.rvs(a, b, size=n_injections_per_cell)
+            _ecc_c_planetary = beta.rvs(a, b, size=n_injections_per_cell)
+
+            # case: companion is a star. go for Moe & Di Stefano (2017), Eq 17.
+
+            mstar = 0.864*u.Msun # WASP-4
+            period_c = ((
+                (sma_c*u.AU)**(3) *
+                4*np.pi**2 / (const.G * (mstar+mass_c*u.Mjup) )
+            )**(1/2)).to(u.day)
+
+            # Moe & Di Stefano (2017), Eq 17.
+            eta = 0.6 - 0.7 / ( np.log10(period_c.to(u.day).value) - 0.5 )
+
+            # f(x,a) = ax^{a-1} for scipy's built-in powerlaw distribution.
+            _ecc_c_stellar = powerlaw.rvs(eta+1, size=n_injections_per_cell)
+
+            # assign the eccentricties piece-wise at 10 Mjup.
+            cutoff = 10 # Mjup
+            ecc_c[mass_c <= cutoff] = _ecc_c_planetary[mass_c <= cutoff]
+            ecc_c[mass_c > cutoff] = _ecc_c_stellar[mass_c > cutoff]
 
             #
             # do a max-likelihood fit for time and argument of periastron.
             # 
+
+            #FIXME : might as well multiprocess??? seems not too bad.
             log_like_values = []
             for ix in range(n_injections_per_cell):
 
@@ -166,7 +190,7 @@ def derive_mass_semimaj_constraints(
                     'errvel': rverrs
                 })
 
-                gammajit_dict = {k:chain_sample_params.iloc[ix][k]
+                gammajit_dict = {k: chain_sample_params.iloc[ix][k]
                                  for k in chain_sample_params.columns
                                  if 'gamma' in k or 'jit' in k}
 
@@ -181,6 +205,7 @@ def derive_mass_semimaj_constraints(
                     print(post.logprob())
 
                 log_like_values.append(post.logprob())
+            #FIXME
 
             log_like_arr[mass_left_ind, sma_left_ind, :] = (
                 np.array(log_like_values)
