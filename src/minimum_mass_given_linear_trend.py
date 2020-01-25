@@ -5,13 +5,16 @@ Wright's blog says:
 "the lowest mass object that could be contributing a linear trend turns out to
 be one in an eccentric orbit with e~0.5"
 https://sites.psu.edu/astrowright/2015/01/06/loooooooong-period-exoplanets/
+
+This calculation was published in https://arxiv.org/pdf/1501.00633.pdf,
+Katherina Feng et al (2015).
 """
 
 import numpy as np
 from astropy import units as u, constants as c
 
 baseline = 10*u.year
-gammadot = -0.04 *u.m/u.s/u.year
+gammadot = -0.04 *u.m/u.s/u.day
 mstar = 0.864*u.Msun
 
 M_min = (
