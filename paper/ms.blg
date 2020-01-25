@@ -3,7 +3,11 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ms.aux
 The style file: yahapj.bst
 Database file #1: bibliography.bib
-Repeated entry---line 3223 of file bibliography.bib
+Repeated entry---line 1542 of file bibliography.bib
+ : @article{rasio_tidal_1996
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3312 of file bibliography.bib
  : @article{husnoo_observational_2012
  :                                   ,
 I'm skipping whatever remains of this entry
@@ -13,45 +17,45 @@ Warning--I didn't find a database entry for "baluev_homogeneously_2019"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in vogt_hires_1994
 Warning--empty publisher in vogt_hires_1994
-You've used 41 entries,
+You've used 47 entries,
             3215 wiz_defined-function locations,
-            960 strings with 22110 characters,
-and the built_in function-call counts, 25765 in all, are:
-= -- 1720
-> -- 2500
-< -- 10
-+ -- 903
-- -- 887
-* -- 2588
-:= -- 4859
-add.period$ -- 41
-call.type$ -- 41
-change.case$ -- 267
-chr.to.int$ -- 41
-cite$ -- 43
-duplicate$ -- 1050
-empty$ -- 1391
-format.name$ -- 928
-if$ -- 4967
+            1005 strings with 23647 characters,
+and the built_in function-call counts, 28712 in all, are:
+= -- 1970
+> -- 2676
+< -- 12
++ -- 972
+- -- 950
+* -- 2841
+:= -- 5375
+add.period$ -- 47
+call.type$ -- 47
+change.case$ -- 306
+chr.to.int$ -- 47
+cite$ -- 49
+duplicate$ -- 1206
+empty$ -- 1596
+format.name$ -- 999
+if$ -- 5568
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 37
-newline$ -- 128
-num.names$ -- 166
-pop$ -- 418
+missing$ -- 43
+newline$ -- 146
+num.names$ -- 190
+pop$ -- 477
 preamble$ -- 1
-purify$ -- 262
+purify$ -- 300
 quote$ -- 0
-skip$ -- 626
+skip$ -- 720
 stack$ -- 0
-substring$ -- 899
-swap$ -- 37
+substring$ -- 1035
+swap$ -- 43
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 366
+type$ -- 420
 warning$ -- 2
-while$ -- 173
+while$ -- 200
 width$ -- 0
-write$ -- 412
-(There was 1 error message)
+write$ -- 472
+(There were 2 error messages)

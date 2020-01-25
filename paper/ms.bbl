@@ -167,9 +167,26 @@ Knutson, H.~A., Fulton, B.~J., Montet, B.~T., {et~al.} 2014,
   \href{http://dx.doi.org/10.1088/0004-637X/785/2/126}{\JournalTitle{\apj},
   785, 126}
 
+\bibitem[{Levrard {et~al.}(2009)Levrard, Winisdoerffer, \&
+  Chabrier}]{levrard_falling_2009}
+Levrard, B., Winisdoerffer, C., \& Chabrier, G. 2009,
+  \href{http://dx.doi.org/10.1088/0004-637X/692/1/L9}{\JournalTitle{\apj}, 692,
+  L9}
+
+\bibitem[{Matsumura {et~al.}(2010)Matsumura, Peale, \&
+  Rasio}]{matsumura_tidal_2010}
+Matsumura, S., Peale, S.~J., \& Rasio, F.~A. 2010,
+  \href{http://dx.doi.org/10.1088/0004-637X/725/2/1995}{\JournalTitle{\apj},
+  725, 1995}
+
 \bibitem[{McKinney(2010)}]{mckinney-proc-scipy-2010}
 McKinney, W. 2010, in Proceedings of the 9th Python in Science Conference, ed.
   S.~van~der Walt \& J.~Millman, 51
+
+\bibitem[{Moe \& Stefano(2017)}]{moe_mind_2017}
+Moe, M., \& Stefano, R.~D. 2017,
+  \href{http://dx.doi.org/10.3847/1538-4365/aa6fb6}{\JournalTitle{The
+  Astrophysical Journal Supplement Series}, 230, 15}
 
 \bibitem[{Montet {et~al.}(2014)Montet, Crepp, Johnson, Howard, \&
   Marcy}]{montet_trends_2014}
@@ -220,6 +237,16 @@ P\'erez, F., \& Granger, B.~E. 2007,
 Pont, F., Husnoo, N., Mazeh, T., \& Fabrycky, D. 2011,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2011.18462.x}{\JournalTitle{\mnras},
   414, 1278}
+
+\bibitem[{Rasio {et~al.}(1996)Rasio, Tout, Lubow, \& Livio}]{rasio_tidal_1996}
+Rasio, F.~A., Tout, C.~A., Lubow, S.~H., \& Livio, M. 1996,
+  \href{http://dx.doi.org/10.1086/177941}{\JournalTitle{The Astrophysical
+  Journal}, 470, 1187}
+
+\bibitem[{Schlaufman(2018)}]{schlaufman_evidence_2018}
+Schlaufman, K.~C. 2018,
+  \href{http://arxiv.org/abs/1801.06185}{\JournalTitle{arXiv:1801.06185
+  [astro-ph]}}, arXiv: 1801.06185
 
 \bibitem[{Scott {et~al.}(2018)Scott, Howell, Horch, \&
   Everett}]{scott_nessi_2018}
@@ -273,5 +300,11 @@ Wright, J.~T., Marcy, G.~W., Butler, R.~P., \& Vogt, S.~S. 2004,
   Jones, Carter, Johnson, McCarthy, \& Apps}]{wright_linear_trends_2007}
 Wright, J.~T., Marcy, G.~W., Fischer, D.~A., {et~al.} 2007,
   \href{http://dx.doi.org/10.1086/510553}{\JournalTitle{\apj}, 657, 533}
+
+\bibitem[{Yee {et~al.}(2020)Yee, Winn, Knutson, Patra, Vissapragada, Zhang,
+  Holman, Shporer, \& Wright}]{yee_orbit_2020}
+Yee, S.~W., Winn, J.~N., Knutson, H.~A., {et~al.} 2020,
+  \href{http://dx.doi.org/10.3847/2041-8213/ab5c16}{\JournalTitle{The
+  Astrophysical Journal Letters}, 888, L5}
 
 \end{thebibliography}

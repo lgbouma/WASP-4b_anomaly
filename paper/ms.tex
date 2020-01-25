@@ -73,24 +73,26 @@ Institute of Technology, Pasadena, CA 91125, USA}
 %
 
 \begin{abstract}
-  We recently reported that space and ground-based transit observations
-  showed the orbital period of WASP-4b to be decreasing.
-  Possible explanations included tidal orbital decay, orbital
-  precession, and light-travel time effects.
-  In this work we present new observations of the radial velocity of
-  WASP-4, acquired with Keck-HIRES.
-  The new data show that the system is accelerating towards our line
-  of sight, at $\dot{\gamma} = X.XX \pm Y.YY\ {\rm m}\,{\rm
-  s}^{-1}\,{\rm yr}^{-1}$.
-  This implies a period decrease of X.XX milliseconds per year,
-  compared to the observed value of Y.YY.
-  Combining the radial velocities with new speckle imaging from
-  Gemini-Zorro, we find that the WASP-4 system likely has a
-  10-200$\,M_{\rm Jup}$ companion with semi-major axis between 10 and
-  100$\,$AU.
-  As observing baselines continue to extend, long-term tracking of hot
-  Jupiter radial velocities will be necessary to distinguish tidal
-  orbital decay from the R{\o}mer delay.
+  Space and ground-based transit observations of the hot Jupiter
+  WASP-4b have recently shown that its orbital period is decreasing.
+  Potential causes of the period change include tidal orbital decay,
+  orbital precession, and light-travel time effects.
+  In this work we present new radial velocity measurements of WASP-4,
+  acquired with Keck-HIRES.
+  The new data show that the system is accelerating towards the Earth
+  at $\dot{\gamma} = X.XX \pm Y.YY\ {\rm m}\,{\rm s}^{-1}\,{\rm
+  yr}^{-1}$.
+  The corresponding period decrease explains WASP-4's
+  changing orbital period as a light-travel time effect.
+  Combining the radial velocities with new speckle imaging limits, we
+  find that system's acceleration is likely caused by a
+  10-200$\,M_{\rm Jup}$ companion with semi-major axis between 10-100$\,$AU.
+  Based on statistics from \citet{knutson_friends_2014}, about 1 in 6
+  hot Jupiters are expected to show period decreases commensurate with
+  WASP-4 due to acceleration by outer companions.
+  Continued long-term radial velocity monitoring of hot Jupiters is
+  therefore essential to distinguish tidal orbital decay from
+  line-of-sight accelerations.
 \end{abstract}
 
 \keywords{Exoplanet tides (497), Exoplanet dynamics (490), Radial velocity 
@@ -100,63 +102,62 @@ Institute of Technology, Pasadena, CA 91125, USA}
 
 \section{Introduction}
 
-Since the first discovery of transiting hot Jupiters, the hunt for
-tidal orbital decay has received much attention (CITE LIKE 20 PAPERS).
-These efforts are gradually beginning to yield fruit: by combining
-transit and occultation timing and radial velocity measurements, CITE
-Yee et al{.} have shown that the data for the hot Jupiter WASP-12b are
-most compatible with orbital decay.
+The issue of whether and how the orbits of hot Jupiters decay due to
+tidal interaction with their host stars has drawn significant
+attention over the past 25 years
+\citep{rasio_tidal_1996,levrard_falling_2009,matsumura_tidal_2010}.
+Numerous observations have also been performed (CITE).  These efforts
+are now yielding fruit: by combining transit and occultation timing
+with radial velocity measurements, \citet{yee_orbit_2020} have shown
+that the data for the hot Jupiter WASP-12b are most compatible with
+orbital decay.
 
-The present study highlights a point that, while obvious, has perhaps
-not yet received due attention.  The point is that the hunt for
-orbital decay of hot Jupiters will be crippled without long-term
-radial velocity monitoring programs.  The reason is simple: when the
-timescale of orbital period change far exceeds the observing baseline,
-the first deviation from constant periodicity is always quadratic in
-the transit number.
+The present study highlights a point that, though obvious, has perhaps
+not yet received due attention.  The point is that observational
+programs aimed at identifying orbital decay in hot Jupiters will be
+crippled without long-term radial velocity monitoring programs.  The
+reason is simple: when the timescale of orbital period change exceeds
+the observing baseline, the first deviation from constant periodicity
+is always quadratic in the transit number.
 
-There are ample reasons to expect orbital decay to be common (CITE).
-However there are reasons to expect the R{\o}mer delay to perhaps be
-even {\it more} common (CITE Knutson 14, Bryan 16).  Both manifest to
-first order identically in transit times (up to the sign of the
-line-of-sight acceleration) -- as a non-zero period derivative.
-
+While orbital decay may be common (CITE).  line-of-sight accelerations
+could be even {\it more} common (CITE Knutson 14, Bryan 16).  Both
+manifest to first order identically in transit times (up to the sign
+of the line-of-sight acceleration) -- as a non-zero period derivative.
 Specifically, \citet{knutson_friends_2014} showed that X\% of hot
 Jupiters show some form of radial acceleration in radial velocity
 time-series with baselines of YY years.  Assuming a separation
 distribution of (WHATEVER), this implies that ZZ\% of hot Jupiters
 will {\it always} show a changing orbital period, over timescale of
 say 10 years.
-The abundance of giant planets
-exterior to Super-Earth sized systems is also high (CITE Bryan 2019),
-but this is not so much of a concern to us, as their planetary masses
-and therefore tidal timescales are typically expected to be at least
-an order of magnitude shorter than hot Jupiters.
+
+% The abundance of giant planets
+% exterior to Super-Earth sized systems is also high (CITE Bryan 2019),
+% but this is not so much of a concern to us, as their planetary masses
+% and therefore tidal timescales are typically expected to be at least
+% an order of magnitude shorter than hot Jupiters.
 
 The main focus of this study is the hot Jupiter WASP-4b, which has an
 orbital period that from transits appears to be decreasing by about 10
 milliseconds per year.  We discovered the timing variations using
 data from TESS and a decade of ground-based monitoring
 \citep[][hereafter \citetalias{bouma_wasp4b_2019}]{bouma_wasp4b_2019}.
-
 Thereafter, \citet{southworth_transit_2019} reported 22 new transit
 times for the system, and confirmed that the updated series of transit
 times was consistent with a quadratic ephemeris.  With additional
 data, they found a lower best-fit decay rate of $\dot{P} = -XX.X \pm
 X.X$ milliseconds per year.
-
 A separate study by \citet{baluev_2019} reported
 additional archival transit light curves of WASP-4b, most notably from
 the TRAPPIST archive, and a select few other observers.
 % \citeauthor{baluev_homogeneously_2019} analyzed their newly obtained
 % photometry, along with archival light curves that we omitted from our
 % analysis due to systematic uncertainties in the absolute time system.
-\citeauthor{baluev_2019} found that when they used all
-the available TTV data, the need for a quadratic ephemeris was present
-``at the high $\sim 5-7$ sigma level''.  However, they pointed out
-that if they used lower-precision subsets of the available timing
-data, the necessity for the quadratic term decreased. This is not
-particularly surprising.
+% \citeauthor{baluev_2019} found that when they used all the available
+% TTV data, the need for a quadratic ephemeris was present.  However,
+% they pointed out that if they used lower-precision subsets of the
+% available timing data, the necessity for the quadratic term decreased.
+% This is not particularly surprising.
 % \citeauthor{baluev_homogeneously_2019} also pointed out that the
 % precise transit times reported by \citet{huitson_gemini_2017} were
 % quite important in the time-series.  Overall,
@@ -167,10 +168,15 @@ To determine the origin of the period change, we acquired four
 additional radial velocity measurements using Keck-HIRES, extending
 the RV baseline from 3 to 9 years.  Previously, the radial velocities
 were sparse and showed a weak ($<2\sigma$) linear trend.  Our new
-measurements reveal a line of sight acceleration of $\dot{\gamma} =
+measurements reveal a line-of-sight acceleration of $\dot{\gamma} =
 -XX {\rm m\,s^{-1}\,yr^{-1}}$.  This translates to an expected period
 decrease simply from the light travel time effect of ZZ milliseconds
 per year --- about commensurate with what is observed.
+In the following, we avoid the term ``R{\o}mer delay'' as this phrase
+typically signifies arrival time delay due to observatory motion. We
+are discussing an analog of the Doppler effect for a source with
+constant line-of-sight acceleration.
+
 
 % FIXME: figure out correct sections
 \S~\ref{sec:observations} presents the new observations...
@@ -382,7 +388,7 @@ who fixed the quadratic component of the long-term trend to zero, in
 Figure~\ref{fig:rvs} we show best-fitting models for the linear-trend
 case.  
 
-WASP-4 was found to be accelerating towards our line of sight at high
+WASP-4 was found to be accelerating towards our line-of-sight at high
 confidence,
 \begin{equation}
   \dot{v}_{\rm r} =
@@ -394,8 +400,8 @@ $\dot{v}_{\rm r}$ was thought to be about five times smaller, and was
 only marginally significant
 \citep{knutson_friends_2014,bouma_wasp4b_2019}.
 
-The system's acceleration towards our line of sight causes a decrease
-in the apparent orbital period (the R{\o}mer delay).  The period
+The system's acceleration towards our line-of-sight causes a decrease
+in the apparent orbital period.  The period
 derivative expected from radial velocities is
 \begin{align}
   \dot{P}_{\rm RV} &= \frac{\dot{v}_{\rm r} P}{c} \\
@@ -474,15 +480,29 @@ stellar activity.
 
 
 Given a linear radial velocity trend, we can place lower-limits on the
-mass and semi-major axis of additional bodies in the system.  The
-constraints on the two parameters are degenerate: $\dot{\gamma}
-\propto M_{\rm p} a^{-2}$.  Nonetheless, the Zorro images and contrast
-curves can limit the available parameter space by setting an upper
-limit on the semimajor axis, and a maximum brightness (and thereby
-mass) of any putative companions.
+mass and semi-major axis of additional bodies in the system.  As a
+quick estimate of the minimum mass required to explain the linear
+trend in WASP-4, we turn to \citet{feng_california_2015}.  As they
+discuss, the scenario that yields the minimum companion mass for a
+system with a linear trend is a companion with $e\approx0.5$ and
+$\omega=90^\circ$.  From their Equation~1,
+\begin{equation}
+ M_{\rm min} \approx 0.0164\,M_{\rm Jup}
+  \left( \frac{\tau}{{\rm yr}} \right)^{4/3}
+  \left| \frac{\dot{\gamma}}{{\rm m\,s^{-1}\,yr^{-1}}} \right|
+  \left( \frac{M_\star}{{M_\odot}} \right)^{2/3},
+\end{equation}
+where $\tau$ is the observing baseline.
+For WASP-4, this yields $M_{\rm min} = 4.7 M_{\rm Jup}$.  Higher mass
+companions are allowed, presuming that they orbit further from the
+star; at fixed $\dot{\gamma}$, $M_{\rm comp} \propto a^2$
+\citep{torres_substellar_1999,liu_crossing_2002}.
 
-The general procedure we use to derive constraints on possible
-companion masses and semi-major axes has been developed by
+High-resolution images can further limit the available parameter space
+by setting an upper limit on the semimajor axis, and a maximum
+brightness (and thereby mass) of any putative companions.
+The procedure we use to combine constraints from both radial
+velocities and high resolution imaging has been developed by
 \citet{wright_linear_trends_2007}, \citet{crepp_trends_2012},
 \citet{montet_trends_2014}, \citet{knutson_friends_2014},
 \citet{bryan_statistics_2016,bryan_excess_2019}, and others.
@@ -597,7 +617,8 @@ the orbital evolution of the inner giant.
 Further radial velocity monitoring should eventually reveal the
 orbital parameters and minimum mass of the companion.
 
-\subsection{How many other hot Jupiters will show the R{\o}mer delay?}
+\subsection{How many other hot Jupiters are accelerating towards the
+Earth?}
 
 We identified WASP-4b's decreasing orbital period as part of a search
 for tidal orbital decay.  However, over half of hot Jupiters have
@@ -612,6 +633,15 @@ derivatives $\dot{P}_{\rm RV} = \dot{v}_{\rm r} P/c$ for all the
 systems.
 The results are given in {\bf Table~X}, and visualized for hot
 Jupiters with significant linear trends in Figure~\ref{fig:pdot_pop}.
+
+Including WASP-4b, 16 of 51 hot Jupiters from
+\citet{knutson_friends_2014} show a non-zero radial velocity trend.
+About half are positive, and half are negative, and therefore
+$\approx$1 in 6 hot Jupiters are expected to show period decreases
+commensurate with WASP-4 due to acceleration by outer companions.
+
+
+
 
 \begin{figure}[t]
 	\begin{center}
@@ -644,7 +674,7 @@ period decrease observed in transits~---~not tidal
 orbital decay, or apsidal precession.
 The most likely parameters for the companion are XXX.
 Over half of hot Jupiters have super-Jovian outer companions,
-so the R{\o}mer delay will become an increasingly large nuisance in
+so the light-travel time effect will become an increasingly large nuisance in
 the hunt for orbital decay as
 the observing baselines for hot Jupiters increase.
 The requirement to avoid missing out is to have long-term
