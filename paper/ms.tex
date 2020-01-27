@@ -150,7 +150,7 @@ X.X$ milliseconds per year.
 A separate study by \citet{baluev_2019} reported
 additional archival transit light curves of WASP-4b, most notably from
 the TRAPPIST archive, and a select few other observers.
-% \citeauthor{baluev_homogeneously_2019} analyzed their newly obtained
+% \citeauthor{baluev_2019} analyzed their newly obtained
 % photometry, along with archival light curves that we omitted from our
 % analysis due to systematic uncertainties in the absolute time system.
 % \citeauthor{baluev_2019} found that when they used all the available
@@ -158,10 +158,10 @@ the TRAPPIST archive, and a select few other observers.
 % they pointed out that if they used lower-precision subsets of the
 % available timing data, the necessity for the quadratic term decreased.
 % This is not particularly surprising.
-% \citeauthor{baluev_homogeneously_2019} also pointed out that the
+% \citeauthor{baluev_2019} also pointed out that the
 % precise transit times reported by \citet{huitson_gemini_2017} were
 % quite important in the time-series.  Overall,
-% \citeauthor{baluev_homogeneously_2019} did not find the claim of a
+% \citeauthor{baluev_2019} did not find the claim of a
 % period decrease convincing.
 
 To determine the origin of the period change, we acquired four
@@ -193,28 +193,32 @@ constant line-of-sight acceleration.
 include data from the peer-reviewed literature for which (a) the
 analysis was based on observations of a single transit, (b) the
 midpoint was fitted as a free parameter, and (c) the time system
-specified both the absolute reference (TDB or UTC) and also whether
-any barycentric or heliocentric corrections had been performed.
+specified both the leap second correction (TDB or UTC) and also
+whether any barycentric or heliocentric corrections had been
+performed.
 
+% FIXME : verify with Michael Gillon that this is true. (P. Evans
+% done)
 The majority of times are identical to those we collected in
 \citetalias{bouma_wasp4b_2019}.  Twenty-two new times reported by
 \citet{southworth_transit_2019} are included.  These transits were
 observed from the 3.58m NTT and Danish 1.54m telescopes at La Silla,
-and the SAAO 1.0m telescope.
+and the SAAO 1.0m telescope.  Additional timimg
+measurements have also recently been reported by \citet{baluev_2019},
+based on a homogeneous analysis of archival ground-based observations
+taken professional and amateur observers.  We included
+twelve of their ``high quality'' transit times acquired by TRAPPIST
+(six transits), El~Sauce (four transits), and
+\citet{petrucci_no_2013}.  For TRAPPIST and El~Sauce, we verified with
+the original observers that correct barycentric and leap-second
+corrections had been performed (M.~Gillon, P.~Evans, priv{.} comm{.}).
+We omitted the fourteen remaining \citeauthor{baluev_2019}
+ETD\footnote{\url{http://var2.astro.cz/ETD}} times due to ambiguity in
+whether leap-second corrections had or had not been performed.
 
-% FIXME : verify with Michael Gillon and Phil Evans that this is true.
-A number of additional times were also recently reported by
-\citet{baluev_2019}, based on a homogeneous analysis of archival
-ground-based observations.  We included their ``high quality'' transit
-times with provenance from the TRAPPIST and El Sauce telescopes, for
-which we verified with the original observers that appropriate
-time-system corrections had been performed (M.~Gillon, P.~Evans,
-priv{.} comm{.}).
-
-The four available occultation data points tabulated by
-\citetalias{bouma_wasp4b_2019} are sparse and have neglegible
-statistical value due to their large uncertainties, and we forgo
-their use in this analysis.  
+The four available occultations tabulated by
+\citetalias{bouma_wasp4b_2019} have neglegible statistical value due
+to their large uncertainties, and we forgo their use in this analysis.
 
 \subsection{Radial velocities}
 
@@ -266,6 +270,7 @@ slightly better result, which we opt to use for our analysis.
 \label{sec:analysis}
 
 \subsection{Transits}
+\label{sec:transit_analysis}
 
 \begin{figure}[t]
 	\begin{center}
@@ -275,36 +280,37 @@ slightly better result, which we opt to use for our analysis.
 	\vspace{-0.7cm}
   \caption{ {\bf Timing residuals and best-fit models for WASP-4b.}
   The vertical axis shows the observed times minus the calculated
-  times assuming a constant orbital period .  Darker points correspond
+  times assuming a constant orbital period.  More opaque points correspond
   to more precise data.  The quadratic ephemeris and its $1\sigma$
-  uncertainties are shown in blue.  The binned TESS point (red square)
-  is the weighted average of 18 TESS transits and is for display
-  purposes only.  The models were fitted to all of the individual
-  transit times.
+  statistical uncertainties are shown in blue.  Neither model fully
+  explains the transit residuals (see~\ref{sec:transit_analysis}).
+  The binned TESS point (yellow star) is the weighted average of 18
+  TESS transits and is for display purposes only.  Its uncertainty is
+  slightly larger than the marker size.  The models were fitted to all
+  of the individual transit times.
   \label{fig:times}
 	}
 \end{figure}
 
-We considered two possible models for the observed transit times.
-The first model assumes a constant orbital period on a circular orbit:
+We considered two possible models for the observed transit times.  The
+first model assumes a constant orbital period on a circular orbit:
 \begin{align}
   t_{\rm tra}(E) &= t_0 + PE,\\
 \end{align}
-where $E$ is the epoch number and $t_0$ is a reference epoch.
-The second model assumes the period changes at a steady rate:
+where $E$ is the epoch number and $t_0$ is a reference epoch.  The
+second model assumes the period changes at a steady rate:
 \begin{align}
   t_{\rm tra}(E) &=
     t_0 + PE +
     \frac{1}{2} \frac{{\rm d}P}{{\rm d}E} E^2.
 \end{align}
-The free parameters are the reference epoch $t_0$, the period at
-the reference epoch, and the period derivative, ${\rm d}P/{\rm d}t =
-(1/P) {\rm d}P/{\rm d}E$.
-We defined the epoch numbers such that $E=0$ is near the weighted
-average of the observed times.  This helps to reduce the covariance
-between $t_0$ and $P$.
-A third possible model that we did not consider for reasons that will
-become apparent is a precessing, eccentric orbit \citep[{\it
+The free parameters are the reference epoch $t_0$, the period at the
+reference epoch, and the period derivative, ${\rm d}P/{\rm d}t = (1/P)
+{\rm d}P/{\rm d}E$.  We defined the epoch numbers such that $E=0$ is
+near the weighted average of the observed times.  This helps to reduce
+the covariance between $t_0$ and $P$.  A third possible model that we
+did not consider for reasons that will become apparent is a
+precessing, eccentric orbit \citep[{\it
 e.g.},][]{gimenez_revision_1995,patra_2017}.
 
 We fitted each of the two models by assuming a Gaussian likelihood and
@@ -315,36 +321,48 @@ posterior using the algorithm proposed by
 the quadratic model allowed the period derivative to have any sign.
 
 Figure~\ref{fig:times} shows the observed transit times, minus the
-best-fit constant period model. 
-The best-fitting constant-period model has $\chi^2 = XXX$ and YY
-degrees of freedom.  The best-fitting
-quadratic model has $\chi^2 = YYY$ and ZZ degrees of freedom. 
+best-fit constant period model.  The best-fitting constant-period
+model has $\chi^2 = 276$, 91 degrees of freedom, and $\chi^2_{\rm
+red}=3.0$.  The best-fitting quadratic model has $\chi^2 = 183$, 90
+degrees of freedom, and $\chi^2_{\rm red}=2.0$.  From the reduced
+$\chi^2$ values, we can surmise that neither model entirely describes
+the transit data that we have collected---there must be some
+additional source of signal or potentially noise. In
+\citet{bouma_wasp4b_2019}, we found that the quadratic model for the
+(less complete) transit data gave $\chi^2_{\rm red}=1.0$.  The only
+difference between our old and new transit datasets are the addition
+of transit times from \citet{southworth_transit_2019} and
+\citet{baluev_2019}.  The worsened $\chi^2_{\rm red}$ could reflect
+underestimated statistical uncertainties in these or in fact any of
+the transit measurements. It could also reflect systematic errors in
+the time-systems in which the transit measurements were recorded,
+though we have taken every caution against the latter possibility.
+% For purposes of simplicity, we simply accept that the additional data
+% have effectively increased the scatter in the transit O-C diagram.
 The difference in the BIC \citep{kass_bayes_1995} between the linear
-and quadratic and models is $\Delta {\rm BIC} = ZZ.Z$, strongly
+and quadratic and models is $\Delta {\rm BIC} = 89.1$, strongly
 favoring the quadratic case.
 
 The best-fit period derivative in the quadratic model is
 \begin{equation}
 \dot{P}
-  = - (X.XX \pm 0.XX)\times 10^{-10}
-  = - YY.Y \pm Z.Z~{\rm ms}\,{\rm yr}^{-1}.
+  = - (2.74 \pm 0.28)\times 10^{-10}
+  = - 8.64 \pm 0.89~{\rm ms}\,{\rm yr}^{-1}.
   \label{eq:dP_dt_obs}
 \end{equation}
-This agrees with the value reported by \citet{southworth_transit_2019}
-after their including an additional 22 archival transit measurements
-($\dot{P} = - 9.2 \pm 1.1~{\rm ms}\,{\rm yr}^{-1}$).
-It is smaller than the rate of period decrease found by
-\citetalias{bouma_wasp4b_2019} ($- 12.6 \pm 1.2~{\rm ms}\,{\rm
-yr}^{-1}$)., presumably because of missing coverage filled in by
-\citeauthor{southworth_transit_2019}'s observations.
-The other best-fit transit timing model parameters are reported in
-{\bf Table~X}.
+This agrees to within $1\sigma$ of the value reported by
+\citet{southworth_transit_2019} ($\dot{P} = - 9.2 \pm 1.1~{\rm
+ms}\,{\rm yr}^{-1}$).  It is $\approx$3$\sigma$ larger than the rate
+of period decrease we found earlier \citep[$- 12.6 \pm 1.2~{\rm
+ms}\,{\rm yr}^{-1}$;][]{bouma_wasp4b_2019}, presumably because of
+missing coverage filled in by \citeauthor{southworth_transit_2019}'s
+and \citeauthor{baluev_2019}'s observations.  The other best-fit
+transit timing model parameters are reported in {\bf Table~X}.
 
 
 
 \subsection{Radial Velocities: WASP-4's acceleration towards the Earth}
 
-%FIXME: is the purple here from my Pdot, or Southworth's?
 %FIXME: perhaps include the WASP-4b phase-fold here too??
 \begin{figure}[t]
 	\begin{center}
@@ -357,7 +375,7 @@ The other best-fit transit timing model parameters are reported in
     of WASP-4b has been subtracted.  The linear trend inferred from the
     RV data is shown with a black line, with $1\sigma$ errors in gray.
     The trend that would be needed to produce the period decrease seen
-    in transits ($\dot{P}= - YY.Y \pm Z.Z~{\rm ms}\,{\rm yr}^{-1}$) is
+    in transits ($\dot{P}= - 8.64 \pm 0.89~{\rm ms}\,{\rm yr}^{-1}$) is
     indicated with the purple dotted line.  The four new RV
     measurements presented in this work increased the significance of
     the slope from $\approx$2$\sigma$ to 15$\sigma$.
@@ -408,14 +426,8 @@ derivative expected from radial velocities is
   \dot{P}_{\rm RV} &= -5.94 \pm 0.39~{\rm ms}\,{\rm yr}^{-1}.
 \end{align}
 In other words, the majority of the period decrease observed in
-transits ($\dot{P} = - X.X \pm 1.1~{\rm ms}\,{\rm yr}^{-1}$) seems to
+transits ($\dot{P}= - 8.64 \pm 0.89~{\rm ms}\,{\rm yr}^{-1}$) seems to
 be explained by the acceleration of the host star.
-% FIXME
-All the
-available TTV data show a period decrease of $\approx 8-12$
-milliseconds per year~\citep{bouma_wasp-4b_2019,southworth_transit_2019,baluev_homogeneously_2019}.
-
-
 
 An important consideration is whether the measured RV trend is at all
 correlated with stellar activity.  We investigate this by analyzing
@@ -639,7 +651,6 @@ Including WASP-4b, 16 of 51 hot Jupiters from
 About half are positive, and half are negative, and therefore
 $\approx$1 in 6 hot Jupiters are expected to show period decreases
 commensurate with WASP-4 due to acceleration by outer companions.
-
 
 
 

@@ -100,6 +100,12 @@ Dotter, A. 2016,
   \href{http://dx.doi.org/10.3847/0067-0049/222/1/8}{\JournalTitle{\apjs}, 222,
   8}
 
+\bibitem[{Feng {et~al.}(2015)Feng, Wright, Nelson, Wang, Ford, Marcy, Isaacson,
+  \& Howard}]{feng_california_2015}
+Feng, Y.~K., Wright, J.~T., Nelson, B., {et~al.} 2015,
+  \href{http://dx.doi.org/10.1088/0004-637X/800/1/22}{\JournalTitle{The
+  Astrophysical Journal}, 800, 22}
+
 \bibitem[{Foreman-Mackey(2016)}]{corner_2016}
 Foreman-Mackey, D. 2016,
   \href{http://dx.doi.org/10.21105/joss.00024}{\JournalTitle{The Journal of
@@ -173,6 +179,12 @@ Levrard, B., Winisdoerffer, C., \& Chabrier, G. 2009,
   \href{http://dx.doi.org/10.1088/0004-637X/692/1/L9}{\JournalTitle{\apj}, 692,
   L9}
 
+\bibitem[{Liu {et~al.}(2002)Liu, Fischer, Graham, Lloyd, Marcy, \&
+  Butler}]{liu_crossing_2002}
+Liu, M.~C., Fischer, D.~A., Graham, J.~R., {et~al.} 2002,
+  \href{http://dx.doi.org/10.1086/339845}{\JournalTitle{The Astrophysical
+  Journal}, 571, 519}
+
 \bibitem[{Matsumura {et~al.}(2010)Matsumura, Peale, \&
   Rasio}]{matsumura_tidal_2010}
 Matsumura, S., Peale, S.~J., \& Rasio, F.~A. 2010,
@@ -232,6 +244,12 @@ P\'erez, F., \& Granger, B.~E. 2007,
   \href{http://dx.doi.org/10.1109/MCSE.2007.53}{\JournalTitle{Computing in
   Science and Engineering}, 9, 21}
 
+\bibitem[{Petrucci {et~al.}(2013)Petrucci, Jofr\'e, Schwartz, Cúneo,
+  Martínez, Gómez, Buccino, \& Mauas}]{petrucci_no_2013}
+Petrucci, R., Jofr\'e, E., Schwartz, M., {et~al.} 2013,
+  \href{http://dx.doi.org/10.1088/2041-8205/779/2/L23}{\JournalTitle{\apjl},
+  779, L23}
+
 \bibitem[{Pont {et~al.}(2011)Pont, Husnoo, Mazeh, \&
   Fabrycky}]{pont_determining_2011}
 Pont, F., Husnoo, N., Mazeh, T., \& Fabrycky, D. 2011,
@@ -262,6 +280,11 @@ Scott, N.~J., Howell, S.~B., Horch, E.~P., \& Everett, M.~E. 2018,
 Southworth, J., Dominik, M., Jorgensen, U.~G., {et~al.} 2019,
   \href{http://arxiv.org/abs/1907.08269}{\JournalTitle{arXiv:1907.08269
   [astro-ph]}}, arXiv: 1907.08269
+
+\bibitem[{Torres(1999)}]{torres_substellar_1999}
+Torres, G. 1999,
+  \href{http://dx.doi.org/10.1086/316313}{\JournalTitle{Publications of the
+  Astronomical Society of the Pacific}, 111, 169}
 
 \bibitem[{Triaud {et~al.}(2010)Triaud, Collier~Cameron, Queloz, Anderson,
   Gillon, Hebb, Hellier, Loeillet, Maxted, Mayor, Pepe, Pollacco, Ségransan,
