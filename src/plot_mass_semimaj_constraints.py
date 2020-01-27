@@ -11,9 +11,9 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
 
     if prob_arr is None:
 
-        n_mass_grid_edges = 26 # a 4x4 grid has 5 edges. want: 51
-        n_sma_grid_edges = 26 # a 4x4 grid has 5 edges. want: 51
-        n_injections_per_cell = 16 # 500 # want: 500
+        n_mass_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
+        n_sma_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
+        n_injections_per_cell = 512 # 500 # want: 500
 
         mass_grid = (
             np.logspace(np.log10(1), np.log10(900), num=n_mass_grid_edges)*u.Mjup
@@ -98,6 +98,8 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
 
     ax.get_yaxis().set_tick_params(which='both', direction='in')
     ax.get_xaxis().set_tick_params(which='both', direction='in')
+    ax.tick_params(right=True, which='both', direction='in')
+    ax.tick_params(top=True, which='both', direction='in')
     fig.tight_layout(h_pad=0, w_pad=0)
 
     dstr = '_discretecolor' if discrete_color else ''

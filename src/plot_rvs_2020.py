@@ -75,9 +75,9 @@ def main(make_my_plot=1):
 
     # what would explain the Pdot from transits?
     period = 1.338231466*units.day
-    Pdot_tra = -4e-10
-    Pdot_tra_perr = -4e-10 + 0.4e-10
-    Pdot_tra_merr = -4e-10 - 0.4e-10
+    Pdot_tra = -2.736e-10
+    Pdot_tra_perr = Pdot_tra + 2.83e-11
+    Pdot_tra_merr = Pdot_tra - 2.83e-11
     dvdt_tra = (Pdot_tra * const.c / period).to(
         (units.m/units.s)/units.day).value
     dvdt_tra_perr = (Pdot_tra_perr * const.c / period).to(
@@ -121,6 +121,7 @@ def main(make_my_plot=1):
 
     ax.get_yaxis().set_tick_params(which='both', direction='in')
     ax.get_xaxis().set_tick_params(which='both', direction='in')
+    ax.tick_params(right=True, which='both', direction='in')
     a_top.get_yaxis().set_tick_params(which='both', direction='in')
     a_top.get_xaxis().set_tick_params(which='both', direction='in')
 
