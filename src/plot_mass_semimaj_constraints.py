@@ -120,7 +120,7 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
     ax.set_ylabel('Companion mass [M$_\mathrm{{jup}}$]')
 
     cbar = fig.colorbar(im, orientation='vertical', extend='min',
-                        label='log(likelihood)')
+                        label='$\ln$(likelihood)')
     cbar.ax.tick_params(labelsize=6)
 
     ax.set_ylim([1,1e3])
