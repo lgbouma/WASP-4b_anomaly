@@ -4,6 +4,7 @@ from numpy import array as nparr
 from cdips.plotting import savefig
 import matplotlib as mpl
 from astropy import units as u, constants as c
+import matplotlib.patheffects as pe
 
 def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
                                   sma_grid=None, with_contrast=False,
@@ -11,8 +12,8 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
 
     if prob_arr is None:
 
-        n_mass_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
-        n_sma_grid_edges = 51 # a 4x4 grid has 5 edges. want: 51
+        n_mass_grid_edges = 129 # a 4x4 grid has 5 edges. want: 51
+        n_sma_grid_edges = 129 # a 4x4 grid has 5 edges. want: 51
         n_injections_per_cell = 512 # 500 # want: 500
 
         mass_grid = (
@@ -54,11 +55,14 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
 
     if not linear_z:
 
+        cutoff = -12
+
         if discrete_color:
-            bounds = np.round(np.linspace(-10, np.log(prob_arr).max(), 5),1)
+            bounds = np.round(np.linspace(cutoff, np.log(prob_arr).max(), 5),1)
             norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
         else:
-            norm = mpl.colors.Normalize(vmin=np.log(prob_arr).max(), vmax=-10)
+            norm = mpl.colors.Normalize(vmin=np.log(prob_arr).max(),
+                                        vmax=cutoff)
 
         im = ax.pcolormesh(X, Y, np.log(prob_arr), cmap=cmap, norm=norm,
                            shading='flat') # vs 'gouraud'
@@ -66,10 +70,11 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
     else:
 
         if discrete_color:
-            bounds = np.linspace(1e-10, prob_arr.max(), 5)
+            bounds = np.linspace(10**(cutoff), prob_arr.max(), 5)
             norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
         else:
-            norm = mpl.colors.Normalize(vmin=prob_arr.max(), vmax=1e-10)
+            norm = mpl.colors.Normalize(vmin=prob_arr.max(),
+                                        vmax=10**(cutoff))
 
         im = ax.pcolormesh(X, Y, prob_arr, cmap=cmap, norm=norm)
 
@@ -83,7 +88,29 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
 
         ax.plot(
             nparr(zdf['sma_AU'])*u.AU,
-            (nparr(zdf['m_comp/m_sun'])*u.Msun).to(u.Mjup)
+            (nparr(zdf['m_comp/m_sun'])*u.Msun).to(u.Mjup),
+            color='C0', lw=1
+        )
+
+        ax.text(
+            100, 450, 'Ruled out by\nspeckle imaging',
+            fontsize=7.5, ha='center', va='center',
+            path_effects=[pe.withStroke(linewidth=0.8, foreground="white")],
+            color='C0'
+        )
+
+        _sma = np.logspace(np.log10(90), np.log10(180))
+        _mass_min = 2 # rescale
+        k = _mass_min / min(_sma**2)
+        _mass = k*_sma**2
+        ax.plot(
+            _sma, _mass, color='k', lw=1
+        )
+        ax.text(
+            np.percentile(_sma, 60), np.percentile(_mass, 40), '$M\propto a^2$',
+            fontsize=7.5, ha='left', va='center',
+            path_effects=[pe.withStroke(linewidth=0.8, foreground="white")],
+            color='black'
         )
 
     ax.set_xscale('log')
@@ -94,7 +121,9 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
 
     cbar = fig.colorbar(im, orientation='vertical', extend='min',
                         label='log(likelihood)')
-    cbar.ax.tick_params(labelsize=8)
+    cbar.ax.tick_params(labelsize=6)
+
+    ax.set_ylim([1,1e3])
 
     ax.get_yaxis().set_tick_params(which='both', direction='in')
     ax.get_xaxis().set_tick_params(which='both', direction='in')

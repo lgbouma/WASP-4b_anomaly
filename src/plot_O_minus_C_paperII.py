@@ -90,7 +90,7 @@ def plot_O_minus_C(
     include_all_points=False,
     x_extra=None, y_extra=None, sigma_y_extra=None,
     x_occ=None, y_occ=None, sigma_y_occ=None,
-    onlytransits=False, theta_quad_merr=None, theta_quad_perr=None):
+    onlytransits=False, perrs_3d=None, merrs_3d=None):
 
     xfit = np.linspace(10*np.min(x), 10*np.max(x), 10000)
 
@@ -147,30 +147,87 @@ def plot_O_minus_C(
     if include_all_points:
         raise NotImplementedError
 
-    a0.plot(xfit,
-            quadratic_fit(theta_quadratic, xfit)
-                - linear_fit(theta_linear, xfit),
-            zorder=-1, color='C0')
+    #a0.plot(xfit,
+    #        quadratic_fit(theta_quadratic, xfit)
+    #            - linear_fit(theta_linear, xfit),
+    #        zorder=-1, color='C0')
     a0.plot(xfit,
             linear_fit(theta_linear, xfit)
                 - linear_fit(theta_linear, xfit),
             zorder=-3, color='gray')
 
+    #
+    # Do the error bands
+    #
+    sigma_t0 = max(
+        [perrs_3d['t0 [min]'], merrs_3d['t0 [min]']]
+    )
+    sigma_P = max(
+        [perrs_3d['P [min]'], merrs_3d['P [min]']]
+    )
+    sigma_quad = max(
+        [perrs_3d['0.5 dP/dE [min]'], merrs_3d['0.5 dP/dE [min]']]
+    )
+
+    model_tmid_upper = np.maximum.reduce([
+        (
+            (theta_quadratic[0]+sigma_t0) +
+            (theta_quadratic[1]+sigma_P)*xfit +
+            (theta_quadratic[2]+sigma_quad)*xfit**2
+        ),
+        (
+            (theta_quadratic[0]+sigma_t0) +
+            (theta_quadratic[1]-sigma_P)*xfit +
+            (theta_quadratic[2]+sigma_quad)*xfit**2
+        ),
+        (
+            (theta_quadratic[0]+sigma_t0) +
+            (theta_quadratic[1]+sigma_P)*xfit +
+            (theta_quadratic[2]-sigma_quad)*xfit**2
+        ),
+        (
+            (theta_quadratic[0]+sigma_t0) +
+            (theta_quadratic[1]-sigma_P)*xfit +
+            (theta_quadratic[2]-sigma_quad)*xfit**2
+        )
+    ])
+
+    model_tmid_lower = np.minimum.reduce([
+        (
+            (theta_quadratic[0]-sigma_t0) +
+            (theta_quadratic[1]-sigma_P)*xfit +
+            (theta_quadratic[2]-sigma_quad)*xfit**2
+        ),
+        (
+            (theta_quadratic[0]-sigma_t0) +
+            (theta_quadratic[1]+sigma_P)*xfit +
+            (theta_quadratic[2]-sigma_quad)*xfit**2
+        ),
+        (
+            (theta_quadratic[0]-sigma_t0) +
+            (theta_quadratic[1]-sigma_P)*xfit +
+            (theta_quadratic[2]+sigma_quad)*xfit**2
+        ),
+        (
+            (theta_quadratic[0]-sigma_t0) +
+            (theta_quadratic[1]+sigma_P)*xfit +
+            (theta_quadratic[2]+sigma_quad)*xfit**2
+        )
+    ])
+
     a0.plot(xfit,
-            quadratic_fit(theta_quad_merr, xfit)
-                - linear_fit(theta_linear, xfit),
-            zorder=-2, color='C0', alpha=0.5)
+            model_tmid_lower - linear_fit(theta_linear, xfit),
+            zorder=-2, color='C0', alpha=0.9)
     a0.plot(xfit,
-            quadratic_fit(theta_quad_perr, xfit)
-                - linear_fit(theta_linear, xfit),
-            zorder=-2, color='C0', alpha=0.5)
+            model_tmid_upper - linear_fit(theta_linear, xfit),
+            zorder=-2, color='C0', alpha=0.9)
     a0.fill_between(
             xfit,
-            quadratic_fit(theta_quad_merr, xfit)
+            model_tmid_lower
                 - linear_fit(theta_linear, xfit),
-            quadratic_fit(theta_quad_perr, xfit)
+            model_tmid_upper
                 - linear_fit(theta_linear, xfit),
-            zorder=-3, color='C0', alpha=0.2
+            zorder=-3, color='C0', alpha=0.3, lw=0
     )
 
 
@@ -261,18 +318,6 @@ def main(plname, xlim=None, ylim=None, include_all_points=False, ylim1=None):
          medianparams_3d['0.5 dP/dE [min]']
         ]
     )
-    theta_quad_merr = nparr(
-        [medianparams_3d['t0 [min]'],
-         medianparams_3d['P [min]'],
-         medianparams_3d['0.5 dP/dE [min]'] - merrs_3d['0.5 dP/dE [min]']
-        ]
-    )
-    theta_quad_perr = nparr(
-        [medianparams_3d['t0 [min]'],
-         medianparams_3d['P [min]'],
-         medianparams_3d['0.5 dP/dE [min]'] + perrs_3d['0.5 dP/dE [min]']
-        ]
-    )
 
     x_extra, y_extra, sigma_y_extra = None, None, None
 
@@ -290,8 +335,8 @@ def main(plname, xlim=None, ylim=None, include_all_points=False, ylim1=None):
         include_all_points=include_all_points,
         x_extra=x_extra, y_extra=y_extra, sigma_y_extra=sigma_y_extra,
         x_occ=x_occ, y_occ=y_occ, sigma_y_occ=sigma_y_occ, ylim1=ylim1,
-        onlytransits=onlytransits, theta_quad_merr=theta_quad_merr,
-        theta_quad_perr=theta_quad_perr)
+        onlytransits=onlytransits, perrs_3d=perrs_3d,
+        merrs_3d=merrs_3d)
 
     if onlytransits:
         print('made the O-C plot with only transits')
@@ -304,6 +349,6 @@ if __name__=="__main__":
 
     # with all points
     ylim = [-5,5]
-    xlim = [-1500, 2000]
+    xlim = [-1600, 2100]
     ylim1 = None #FIXME [-5,4.2]
     main(plname, xlim=xlim, ylim=ylim, ylim1=ylim1)
