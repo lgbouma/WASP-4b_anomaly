@@ -15,49 +15,48 @@ Repeated entry---line 4114 of file bibliography.bib
  : @article{petrucci_no_2013
  :                          ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "foreman-mackey_emcee_2013"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in vogt_hires_1994
 Warning--empty publisher in vogt_hires_1994
-You've used 51 entries,
+You've used 52 entries,
             3215 wiz_defined-function locations,
-            1034 strings with 24980 characters,
-and the built_in function-call counts, 31090 in all, are:
-= -- 2167
-> -- 2852
+            1040 strings with 25157 characters,
+and the built_in function-call counts, 31650 in all, are:
+= -- 2215
+> -- 2890
 < -- 13
-+ -- 1042
-- -- 1018
-* -- 3055
-:= -- 5803
-add.period$ -- 51
-call.type$ -- 51
-change.case$ -- 345
-chr.to.int$ -- 51
-cite$ -- 53
-duplicate$ -- 1314
-empty$ -- 1735
-format.name$ -- 1068
-if$ -- 6037
++ -- 1057
+- -- 1033
+* -- 3105
+:= -- 5900
+add.period$ -- 52
+call.type$ -- 52
+change.case$ -- 353
+chr.to.int$ -- 52
+cite$ -- 54
+duplicate$ -- 1342
+empty$ -- 1770
+format.name$ -- 1083
+if$ -- 6150
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 47
-newline$ -- 158
-num.names$ -- 206
-pop$ -- 532
+missing$ -- 48
+newline$ -- 161
+num.names$ -- 210
+pop$ -- 544
 preamble$ -- 1
-purify$ -- 339
+purify$ -- 347
 quote$ -- 0
-skip$ -- 782
+skip$ -- 798
 stack$ -- 0
-substring$ -- 1131
-swap$ -- 47
+substring$ -- 1156
+swap$ -- 48
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 456
+type$ -- 465
 warning$ -- 2
-while$ -- 220
+while$ -- 225
 width$ -- 0
-write$ -- 512
+write$ -- 522
 (There were 3 error messages)

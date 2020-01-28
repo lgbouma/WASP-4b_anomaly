@@ -80,8 +80,8 @@ Institute of Technology, Pasadena, CA 91125, USA}
   In this work we present new radial velocity measurements of WASP-4,
   acquired with Keck-HIRES.
   The new data show that the system is accelerating towards the Earth
-  at $\dot{\gamma} = X.XX \pm Y.YY\ {\rm m}\,{\rm s}^{-1}\,{\rm
-  yr}^{-1}$.
+  at $\dot{\gamma} = -0.0422^{+0.0028}_{-0.0027}\ {\rm m}\,{\rm
+  s}^{-1}\,{\rm yr}^{-1}$.
   The corresponding period decrease explains WASP-4's
   changing orbital period as a light-travel time effect.
   Combining the radial velocities with new speckle imaging limits, we
@@ -150,26 +150,14 @@ X.X$ milliseconds per year.
 A separate study by \citet{baluev_2019} reported
 additional archival transit light curves of WASP-4b, most notably from
 the TRAPPIST archive, and a select few other observers.
-% \citeauthor{baluev_2019} analyzed their newly obtained
-% photometry, along with archival light curves that we omitted from our
-% analysis due to systematic uncertainties in the absolute time system.
-% \citeauthor{baluev_2019} found that when they used all the available
-% TTV data, the need for a quadratic ephemeris was present.  However,
-% they pointed out that if they used lower-precision subsets of the
-% available timing data, the necessity for the quadratic term decreased.
-% This is not particularly surprising.
-% \citeauthor{baluev_2019} also pointed out that the
-% precise transit times reported by \citet{huitson_gemini_2017} were
-% quite important in the time-series.  Overall,
-% \citeauthor{baluev_2019} did not find the claim of a
-% period decrease convincing.
 
 To determine the origin of the period change, we acquired four
 additional radial velocity measurements using Keck-HIRES, extending
 the RV baseline from 3 to 9 years.  Previously, the radial velocities
 were sparse and showed a weak ($<2\sigma$) linear trend.  Our new
 measurements reveal a line-of-sight acceleration of $\dot{\gamma} =
--XX {\rm m\,s^{-1}\,yr^{-1}}$.  This translates to an expected period
+-0.0422^{+0.0028}_{-0.0027}\ {\rm m\,s^{-1}\,yr^{-1}}$.  This
+translates to an expected period
 decrease simply from the light travel time effect of ZZ milliseconds
 per year --- about commensurate with what is observed.
 In the following, we avoid the term ``R{\o}mer delay'' as this phrase
@@ -279,13 +267,14 @@ slightly better result, which we opt to use for our analysis.
 	\end{center}
 	\vspace{-0.7cm}
   \caption{ {\bf Timing residuals and best-fit models for WASP-4b.}
-  The vertical axis shows the observed times minus the calculated
+  The vertical axis shows the observed transit times minus the calculated
   times assuming a constant orbital period.  More opaque points correspond
-  to more precise data.  The quadratic ephemeris and its $1\sigma$
+  to more precise data.  The quadratic ephemeris and its $\pm1\sigma$
   statistical uncertainties are shown in blue.  Neither model fully
-  explains the transit residuals (see~\ref{sec:transit_analysis}).
+  explains the scatter in transit residuals, perhaps due to
+  underestimated uncertainties (see~\ref{sec:transit_analysis}).
   The binned TESS point (yellow star) is the weighted average of 18
-  TESS transits and is for display purposes only.  Its uncertainty is
+  TESS transits and is binned for display purposes only.  Its uncertainty is
   slightly larger than the marker size.  The models were fitted to all
   of the individual transit times.
   \label{fig:times}
@@ -295,7 +284,7 @@ slightly better result, which we opt to use for our analysis.
 We considered two possible models for the observed transit times.  The
 first model assumes a constant orbital period on a circular orbit:
 \begin{align}
-  t_{\rm tra}(E) &= t_0 + PE,\\
+  t_{\rm tra}(E) &= t_0 + PE,
 \end{align}
 where $E$ is the epoch number and $t_0$ is a reference epoch.  The
 second model assumes the period changes at a steady rate:
@@ -378,7 +367,7 @@ transit timing model parameters are reported in {\bf Table~X}.
     in transits ($\dot{P}= - 8.64 \pm 0.89~{\rm ms}\,{\rm yr}^{-1}$) is
     indicated with the purple dotted line.  The four new RV
     measurements presented in this work increased the significance of
-    the slope from $\approx$2$\sigma$ to 15$\sigma$.
+    the radial velocity trend from $\approx$2$\sigma$ to 15$\sigma$.
 	\label{fig:rvs}
   \vspace{-0.3cm}
 	}
@@ -409,7 +398,7 @@ case.
 WASP-4 was found to be accelerating towards our line-of-sight at high
 confidence,
 \begin{equation}
-  \dot{v}_{\rm r} =
+  \dot{v}_{\rm r} = \dot{\gamma} = 
      -0.0422^{+0.0028}_{-0.0027}
      \,{\rm m}\,{\rm s}^{-1}\,{\rm day}^{-1}.
 \end{equation}
@@ -450,35 +439,29 @@ stellar activity.
 
 \subsection{Constraints on companion masses and semi-major axes}
 
-%TODO: describe 3b better
-%TODO: also, put 3b in as the bottom right inset to the contrast curve
 \begin{figure}[!t]
-	\gridline{
-		\fig{f3a.png}{0.33\textwidth}{}
-	}
-	\vspace{-1cm}
-	\gridline{
-		\fig{f3b.pdf} {0.5\textwidth}{}
-	}
+	\begin{center}
+		\leavevmode
+		\includegraphics[width=0.5\textwidth]{f3.pdf}
+	\end{center}
 	\vspace{-0.7cm}
     \caption{
-      {\it Top:\,} 
-      Speckle image reconstructed from 1000 40 millisecond frames in
-      an 832 nm bandpass, and acquired on September 28, 2019.  The
-      image scale is $2.46''\times2.46''$.
-      {\it Bottom:\,} 
-      Contrast curve derived from point-source injection-recovery
-      experiments.
+      {\bf Zorro contrast curve derived from point-source
+      injection-recovery experiments.}
+      Sources below the curve would have been detected.
+      The inset shows the speckle image reconstructed from 1000 40
+      millisecond frames in an 832 nm bandpass, and acquired on
+      September 28, 2019.  The image scale is $2.46''\times2.46''$.
     }
     \label{fig:zorro}
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure*}[t]
 	\begin{center}
 		\leavevmode
-		\includegraphics[width=0.48\textwidth]{f4.pdf}
+		\includegraphics[width=0.78\textwidth]{f4.pdf}
 	\end{center}
-	\vspace{-0.7cm}
+	\vspace{-0.5cm}
 	\caption{
     {\bf Masses and semi-major axes of companions that meet
     requirements of both the radial velocity and the speckle imaging.}
@@ -488,7 +471,7 @@ stellar activity.
 	\label{fig:mass_sma}
   \vspace{-0.3cm}
 	}
-\end{figure}
+\end{figure*}
 
 
 Given a linear radial velocity trend, we can place lower-limits on the
@@ -555,11 +538,11 @@ To derive constraints on possible companion masses and separations
 from the radial velocities, we mostly followed the procedure of
 \citet{bryan_excess_2019}. 
 
-We began by defining a $75\times50$ grid in true planetary mass and
+We began by defining a $128\times128$ grid in true planetary mass and
 semimajor axis, with even logarithmic spacing from 1 to 900$\,$$M_{\rm
 Jup}$ and 3 to 500$\,$${\rm AU}$.  We then considered the possibility
 that an additional companion in any particular cell could explain the
-observed linear trend.  In each cell, we simulated 500 hypothetical
+observed linear trend.  In each cell, we simulated 512 hypothetical
 companions.
 
 %FIXME: may want to verify that changing the cutoff location, to say
@@ -590,7 +573,7 @@ Given $(a_{\rm c}, M_{\rm c}, e_{\rm c}$ for each simulated outer
 companion, and the fixed instrument offsets and jitters from the MCMC
 chains, we then performed a maximum likelihood fit for the time and
 argument of periastron of the outer simulated companion.  We converted
-the resulting $75\times50\times500$ cube of best-fit log-likelihood
+the resulting $128\times128\times512$ cube of best-fit log-likelihood
 values to probabilities, and averaged over the samples in each grid
 cell to derive a probability distribution in mass and semi-major axis.
 
@@ -628,6 +611,25 @@ Given such a mass, this companion could at one time have influenced
 the orbital evolution of the inner giant.
 Further radial velocity monitoring should eventually reveal the
 orbital parameters and minimum mass of the companion.
+
+% TODO: add a paragraph noting that while the skepticism
+% is fine "I was right".
+
+% \citeauthor{baluev_2019} analyzed their newly obtained
+% photometry, along with archival light curves that we omitted from our
+% analysis due to systematic uncertainties in the absolute time system.
+% \citeauthor{baluev_2019} found that when they used all the available
+% TTV data, the need for a quadratic ephemeris was present.  However,
+% they pointed out that if they used lower-precision subsets of the
+% available timing data, the necessity for the quadratic term decreased.
+% This is not particularly surprising.
+% \citeauthor{baluev_2019} also pointed out that the
+% precise transit times reported by \citet{huitson_gemini_2017} were
+% quite important in the time-series.  Overall,
+% \citeauthor{baluev_2019} did not find the claim of a
+% period decrease convincing.
+
+
 
 \subsection{How many other hot Jupiters are accelerating towards the
 Earth?}
