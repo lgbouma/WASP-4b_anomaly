@@ -95,7 +95,7 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
         ax.text(
             100, 450, 'Ruled out by\nspeckle imaging',
             fontsize=7.5, ha='center', va='center',
-            path_effects=[pe.withStroke(linewidth=0.8, foreground="white")],
+            path_effects=[pe.withStroke(linewidth=0.5, foreground="white")],
             color='C0'
         )
 
@@ -109,7 +109,7 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
         ax.text(
             np.percentile(_sma, 60), np.percentile(_mass, 40), '$M\propto a^2$',
             fontsize=7.5, ha='left', va='center',
-            path_effects=[pe.withStroke(linewidth=0.8, foreground="white")],
+            path_effects=[pe.withStroke(linewidth=0.5, foreground="white")],
             color='black'
         )
 

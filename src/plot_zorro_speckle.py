@@ -31,7 +31,7 @@ def plot_zorro_speckle():
     inset.axis('off')
     plt.setp(inset, xticks=[], yticks=[])
 
-    ax.set_ylabel('$\Delta$m (832 nm)')
+    ax.set_ylabel('$\Delta$mag (832 nm)')
     ax.set_xlabel('Angular separation [arcsec]')
 
     ax.get_yaxis().set_tick_params(which='both', direction='in')
