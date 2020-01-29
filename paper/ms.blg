@@ -3,72 +3,75 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ms.aux
 The style file: yahapj.bst
 Database file #1: bibliography.bib
-Repeated entry---line 1702 of file bibliography.bib
+You're missing a field name---line 413 of file bibliography.bib
+ :  
+ :  %series = {SPIE Conference Series},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1688 of file bibliography.bib
  : @article{rasio_tidal_1996
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3472 of file bibliography.bib
+Repeated entry---line 3454 of file bibliography.bib
  : @article{husnoo_observational_2012
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4044 of file bibliography.bib
+Repeated entry---line 4071 of file bibliography.bib
  : @article{southworth_high-precision_2009
  :                                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4084 of file bibliography.bib
- : @article{sanchis-ojeda_starspots_2011
- :                                      ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 4146 of file bibliography.bib
+Repeated entry---line 4173 of file bibliography.bib
  : @article{hoyer_tramos_2013
  :                           ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4179 of file bibliography.bib
+Repeated entry---line 4206 of file bibliography.bib
  : @article{petrucci_no_2013
  :                          ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "®2018"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in vogt_hires_1994
 Warning--empty publisher in vogt_hires_1994
-You've used 76 entries,
+Warning--empty pages in vogt_hires_1994
+You've used 71 entries,
             3215 wiz_defined-function locations,
-            1209 strings with 33178 characters,
-and the built_in function-call counts, 45358 in all, are:
-= -- 3276
-> -- 3901
+            1170 strings with 28756 characters,
+and the built_in function-call counts, 40682 in all, are:
+= -- 3041
+> -- 3259
 < -- 24
-+ -- 1453
-- -- 1392
-* -- 4352
-:= -- 8352
-add.period$ -- 76
-call.type$ -- 76
-change.case$ -- 513
-chr.to.int$ -- 76
-cite$ -- 78
-duplicate$ -- 2022
-empty$ -- 2635
-format.name$ -- 1475
-if$ -- 8892
++ -- 1230
+- -- 1166
+* -- 3806
+:= -- 7413
+add.period$ -- 71
+call.type$ -- 71
+change.case$ -- 467
+chr.to.int$ -- 71
+cite$ -- 74
+duplicate$ -- 1899
+empty$ -- 2468
+format.name$ -- 1247
+if$ -- 8046
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 71
-newline$ -- 233
-num.names$ -- 307
-pop$ -- 804
+missing$ -- 66
+newline$ -- 218
+num.names$ -- 287
+pop$ -- 746
 preamble$ -- 1
-purify$ -- 506
+purify$ -- 465
 quote$ -- 0
-skip$ -- 1197
+skip$ -- 1123
 stack$ -- 0
-substring$ -- 1790
-swap$ -- 73
+substring$ -- 1685
+swap$ -- 67
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 678
-warning$ -- 2
-while$ -- 338
+type$ -- 633
+warning$ -- 3
+while$ -- 321
 width$ -- 0
-write$ -- 762
+write$ -- 711
 (There were 6 error messages)
