@@ -3,60 +3,60 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ms.aux
 The style file: yahapj.bst
 Database file #1: bibliography.bib
-Repeated entry---line 1640 of file bibliography.bib
+Repeated entry---line 1654 of file bibliography.bib
  : @article{rasio_tidal_1996
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3410 of file bibliography.bib
+Repeated entry---line 3424 of file bibliography.bib
  : @article{husnoo_observational_2012
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 4117 of file bibliography.bib
+Repeated entry---line 4131 of file bibliography.bib
  : @article{petrucci_no_2013
  :                          ,
 I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in vogt_hires_1994
 Warning--empty publisher in vogt_hires_1994
-You've used 53 entries,
+You've used 54 entries,
             3215 wiz_defined-function locations,
-            1048 strings with 25402 characters,
-and the built_in function-call counts, 32122 in all, are:
-= -- 2258
-> -- 2912
-< -- 14
-+ -- 1066
-- -- 1040
-* -- 3142
-:= -- 5979
-add.period$ -- 53
-call.type$ -- 53
-change.case$ -- 359
-chr.to.int$ -- 53
-cite$ -- 55
-duplicate$ -- 1370
-empty$ -- 1805
-format.name$ -- 1094
-if$ -- 6249
+            1054 strings with 25571 characters,
+and the built_in function-call counts, 32664 in all, are:
+= -- 2308
+> -- 2924
+< -- 15
++ -- 1080
+- -- 1043
+* -- 3177
+:= -- 6064
+add.period$ -- 54
+call.type$ -- 54
+change.case$ -- 364
+chr.to.int$ -- 54
+cite$ -- 56
+duplicate$ -- 1412
+empty$ -- 1849
+format.name$ -- 1098
+if$ -- 6365
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 49
-newline$ -- 164
-num.names$ -- 214
-pop$ -- 555
+missing$ -- 50
+newline$ -- 167
+num.names$ -- 218
+pop$ -- 565
 preamble$ -- 1
-purify$ -- 353
+purify$ -- 358
 quote$ -- 0
-skip$ -- 814
+skip$ -- 837
 stack$ -- 0
-substring$ -- 1181
-swap$ -- 49
+substring$ -- 1238
+swap$ -- 50
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 474
+type$ -- 483
 warning$ -- 2
-while$ -- 230
+while$ -- 235
 width$ -- 0
-write$ -- 532
+write$ -- 541
 (There were 3 error messages)
