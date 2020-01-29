@@ -330,7 +330,7 @@ model has 91 degrees of freedom, $\chi^2 = 276$,  and $\chi^2_{\rm
 red}=3.0$.  The best-fitting quadratic model has 90 degrees of freedom,
 $\chi^2 = 183$, and $\chi^2_{\rm red}=2.0$.  The difference in the
 Bayesian information criteria (BIC) between the linear and quadratic
-and models is $\Delta {\rm BIC} = 89.1$, strongly favoring the
+and models is $\Delta {\rm BIC} = 89$, strongly favoring the
 quadratic case \citep{kass_bayes_1995}.
 
 From the reduced $\chi^2$ values, we can surmise that neither model
@@ -392,7 +392,7 @@ parameters are reported in Table~3.
 \end{figure}
 
 Our initial model for the radial velocity data was a single Keplerian
-orbit, plus instrument offsets, jitters, and a long-term trend
+orbit, plus instrument offsets, jitters, and a long-term linear trend
 \citep[][\texttt{radvel}]{fulton_radvel_2018}.  We set Gaussian priors
 on the orbital period and time of inferior conjunction using the
 values from Table~4 of \citetalias{bouma_wasp4b_2019}, and fixed
@@ -400,28 +400,20 @@ WASP-4b's eccentricity to zero
 \citep{beerer_secondary_2011,knutson_friends_2014,bonomo_gaps_2017}.
 The free parameters were the velocity semi-amplitude, the instrument
 zero-points, an additive ``white noise'' instrument jitter for each
-instrument, linear ($\dot{v_{\rm r}}$), and optionally second-order
-($\ddot{v_{\rm r}}$) acceleration terms.
+instrument, and a linear ($\dot{v_{\rm r}}$) acceleration term.  We
+also considered a model without the linear trend, and found that it
+was disfavored by $\Delta {\rm BIC}=73$.
 
-%FIXME: this is a janky approach if so??
-We found that the best-fitting model with both linear and quadratic
-radial velocity terms was marginally preferred (by $\Delta
-\mathrm{BIC} = 5.8$) over the best-fitting model with only a linear
-term.  Regardless, for consistency with \citet{knutson_friends_2014},
-who fixed the quadratic component of the long-term trend to zero, in
-Figure~\ref{fig:rvs} we show best-fitting models for the linear-trend
-case.  
-
-WASP-4 was found to be accelerating towards our line-of-sight at high
-confidence,
+In the preferred ``planet+trend'' model, WASP-4 is accelerating
+towards our line-of-sight at high confidence,
 \begin{equation}
   \dot{v}_{\rm r} = \dot{\gamma} = 
      -0.0422^{+0.0028}_{-0.0027}
      \,{\rm m}\,{\rm s}^{-1}\,{\rm day}^{-1}.
 \end{equation}
-For comparison, before our new measurements, $\dot{v}_{\rm r}$ was
-thought to be about five times smaller, and was only marginally
-significant \citep{knutson_friends_2014,bouma_wasp4b_2019}.
+For comparison, before our new measurements, $\dot{\gamma}$ was
+thought to be about five times smaller, and had marginal statistical significance
+\citep{knutson_friends_2014,bouma_wasp4b_2019}.
 
 The system's acceleration towards our line-of-sight causes a decrease
 in the apparent orbital period.  The period derivative expected from
