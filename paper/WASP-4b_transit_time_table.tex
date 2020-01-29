@@ -1,0 +1,73 @@
+%% \begin{deluxetable}{} command tell LaTeX how many columns
+%% there are and how to align them.
+\startlongtable
+\begin{deluxetable*}{ccccc}
+    
+%% Keep a portrait orientation
+
+%% Over-ride the default font size
+%% Use Default (12pt)
+\tabletypesize{\scriptsize}
+
+%% Use \tablewidth{?pt} to over-ride the default table width.
+%% If you are unhappy with the default look at the end of the
+%% *.log file to see what the default was set at before adjusting
+%% this value.
+
+%% This is the title of the table.
+\tablecaption{WASP-4b transit times.}
+\label{tab:transit_times}
+
+%% This command over-rides LaTeX's natural table count
+%% and replaces it with this number.  LaTeX will increment 
+%% all other tables after this table based on this number
+\tablenum{1}
+
+%% The \tablehead gives provides the column headers.  It
+%% is currently set up so that the column labels are on the
+%% top line and the units surrounded by ()s are in the 
+%% bottom line.  You may add more header information by writing
+%% another line between these lines. For each column that requries
+%% extra information be sure to include a \colhead{text} command
+%% and remember to end any extra lines with \\ and include the 
+%% correct number of &s.
+\tablehead{
+  \colhead{$t_{\rm tra}$ [BJD$_\mathrm{TDB}$]} &
+  \colhead{$\sigma_{t_{\rm tra}}$ [days]} &
+  \colhead{Epoch} & 
+  \colhead{Time Reference} & 
+  \colhead{Observation Reference}
+}
+
+%% All data must appear between the \startdata and \enddata commands
+% XXX pasted in from selected_transit_times.tex
+\startdata
+ 2454368.59279 &      0.00033 &   -1354 &       \citet{hoyer_tramos_2013} &           \citet{wilson_wasp-4b_2008} \\
+ 2454396.69576 &      0.00012 &   -1333 &       \citet{hoyer_tramos_2013} &          \citet{gillon_improved_2009} \\
+ 2454697.79817 &      0.00009 &   -1108 &       \citet{hoyer_tramos_2013} &             \citet{winn_transit_2009} \\
+ 2454701.81303 &      0.00018 &   -1105 &       \citet{hoyer_tramos_2013} &             \citet{hoyer_tramos_2013} \\
+\enddata
+
+%% Include any \tablenotetext{key}{text}, \tablerefs{ref list},
+%% or \tablecomments{text} between the \enddata and 
+%% \end{deluxetable} commands
+
+%% General table comment marker
+\tablecomments{
+Table~1 is published in its entirety in a machine-readable format.
+Four rows are shown for guidance regarding form and
+content.  $t_{\rm tra}$ is the measured transit midtime, and
+$\sigma_{t_{\rm tra}}$ is its $1\sigma$ uncertainty.  ``Time
+Reference'' refers to the provenance of the timing measurement, which
+may differ from the ``Observation Reference'' in cases for which a
+homogeneous timing analysis was performed.  The
+\citealt{hoyer_tramos_2013} BJD$_{\rm TT}$ times are equal to
+BJD$_{\rm TDB}$ for our purposes \citep{urban_explanatory_2012}.  We
+omitted the timing measurements from
+\citet{southworth_high-precision_2009}, since there were technical
+problems with the computer clock at the time of
+observation~\citep{nikolov_wasp-4b_2012}.  The two Baxter et al.\ (in
+prep) times were obtained from Spitzer/IRAC transit light curves in
+the 3.6$\mu$m and 4.5$\mu$m channels.
+}
+\end{deluxetable*}
