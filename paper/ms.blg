@@ -20,6 +20,10 @@ Repeated entry---line 4071 of file bibliography.bib
  : @article{southworth_high-precision_2009
  :                                        ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 4111 of file bibliography.bib
+ : @article{sanchis-ojeda_starspots_2011
+ :                                      ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 4173 of file bibliography.bib
  : @article{hoyer_tramos_2013
  :                           ,
@@ -28,50 +32,49 @@ Repeated entry---line 4206 of file bibliography.bib
  : @article{petrucci_no_2013
  :                          ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "®2018"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in vogt_hires_1994
 Warning--empty publisher in vogt_hires_1994
 Warning--empty pages in vogt_hires_1994
-You've used 71 entries,
+You've used 76 entries,
             3215 wiz_defined-function locations,
-            1170 strings with 28756 characters,
-and the built_in function-call counts, 40682 in all, are:
-= -- 3041
-> -- 3259
+            1202 strings with 33093 characters,
+and the built_in function-call counts, 45439 in all, are:
+= -- 3281
+> -- 3898
 < -- 24
-+ -- 1230
-- -- 1166
-* -- 3806
-:= -- 7413
-add.period$ -- 71
-call.type$ -- 71
-change.case$ -- 467
-chr.to.int$ -- 71
-cite$ -- 74
-duplicate$ -- 1899
-empty$ -- 2468
-format.name$ -- 1247
-if$ -- 8046
++ -- 1454
+- -- 1391
+* -- 4358
+:= -- 8361
+add.period$ -- 76
+call.type$ -- 76
+change.case$ -- 508
+chr.to.int$ -- 76
+cite$ -- 79
+duplicate$ -- 2037
+empty$ -- 2642
+format.name$ -- 1474
+if$ -- 8910
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 66
-newline$ -- 218
-num.names$ -- 287
-pop$ -- 746
+missing$ -- 71
+newline$ -- 233
+num.names$ -- 307
+pop$ -- 806
 preamble$ -- 1
-purify$ -- 465
+purify$ -- 506
 quote$ -- 0
-skip$ -- 1123
+skip$ -- 1203
 stack$ -- 0
-substring$ -- 1685
-swap$ -- 67
+substring$ -- 1806
+swap$ -- 72
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 633
+type$ -- 678
 warning$ -- 3
-while$ -- 321
+while$ -- 344
 width$ -- 0
-write$ -- 711
-(There were 6 error messages)
+write$ -- 761
+(There were 7 error messages)
