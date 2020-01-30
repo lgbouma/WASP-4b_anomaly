@@ -84,8 +84,8 @@ Institute of Technology, Pasadena, CA 91125, USA}
   are expected to show similar period decreases as WASP-4, due to
   acceleration by outer companions.  We find that these period
   decreases will be increasingly measureable in coming years, because
-  the precision of period derivative measurements scales as the fourth
-  power of the observing baseline.  Continued radial velocity
+  the precision of period derivative measurements scales as
+  (observing baseline)$^{5/2}$.  Continued radial velocity
   monitoring of hot Jupiters is therefore essential to distinguish
   tidal orbital decay from line-of-sight accelerations.
 \end{abstract}
@@ -117,8 +117,8 @@ main-sequence evolution time  ({\it e.g.},
 orbital decay through transit and occultation timing could provide an
 empirical resolution.  For instance, combined transit timing and
 radial velocity measurements for WASP-12b have shown that its secular
-period decrease of $\approx$30 milliseconds per year is almost
-certainly due to tidal orbital decay
+period decrease of $\approx$30 milliseconds per year is probably due
+to tidal orbital decay
 \citep{maciejewski_departure_2016,patra_2017,yee_orbit_2020}.
 
 This study highlights a point that, though obvious, has perhaps not
@@ -698,15 +698,14 @@ if $N$ transit timing measurements are taken uniformly across a
 baseline of $\Delta E$ epochs with constant precision $\sigma_{\rm
 tra}$, then the uncertainty of the quadratic term is given by
 \begin{align}
-  \sigma_{a_2} =
-  \left(\frac{25{,}920}{N}\right)^{1/2}
-  \frac{\sigma_{\rm tra}}{(\Delta E)^4}
+  \sigma_{a_2} = 6\sqrt{5}
+   \frac{\sigma}{N^{1/2} (\Delta E)^2} \propto (\Delta E)^{-5/2}.
 \end{align}
-This result implies that a doubled observing baseline yields a
-sixteen-fold improvement in precision on d$P$/d$t$.  If regular
+This result implies that a doubled observing baseline yields an
+$\approx$5.7-fold improvement in precision on d$P$/d$t$.  If regular
 observations continue from ground and space-based observatories,
 period derivatives with precision below $1~{\rm ms}\,{\rm yr}^{-1}$
-will be measureable before 2030.
+will become much more common over the coming decade.
 
 
 \section{Conclusions}
@@ -730,10 +729,10 @@ Jupiter beyond 5$\,$AU
 and period changes induced by these outer companions will become an
 increasingly large nuisance in the hunt for orbital decay as the
 observational baselines get longer.  In particular, the precision with
-which the period derivative can be measured from transits scales as
-the fourth power of the baseline duration (Section~\ref{sec:fisher}), and
+which the period derivative can be measured from transits scales with
+the baseline duration to the power of 5/2 (Section~\ref{sec:fisher}), and
 so within a decade many more hot Jupiters should show orbital period
-changes due to accelerations induced by their outer companions.  
+changes due to accelerations from their outer companions.  
 To distinguish this effect from tidal decay, further long-term radial
 velocity measurements of hot Jupiters are required.
 
