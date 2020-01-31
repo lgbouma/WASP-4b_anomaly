@@ -55,16 +55,16 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
 
     if not linear_z:
 
-        cutoff = -12
+        cutoff = -6.3
 
         if discrete_color:
-            bounds = np.round(np.linspace(cutoff, np.log(prob_arr).max(), 5),1)
+            bounds = np.round(np.linspace(cutoff, np.log10(prob_arr).max(), 5),1)
             norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
         else:
-            norm = mpl.colors.Normalize(vmin=np.log(prob_arr).max(),
+            norm = mpl.colors.Normalize(vmin=np.log10(prob_arr).max(),
                                         vmax=cutoff)
 
-        im = ax.pcolormesh(X, Y, np.log(prob_arr), cmap=cmap, norm=norm,
+        im = ax.pcolormesh(X, Y, np.log10(prob_arr), cmap=cmap, norm=norm,
                            shading='flat') # vs 'gouraud'
 
     else:
@@ -89,14 +89,24 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
         ax.plot(
             nparr(zdf['sma_AU'])*u.AU,
             (nparr(zdf['m_comp/m_sun'])*u.Msun).to(u.Mjup),
-            color='C0', lw=1
+            color='C0', lw=1,
+            zorder=4
         )
 
-        ax.text(
+        t = ax.text(
             100, 450, 'Ruled out by\nspeckle imaging',
             fontsize=7.5, ha='center', va='center',
-            path_effects=[pe.withStroke(linewidth=0.5, foreground="white")],
-            color='C0'
+            # path_effects=[pe.withStroke(linewidth=0.5, foreground="white")],
+            color='C0', zorder=3
+        )
+
+        ax.fill_between(
+            nparr(zdf['sma_AU'])*u.AU,
+            (nparr(zdf['m_comp/m_sun'])*u.Msun).to(u.Mjup),
+            1000,
+            color='white',
+            alpha=0.8,
+            zorder=2
         )
 
         _sma = np.logspace(np.log10(90), np.log10(180))
@@ -117,13 +127,14 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
     ax.set_yscale('log')
 
     ax.set_xlabel('Semi-major axis [AU]')
-    ax.set_ylabel('Companion mass [M$_\mathrm{{jup}}$]')
+    ax.set_ylabel('Companion mass [M$_\mathrm{{Jup}}$]')
 
     cbar = fig.colorbar(im, orientation='vertical', extend='min',
-                        label='$\ln$(likelihood)')
-    cbar.ax.tick_params(labelsize=6)
+                        label='$\log_{{10}}$(likelihood)')
+    cbar.ax.tick_params(labelsize=6, direction='out')
 
     ax.set_ylim([1,1e3])
+    ax.set_xlim([3,310])
 
     ax.get_yaxis().set_tick_params(which='both', direction='in')
     ax.get_xaxis().set_tick_params(which='both', direction='in')

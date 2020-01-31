@@ -201,6 +201,12 @@ Howard, A.~W., Johnson, J.~A., Marcy, G.~W., {et~al.} 2010,
   \href{http://dx.doi.org/10.1088/0004-637X/721/2/1467}{\JournalTitle{\apj},
   721, 1467}
 
+\bibitem[{Howell {et~al.}(2011)Howell, Everett, Sherry, Horch, \&
+  Ciardi}]{howell_speckle_2011}
+Howell, S.~B., Everett, M.~E., Sherry, W., Horch, E., \& Ciardi, D.~R. 2011,
+  \href{http://dx.doi.org/10.1088/0004-6256/142/1/19}{\JournalTitle{\aj}, 142,
+  19}
+
 \bibitem[{Hoyer {et~al.}(2013)Hoyer, L\'opez-Morales, Rojo, Nascimbeni,
   Hidalgo, Astudillo-Defru, Concha, Contreras, Servajean, \&
   Hinse}]{hoyer_tramos_2013}
@@ -288,8 +294,8 @@ Matsumura, S., Peale, S.~J., \& Rasio, F.~A. 2010,
 McKinney, W. 2010, in Proceedings of the 9th Python in Science Conference, ed.
   S.~van~der Walt \& J.~Millman, 51
 
-\bibitem[{Moe \& Stefano(2017)}]{moe_mind_2017}
-Moe, M., \& Stefano, R.~D. 2017,
+\bibitem[{Moe \& Di~Stefano(2017)}]{moe_mind_2017}
+Moe, M., \& Di~Stefano, R. 2017,
   \href{http://dx.doi.org/10.3847/1538-4365/aa6fb6}{\JournalTitle{\apjs}, 230,
   15}
 
@@ -460,6 +466,11 @@ Wilson, D.~M., Gillon, M., Hellier, C., {et~al.} 2008,
 Winn, J.~N., Holman, M.~J., Carter, J.~A., {et~al.} 2009,
   \href{http://dx.doi.org/10.1088/0004-6256/137/4/3826}{\JournalTitle{\aj},
   137, 3826}
+
+\bibitem[{Wright \& Howard(2009)}]{wright_efficient_2009}
+Wright, J.~T., \& Howard, A.~W. 2009,
+  \href{http://dx.doi.org/10.1088/0067-0049/182/1/205}{\JournalTitle{\apjs},
+  182, 205}
 
 \bibitem[{Wright {et~al.}(2004)Wright, Marcy, Butler, \&
   Vogt}]{wright_chromospheric_2004}

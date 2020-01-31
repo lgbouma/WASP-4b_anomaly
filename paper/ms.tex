@@ -250,22 +250,25 @@ of a linear trend in the residuals after fitting out the orbit of
 WASP-4b.  This prompted us to acquire speckle images using Zorro at
 Gemini-South \citep[see][and the instrument
 web-pages\footnote{\url{www.gemini.edu/sciops/instruments/alopeke-zorro/}}]{scott_nessi_2018}.
-Zorro is a dual-channel speckle interferometer with narrow-band
+Zorro is a dual-channel speckle interferometer employing narrow-band
 filters centered at 562$\,$nm and 832$\,$nm.  
 
-% TODO: might Howell suggest a paragraph for how the contrast ratios
-% were derived?
-We observed WASP-4 twice, on the night of September 11-12 and also
-on the night of September 28-29. 
-{\bf We reconstructed the images following...}
-{\bf We reduced the reconstructed speckle images to contrast curves by
-injecting and recovering point-sources...}
-The contrast curves showed that the second night, which had better
-seeing, also produced the more constraining result.  The 832$\,$nm
-results were also the most useful, since faint companions are redder than
-the host star.  We therefore opted for the 832$\,$nm September 28-29
-results for the remaining analysis.
-
+We observed WASP-4 twice, on the night of September 11-12 with
+relatively poor seeing (1.2$''$) and also on the night of September
+28-29.  Over each observation, we acquired three sets of 1000
+60$\,$msec exposures.  If a companion is present, the autocorrelation
+functions of these speckle images reveal a characteristic
+interference pattern. This pattern in then used to determine the
+properties of the detected companion and to produce a reconstructed
+image.  Using the reduced images and their
+reconstructed speckle images,  contrast curves are produced yielding
+5-sigma detection limits  (see \citealt{howell_speckle_2011}). 
+No companions were detected,
+and the second night, which had better seeing
+(0.6$''$), also produced the more constraining result.  The 832$\,$nm
+limits were the most useful to us given that faint companions
+are redder than the host star.  We therefore opted to use the
+832$\,$nm September 28-29 contrast limits for the remaining analysis.
 
 
 \section{Analysis}
@@ -416,8 +419,7 @@ thought to be about five times smaller, and had marginal statistical
 significance \citep{knutson_friends_2014,bouma_wasp4b_2019}.
 
 The system's acceleration towards our line-of-sight causes a decrease
-in the apparent orbital period.  The period derivative expected from
-radial velocities is
+in the apparent orbital period.  The expected period derivative is
 \begin{align}
   \dot{P}_{\rm\,RV}
   = \frac{\dot{v}_{\rm r} P}{c}
@@ -490,8 +492,8 @@ quick estimate of the minimum mass required to explain the linear
 trend in WASP-4, we turn to \citet{feng_california_2015}.  As they
 discuss, the scenario that yields the minimum companion mass for a
 system with a linear trend is a companion with $e\approx0.5$ and
-$\omega=90^\circ$.  Substituting $P\approx 1.25\tau$, $K \approx
-0.5\tau \gammadot$ into the mass function \citep[{\it
+$\omega=90^\circ$.  Substituting $P\approx 1.25\tau$ and $K \approx
+0.5\tau \dot{\gamma}$ into the mass function \citep[{\it
 e.g.},][]{wright_efficient_2009} yields
 \begin{equation}
  M_{\rm min} \approx 5.99\,M_{\rm Jup}
@@ -529,7 +531,7 @@ have fully contracted.
 
 Due to the custom filters of the Zorro imager, and corresponding lack
 of synthetic photometry, we further assumed that all sources had
-blackbody spectra. While this is a bold simplification, we do not
+blackbody spectra. While this is a simplification, we do not
 readily have access to the planetary and stellar atmosphere models
 needed for the consistent calculation with the \texttt{COND03} and
 \texttt{MESA} models.  We therefore adopted the effective temperatures
@@ -563,12 +565,12 @@ uniform distribution in $\cos i$.  For companion masses less than
 $10\,M_{\rm Jup}$, we drew the eccentricity from
 \citet{kipping_beta_2013}'s long-period exoplanet Beta distribution
 ($a=1.12$, $b=3.09$).  If the companion mass exceeded $10\,M_{\rm
-Jup}$, we drew the eccentricity distribution from the power-law $p_e
-\propto e^\eta$ reported by \citet{moe_mind_2017} in their
-Equation~17.  We emphasize that the long-period exoplanet and
+Jup}$, we drew the eccentricity from the power-law $p_e \propto
+e^\eta$ reported by \citet{moe_mind_2017} in their Equation~17 ($\eta
+\approx 0.5$ for most orbital periods).  The long-period exoplanet and
 long-period binary eccentricity distributions are quite different: the
 exoplanet distribution is ``bottom-heavy'', with eccentricities
-preferentially close to zero. The binary star distribution is
+preferentially close to zero.  The binary star distribution is
 ``top-heavy'', with eccentricities closer to one.  We chose a mass
 cutoff of $10\,M_{\rm Jup}$ to separate the two regimes based on the
 bound observed by \citet{schlaufman_evidence_2018} between giant
