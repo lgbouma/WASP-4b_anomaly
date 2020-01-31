@@ -419,11 +419,19 @@ thought to be about five times smaller, and had marginal statistical
 significance \citep{knutson_friends_2014,bouma_wasp4b_2019}.
 
 The system's acceleration towards our line-of-sight causes a decrease
-in the apparent orbital period.  The expected period derivative is
+in the apparent orbital period:
 \begin{align}
-  \dot{P}_{\rm\,RV}
-  = \frac{\dot{v}_{\rm r} P}{c}
-  = -5.94 \pm 0.39~{\rm msec}\,{\rm yr}^{-1}.
+  \dot{P}_{\rm\,RV} &= \frac{\dot{v}_{\rm r} P}{c}.
+\end{align}
+Expressed in convenient units,
+\begin{align}
+  \dot{P}_{\rm\,RV} &= 105{.}3\,{\rm msec}\,{\rm yr}^{-1} \
+  \left( \frac{P}{{\rm day}} \right)
+  \left( \frac{\dot{\gamma}}{ {\rm m}\,{\rm s}^{-1}\,{\rm day}^{-1}} \right).
+\end{align}
+For WASP-4, this yields
+\begin{align}
+  \dot{P}_{\rm\,RV} &= -5.94 \pm 0.39\,{\rm msec}\,{\rm yr}^{-1}.
 \end{align}
 In other words, the majority of the period decrease observed in
 transits ($\dot{P}= - 8.64 \pm 0.89~{\rm msec}\,{\rm yr}^{-1}$) seems to
@@ -605,9 +613,9 @@ Transits show the obital period decreasing by $- 8.64 \pm 0.89~{\rm
 ms}\,{\rm yr}^{-1}$; the line-of-sight acceleration observed in radial
 velocities would predict a period decrease of $-5.94 \pm 0.39~{\rm
 ms}\,{\rm yr}^{-1}$.  Though the quantitative agreement is not
-perfect, Occam's razor would suggest that the line-of-sight
-acceleration is probably a sufficient explanation for the apparent
-decrease of WASP-4b's orbital period.
+perfect, Occam's razor would suggest that most or all of the apparent
+decrease of WASP-4b's orbital period is caused by the line-of-sight
+acceleration.
 
 The corresponding requirements for the companion causing the
 acceleration are that it is likely either a brown-dwarf or low mass
@@ -621,18 +629,6 @@ evidence for certain high-eccentricity formation pathways (see
 should eventually reveal the orbital parameters and minimum mass of
 WASP-4's companion.
 
-% \citeauthor{baluev_2019} analyzed their newly obtained photometry,
-% along with archival light curves that we omitted from our analysis
-% due to systematic uncertainties in the absolute time system.
-% \citeauthor{baluev_2019} found that when they used all the available
-% TTV data, the need for a quadratic ephemeris was present.  However,
-% they pointed out that if they used lower-precision subsets of the
-% available timing data, the necessity for the quadratic term
-% decreased.  This is not particularly surprising.
-% \citeauthor{baluev_2019} also pointed out that the precise transit
-% times reported by \citet{huitson_gemini_2017} were quite important
-% in the time-series.  Overall, \citeauthor{baluev_2019} did not find
-% the claim of a period decrease convincing.
 
 \subsection{How many other hot Jupiters are accelerating towards the
 Earth?}
@@ -674,8 +670,13 @@ Including WASP-4b, 16 of 51 hot Jupiters surveyed by
 \citet{knutson_friends_2014} show a non-zero radial velocity trend.
 Therefore around 1 in 3 hot Jupiters is expected to show period
 changes commensurate with WASP-4 due to acceleration by outer
-companions.  Half of these will be period decreases, and will be an
+companions.  Half of these will be period decreases\footnote{ At a
+population level, one would expect half of the line-of-sight
+accelerations to be positive, and half negative.  Tidal orbital decay
+however is usually negative, and might manifest as an asymmetry in the
+$\dot{P}$ distribution of hot Jupiters.}, and will be an
 astrophysical false positive in searches for tidal orbital decay.
+
 
 \subsection{At what rate is the measurement precision of d$P$/d$t$
 increasing?}
