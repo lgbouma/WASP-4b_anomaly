@@ -11,10 +11,10 @@ Katherina Feng et al (2015).
 """
 
 import numpy as np
-from astropy import units as u, constants as c
+from astropy import units as u, constants as const
 
 baseline = 10*u.year
-gammadot = -0.04 *u.m/u.s/u.day
+gammadot = -0.0422 *u.m/u.s/u.day
 mstar = 0.864*u.Msun
 
 M_min = (
@@ -25,3 +25,37 @@ M_min = (
 
 print(M_min.to(u.Mjup))
 print(M_min.to(u.Mearth))
+
+####################
+
+#
+# now double check the prefactor
+#
+ecc = 0.5
+prefactor = (
+    (1.25/(2*np.pi*const.G))**(1/3)
+    * (1-ecc**2)**(1/2)
+    * ( (1*u.Msun)**(2/3)*(1*u.m/u.s/u.year)*(1*u.year)**(4/3) )
+)
+print(prefactor.to(u.Mjup))
+print((prefactor/2).to(u.Mjup))
+
+
+#
+# what if we used better units?
+#
+ecc = 0.5
+prefactor = (
+    (1.25/(2*np.pi*const.G))**(1/3)
+    * (1-ecc**2)**(1/2)
+    * ( (1*u.Msun)**(2/3)*(1*u.m/u.s/u.day)*(1*u.year)**(4/3) )
+)
+print(prefactor.to(u.Mjup))
+print((prefactor/2).to(u.Mjup))
+
+M_min = (
+    (5.992106 * u.Mjup) * (baseline/(1*u.yr))**(4/3)
+    * np.abs(gammadot/(1*u.m/u.s/u.day))
+    * (mstar/u.Msun)**(2/3)
+)
+print(M_min)
