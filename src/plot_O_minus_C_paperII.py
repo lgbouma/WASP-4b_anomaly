@@ -159,15 +159,16 @@ def plot_O_minus_C(
     #
     # Do the error bands
     #
+    chi2red = (182.708/90.) # /Users/luke/Dropbox/proj/tessorbitaldecay/results/model_comparison/WASP-4b_20200127/model_comparison_output.txt
     sigma_t0 = max(
         [perrs_3d['t0 [min]'], merrs_3d['t0 [min]']]
-    )
+    )*np.sqrt(chi2red)
     sigma_P = max(
         [perrs_3d['P [min]'], merrs_3d['P [min]']]
-    )
+    )*np.sqrt(chi2red)
     sigma_quad = max(
         [perrs_3d['0.5 dP/dE [min]'], merrs_3d['0.5 dP/dE [min]']]
-    )
+    )*np.sqrt(chi2red)
 
     model_tmid_upper = np.maximum.reduce([
         (
