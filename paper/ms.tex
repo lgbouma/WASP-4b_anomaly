@@ -83,13 +83,13 @@ Institute of Technology, Pasadena, CA 91125, USA}
   the system's acceleration is likely caused by a 10-200$\,M_{\rm
   Jup}$ companion with semi-major axis between 10-100$\,$AU.  The
   statistics from \citet{knutson_friends_2014} imply that about 1 in 6
-  hot Jupiters are expected to show comparable period decreases to
-  WASP-4, due to acceleration by outer companions.  These
-  period decreases will be increasingly measureable in coming years,
-  because the precision of the period derivative measurement scales with
-  the observing baseline to the power of 5/2.  Continued radial velocity monitoring
-  of hot Jupiters is therefore essential to distinguish tidal orbital
-  decay from line-of-sight accelerations.
+  hot Jupiters are expected to show period decreases comparable to
+  WASP-4, due to acceleration by outer companions.  These period
+  changes will be increasingly measureable in coming years, because
+  the precision of the period derivative measurement scales with the
+  observing baseline to the power of 5/2.  Continued radial velocity
+  monitoring of hot Jupiters is therefore essential to distinguish
+  tidal orbital decay from line-of-sight accelerations.
 \end{abstract}
 
 \keywords{Exoplanet tides (497), Exoplanet dynamics (490), Radial velocity 
@@ -329,7 +329,7 @@ model that we did not consider for reasons that will become apparent
 is a precessing, eccentric orbit \citep[{\it
 e.g.},][]{gimenez_revision_1995,patra_2017}.
 
-We fitted each of the two models by assuming a Gaussian likelihood and
+We fitted each model by assuming a Gaussian likelihood and
 sampling over the posterior probability distributions.  We sampled the
 posterior using the algorithm proposed by
 \citet{goodman_ensemble_2010} and implemented by
@@ -368,7 +368,7 @@ The resulting best-fit period derivative for the quadratic model is
 \begin{equation}
 \dot{P}
   = - (2.74 \pm 0.28)\times 10^{-10}
-  = - 8w.64 \pm 1.26~{\rm msec}\,{\rm yr}^{-1}.
+  = - 8.64 \pm 1.26~{\rm msec}\,{\rm yr}^{-1}.
   \label{eq:dP_dt_obs}
 \end{equation}
 This agrees to within $1\sigma$ of the value reported by
@@ -382,7 +382,7 @@ parameters are reported in Table~3.
 
 
 
-\subsection{Radial Velocities: WASP-4's acceleration towards the Earth}
+\subsection{Radial velocities}
 
 \begin{figure*}[t]
 	\begin{center}
@@ -407,7 +407,7 @@ parameters are reported in Table~3.
     {\it Bottom:}
     Phased orbit of WASP-4b.
 	\label{fig:rvs}
-  \vspace{-0.3cm}
+  \vspace{-0.0cm}
 	}
 \end{figure*}
 
@@ -431,6 +431,7 @@ towards our line-of-sight at high confidence,
      -0.0422^{+0.0028}_{-0.0027}
      \,{\rm m}\,{\rm s}^{-1}\,{\rm day}^{-1}.
 \end{equation}
+The remaining radial velocity model parameters are listed in Table~4.
 For comparison, before our new measurements, $\dot{\gamma}$ was
 thought to be about five times smaller, and had marginal statistical
 significance \citep{knutson_friends_2014,bouma_wasp4b_2019}.
@@ -497,7 +498,7 @@ activity.
 		\leavevmode
 		\includegraphics[width=0.8\textwidth]{f4.pdf}
 	\end{center}
-	\vspace{-0.6cm}
+	\vspace{-0.8cm}
 	\caption{
     {\bf Masses and semi-major axes of companions that meet
     requirements of both the radial velocities and the speckle
@@ -680,7 +681,7 @@ To evaluate the importance of these effects for future transit timing
 analyses, we collected the linear radial velocity trends reported by
 \citet{knutson_friends_2014}, and computed the expected orbital period
 derivatives $\dot{P}_{\rm\,RV} = \dot{v}_{\rm r} P/c$ for each system.
-The results are given in Table~4, and visualized for hot Jupiters with
+The results are given in Table~5, and visualized for hot Jupiters with
 significant ($>$$3\sigma$) linear trends in Figure~\ref{fig:pdot_pop}.
 
 Including WASP-4b, 16 of 51 hot Jupiters surveyed by
@@ -837,11 +838,9 @@ velocity measurements of hot Jupiters are strongly encouraged.
 \nocite{huitson_gemini_2017}
 
 \input{WASP-4b_transit_time_table.tex}
-\vspace{-2cm}
 \input{WASP-4b_rv_table.tex}
-\vspace{-2cm}
 \input{model_fit_table.tex}
-\vspace{-2cm}
+\input{rv_model_posterior_table.tex}
 \input{pdot_table.tex}
 
 %\clearpage
