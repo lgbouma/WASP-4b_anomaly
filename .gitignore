@@ -10,3 +10,4 @@ src/template.txt
 *.aux
 *personal*
 *DS_Store
+logs*
