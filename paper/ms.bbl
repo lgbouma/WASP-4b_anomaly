@@ -412,12 +412,12 @@ Southworth, J., Hinse, T.~C., J{\o}rgensen, U.~G., {et~al.} 2009,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2009.14767.x}{\JournalTitle{\mnras},
   396, 1023}
 
-\bibitem[{Southworth {et~al.}(2019)Southworth, Dominik, Jørgensen, Andersen,
+\bibitem[{Southworth {et~al.}(2019)Southworth, Dominik, J\o~rgensen, Andersen,
   Bozza, Burgdorf, D'Ago, Dib, Figuera~Jaimes, Fujii, Gill, Haikala, Hinse,
   Hundertmark, Khalouei, Korhonen, Longa-Peña, Mancini, Peixinho, Rabus,
   Rahvar, Sajadian, Skottfelt, Snodgrass, Spyratos, Tregloan-Reed,
   Unda-Sanzana, \& von Essen}]{southworth_transit_2019}
-Southworth, J., Dominik, M., Jørgensen, U.~G., {et~al.} 2019,
+Southworth, J., Dominik, M., J\o~rgensen, U.~G., {et~al.} 2019,
   \href{http://dx.doi.org/10.1093/mnras/stz2602}{\JournalTitle{\mnras}, 490,
   4230}
 
@@ -436,6 +436,12 @@ Torres, G. 1999, \href{http://dx.doi.org/10.1086/316313}{\JournalTitle{\pasp},
 Triaud, A. H. M.~J., Collier~Cameron, A., Queloz, D., {et~al.} 2010,
   \href{http://dx.doi.org/10.1051/0004-6361/201014525}{\JournalTitle{\aap},
   524, A25}
+
+\bibitem[{Trifonov {et~al.}(2020)Trifonov, Tal-Or, Zechmeister, Kaminski,
+  Zucker, \& Mazeh}]{trifonov_public_2020}
+Trifonov, T., Tal-Or, L., Zechmeister, M., {et~al.} 2020,
+  \href{http://arxiv.org/abs/2001.05942}{\JournalTitle{arXiv:2001.05942
+  [astro-ph]}}, arXiv: 2001.05942
 
 \bibitem[{Urban \& Seidelmann(2012)}]{urban_explanatory_2012}
 Urban, S., \& Seidelmann, P. 2012, Explanatory {Supplement} to the

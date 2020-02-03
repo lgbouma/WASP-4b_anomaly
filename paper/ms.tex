@@ -207,7 +207,7 @@ and the SAAO 1.0m telescope.
 
 Additional timing measurements were also recently made available by
 \citet{baluev_2019}, based on a homogeneous analysis of archival
-ground-based observations taken professional and amateur observers.
+ground-based observations.
 We included twelve of their ``high quality'' transit times from
 TRAPPIST (six transits), El~Sauce (four transits), and
 \citet{petrucci_no_2013}.  For TRAPPIST and El~Sauce, we verified with
@@ -238,8 +238,7 @@ Along with the 2010-2019 HIRES observations, there are also
 measurements from CORALIE and HARPS.  Following
 \citetalias{bouma_wasp4b_2019}, we included the CORALIE measurements
 from \citet{wilson_wasp-4b_2008} and \citet{triaud_spin-orbit_2010},
-using the homogeneous radial velocities calculated by the latter
-authors.
+using the homogeneous values calculated by the latter authors.
 
 For HARPS, we included the values reported by
 \citet{pont_determining_2011} and \citet{husnoo_observational_2012}.
@@ -252,12 +251,12 @@ experiment with using the recent \citet{trifonov_public_2020}
 re-reductions, which allowed us to include two calibration RVs taken
 as part of the \citet{triaud_spin-orbit_2010} program. The decision
 regarding whether to include or omit these points did not
-substantially affect any of our conclusions.
+noticeably affect our results.
 
 
 \subsection{Speckle imaging}
 
-A cursory analysis of the new HIRES observations led to our detection
+An initial analysis of the new HIRES observations led to our detection
 of a linear trend in the residuals after fitting out the orbit of
 WASP-4b.  This prompted us to acquire speckle images using Zorro at
 Gemini-South \citep[see][and the instrument
@@ -272,14 +271,14 @@ relatively poor seeing (1.2$''$) and also on the night of September
 functions of these speckle images reveal a characteristic interference
 pattern. This pattern in then used to determine the properties of the
 detected companion and to produce a reconstructed image.  Using the
-reduced images and their reconstructed speckle images,  contrast
-curves are produced yielding 5-sigma detection limits  (see
-\citealt{howell_speckle_2011}).  No companions were detected, and the
-second night, which had better seeing (0.6$''$), also produced the
-more constraining result.  The 832$\,$nm limits were the most useful
-to us given that faint companions are redder than the host star.  We
-therefore opted to use the 832$\,$nm September 28-29 contrast limits
-for the remaining analysis.
+reconstructed speckle images,  contrast curves are produced yielding
+5-sigma detection limits  (see \citealt{howell_speckle_2011}).  No
+companions were detected, and the second night, which had better
+seeing (0.6$''$), also produced the more constraining result.  The
+832$\,$nm limits were the most useful to us given that faint
+companions are redder than the host star.  We therefore opted to use
+the 832$\,$nm September 28-29 contrast limits for the remaining
+analysis.
 
 
 \section{Analysis}
@@ -297,10 +296,9 @@ for the remaining analysis.
   \caption{ {\bf Timing residuals and best-fit models for WASP-4b.}
   The vertical axis shows the observed transit times minus the
   calculated times assuming a constant orbital period.  More opaque
-  points correspond to more precise data.  The quadratic ephemeris and
-  its $\pm1\sigma$ statistical uncertainties are shown in blue.
-  The scatter in the residuals could be due to underestimated
-  measurement uncertainties (see Section~\ref{sec:transit_analysis}).
+  points correspond to more precise data.  The $\pm1\sigma$
+  uncertainties of the quadratic ephemeris 
+  are shown in blue.
   The binned TESS point (yellow star) is the weighted average of 18
   TESS transits and is binned for display purposes only.  Its
   uncertainty is slightly larger than the marker size.  The models
@@ -346,10 +344,10 @@ red}=3.0$.  The best-fitting quadratic model has 90 degrees of freedom,
 $\chi^2 = 183$, and $\chi^2_{\rm red}=2.0$.  The difference in the
 Bayesian information criteria (BIC) between the linear and quadratic
 and models is $\Delta {\rm BIC} = 89$, strongly favoring the
-quadratic case \citep{kass_bayes_1995}.
+quadratic model \citep{kass_bayes_1995}.
 
 From the reduced $\chi^2$ values, we can surmise that neither model
-entirely describes the transit data that we have collected---there
+entirely describes the transit data---there
 must be some additional source of signal or noise. In
 \citetalias{bouma_wasp4b_2019}, we found that the quadratic model for the
 (sparser) transit data gave $\chi^2_{\rm red}=1.0$.  The worsened
@@ -364,10 +362,10 @@ measurement uncertainties, and lower the reduced $\chi^2$.  We do not
 think that such an approach is warranted, because it would not change
 the result that the quadratic model is strongly preferred.  Instead,
 we opt to simply inflate the uncertainties reported for each model by
-a factor of $\sqrt{\chi^2_{\rm red}}$ ($\approx$1.73$\times$ for the
-linear model, and $\approx$1.41$\times$ for the quadtratic).
+a factor of $(\chi^2_{\rm red})^{1/2}$, or $\approx$1.73$\times$ for the
+linear model, and $\approx$1.41$\times$ for the quadratic.
 
-The best-fit period derivative in the quadratic model is then
+The resulting best-fit period derivative for the quadratic model is 
 \begin{equation}
 \dot{P}
   = - (2.74 \pm 0.28)\times 10^{-10}
@@ -376,7 +374,7 @@ The best-fit period derivative in the quadratic model is then
 \end{equation}
 This agrees to within $1\sigma$ of the value reported by
 \citet{southworth_transit_2019} ($\dot{P} = - 9.2 \pm 1.1~{\rm
-ms}\,{\rm yr}^{-1}$).  It is $\approx$3$\sigma$ larger than the rate
+ms}\,{\rm yr}^{-1}$).  It is $\approx$2.3$\sigma$ larger than the rate
 of period decrease we previously reported \citepalias[$- 12.6 \pm 1.2~{\rm
 ms}\,{\rm yr}^{-1}$;][]{bouma_wasp4b_2019}, presumably because of the
 new data from \citeauthor{southworth_transit_2019} and
@@ -435,9 +433,9 @@ significance \citep{knutson_friends_2014,bouma_wasp4b_2019}.
 The system's acceleration towards our line-of-sight causes a decrease
 in the apparent orbital period:
 \begin{align}
-  \dot{P}_{\rm\,RV} &= \frac{\dot{v}_{\rm r} P}{c}.
+  \dot{P}_{\rm\,RV} &= \frac{\dot{v}_{\rm r} P}{c},
 \end{align}
-Expressed in convenient units,
+or in more convenient units,
 \begin{align}
   \dot{P}_{\rm\,RV} &= 105{.}3\,{\rm msec}\,{\rm yr}^{-1} \
   \left( \frac{P}{{\rm day}} \right)
@@ -447,9 +445,9 @@ For WASP-4, this yields
 \begin{align}
   \dot{P}_{\rm\,RV} &= -5.94 \pm 0.39\,{\rm msec}\,{\rm yr}^{-1}.
 \end{align}
-In other words, the majority of the period decrease observed in
-transits ($\dot{P}= - 8.64 \pm 1.26~{\rm msec}\,{\rm yr}^{-1}$) seems to
-be explained by the acceleration of the host star.
+The majority of the period decrease observed in transits ($\dot{P}= -
+8.64 \pm 1.26~{\rm msec}\,{\rm yr}^{-1}$) seems to be explained by the
+acceleration of the host star.
 
 An important consideration is whether the measured RV trend is
 correlated with stellar activity.  We investigate this by analyzing
@@ -837,8 +835,11 @@ velocity measurements of hot Jupiters are required.
 \bibliography{bibliography} 
 
 \input{WASP-4b_transit_time_table.tex}
+\vspace{-2cm}
 \input{WASP-4b_rv_table.tex}
+\vspace{-2cm}
 \input{model_fit_table.tex}
+\vspace{-2cm}
 \input{pdot_table.tex}
 
 
