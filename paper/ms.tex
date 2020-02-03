@@ -287,10 +287,10 @@ analysis.
 \subsection{Transits}
 \label{sec:transit_analysis}
 
-\begin{figure}[t]
+\begin{figure*}[t]
 	\begin{center}
 		\leavevmode
-		\includegraphics[width=0.47\textwidth]{f1.pdf}
+		\includegraphics[width=0.7\textwidth]{f1.pdf}
 	\end{center}
 	\vspace{-0.7cm}
   \caption{ {\bf Timing residuals and best-fit models for WASP-4b.}
@@ -304,7 +304,7 @@ analysis.
   were fitted to all of the individual transit times.
   \label{fig:times}
 	}
-\end{figure}
+\end{figure*}
 
 We considered two models for the observed transit times.  The first
 model assumes a constant orbital period $P$ on a circular orbit:
@@ -384,26 +384,32 @@ parameters are reported in Table~3.
 
 \subsection{Radial Velocities: WASP-4's acceleration towards the Earth}
 
-\begin{figure}[t]
+\begin{figure*}[t]
 	\begin{center}
 		\leavevmode
-		\includegraphics[width=0.47\textwidth]{f2.pdf}
+		\includegraphics[width=0.7\textwidth]{f2.pdf}
 	\end{center}
 	\vspace{-0.7cm}
 	\caption{
-    {\bf Radial velocity residuals of WASP-4.} The best-fit
-    Keplerian orbit of WASP-4b has been subtracted.  The linear trend
-    inferred from the RV data is shown with a black line, with
-    $1\sigma$ errors in gray.  The trend that would be needed to
+    {\bf Radial velocities of WASP-4.}
+    {\it Top:} RV measurements, with best-fit instrument offsets
+    added. 
+    {\it Middle:}
+    Residuals, after subtracting the
+    maximum-likelihood orbit of WASP-4b.  The linear trend
+    inferred from the RV data is shown with a black line.
+    The trend that would be needed to
     produce the period decrease seen in transits ($\dot{P}= - 8.64 \pm
     1.26~{\rm msec}\,{\rm yr}^{-1}$) is indicated in purple.  The four
-    new RV measurements presented in this work increase the
-    significance of the radial velocity trend from $\approx$2$\sigma$
+    new RV measurements from this work increase the
+    significance of the linear trend from $\approx$2$\sigma$
     to 15$\sigma$.
+    {\it Bottom:}
+    Phased orbit of WASP-4b.
 	\label{fig:rvs}
   \vspace{-0.3cm}
 	}
-\end{figure}
+\end{figure*}
 
 Our initial model for the radial velocity data was a single Keplerian
 orbit, plus instrument offsets, jitters, and a long-term linear trend
@@ -489,7 +495,7 @@ activity.
 \begin{figure*}[t]
 	\begin{center}
 		\leavevmode
-		\includegraphics[width=0.73\textwidth]{f4.pdf}
+		\includegraphics[width=0.8\textwidth]{f4.pdf}
 	\end{center}
 	\vspace{-0.6cm}
 	\caption{
@@ -830,9 +836,6 @@ velocity measurements of hot Jupiters are strongly encouraged.
 \nocite{ranjan_atmospheric_2014}
 \nocite{huitson_gemini_2017}
 
-\bibliographystyle{yahapj}                            
-\bibliography{bibliography} 
-
 \input{WASP-4b_transit_time_table.tex}
 \vspace{-2cm}
 \input{WASP-4b_rv_table.tex}
@@ -840,6 +843,11 @@ velocity measurements of hot Jupiters are strongly encouraged.
 \input{model_fit_table.tex}
 \vspace{-2cm}
 \input{pdot_table.tex}
+
+%\clearpage
+\bibliographystyle{yahapj}                            
+\bibliography{bibliography} 
+
 
 
 \end{document}
