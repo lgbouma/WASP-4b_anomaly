@@ -78,7 +78,7 @@ Institute of Technology, Pasadena, CA 91125, USA}
   The implied period decrease explains most or all of WASP-4's
   changing orbital period as a light-travel time effect ($-5.94 \pm
   0.39~{\rm msec}\,{\rm yr}^{-1}$ implied, compared to $-8.64 \pm
-  0.89~{\rm msec}\,{\rm yr}^{-1}$ observed).  Combining the radial
+  1.26~{\rm msec}\,{\rm yr}^{-1}$ observed).  Combining the radial
   velocities with new upper limits from speckle imaging, we find that
   the system's acceleration is likely caused by a 10-200$\,M_{\rm
   Jup}$ companion with semi-major axis between 10-100$\,$AU.  The
@@ -361,14 +361,17 @@ this latter possibility.
 
 One approach to analyzing such data would be to inflate the transit
 measurement uncertainties, and lower the reduced $\chi^2$.  We do not
-think that such an approach is warranted, since it would not change
-the result that the quadratic model is strongly preferred.
+think that such an approach is warranted, because it would not change
+the result that the quadratic model is strongly preferred.  Instead,
+we opt to simply inflate the uncertainties reported for each model by
+a factor of $\sqrt{\chi^2_{\rm red}}$ ($\approx$1.73$\times$ for the
+linear model, and $\approx$1.41$\times$ for the quadtratic).
 
-The best-fit period derivative in the quadratic model is
+The best-fit period derivative in the quadratic model is then
 \begin{equation}
 \dot{P}
   = - (2.74 \pm 0.28)\times 10^{-10}
-  = - 8.64 \pm 0.89~{\rm msec}\,{\rm yr}^{-1}.
+  = - 8.64 \pm 1.26~{\rm msec}\,{\rm yr}^{-1}.
   \label{eq:dP_dt_obs}
 \end{equation}
 This agrees to within $1\sigma$ of the value reported by
@@ -396,7 +399,7 @@ parameters are reported in Table~3.
     inferred from the RV data is shown with a black line, with
     $1\sigma$ errors in gray.  The trend that would be needed to
     produce the period decrease seen in transits ($\dot{P}= - 8.64 \pm
-    0.89~{\rm msec}\,{\rm yr}^{-1}$) is indicated with the purple dotted
+    1.26~{\rm msec}\,{\rm yr}^{-1}$) is indicated with the purple dotted
     line.  The four new RV measurements presented in this work
     increased the significance of the radial velocity trend from
     $\approx$2$\sigma$ to 15$\sigma$.
@@ -445,7 +448,7 @@ For WASP-4, this yields
   \dot{P}_{\rm\,RV} &= -5.94 \pm 0.39\,{\rm msec}\,{\rm yr}^{-1}.
 \end{align}
 In other words, the majority of the period decrease observed in
-transits ($\dot{P}= - 8.64 \pm 0.89~{\rm msec}\,{\rm yr}^{-1}$) seems to
+transits ($\dot{P}= - 8.64 \pm 1.26~{\rm msec}\,{\rm yr}^{-1}$) seems to
 be explained by the acceleration of the host star.
 
 An important consideration is whether the measured RV trend is
@@ -620,7 +623,7 @@ period included tidal orbital decay, orbital precession, and
 light-travel time effects \citep{bouma_wasp4b_2019}.  Our new radial
 velocity measurements strongly indicate that the least exotic
 option---light-travel time effects---is also the most likely.
-Transits show the obital period decreasing by $- 8.64 \pm 0.89~{\rm
+Transits show the obital period decreasing by $- 8.64 \pm 1.26~{\rm
 ms}\,{\rm yr}^{-1}$; the line-of-sight acceleration observed in radial
 velocities would predict a period decrease of $-5.94 \pm 0.39~{\rm
 ms}\,{\rm yr}^{-1}$.  Though the quantitative agreement is not
@@ -711,7 +714,7 @@ as
   t_{\rm tra} = a_0 + a_1 E + a_2 E^2,
 \end{align}
 where $a_0\equiv t_0$, $a_1\equiv P$, and $a_2\equiv 0.5\cdot {\rm
-d}P/{\rm d}E$.  By following \citet{gould_chi2_2003}, we derived that
+d}P/{\rm d}E$.  Following \citet{gould_chi2_2003}, one can show that
 if $N$ transit timing measurements are taken uniformly across a
 baseline of $\Delta E$ epochs with constant precision $\sigma_{\rm
 tra}$, then the uncertainty of the quadratic term is given by
@@ -722,8 +725,8 @@ tra}$, then the uncertainty of the quadratic term is given by
 This result implies that a doubled observing baseline yields an
 $\approx$5.7-fold improvement in precision on d$P$/d$t$.  If regular
 observations continue from ground and space-based observatories,
-period derivatives with precision below $1~{\rm msec}\,{\rm yr}^{-1}$
-will become much more common over the coming decade.
+period derivatives will begin to be measured with precision exceeding
+$1~{\rm msec}\,{\rm yr}^{-1}$ over the coming decade.
 
 
 \section{Conclusions}
@@ -735,7 +738,7 @@ is accelerating towards the Earth at $\dot{\gamma} =
 The corresponding light-travel time effect predicts a period decrease
 $\dot{\gamma} P/c$ of $-5.94 \pm 0.39~{\rm msec}\,{\rm yr}^{-1}$.  The
 majority of the period decrease observed in transits ($\dot{P}= - 8.64
-\pm 0.89~{\rm msec}\,{\rm yr}^{-1}$) is therefore explained by the
+\pm 1.26~{\rm msec}\,{\rm yr}^{-1}$) is therefore explained by the
 acceleration of the host star~---~not tidal orbital decay, or apsidal
 precession.  The companion causing the acceleration is most likely a
 brown dwarf or low-mass star with semi-major axis between

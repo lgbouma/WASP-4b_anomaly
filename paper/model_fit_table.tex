@@ -18,17 +18,20 @@
 }
 % provenance:
 % /Users/luke/Dropbox/proj/tessorbitaldecay/results/model_comparison/WASP-4b_20200127/model_comparison_output.txt
+% processed through inflate_uncertainties.py
 \startdata
 ~~~~~~{\it Constant period} &  \\
-$t_0$\,[${\rm BJD}_{\rm TBD}$]    & 2456180.558712(+14)(-14)              \\
-$P$\,[days]                       & 1.338231429(+15)(-15)                 \\
+$t_0$\,[${\rm BJD}_{\rm TBD}$]    & 2456180.558712(+24)(-24)              \\
+$P$\,[days]                       & 1.338231429(+26)(-26)                 \\
 ~~~~~~{\it Constant period derivative} &  \\
-$t_0$~[${\rm BJD}_{\rm TBD}$]     & 2456180.558872(+22)(-21)              \\
-$P$\,[days]                       & 1.338231502(+17)(-17)                 \\
-$dP/dt$                           & $-2.74(+28)(-28) \times 10^{-10}$     \\
+$t_0$~[${\rm BJD}_{\rm TBD}$]     & 2456180.558872(+31)(-31)              \\
+$P$\,[days]                       & 1.338231502(+24)(-24)                 \\
+$dP/dt$                           & $-2.74(+40)(-40) \times 10^{-10}$     \\
 \enddata
 \tablenotetext{a}{
-The numbers in parenthesis give the $68\%$ confidence interval for the final
-two digits, where appropriate.
+The numbers in parenthesis give the $68\%$ confidence interval for the
+final two digits, where appropriate.  The intervals have been inflated
+by a factor of $\sqrt{\chi^2_{\rm red}}$ due to excess scatter in the
+transit residuals (see Section~\ref{sec:transit_analysis}).
 }
 \end{deluxetable*}
