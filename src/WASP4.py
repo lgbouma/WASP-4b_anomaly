@@ -46,7 +46,7 @@ params = anybasis_params.basis.to_any_basis(anybasis_params,fitting_basis)
 params['secosw1'].vary = False
 params['sesinw1'].vary = False
 
-params['curv'].vary = True # change this!
+params['curv'].vary = False # change this!
 
 params['per1'].vary = True  # if false, struggles more w/ convergence.
 params['tc1'].vary = True

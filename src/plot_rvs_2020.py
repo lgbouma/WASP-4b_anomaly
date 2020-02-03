@@ -18,7 +18,7 @@ from astrobase.lcmath import phase_magseries
 
 from radvel_utils import args_object, _get_fit_results
 
-def plot_rvs_2020_single_residual():
+def plot_rvs_2020_data_and_residual():
 
     # initialization script used to make the fix_gammadot fits
     basedir = os.path.join(
@@ -32,7 +32,7 @@ def plot_rvs_2020_single_residual():
         basedir,
         "results/rv_fitting/LGB_20190911_fix_gammaddot"
     )
-    savpath='../results/20190911_rv_fit.png'
+    savpath='../results/20190911_rv_data_and_residual.png'
 
     (rvtimes, rvs, rverrs, resid, telvec, dvdt,
      curv, dvdt_merr, dvdt_perr, time_base) = _get_fit_results(
@@ -44,16 +44,21 @@ def plot_rvs_2020_single_residual():
     #
     offset=2450000
 
-    fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(4, 3))
+    fig, (a0, a1) = plt.subplots(nrows=2, ncols=1, sharex=True,
+                               figsize=(0.8*6,0.8*5.5), gridspec_kw=
+                               {'height_ratios':[3, 2]})
 
     utel = np.unique(telvec)
     markers = ['o','s','^']
     for ix, tel in enumerate(utel):
         sel = (telvec == tel)
-
-        ax.errorbar(rvtimes[sel]-offset, resid[sel], rverrs[sel], marker=markers[ix],
+        a0.errorbar(rvtimes[sel]-offset, rvs[sel], rverrs[sel], marker=markers[ix],
                     ecolor='gray', zorder=10, mew=0, ms=4, elinewidth=1,
-                    color='C{}'.format(ix), lw=0, label=tel)
+                    color='C{}'.format(ix), label=tel, lw=0)
+
+        a1.errorbar(rvtimes[sel]-offset, resid[sel], rverrs[sel], marker=markers[ix],
+                    ecolor='gray', zorder=10, mew=0, ms=4, elinewidth=1,
+                    color='C{}'.format(ix), lw=0)
 
     _times = np.linspace(np.min(rvtimes)-5000, np.max(rvtimes)+5000, num=2000)
 
@@ -63,11 +68,11 @@ def plot_rvs_2020_single_residual():
     model_merr = dvdt_merr*(_times-time_base)# + curv*(_times-time_base)**2
     model_perr = dvdt_perr*(_times-time_base)# + curv*(_times-time_base)**2
 
-    ax.plot(_times-offset, model_line, color='black', zorder=-3, lw=0.5)
-    ax.fill_between(_times-offset, model_merr, model_perr, color='black',
+    a1.plot(_times-offset, model_line, color='black', zorder=-3, lw=0.5)
+    a1.fill_between(_times-offset, model_merr, model_perr, color='black',
                     zorder=-4, alpha=0.2, lw=0)#label='$\pm 1\sigma$')
-    ax.text(0.55, 0.54, 'Best-fit from RVs', va='bottom', ha='left',
-            transform=ax.transAxes, color='black')
+    a1.text(0.55, 0.54, 'Best-fit from RVs', va='bottom', ha='left',
+            transform=a1.transAxes, color='black')
 
     # what would explain the Pdot from transits?
     period = 1.338231466*units.day
@@ -89,38 +94,42 @@ def plot_rvs_2020_single_residual():
     model_tra_merr = dvdt_tra_merr*(_mtimes-_mbase)# + curv*(_times-time_base)**2
     model_tra_perr = dvdt_tra_perr*(_mtimes-_mbase)# + curv*(_times-time_base)**2
 
-    ax.plot(_mtimes-offset, model_tra_line-150,
+    a1.plot(_mtimes-offset, model_tra_line-110,
             color='purple', zorder=-3, lw=0.5, ls=':')
-    ax.fill_between(_mtimes-offset, model_tra_merr-150, model_tra_perr-150,
+    a1.fill_between(_mtimes-offset, model_tra_merr-110, model_tra_perr-110,
                     color='purple', zorder=-4, alpha=0.4, lw=0)
-    ax.text(0.05, 0.12, 'Slope = $c\dot{P}/P$', va='bottom',
-            ha='left', transform=ax.transAxes, color='purple', alpha=0.9)
+    a1.text(0.05, 0.12, 'Slope = $c\dot{P}/P$', va='bottom',
+            ha='left', transform=a1.transAxes, color='purple', alpha=0.9)
 
-    ax.legend(loc='upper right', fontsize='medium')
+    a0.legend(loc='upper right', fontsize='medium')
 
-    ax.set_xlabel('JD'+' - {}'.format(offset), fontsize='large')
-    ax.set_ylabel('RV obs. - calc. [m/s]', fontsize='large')
+    a1.set_xlabel('Time [JD'+' - {}]'.format(offset), fontsize='large')
+    a0.set_ylabel('Radial velocity [m/s]', fontsize='large')
+    a1.set_ylabel('Residual [m/s]', fontsize='large')
 
     # make twin axis to show year on top
     times = Time(rvtimes, format='jd', scale='tdb')
-    a_top = ax.twiny()
+    a_top = a0.twiny()
     a_top.scatter(times.decimalyear, rvs, s=0)
     a_top.set_xlabel('Year', fontsize='large')
 
-    ax.set_xlim((3950, 9050))
-    ax.set_ylim((-300, 300))
+    for a in [a0,a1]:
+        a.set_xlim((3950, 9050))
+    for a in [a0,a1,a_top]:
+        a.get_yaxis().set_tick_params(which='both', direction='in')
+        a.get_xaxis().set_tick_params(which='both', direction='in')
+    a0.tick_params(right=True, which='both', direction='in')
+    a1.tick_params(top=True, right=True, which='both', direction='in')
+
+    a0.set_ylim((-330, 330))
+    a1.set_ylim((-230, 230))
+
 
     _times = np.linspace(np.min(rvtimes)-5000, np.max(rvtimes)+5000, num=2000)
     a_top.set_xlim(
         (Time( (3950+2450000), format='jd', scale='tdb').decimalyear,
         Time( (9050+2450000), format='jd', scale='tdb').decimalyear)
     )
-
-    ax.get_yaxis().set_tick_params(which='both', direction='in')
-    ax.get_xaxis().set_tick_params(which='both', direction='in')
-    ax.tick_params(right=True, which='both', direction='in')
-    a_top.get_yaxis().set_tick_params(which='both', direction='in')
-    a_top.get_xaxis().set_tick_params(which='both', direction='in')
 
     fig.tight_layout(h_pad=0.15, w_pad=0, pad=0)
     fig.savefig(savpath, bbox_inches='tight', dpi=400)
@@ -130,9 +139,7 @@ def plot_rvs_2020_single_residual():
     print('saved {:s}'.format(savpath))
 
 
-
-def plot_rvs_2020_orbit_and_residual():
-    # [WIP] is this really necessary?
+def plot_rvs_2020_orbit():
 
     # initialization script used to make the fix_gammadot fits
     basedir = os.path.join(
@@ -146,29 +153,46 @@ def plot_rvs_2020_orbit_and_residual():
         basedir,
         "results/rv_fitting/LGB_20190911_fix_gammaddot"
     )
-    savpath='../results/20190911_rv_fit_orbit_and_residual.png'
+    savpath='../results/20190911_rv_data_and_residual.png'
 
     (rvtimes, rvs, rverrs, resid, telvec, dvdt,
      curv, dvdt_merr, dvdt_perr, time_base) = _get_fit_results(
          setupfn, outputdir
     )
 
+    assert curv==0
+    _times = np.linspace(np.min(rvtimes)-5000, np.max(rvtimes)+5000, num=2000)
+    model_line = dvdt*(_times-time_base)# + curv*(_times-time_base)**2
+
+    model_line_data = dvdt*(rvtimes-time_base)
+
+    model_orbit = 0#FIXME gotta compute
+
+    #NOTE: can't just subtract. the OFFSETS matter here too :-(
+    #NOTE: this was actually an error in your earlier versions of this plot!
+    data_orbit = rvs - 
+
+
+    phase_magseries(times, rvs-, period, epoch, wrap=True, sort=True)
+
     #
     # make the plot
     #
     offset=2450000
 
-    fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(7, 3))
+    fig, ax = plt.subplots(nrows=1, ncols=1)
 
     utel = np.unique(telvec)
     markers = ['o','s','^']
     for ix, tel in enumerate(utel):
         sel = (telvec == tel)
+        a0.errorbar(rvtimes[sel]-offset, rvs[sel], rverrs[sel], marker=markers[ix],
+                    ecolor='gray', zorder=10, mew=0, ms=4, elinewidth=1,
+                    color='C{}'.format(ix), label=tel, lw=0)
 
-        axs[1].errorbar(rvtimes[sel]-offset, resid[sel], rverrs[sel],
-                        marker=markers[ix], ecolor='gray', zorder=10, mew=0,
-                        ms=4, elinewidth=1, color='C{}'.format(ix), lw=0,
-                        label=tel)
+        a1.errorbar(rvtimes[sel]-offset, resid[sel], rverrs[sel], marker=markers[ix],
+                    ecolor='gray', zorder=10, mew=0, ms=4, elinewidth=1,
+                    color='C{}'.format(ix), lw=0)
 
     _times = np.linspace(np.min(rvtimes)-5000, np.max(rvtimes)+5000, num=2000)
 
@@ -178,11 +202,11 @@ def plot_rvs_2020_orbit_and_residual():
     model_merr = dvdt_merr*(_times-time_base)# + curv*(_times-time_base)**2
     model_perr = dvdt_perr*(_times-time_base)# + curv*(_times-time_base)**2
 
-    axs[1].plot(_times-offset, model_line, color='black', zorder=-3, lw=0.5)
-    axs[1].fill_between(_times-offset, model_merr, model_perr, color='black',
-                        zorder=-4, alpha=0.2, lw=0)#label='$\pm 1\sigma$')
-    axs[1].text(0.55, 0.54, 'Best-fit from RVs', va='bottom', ha='left',
-                transform=axs[1].transAxes, color='black')
+    a1.plot(_times-offset, model_line, color='black', zorder=-3, lw=0.5)
+    a1.fill_between(_times-offset, model_merr, model_perr, color='black',
+                    zorder=-4, alpha=0.2, lw=0)#label='$\pm 1\sigma$')
+    a1.text(0.55, 0.54, 'Best-fit from RVs', va='bottom', ha='left',
+            transform=a1.transAxes, color='black')
 
     # what would explain the Pdot from transits?
     period = 1.338231466*units.day
@@ -204,40 +228,42 @@ def plot_rvs_2020_orbit_and_residual():
     model_tra_merr = dvdt_tra_merr*(_mtimes-_mbase)# + curv*(_times-time_base)**2
     model_tra_perr = dvdt_tra_perr*(_mtimes-_mbase)# + curv*(_times-time_base)**2
 
-    axs[1].plot(_mtimes-offset, model_tra_line-150,
+    a1.plot(_mtimes-offset, model_tra_line-110,
             color='purple', zorder=-3, lw=0.5, ls=':')
-    axs[1].fill_between(_mtimes-offset, model_tra_merr-150, model_tra_perr-150,
+    a1.fill_between(_mtimes-offset, model_tra_merr-110, model_tra_perr-110,
                     color='purple', zorder=-4, alpha=0.4, lw=0)
-    axs[1].text(0.05, 0.12, 'Slope = $c\dot{P}/P$', va='bottom',
-            ha='left', transform=ax.transAxes, color='purple', alpha=0.9)
+    a1.text(0.05, 0.12, 'Slope = $c\dot{P}/P$', va='bottom',
+            ha='left', transform=a1.transAxes, color='purple', alpha=0.9)
 
-    axs[1].legend(loc='upper right', fontsize='medium')
+    a0.legend(loc='upper right', fontsize='medium')
 
-    axs[1].set_xlabel('JD'+' - {}'.format(offset), fontsize='large')
-    axs[1].set_ylabel('RV obs. - calc. [m/s]', fontsize='large')
+    a1.set_xlabel('Time [JD'+' - {}]'.format(offset), fontsize='large')
+    a0.set_ylabel('Radial velocity [m/s]', fontsize='large')
+    a1.set_ylabel('Residual [m/s]', fontsize='large')
 
     # make twin axis to show year on top
     times = Time(rvtimes, format='jd', scale='tdb')
-    a_top = axs[0].twiny()
+    a_top = a0.twiny()
     a_top.scatter(times.decimalyear, rvs, s=0)
     a_top.set_xlabel('Year', fontsize='large')
 
-    xmin, xmax = 3950, 9050
-    axs[1].set_xlim((xmin, xmax))
-    axs[1].set_ylim((-300, 300))
+    for a in [a0,a1]:
+        a.set_xlim((3950, 9050))
+    for a in [a0,a1,a_top]:
+        a.get_yaxis().set_tick_params(which='both', direction='in')
+        a.get_xaxis().set_tick_params(which='both', direction='in')
+    a0.tick_params(right=True, which='both', direction='in')
+    a1.tick_params(top=True, right=True, which='both', direction='in')
+
+    a0.set_ylim((-330, 330))
+    a1.set_ylim((-230, 230))
+
 
     _times = np.linspace(np.min(rvtimes)-5000, np.max(rvtimes)+5000, num=2000)
     a_top.set_xlim(
-        (Time( (xmin+2450000), format='jd', scale='tdb').decimalyear,
-        Time( (xmax+2450000), format='jd', scale='tdb').decimalyear)
+        (Time( (3950+2450000), format='jd', scale='tdb').decimalyear,
+        Time( (9050+2450000), format='jd', scale='tdb').decimalyear)
     )
-
-    for ax in axs:
-        ax.get_yaxis().set_tick_params(which='both', direction='in')
-        ax.get_xaxis().set_tick_params(which='both', direction='in')
-        ax.tick_params(right=True, which='both', direction='in')
-    a_top.get_yaxis().set_tick_params(which='both', direction='in')
-    a_top.get_xaxis().set_tick_params(which='both', direction='in')
 
     fig.tight_layout(h_pad=0.15, w_pad=0, pad=0)
     fig.savefig(savpath, bbox_inches='tight', dpi=400)
@@ -251,5 +277,5 @@ def plot_rvs_2020_orbit_and_residual():
 
 if __name__=="__main__":
 
-    plot_rvs_2020_single_residual()
-    plot_rvs_2020_orbit_and_residual()
+    plot_rvs_2020_data_and_residual()
+    plot_rvs_2020_orbit()
