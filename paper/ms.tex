@@ -202,6 +202,8 @@ The majority of times are identical to those we collected in
 \citet{southworth_transit_2019} are included.  These transits were
 observed from the 3.58m NTT and Danish 1.54m telescopes at La Silla,
 and the SAAO 1.0m telescope.
+% Five of the twenty-two occurred at simultaneous epochs as transits
+% previously reported by \citet{hoyer_tramos_2013}.
 
 Additional timing measurements were also recently made available by
 \citet{baluev_2019}, based on a homogeneous analysis of archival
@@ -232,16 +234,26 @@ Our new measurements triple the HIRES observing baseline to nine
 years.
 
 The complete set of radial velocity observations is given in Table~2.
-Along with the 2010-2019 HIRES observations, there are also earlier
+Along with the 2010-2019 HIRES observations, there are also
 measurements from CORALIE and HARPS.  Following
 \citetalias{bouma_wasp4b_2019}, we included the CORALIE measurements
 from \citet{wilson_wasp-4b_2008} and \citet{triaud_spin-orbit_2010},
 using the homogeneous radial velocities calculated by the latter
-authors. We included the HARPS values reported by
+authors.
+
+For HARPS, we included the values reported by
 \citet{pont_determining_2011} and \citet{husnoo_observational_2012}.
-We omitted the HARPS data points taken over three nights by
-\citet{triaud_spin-orbit_2010} for Rossiter-McLaughlin observations
-because they have a systematic offset from the remaining datasets.
+While \citet{triaud_spin-orbit_2010} also acquired HARPS data over
+three nights for Rossiter-McLaughlin observations, these data were
+reduced with a non-standard pipeline, and so are systematically offset
+from the remaining HARPS data.  In our final fit, we therefore omitted
+the three \citet{triaud_spin-orbit_2010} nights.  We did nonetheless
+experiment with using the recent \citet{trifonov_public_2020}
+re-reductions, which allowed us to include two calibration RVs taken
+as part of the \citet{triaud_spin-orbit_2010} program. The decision
+regarding whether to include or omit these points did not
+substantially affect any of our conclusions.
+
 
 \subsection{Speckle imaging}
 
@@ -257,18 +269,17 @@ We observed WASP-4 twice, on the night of September 11-12 with
 relatively poor seeing (1.2$''$) and also on the night of September
 28-29.  Over each observation, we acquired three sets of 1000
 60$\,$msec exposures.  If a companion is present, the autocorrelation
-functions of these speckle images reveal a characteristic
-interference pattern. This pattern in then used to determine the
-properties of the detected companion and to produce a reconstructed
-image.  Using the reduced images and their
-reconstructed speckle images,  contrast curves are produced yielding
-5-sigma detection limits  (see \citealt{howell_speckle_2011}). 
-No companions were detected,
-and the second night, which had better seeing
-(0.6$''$), also produced the more constraining result.  The 832$\,$nm
-limits were the most useful to us given that faint companions
-are redder than the host star.  We therefore opted to use the
-832$\,$nm September 28-29 contrast limits for the remaining analysis.
+functions of these speckle images reveal a characteristic interference
+pattern. This pattern in then used to determine the properties of the
+detected companion and to produce a reconstructed image.  Using the
+reduced images and their reconstructed speckle images,  contrast
+curves are produced yielding 5-sigma detection limits  (see
+\citealt{howell_speckle_2011}).  No companions were detected, and the
+second night, which had better seeing (0.6$''$), also produced the
+more constraining result.  The 832$\,$nm limits were the most useful
+to us given that faint companions are redder than the host star.  We
+therefore opted to use the 832$\,$nm September 28-29 contrast limits
+for the remaining analysis.
 
 
 \section{Analysis}
