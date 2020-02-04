@@ -24,7 +24,7 @@
 
 \defcitealias{bouma_wasp4b_2019}{B19}
 
-\title{WASP-4 is Accelerating Towards the Earth}
+\title{WASP-4 is Accelerating Towards the Sun}
 % ", Explaining its Decreasing Orbital Period"
 % ": A Cautionary Tale in the Search for Tidal Orbital Decay"
 % "An Explanation for WASP-4's Decreasing Orbital Period".
@@ -67,29 +67,32 @@ Institute of Technology, Pasadena, CA 91125, USA}
 %
 
 \begin{abstract}
-  Space and ground-based transit measurements of the hot Jupiter
-  WASP-4b have recently shown that its orbital period appears to be
-  decreasing.  Proposed explanations for the period change include
-  tidal orbital decay, orbital precession, and light-travel time
-  effects.  We present new radial velocity measurements of WASP-4,
-  acquired with Keck-HIRES.  The data show that the system is
-  accelerating towards the Earth at $\dot{\gamma} =
-  -0.0422^{+0.0028}_{-0.0027}\,{\rm m}\,{\rm s}^{-1}\,{\rm day}^{-1}$.
-  The implied period decrease explains most or all of WASP-4b's
-  changing orbital period as a light-travel time effect ($-5.94 \pm
-  0.39~{\rm msec}\,{\rm yr}^{-1}$ implied, compared to $-8.64 \pm
-  1.26~{\rm msec}\,{\rm yr}^{-1}$ observed).  Combining the radial
-  velocities with new upper limits from speckle imaging, we find that
-  the system's acceleration is likely caused by a 10-200$\,M_{\rm
-  Jup}$ companion with semi-major axis between 10-100$\,$AU.  The
-  statistics from \citet{knutson_friends_2014} imply that about 1 in 6
-  hot Jupiters are expected to show period decreases comparable to
-  WASP-4, due to acceleration by outer companions.  These period
-  changes will be increasingly measureable in coming years, because
-  the precision of the period derivative measurement scales with the
-  observing baseline to the power of 5/2.  Continued radial velocity
+  The orbital period of the hot Jupiter WASP-4b appears to be decreasing at
+  a rate of $-8.64 \pm 1.26~{\rm msec}\,{\rm yr}^{-1}$,
+  based on transit-timing measurements spanning 12 years.
+  Proposed explanations for the period change include
+  tidal orbital decay, apsidal precession, and acceleration of the system
+  along the line of sight.
+  To investigate further, we performed new radial velocity measurements and
+  speckle imaging of WASP-4.
+  The radial-velocity data show that the system is
+  accelerating towards the Sun at a rate of
+  $-0.0422\pm 0.0028\,{\rm m}\,{\rm s}^{-1}\,{\rm day}^{-1}$.
+  The associated Doppler effect would cause
+  the apparent period to shrink at a rate of
+  $-5.94 \pm 0.39~{\rm msec}\,{\rm yr}^{-1}$, comparable
+  to the observed rate.
+  Thus, the observed change in the transit period is mostly
+  or entirely produced by the line-of-sight acceleration of the system.
+  This acceleration is probably caused by a wide-orbiting companion
+  of mass 10-200$\,M_{\rm Jup}$ and orbital distance 10-100$\,$AU,
+  based on the magnitude of the radial-velocity trend and the non-detection of any
+  companion in the speckle image.  We expect that 1 out of 6 hot Jupiters
+  will show apparent period changes of the same order of magnitude as WASP-4,
+  based on the hot-Jupiter companion statistics of  
+  \citet{knutson_friends_2014}. Continued radial velocity
   monitoring of hot Jupiters is therefore essential to distinguish
-  tidal orbital decay from line-of-sight accelerations.
+  the effects of tidal orbital decay or apsidal precession from line-of-sight acceleration.
 \end{abstract}
 
 \keywords{Exoplanet tides (497), Exoplanet dynamics (490), Radial velocity 
@@ -99,88 +102,100 @@ Institute of Technology, Pasadena, CA 91125, USA}
 
 \section{Introduction}
 
-The orbits of most hot Jupiters are unstable to tidal decay
-\citep{counselman_outcomes_1973,hut_stability_1980,rasio_tidal_1996,levrard_falling_2009,matsumura_tidal_2010}.
-The relevant issue is whether the timescale for tidal orbital decay is
+The orbits of most hot Jupiters are formally unstable to tidal decay
+\citep{counselman_outcomes_1973,
+hut_stability_1980,rasio_tidal_1996,levrard_falling_2009,matsumura_tidal_2010}.
+It is not clear, though, whether the timescale for tidal orbital decay is
 shorter or longer than the timescale for main-sequence stellar
-evolution.  This question depends on the uncertain rate at which
-friction inside the star can damp the energy of tidal oscillations and
-thereby shrink the orbit (as reviewed by \citealt{Mazeh2008} and
+evolution.  This answer to this question depends on the uncertain rate at which
+friction inside the star damps the tidal oscillations, which is ultimately
+what causes the orbit to shrink
+(as reviewed by \citealt{Mazeh2008} and
 \citealt{ogilvie_tidal_2014}).
-
-Indirect studies of age and angular momentum indicators including the
-hot Jupiter semi-major axis distribution, host star spin rates, and
-galactic velocity dispersions have led to estimates for the inspiral
-timescale that vary from much less to much greater than the
-main-sequence evolution time  ({\it e.g.},
+Population studies of hot Jupiters --- based on ages, rotation rates,
+orbital distances, and Galactic kinematics --- have led to differing
+conclusions, with estimated lifetimes ranging from less than a gigayear
+to much longer than main-sequence lifetimes
+(see, {\it e.g.},
 \citealt{jackson_observational_2009}, \citealt{teitler_why_2014},
 \citealt{penev_empirical_2018}, \citealt{cameron_hierarchical_2018},
-\citealt{hamer_schlaufman_2019}).  Direct measurements of tidal
-orbital decay through transit and occultation timing could provide an
-empirical resolution.  For instance, combined transit timing and
-radial velocity measurements for WASP-12b have shown that its secular
-period decrease of $\approx$30 milliseconds per year is probably due
-to tidal orbital decay
+\citealt{hamer_schlaufman_2019}).
+
+An empirical resolution might be possible through long-term timing
+of transits and occultations, seeking evidence for changes in the orbital
+period.  For instance, long-term transit timing and
+radial velocity measurements for WASP-12b have revealed a secular
+decrease in the period at a rate of $\approx$30 milliseconds per year, which has
+been interpreted as the effect of tidal orbital decay
 \citep{maciejewski_departure_2016,patra_2017,yee_orbit_2020}.
 
-This study highlights a point that, though obvious, has perhaps not
-yet received due attention.  The point is that observational programs
+This study draws attention to a confounding factor that, while elementary,
+does not seem to have
+received the attention it deserves.
+The point is that observational programs
 aimed at identifying orbital decay in hot Jupiters through transit
-timing will be crippled without concurrent long-term radial velocity
-monitoring.  The reason is that line-of-sight accelerations due to
-outer companions \citep[{\it e.g.},][]{agol_detecting_2005} and tidal
-orbital decay both initially manifest identically in transit times, as
-a non-zero period derivative.  Massive outer companions to hot
-Jupiters are the norm; \citet{bryan_statistics_2016} calculated an
+timing must be accompanied by concurrent long-term radial velocity
+monitoring.  The reason is that an apparent change in period
+can be produced by the Doppler effect associated with acceleration
+of the hot-Jupiter host star along the line of sight, such as the acceleration that
+might be produced by a massive, wide-orbiting companion.
+Massive outer companions to hot Jupiters are common.
+\citet{bryan_statistics_2016} calculated an
 occurrence rate of $60.9^{+5.2}_{-5.6}\%$ for outer companions to hot
 Jupiters with masses from 1-20$\,$$M_{\rm Jup}$ and semi-major axes
-from 5-100$\,$AU.  Therefore it could very well be that more hot
-Jupiters will show shrinking orbital periods due to long term
-accelerations than due to tidal orbital decay.
+from 5-100$\,$AU.  Therefore, we expect that many hot Jupiters will display
+secular trends in orbital period that are unrelated to tidal orbital decay.
+This possibility can be checked by performing long-term radial-velocity monitoring
+at a level sensitive enough to detect or rule out the relevant amplitude of
+acceleration.
 
-The main focus of this study is the hot Jupiter WASP-4b, which has an
+The focus of this study is the hot Jupiter WASP-4b, which has an
 orbital period that appears to be decreasing by about 10 milliseconds
-per year.  We discovered the timing variations by combining data from
-TESS \citep{ricker_transiting_2015} with a decade of ground-based
-observations \citep[][hereafter
-\citetalias{bouma_wasp4b_2019}]{bouma_wasp4b_2019}.  Thereafter,
-\citet{southworth_transit_2019} reported 22 new transit times for the
-system, and found an updated decay rate of $\dot{P} = -9.2 \pm 1.1$
-milliseconds per year. The \citeauthor{southworth_transit_2019} decay
-rate was $\approx$3$\sigma$ less rapid than that found by
-\citetalias{bouma_wasp4b_2019}, but the conclusions of the studies
-were otherwise similar.  A separate study by \citet{baluev_2019}
-reported additional archival transit light curves of WASP-4b from
-TRAPPIST and select other observers.  \citet{baluev_2019} pointed out
-that when using lower-precision subsets of the available transit data,
-the case for a decreasing period worsened.
+per year.  The period decrease was identified by \citet{bouma_wasp4b_2019}]{bouma_wasp4b_2019},
+who combined data from
+the NASA TESS mission \citep{ricker_transiting_2015} and a decade of ground-based
+transit observations. Soon thereafter, \citet{southworth_transit_2019} reported an additional
+22 transit times and recalculated the period derivative to be $\dot{P} = -9.2 \pm 1.1$
+milliseconds per year.  A separate study by \citet{baluev_2019}
+reported on additional transit times, and pointed out
+that the period decrease was statistically significant only when
+analyzing the data with the highest precision.
 
 To determine the origin of the period change, we acquired four
-additional radial velocity measurements using Keck-HIRES, extending
-the RV baseline from 3 to 9 years.  Previously, the five available
-HIRES radial velocities suggested a weak ($\approx$$2\sigma$) linear
-trend \citep{knutson_friends_2014}.  Our new measurements reveal a
+additional radial velocity measurements with the Keck I 10m telescope
+and the High Resolution Echelle
+Spectrometer (HIRES; \citealt{vogt_hires_1994}).
+In doing so, we extended
+the time baseline of HIRES measurements from 3 to 9 years.
+The previously available HIRES data led to the marginal ($\approx$$2\sigma$)
+detection of a radial-velocity trend \citep{knutson_friends_2014}.
+Our new measurements reveal a
 line-of-sight acceleration of $\dot{\gamma} =
--0.0422^{+0.0028}_{-0.0027}\ {\rm m\,s^{-1}\,day^{-1}}$.  This
-translates to an expected period decrease from the light-travel time
-effect of -5.9 milliseconds per year---about commensurate with what is
-observed from transits.  While the apparent period change caused by a
+-0.0422^{+0.0028}_{-0.0027}\ {\rm m\,s^{-1}\,day^{-1}}$.
+Through the Doppler effect\footnote{While the apparent period change caused by a
 line-of-sight acceleration has been referred to as the ``R{\o}mer
-effect'' \citep{yee_orbit_2020}, we prefer to avoid this term, which
-typically signifies arrival time delay due to observatory motion. We
-are discussing the Doppler effect seen by a stationary observer for a
-source with constant line-of-sight acceleration.
+effect'' \citep{yee_orbit_2020}, a simpler and probably better term is
+the Doppler effect. The R{\o}mer effect refers to the {\it delay} in
+the reception of a signal due to a change in the time required for
+light to traverse the distance between the source and observer. The Doppler
+effect refers to the change in the apparent {\it rate} of a process due
+to changes in the relative motion of the source and observer, such
+as the rate of transits.}, this translates into an expected period decrease
+$-5.9$ milliseconds per year, which is comparable to the period decrease
+that was measured from transit timing.  We undertook high-resolution
+(speckle) imaging to search for evidence of a companion that could
+be responsible for the acceleration of WASP-4.
 
-In the following, Section~\ref{sec:observations} collects the
-available transit data and presents the new radial velocity and
-speckle imaging observations.  Section~\ref{sec:analysis} analyzes the
-data, and finds that they yield a picture in which the WASP-4 system
-is accelerating towards our line-of-sight, likely due to the pull of a
-brown or M-dwarf companion.  Section~\ref{sec:discussion} places this
-result in the broader context of orbital decay searches, and points
-out that line-of-sight accelerations, {\it i.e.}, ``false positive
-orbital decay signals'', are relatively common in the hot Jupiter
-population.  Section~\ref{sec:conclusions} offers concluding remarks.
+Section~\ref{sec:observations} of this paper presents all of the
+available transit data as well as the new radial velocity and
+speckle imaging observations.  Section~\ref{sec:analysis} describes
+our analysis of the data, and our interpretation
+that WASP-4 is being pulled around by a brown dwarf or low-mass star.
+Section~\ref{sec:discussion} places this
+result within the context of orbital decay searches, and points
+out that line-of-sight accelerations will be a relatively
+common type of ``false positive.''
+Section~\ref{sec:conclusions} offers concluding remarks.
 
 \section{Observations}
 \label{sec:observations}
@@ -188,97 +203,93 @@ population.  Section~\ref{sec:conclusions} offers concluding remarks.
 \subsection{Transits}
 
 Table~1 lists the transit times we collected for our analysis.  We
-include data from the peer-reviewed literature for which {\it (i)} the
-analysis was based on observations of a single transit, {\it (ii)} the
-midpoint was fitted as a free parameter, and {\it (iii)} the time
-system specified both the leap second correction (TDB or UTC) and also
-whether any barycentric or heliocentric corrections had been
-performed.
+included data from the peer-reviewed literature for which {\it (i)} the
+reported time was based on the data from a single transit (as opposed
+to fitting the data spanning multiple transits and assuming the
+period to be constant), {\it (ii)} the
+central transit time was allowed to be a free parameter, and {\it (iii)} the time
+system was documented clearly, in particular specifying
+whether barycentric or heliocentric corrections had been
+performed and whether leap seconds had been taken into account (TDB or UTC).
 
 % FIXME : verify with Michael Gillon that this is true. (P. Evans
 % done)
-The majority of times are identical to those we collected in
+Most of these data are identical to the data presented by
 \citetalias{bouma_wasp4b_2019}.  Twenty-two new times reported by
 \citet{southworth_transit_2019} are included.  These transits were
-observed from the 3.58m NTT and Danish 1.54m telescopes at La Silla,
-and the SAAO 1.0m telescope.
+observed from the 3.58m New Technology Telescope and the Danish 1.54m telescope at La Silla, Chile,
+and the South African Astronomical Observatory 1.0m telescope.
 % Five of the twenty-two occurred at simultaneous epochs as transits
 % previously reported by \citet{hoyer_tramos_2013}.
-
-Additional timing measurements were also recently made available by
+Additional timing measurements were also reported recently by
 \citet{baluev_2019}, based on a homogeneous analysis of archival
 ground-based observations.
 We included twelve of their ``high quality'' transit times from
-TRAPPIST (six transits), El~Sauce (four transits), and
+the TRAPPIST telescope (six transits), El~Sauce (four transits), and
 \citet{petrucci_no_2013}.  For TRAPPIST and El~Sauce, we verified with
 the original observers that correct barycentric and leap-second
 corrections had been performed (M.~Gillon, P.~Evans, priv{.} comm{.}).
 We omitted the fourteen remaining \citeauthor{baluev_2019}
 ETD\footnote{\url{http://var2.astro.cz/ETD}} times due to ambiguity in
-whether leap-second corrections had or had not been performed.
-
-The four available occultations tabulated by
-\citetalias{bouma_wasp4b_2019} have neglegible statistical value due
-to their large uncertainties, and we forgo their use in this analysis.
+whether leap-second corrections had been performed.
+We did not include in our analysis the four occultation times tabulated by
+\citetalias{bouma_wasp4b_2019}, because of the large timing
+uncertainties and negligible statistical power.
 
 \subsection{Radial velocities}
 
-After identifying the period decrease in
-\citetalias{bouma_wasp4b_2019}, we acquired four additional radial
-velocity measurements with the Keck High Resolution Echelle
-Spectrometer (HIRES; \citealt{vogt_hires_1994}).  Our observations
-were acquired using the standard setup and reduction techniques of the
+We acquired four new radial
+velocity measurements with Keck/HIRES.  Our observations
+were performed using the standard setup and reduction techniques of the
 California Planet Survey \citep{howard_cps_2010}.  Previously, the
 HIRES data-points spanned 2010 to 2013 \citep{knutson_friends_2014}.
 Our new measurements triple the HIRES observing baseline to nine
 years.
 
 The complete set of radial velocity observations is given in Table~2.
-Along with the 2010-2019 HIRES observations, there are also
-measurements from CORALIE and HARPS.  Following
-\citetalias{bouma_wasp4b_2019}, we included the CORALIE measurements
+Along with the 2010--2019 HIRES observations are early
+measurements with two different spectrographs.
+We included data from CORALIE ({\bf Spell it out on first use)}
 from \citet{wilson_wasp-4b_2008} and \citet{triaud_spin-orbit_2010},
-using the homogeneous values calculated by the latter authors.
-
-For HARPS, we included the values reported by
-\citet{pont_determining_2011} and \citet{husnoo_observational_2012}.
+adopting the values from the homogeneous analysis of the latter authors.
+We included data from HARPS ({\bf spell it out})
+from \citet{pont_determining_2011} and \citet{husnoo_observational_2012}.
 While \citet{triaud_spin-orbit_2010} also acquired HARPS data over
 three nights for Rossiter-McLaughlin observations, these data were
-reduced with a non-standard pipeline, and so are systematically offset
-from the remaining HARPS data.  In our final fit, we therefore omitted
-the three \citet{triaud_spin-orbit_2010} nights.  We did nonetheless
-experiment with using the recent \citet{trifonov_public_2020}
-re-reductions, which allowed us to include two calibration RVs taken
-as part of the \citet{triaud_spin-orbit_2010} program. The decision
+reduced with a non-standard pipeline making them ill-suited
+for our study, and we did not include them.\footnote{This problem was
+fixed in principle by \citet{trifonov_public_2020} who performed
+a homogeneous re-reduction of the entire HARPS data archive.
+We found that the decision
 regarding whether to include or omit these points did not
-noticeably affect our results.
-
+noticeably affect our results.}
 
 \subsection{Speckle imaging}
 
-An initial analysis of the new HIRES observations led to our detection
-of a linear trend in the residuals after fitting out the orbit of
-WASP-4b.  This prompted us to acquire speckle images using Zorro at
-Gemini-South \citep[see][and the instrument
+Once we saw that the new HIRES observations implied a highly significant
+trend in the radial velocity,
+we sought independent evidence for a wide-orbiting companion by performing
+speckle imaging with the Zorro instrument on the 
+Gemini South 8m telescope\citep[see][and the instrument
 web-pages\footnote{\url{www.gemini.edu/sciops/instruments/alopeke-zorro/}}]{scott_nessi_2018}.
 Zorro is a dual-channel speckle interferometer employing narrow-band
 filters centered at 562$\,$nm and 832$\,$nm.  
 
 We observed WASP-4 twice, on the night of September 11-12 with
 relatively poor seeing (1.2$''$) and also on the night of September
-28-29.  Over each observation, we acquired three sets of 1000
-60$\,$msec exposures.  If a companion is present, the autocorrelation
-functions of these speckle images reveal a characteristic interference
+28-29.  On each night, we acquired three sets of $1000\times 60$\,$msec exposures.
+If a companion is present, the autocorrelation
+functions of these speckle images would reveal a characteristic interference
 pattern. This pattern in then used to determine the properties of the
-detected companion and to produce a reconstructed image.  Using the
-reconstructed speckle images,  contrast curves are produced yielding
-5-sigma detection limits  (see \citealt{howell_speckle_2011}).  No
-companions were detected, and the second night, which had better
-seeing (0.6$''$), also produced the more constraining result.  The
-832$\,$nm limits were the most useful to us given that faint
-companions are redder than the host star.  We therefore opted to use
-the 832$\,$nm September 28-29 contrast limits for the remaining
-analysis.
+detected companion and produce a reconstructed image.  Using the
+reconstructed speckle images, contrast curves are produced to determine the
+5-$\sigma$ detection limits (see \citealt{howell_speckle_2011}).  No
+companions were detected. The data from the second night, which had better
+seeing (0.6$''$), led to the most constraining limit.  The
+832$\,$nm limits were the most useful, given that any faint
+companion would likely be redder than the host star.  Therefore,
+we opted to use
+the 832$\,$nm September 28-29 contrast limits in the analysis described below.
 
 
 \section{Analysis}
@@ -295,24 +306,26 @@ analysis.
 	\vspace{-0.7cm}
   \caption{ {\bf Timing residuals and best-fit models for WASP-4b.}
   The vertical axis shows the observed transit times minus the
-  calculated times assuming a constant orbital period.  More opaque
+  calculated times, assuming a constant orbital period.  More opaque
   points correspond to more precise data.  The $\pm1\sigma$
   uncertainties of the quadratic ephemeris 
   are shown in blue.
-  The binned TESS point (yellow star) is the weighted average of 18
-  TESS transits and is binned for display purposes only.  The models
-  were fitted to all of the individual transit times.
+  The yellow star represents the weighted average of 18 data points
+  obtained with TESS. The TESS data were averaged here for display purposes only;
+  our analysis used the 18 individual transit times.
   \label{fig:times}
 	}
 \end{figure*}
 
-We considered two models for the observed transit times.  The first
-model assumes a constant orbital period $P$ on a circular orbit:
+We fitted two simple timing models to the transit-timing data. The first
+model assumes the period $P$ to be constant:
 \begin{align}
   t_{\rm tra}(E) &= t_0 + PE,
 \end{align}
-where $E$ is the integer transit number and $t_0$ is a reference
-epoch.  The second model assumes that the period changes at a steady
+where $E$ is the integer specifying the number within the sequence of orbits
+spanned by the data,
+and $t_0$ is the transit time for the event designated $E=0$.
+The second model assumes that the period changes at a steady
 rate:
 \begin{align}
   t_{\rm tra}(E) &=
@@ -320,67 +333,61 @@ rate:
     \frac{1}{2} \frac{{\rm d}P}{{\rm d}E} E^2.
   \label{eq:quadratic_model}
 \end{align}
-The free parameters are the reference epoch $t_0$, the period at the
+The free parameters are the reference time $t_0$, the period at the
 reference epoch $P$, and the period derivative, ${\rm d}P/{\rm d}t =
 (1/P) {\rm d}P/{\rm d}E$.  We defined the epoch numbers such that
-$E=0$ is near the weighted average of the observed times.  This helps
-to reduce the covariance between $t_0$ and $P$.  A third possible
-model that we did not consider for reasons that will become apparent
-is a precessing, eccentric orbit \citep[{\it
-e.g.},][]{gimenez_revision_1995,patra_2017}.
+$E=0$ is near the weighted average of the times of observed transits.
+This choice leads to a small covariance between the uncertainties in $t_0$ and $P$.
+%A third possible
+%model that we did not consider for reasons that will become apparent
+%is a precessing, eccentric orbit \citep[{\it
+%e.g.},][]{gimenez_revision_1995,patra_2017}.
 
 We fitted each model by assuming a Gaussian likelihood and
 sampling over the posterior probability distributions.  We sampled the
 posterior using the algorithm proposed by
 \citet{goodman_ensemble_2010} and implemented by
 \citet{foreman-mackey_emcee_2013} in \texttt{emcee}.  The prior for
-the quadratic model allowed the period derivative to have any sign.
+the quadratic model allowed the period derivative to be either positive
+or negative.
 
 Figure~\ref{fig:times} shows the observed transit times, minus the
-best-fit constant period model.  The best-fitting constant-period
-model has 91 degrees of freedom, $\chi^2 = 276$,  and $\chi^2_{\rm
+best-fitting constant-period model.  The best-fitting constant-period
+model has 91 degrees of freedom, $\chi^2 = 276$, and $\chi^2_{\rm
 red}=3.0$.  The best-fitting quadratic model has 90 degrees of freedom,
 $\chi^2 = 183$, and $\chi^2_{\rm red}=2.0$.  The difference in the
 Bayesian information criteria (BIC) between the linear and quadratic
 and models is $\Delta {\rm BIC} = 89$, strongly favoring the
 quadratic model \citep{kass_bayes_1995}.
 
-From the reduced $\chi^2$ values, we can surmise that neither model
-entirely describes the transit data---there
-must be some additional source of signal or noise. In
-\citetalias{bouma_wasp4b_2019}, we found that the quadratic model for the
-(sparser) transit data gave $\chi^2_{\rm red}=1.0$.  The worsened
-$\chi^2_{\rm red}$ could reflect underestimated statistical
-uncertainties in any of our transit measurements.  It could also
-reflect systematic errors in the time-systems in which the transit
-measurements were recorded, though we have taken every caution against
-this latter possibility.
+From the high values of $\chi^2_{\rm red}$, we can surmise that neither model
+provides a satisfactory fit to the transit data; there
+must be some additional signal or noise.
+The earlier study by \citetalias{bouma_wasp4b_2019} found that the quadratic model for the
+(sparser) transit data gave $\chi^2_{\rm red}=1.0$.  The worsening 
+of $\chi^2_{\rm red}$ probably reflects underestimated measurement
+uncertainties in at least some of the newly reported transit times,
+due to time correlated noise in the photometry. It might also be due
+to errors or misunderstandings of the time systems in which the
+data were recorded, despite our best efforts to interpret the literature.
+In what follows, we opted to enlarge the uncertainties in the best-fitting parameters
+of each model by a factor of $(\chi^2_{\rm red})^{1/2}$.  This was a factor of $\approx$1.73$\times$ for the
+linear model, and $\approx$1.41$\times$ for the quadratic model.
 
-One approach to analyzing such data would be to inflate the transit
-measurement uncertainties, and lower the reduced $\chi^2$.  We do not
-think that such an approach is warranted, because it would not change
-the result that the quadratic model is strongly preferred.  Instead,
-we opt to simply inflate the uncertainties reported for each model by
-a factor of $(\chi^2_{\rm red})^{1/2}$, or $\approx$1.73$\times$ for the
-linear model, and $\approx$1.41$\times$ for the quadratic.
-
-The resulting best-fit period derivative for the quadratic model is 
+The resulting period derivative for the quadratic model is 
 \begin{equation}
 \dot{P}
   = - (2.74 \pm 0.28)\times 10^{-10}
   = - 8.64 \pm 1.26~{\rm msec}\,{\rm yr}^{-1}.
   \label{eq:dP_dt_obs}
 \end{equation}
-This agrees to within $1\sigma$ of the value reported by
+This agrees to within 1-$\sigma$ of the value reported by
 \citet{southworth_transit_2019} ($\dot{P} = - 9.2 \pm 1.1~{\rm
-ms}\,{\rm yr}^{-1}$).  It is $\approx$2.3$\sigma$ larger than the rate
-of period decrease we previously reported \citepalias[$- 12.6 \pm 1.2~{\rm
-ms}\,{\rm yr}^{-1}$;][]{bouma_wasp4b_2019}, presumably because of the
-new data from \citeauthor{southworth_transit_2019} and
-\citeauthor{baluev_2019}  The other best-fit transit timing model
+ms}\,{\rm yr}^{-1}$).  It is 2.3-$\sigma$ larger than the rate
+of period decrease reported by \citepalias[][; $- 12.6 \pm 1.2~{\rm ms}\,{\rm yr}^{-1}$]{bouma_wasp4b_2019},
+presumably because of the new data from \citeauthor{southworth_transit_2019} and
+\citeauthor{baluev_2019}. The other best-fitting model
 parameters are reported in Table~3.
-
-
 
 \subsection{Radial velocities}
 
