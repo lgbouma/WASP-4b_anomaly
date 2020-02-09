@@ -1,5 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TODO: make table 4 look beter
+% TODO: kishore reference
+% TODO: rachel comments
+% TODO: steve comments
 
 \documentclass[12pt,twocolumn,tighten]{aastex62}
 \usepackage{amsmath,amstext,amssymb}
@@ -19,13 +21,13 @@
 \revised{---}
 \accepted{---}
 \submitjournal{AAS journals.}
-\shorttitle{WASP-4 is accelerating towards the Sun}
+\shorttitle{WASP-4 is accelerating toward the Earth}
 
 \begin{document}
 
 \defcitealias{bouma_wasp4b_2019}{B19}
 
-\title{WASP-4 is Accelerating Towards the Sun}
+\title{WASP-4 is Accelerating Toward the Earth}
 % ", Explaining its Decreasing Orbital Period"
 % ": A Cautionary Tale in the Search for Tidal Orbital Decay"
 % "An Explanation for WASP-4's Decreasing Orbital Period".
@@ -63,11 +65,10 @@ CA 94720, USA}
 \affiliation{Division of Geological and Planetary Sciences, California
 Institute of Technology, Pasadena, CA 91125, USA}
 %
-\author{R. A. Matson}
-\affiliation{NASA Ames Research Center, Moffett Field, CA 94035, USA}
+\author[0000-0001-7233-7508]{R. A. Matson}
+\affiliation{U.S. Naval Observatory, Washington, DC 20392, USA}
 %
 
-%TODO FIXME: some sentences
 \begin{abstract}
   The orbital period of the hot Jupiter WASP-4b appears to be
   decreasing at a rate of $-8.64 \pm 1.26~{\rm msec}\,{\rm yr}^{-1}$,
@@ -85,10 +86,10 @@ Institute of Technology, Pasadena, CA 91125, USA}
   acceleration of the system.  This acceleration is probably caused by
   a wide-orbiting companion of mass 10-200$\,M_{\rm Jup}$ and orbital
   distance 10-100$\,$AU, based on the magnitude of the radial-velocity
-  trend and the non-detection of any companion in the speckle image.
-  We expect that 1 out of 6 hot Jupiters will show apparent period
-  changes of the same order of magnitude as WASP-4, based on the
-  hot-Jupiter companion statistics of  \citet{knutson_friends_2014}.
+  trend and the non-detection of any companion in the speckle images.
+  We expect that the orbital periods of 1 out of 6 hot Jupiters will
+  appear to shrink at a rate similar to WASP-4b, based on the
+  hot-Jupiter companion statistics of \citet{knutson_friends_2014}.
   Continued radial velocity monitoring of hot Jupiters is therefore
   essential to distinguish the effects of tidal orbital decay or
   apsidal precession from line-of-sight acceleration.
@@ -123,7 +124,7 @@ period.  For instance, long-term transit timing and radial velocity
 measurements for WASP-12b have revealed a secular decrease in the
 period at a rate of $\approx$30 milliseconds per year, which has been
 interpreted as the effect of tidal orbital decay
-\citep{maciejewski_departure_2016,patra_2017,yee_orbit_2020}.
+\citep{maciejewski_departure_2016,patra_2017,maciejewski_planet-star_2018,yee_orbit_2020}.
 
 This study draws attention to a confounding factor that, while
 elementary, does not seem to have received the attention it deserves.
@@ -193,6 +194,25 @@ Section~\ref{sec:conclusions} offers concluding remarks.
 \section{Observations}
 \label{sec:observations}
 
+\begin{figure*}[t]
+	\begin{center}
+		\leavevmode
+		\includegraphics[width=0.7\textwidth]{f1.pdf}
+	\end{center}
+	\vspace{-0.7cm}
+	\caption{ {\bf Timing residuals and best-fit models for WASP-4b.}
+		The vertical axis shows the observed transit times minus the
+		calculated times, assuming a constant orbital period.  More opaque
+		points correspond to more precise data.  The $\pm1\sigma$
+		uncertainties of the quadratic ephemeris are shown in blue.  The
+		yellow star represents the weighted average of 18 data points
+		obtained with TESS. The TESS data were averaged here for display
+		purposes only; our analysis used the 18 individual transit times.
+		\label{fig:times}
+	}
+\end{figure*}
+
+
 \subsection{Transits}
 
 Table~1 lists the transit times we collected for our analysis.  We
@@ -218,8 +238,8 @@ transits), El~Sauce (four transits), and \citet{petrucci_no_2013}.
 For TRAPPIST and El~Sauce, we verified with the original observers
 that the timestamps were amenable to the appropriate barycentric and
 leap second corrections (M.~Gillon, P.~Evans, priv{.} comm{.}).  We
-omitted the fourteen remaining \citeauthor{baluev_2019}
-ETD\footnote{\url{http://var2.astro.cz/ETD}} times due to ambiguity in
+omitted the fourteen remaining 
+ETD\footnote{\url{http://var2.astro.cz/ETD}} times from \citeauthor{baluev_2019} due to ambiguity in
 whether leap-second corrections had been performed.  We did not
 include in our analysis the four occultation times tabulated by
 \citetalias{bouma_wasp4b_2019}, because of the large timing
@@ -258,7 +278,7 @@ Once we saw that the new HIRES observations implied a highly
 significant trend in the radial velocity, we sought independent
 evidence for a wide-orbiting companion by performing speckle imaging
 with the Zorro instrument on the Gemini South 8m
-telescope\citep[see][and the instrument
+telescope~\citep[see][and the instrument
 web-pages\footnote{\url{www.gemini.edu/sciops/instruments/alopeke-zorro/}}]{scott_nessi_2018}.
 Zorro is a dual-channel speckle interferometer employing narrow-band
 filters centered at 562$\,$nm and 832$\,$nm.  
@@ -283,26 +303,70 @@ contrast limits in the analysis described below.
 \section{Analysis}
 \label{sec:analysis}
 
-\subsection{Transits}
-\label{sec:transit_analysis}
 
 \begin{figure*}[t]
 	\begin{center}
 		\leavevmode
-		\includegraphics[width=0.7\textwidth]{f1.pdf}
+		\includegraphics[width=0.7\textwidth]{f2.pdf}
 	\end{center}
 	\vspace{-0.7cm}
-  \caption{ {\bf Timing residuals and best-fit models for WASP-4b.}
-  The vertical axis shows the observed transit times minus the
-  calculated times, assuming a constant orbital period.  More opaque
-  points correspond to more precise data.  The $\pm1\sigma$
-  uncertainties of the quadratic ephemeris are shown in blue.  The
-  yellow star represents the weighted average of 18 data points
-  obtained with TESS. The TESS data were averaged here for display
-  purposes only; our analysis used the 18 individual transit times.
-  \label{fig:times}
+	\caption{
+		{\bf Radial velocities of WASP-4.}
+		{\it Top:} RV measurements, with best-fit instrument offsets
+		added. 
+		{\it Middle:}
+		Residuals, after subtracting the best-fitting model for the
+		variations induced by the planet WASP-4b. The black line is the
+		linear trend inferred from the RV data.  The purple line shows the
+		slope that would be needed for the Doppler effect to explain the
+		entire period decrease determined from transit timing.  The four
+		new RV measurements from this work increase the significance of
+		the linear trend from $\approx$2-$\sigma$ to 15-$\sigma$.
+		{\it Bottom:}
+		Phased orbit of WASP-4b.
+		\label{fig:rvs}
+		\vspace{-0.0cm}
 	}
 \end{figure*}
+
+
+\begin{figure}[!t]
+	\begin{center}
+		\leavevmode
+		\includegraphics[width=0.47\textwidth]{f3.pdf}
+	\end{center}
+	\vspace{-0.7cm}
+	\caption{
+		{\bf Zorro contrast limits derived from point-source
+			injection-recovery experiments.} Sources below the curve would
+		have been detected.  The inset shows the speckle image
+		reconstructed from 1000 60 millisecond frames in an 832$\,$nm
+		bandpass, and acquired on September 28, 2019.  The image scale
+		is $2.46''\times2.46''$.
+	}
+	\label{fig:zorro}
+\end{figure}
+
+\begin{figure*}[t]
+	\begin{center}
+		\leavevmode
+		\includegraphics[width=0.8\textwidth]{f4.pdf}
+	\end{center}
+	\vspace{-0.8cm}
+	\caption{
+		{\bf Masses and semi-major axes of companions that meet
+			requirements of both the radial velocities and the speckle
+			imaging.} The likelihood inferred from radial velocities is shown
+		in grayscale, and the region excluded from the speckle imaging is
+		indicated.  The black line illustrates the expected degeneracy
+		between mass and semimajor-axis.
+		\label{fig:mass_sma}
+		\vspace{-0cm}
+	}
+\end{figure*}
+
+\subsection{Transits}
+\label{sec:transit_analysis}
 
 We fitted two simple timing models to the transit-timing data. The
 first model assumes the period $P$ to be constant:
@@ -368,38 +432,13 @@ The resulting period derivative for the quadratic model is
 This agrees to within 1-$\sigma$ of the value reported by
 \citet{southworth_transit_2019} ($\dot{P} = - 9.2 \pm 1.1~{\rm
 ms}\,{\rm yr}^{-1}$).  It is 2.3-$\sigma$ larger than the rate of
-period decrease reported by \citepalias[][; $- 12.6 \pm 1.2~{\rm
-ms}\,{\rm yr}^{-1}$]{bouma_wasp4b_2019}, presumably because of the new
+period decrease reported by \citetalias{bouma_wasp4b_2019}
+($- 12.6 \pm 1.2~{\rm ms}\,{\rm yr}^{-1}$), presumably because of the new
 data from \citeauthor{southworth_transit_2019} and
 \citeauthor{baluev_2019}. The other best-fitting model parameters are
 reported in Table~3.
 
 \subsection{Radial velocities}
-
-\begin{figure*}[t]
-	\begin{center}
-		\leavevmode
-		\includegraphics[width=0.7\textwidth]{f2.pdf}
-	\end{center}
-	\vspace{-0.7cm}
-	\caption{
-    {\bf Radial velocities of WASP-4.}
-    {\it Top:} RV measurements, with best-fit instrument offsets
-    added. 
-    {\it Middle:}
-    Residuals, after subtracting the best-fitting model for the
-    variations induced by the planet WASP-4b. The black line is the
-    linear trend inferred from the RV data.  The purple line shows the
-    slope that would be needed for the Doppler effect to explain the
-    entire period decrease determined from transit timing.  The four
-    new RV measurements from this work increase the significance of
-    the linear trend from $\approx$2-$\sigma$ to 15-$\sigma$.
-    {\it Bottom:}
-    Phased orbit of WASP-4b.
-	\label{fig:rvs}
-  \vspace{-0.0cm}
-	}
-\end{figure*}
 
 Our initial model for the radial velocity data was a circular orbit
 plus instrument offsets, ``jitter'' values (explained below), and a
@@ -471,41 +510,6 @@ that there is no evidence that the linear trend is caused by stellar
 activity.
 
 \subsection{Constraints on companion masses and semi-major axes}
-
-\begin{figure}[!t]
-	\begin{center}
-		\leavevmode
-		\includegraphics[width=0.47\textwidth]{f3.pdf}
-	\end{center}
-	\vspace{-0.7cm}
-    \caption{
-      {\bf Zorro contrast limits derived from point-source
-      injection-recovery experiments.} Sources below the curve would
-      have been detected.  The inset shows the speckle image
-      reconstructed from 1000 60 millisecond frames in an 832$\,$nm
-      bandpass, and acquired on September 28, 2019.  The image scale
-      is $2.46''\times2.46''$.
-    }
-    \label{fig:zorro}
-\end{figure}
-
-\begin{figure*}[t]
-	\begin{center}
-		\leavevmode
-		\includegraphics[width=0.8\textwidth]{f4.pdf}
-	\end{center}
-	\vspace{-0.8cm}
-	\caption{
-    {\bf Masses and semi-major axes of companions that meet
-    requirements of both the radial velocities and the speckle
-    imaging.} The likelihood inferred from radial velocities is shown
-    in grayscale, and the region excluded from the speckle imaging is
-    indicated.  The black line illustrates the expected degeneracy
-    between mass and semimajor-axis.
-	\label{fig:mass_sma}
-  \vspace{-0cm}
-	}
-\end{figure*}
 
 Given a linear radial velocity trend, we can place probabilistic
 constraints on the mass and semi-major axis of the additional body
@@ -632,7 +636,7 @@ Based on the available data, the companion causing the acceleration is
 probably either a brown-dwarf or low mass star with an orbital
 distance of $10$-$100\,{\rm AU}$ (Figure~\ref{fig:mass_sma}).  Given
 such a mass, this companion may have influenced the orbital evolution
-of the giant planet around WASP-4, as well as any other planets.  The
+of the hot Jupiter orbiting WASP-4, as well as any other planets.  The
 fact that most hot Jupiters have similar massive outer companions
 \citep{knutson_friends_2014,bryan_statistics_2016} is compatible with
 some of the high-eccentricity formation theories for hot Jupiters (see
@@ -694,8 +698,8 @@ increasing?}
 For hot Jupiters that have been monitored over baselines exceeding 10
 years, secular changes in their orbital periods are currently being
 constrained to a precision of $\lesssim$$10~{\rm msec}\,{\rm yr}^{-1}$
-({\it e.g.}, K.~Patra et al{.} 2020, submitted).  {\bf Other citations
-too?} This is roughly commensurate with the level of signal many outer
+\citep{wilkins_searching_2017,maciejewski_planet-star_2018,baluev_2019,petrucci_discarding_2020,patra_2020}.
+This is roughly commensurate with the level of signal many outer
 companions are expected to induce (Figure~\ref{fig:pdot_pop}).
 
 At what point in time will further detections of the Doppler effect
@@ -732,7 +736,9 @@ $\dot{\gamma} P/c$ of $-5.94 \pm 0.39~{\rm msec}\,{\rm yr}^{-1}$.  The
 majority of the period decrease observed in transits ($\dot{P}= - 8.64
 \pm 1.26~{\rm msec}\,{\rm yr}^{-1}$) is therefore explained by the
 acceleration of the host star~---~leaving no evidence for tidal
-orbital decay or apsidal precession.  The companion causing the
+orbital decay or apsidal precession.  
+A probabilistic analysis of the speckle imaging limits and the
+radial velocity trend showed that the companion causing the
 acceleration is most likely a brown dwarf or low-mass star with
 semi-major axis between 10-100$\,$AU.
 
@@ -803,7 +809,7 @@ velocity measurements of hot Jupiters are strongly encouraged.
   \texttt{emcee} \citep{foreman-mackey_emcee_2013},
   \texttt{IPython} \citep{perez_2007},
   \texttt{matplotlib} \citep{hunter_matplotlib_2007}, 
-	\texttt{MESA} \citep{paxton_modules_2011,paxton_modules_2013,paxton_modules_2015}
+  \texttt{MESA} \citep{paxton_modules_2011,paxton_modules_2013,paxton_modules_2015}
   \texttt{numpy} \citep{walt_numpy_2011}, 
   \texttt{pandas} \citep{mckinney-proc-scipy-2010},
   \texttt{radvel} \citep{fulton_radvel_2018},

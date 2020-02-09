@@ -2,12 +2,6 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\JournalTitle[1]{#1}
 
-\bibitem[{Agol {et~al.}(2005)Agol, Steffen, Sari, \&
-  Clarkson}]{agol_detecting_2005}
-Agol, E., Steffen, J., Sari, R., \& Clarkson, W. 2005,
-  \href{http://dx.doi.org/10.1111/j.1365-2966.2005.08922.x}{\JournalTitle{\mnras},
-  359, 567}
-
 \bibitem[{{Astropy Collaboration} {et~al.}(2018){Astropy Collaboration},
   {Price-Whelan}, {Sip{\H{o}}cz}, {G{\"u}nther}, {Lim}, {Crawford}, {Conseil},
   {Shupe}, {Craig}, {Dencheva}, {Ginsburg}, {Vand erPlas}, {Bradley},
@@ -166,10 +160,6 @@ Gillon, M., Smalley, B., Hebb, L., {et~al.} 2009,
   \href{http://dx.doi.org/10.1051/0004-6361:200810929}{\JournalTitle{\aap},
   496, 259}
 
-\bibitem[{Gim\'enez \& Bastero(1995)}]{gimenez_revision_1995}
-Gim\'enez, A., \& Bastero, M. 1995,
-  \href{http://dx.doi.org/10.1007/BF00626903}{\JournalTitle{\apss}, 226, 99}
-
 \bibitem[{Ginsburg {et~al.}(2018)Ginsburg, Sipocz, {Madhura Parikh}, Woillez,
   Groener, Liedtke, Robitaille, Deil, {Jcsegovia}, Norman, Svoboda, {C. E.
   Brasseur}, Tollerud, Persson, {Adamginsburg}, S\'eguin-Charbonneau,
@@ -279,6 +269,13 @@ Maciejewski, G., Dimitrov, D., Fern\'andez, M., {et~al.} 2016,
   \href{http://dx.doi.org/10.1051/0004-6361/201628312}{\JournalTitle{\aap},
   588, L6}
 
+\bibitem[{Maciejewski {et~al.}(2018)Maciejewski, Fern\'andez, Aceituno,
+  Mart\'in-Ruiz, Ohlert, Dimitrov, Szyszka, von Essen, Mugrauer, Bischoff,
+  Michel, Mallonn, Stangret, \& Moździerski}]{maciejewski_planet-star_2018}
+Maciejewski, G., Fern\'andez, M., Aceituno, F., {et~al.} 2018,
+  \href{http://dx.doi.org/10.32023/0001-5237/68.4.4}{\JournalTitle{Acta
+  Astronomica}, 68, 371}
+
 \bibitem[{Matsumura {et~al.}(2010)Matsumura, Peale, \&
   Rasio}]{matsumura_tidal_2010}
 Matsumura, S., Peale, S.~J., \& Rasio, F.~A. 2010,
@@ -317,6 +314,11 @@ Ogilvie, G.~I. 2014,
   \href{http://dx.doi.org/10.1146/annurev-astro-081913-035941}{\JournalTitle{\araa},
   52, 171}
 
+\bibitem[{Patra {et~al.}(2020)Patra, Winn, Holman, {et~al.}}]{patra_2020}
+Patra, K., Winn, J., Holman, M., {et~al.} 2020,
+  \href{http://arxiv.org/abs/2002.XXXXXX}{\JournalTitle{arXiv:2002.XXXXX
+  [astro-ph]}}, arXiv: 2002.XXXXX
+
 \bibitem[{Patra {et~al.}(2017)Patra, Winn, Holman, Yu, Deming, \&
   Dai}]{patra_2017}
 Patra, K.~C., Winn, J.~N., Holman, M.~J., {et~al.} 2017,
@@ -353,6 +355,12 @@ P\'erez, F., \& Granger, B.~E. 2007,
   \href{http://dx.doi.org/10.1109/MCSE.2007.53}{\JournalTitle{Computing in
   Science and Engineering}, 9, 21}
 
+\bibitem[{Petrucci {et~al.}(2020)Petrucci, Jofr\'e, G\'omez~Maqueo Chew,
+  Hinse, Mašek, Tan, \& Gómez}]{petrucci_discarding_2020}
+Petrucci, R., Jofr\'e, E., G\'omez~Maqueo Chew, Y., {et~al.} 2020,
+  \href{http://dx.doi.org/10.1093/mnras/stz3034}{\JournalTitle{Monthly Notices
+  of the Royal Astronomical Society}, 491, 1243}
+
 \bibitem[{Petrucci {et~al.}(2013)Petrucci, Jofr\'e, Schwartz, Cúneo,
   Martínez, Gómez, Buccino, \& Mauas}]{petrucci_no_2013}
 Petrucci, R., Jofr\'e, E., Schwartz, M., {et~al.} 2013,
@@ -364,6 +372,14 @@ Petrucci, R., Jofr\'e, E., Schwartz, M., {et~al.} 2013,
 Pont, F., Husnoo, N., Mazeh, T., \& Fabrycky, D. 2011,
   \href{http://dx.doi.org/10.1111/j.1365-2966.2011.18462.x}{\JournalTitle{\mnras},
   414, 1278}
+
+\bibitem[{Price-Whelan {et~al.}(2020)Price-Whelan, Hogg, Rix, Beaton, Lewis,
+  Nidever, Almeida, Barba, Beers, Carlberg, De~Lee, Fernández-Trincado,
+  Frinchaboy, García-Hernández, Green, Hasselquist, Longa-Peña, Majewski,
+  Nitschelm, Sobeck, Stassun, Stringfellow, \& Troup}]{price-whelan_close_2020}
+Price-Whelan, A.~M., Hogg, D.~W., Rix, H.-W., {et~al.} 2020,
+  \href{http://arxiv.org/abs/2002.00014}{\JournalTitle{arXiv:2002.00014
+  [astro-ph]}}
 
 \bibitem[{Ranjan {et~al.}(2014)Ranjan, Charbonneau, D\'esert, Madhusudhan,
   Deming, Wilkins, \& Mandell}]{ranjan_atmospheric_2014}
@@ -403,14 +419,6 @@ Schlaufman, K.~C. 2018,
 Scott, N.~J., Howell, S.~B., Horch, E.~P., \& Everett, M.~E. 2018,
   \href{http://dx.doi.org/10.1088/1538-3873/aab484}{\JournalTitle{\pasp}, 130,
   054502}
-
-\bibitem[{Southworth {et~al.}(2009)Southworth, Hinse, J{\o}rgensen, Dominik,
-  Ricci, Burgdorf, Hornstrup, Wheatley, Anguita, Bozza, Novati, Harpsøe,
-  Kjærgaard, Liebig, Mancini, Masi, Mathiasen, Rahvar, Scarpetta, Snodgrass,
-  Surdej, Thöne, \& Zub}]{southworth_high-precision_2009}
-Southworth, J., Hinse, T.~C., J{\o}rgensen, U.~G., {et~al.} 2009,
-  \href{http://dx.doi.org/10.1111/j.1365-2966.2009.14767.x}{\JournalTitle{\mnras},
-  396, 1023}
 
 \bibitem[{Southworth {et~al.}(2019)Southworth, Dominik, J\o~rgensen, Andersen,
   Bozza, Burgdorf, D'Ago, Dib, Figuera~Jaimes, Fujii, Gill, Haikala, Hinse,
@@ -458,6 +466,12 @@ Urban, S., \& Seidelmann, P. 2012, Explanatory {Supplement} to the
 \bibitem[{Walt {et~al.}(2011)Walt, Colbert, \& Varoquaux}]{walt_numpy_2011}
 Walt, S. v.~d., Colbert, S.~C., \& Varoquaux, G. 2011, \JournalTitle{Computing
   in Science \& Engineering}, 13, 22
+
+\bibitem[{Wilkins {et~al.}(2017)Wilkins, Delrez, Barker, Deming, Hamilton,
+  Gillon, \& Jehin}]{wilkins_searching_2017}
+Wilkins, A.~N., Delrez, L., Barker, A.~J., {et~al.} 2017,
+  \href{http://dx.doi.org/10.3847/2041-8213/aa5d9f}{\JournalTitle{\apjl}, 836,
+  L24}
 
 \bibitem[{Wilson {et~al.}(2008)Wilson, Gillon, Hellier, Maxted, Pepe, Queloz,
   Anderson, Collier~Cameron, Smalley, Lister, Bentley, Blecha, Christian,
