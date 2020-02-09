@@ -1,4 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TODO: make table 4 look beter
 
 \documentclass[12pt,twocolumn,tighten]{aastex62}
 \usepackage{amsmath,amstext,amssymb}
@@ -66,7 +67,7 @@ Institute of Technology, Pasadena, CA 91125, USA}
 \affiliation{NASA Ames Research Center, Moffett Field, CA 94035, USA}
 %
 
-%TODO FIXME
+%TODO FIXME: some sentences
 \begin{abstract}
   The orbital period of the hot Jupiter WASP-4b appears to be
   decreasing at a rate of $-8.64 \pm 1.26~{\rm msec}\,{\rm yr}^{-1}$,
@@ -101,8 +102,7 @@ velocity (1332), Transit timing variation method (1710)}
 \section{Introduction}
 
 The orbits of most hot Jupiters are formally unstable to tidal decay
-\citep{counselman_outcomes_1973,
-hut_stability_1980,rasio_tidal_1996,levrard_falling_2009,matsumura_tidal_2010}.
+\citep{counselman_outcomes_1973,hut_stability_1980,rasio_tidal_1996,levrard_falling_2009,matsumura_tidal_2010}.
 It is not clear, though, whether the timescale for tidal orbital decay
 is shorter or longer than the timescale for main-sequence stellar
 evolution.  This answer to this question depends on the uncertain rate
@@ -145,10 +145,10 @@ detect or rule out the relevant amplitude of acceleration.
 
 The focus of this study is the hot Jupiter WASP-4b, which has an
 orbital period that appears to be decreasing by about 10 milliseconds
-per year.  The period decrease was identified by
-\citet{bouma_wasp4b_2019}]{bouma_wasp4b_2019}, who combined data from
-the NASA TESS mission \citep{ricker_transiting_2015} and a decade of
-ground-based transit observations. Soon thereafter,
+per year.  The period decrease was identified by \citep[][hereafter
+\citetalias{bouma_wasp4b_2019}]{bouma_wasp4b_2019}, who combined data
+from the NASA TESS mission \citep{ricker_transiting_2015} and a decade
+of ground-based transit observations. Soon thereafter,
 \citet{southworth_transit_2019} reported an additional 22 transit
 times and recalculated the period derivative to be $\dot{P} = -9.2 \pm
 1.1$ milliseconds per year.  A separate study by \citet{baluev_2019}
@@ -174,11 +174,11 @@ change in the time required for light to traverse the distance between
 the source and observer. The Doppler effect refers to the change in
 the apparent {\it rate} of a process due to changes in the relative
 motion of the source and observer, such as the rate of transits.},
-this translates into an expected period decrease $-5.9$ milliseconds
-per year, which is comparable to the period decrease that was measured
-from transit timing.  We undertook high-resolution (speckle) imaging
-to search for evidence of a companion that could be responsible for
-the acceleration of WASP-4.
+this translates into an expected period decrease of $-5.9$
+milliseconds per year, which is comparable to the period decrease that
+was measured from transit timing.  We undertook high-resolution
+(speckle) imaging to search for evidence of a companion that could be
+responsible for the acceleration of WASP-4.
 
 Section~\ref{sec:observations} of this paper presents all of the
 available transit data as well as the new radial velocity and speckle
@@ -205,28 +205,25 @@ documented clearly, in particular specifying whether barycentric or
 heliocentric corrections had been performed and whether leap seconds
 had been taken into account (TDB or UTC).
 
-% FIXME : update wording
 Most of these data are identical to the data presented by
 \citetalias{bouma_wasp4b_2019}.  Twenty-two new times reported by
 \citet{southworth_transit_2019} are included.  These transits were
 observed from the 3.58m New Technology Telescope and the Danish 1.54m
 telescope at La Silla, Chile, and the South African Astronomical
-Observatory 1.0m telescope.
-% Five of the twenty-two occurred at simultaneous epochs as transits
-% previously reported by \citet{hoyer_tramos_2013}.
-Additional timing measurements were also reported recently by
-\citet{baluev_2019}, based on a homogeneous analysis of archival
-ground-based observations.  We included twelve of their ``high
-quality'' transit times from the TRAPPIST telescope (six transits),
-El~Sauce (four transits), and \citet{petrucci_no_2013}.  For TRAPPIST
-and El~Sauce, we verified with the original observers that correct
-barycentric and leap-second corrections had been performed (M.~Gillon,
-P.~Evans, priv{.} comm{.}).  We omitted the fourteen remaining
-\citeauthor{baluev_2019} ETD\footnote{\url{http://var2.astro.cz/ETD}}
-times due to ambiguity in whether leap-second corrections had been
-performed.  We did not include in our analysis the four occultation
-times tabulated by \citetalias{bouma_wasp4b_2019}, because of the
-large timing uncertainties and negligible statistical power.
+Observatory 1.0m telescope.  Additional timing measurements were also
+reported recently by \citet{baluev_2019}, based on a homogeneous
+analysis of archival ground-based observations.  We included twelve of
+their ``high quality'' transit times from the TRAPPIST telescope (six
+transits), El~Sauce (four transits), and \citet{petrucci_no_2013}.
+For TRAPPIST and El~Sauce, we verified with the original observers
+that the timestamps were amenable to the appropriate barycentric and
+leap second corrections (M.~Gillon, P.~Evans, priv{.} comm{.}).  We
+omitted the fourteen remaining \citeauthor{baluev_2019}
+ETD\footnote{\url{http://var2.astro.cz/ETD}} times due to ambiguity in
+whether leap-second corrections had been performed.  We did not
+include in our analysis the four occultation times tabulated by
+\citetalias{bouma_wasp4b_2019}, because of the large timing
+uncertainties and negligible statistical power.
 
 \subsection{Radial velocities}
 
@@ -239,11 +236,12 @@ observing baseline to nine years.
 
 The complete set of radial velocity observations is given in Table~2.
 Along with the 2010--2019 HIRES observations are early measurements
-with two different spectrographs.  We included data from CORALIE ({\bf
-Spell it out on first use)} from \citet{wilson_wasp-4b_2008} and
-\citet{triaud_spin-orbit_2010}, adopting the values from the
-homogeneous analysis of the latter authors.  We included data from
-HARPS ({\bf spell it out}) from \citet{pont_determining_2011} and
+with two different spectrographs.  \citet{wilson_wasp-4b_2008} and
+\citet{triaud_spin-orbit_2010} observed WASP-4 with the Swiss 1.2m
+Euler Telescope and CORALIE Spectrograph; we adopted the radial
+velocity values from the homogeneous analysis of the latter authors.
+We also included data from the High Accuracy Radial Velocity Planet
+Searcher (HARPS), reported by \citet{pont_determining_2011} and
 \citet{husnoo_observational_2012}.  While
 \citet{triaud_spin-orbit_2010} also acquired HARPS data over three
 nights for Rossiter-McLaughlin observations, these data were reduced
@@ -256,11 +254,11 @@ noticeably affect our results.}
 
 \subsection{Speckle imaging}
 
-Once we saw that the new HIRES observations implied a highly significant
-trend in the radial velocity,
-we sought independent evidence for a wide-orbiting companion by performing
-speckle imaging with the Zorro instrument on the 
-Gemini South 8m telescope\citep[see][and the instrument
+Once we saw that the new HIRES observations implied a highly
+significant trend in the radial velocity, we sought independent
+evidence for a wide-orbiting companion by performing speckle imaging
+with the Zorro instrument on the Gemini South 8m
+telescope\citep[see][and the instrument
 web-pages\footnote{\url{www.gemini.edu/sciops/instruments/alopeke-zorro/}}]{scott_nessi_2018}.
 Zorro is a dual-channel speckle interferometer employing narrow-band
 filters centered at 562$\,$nm and 832$\,$nm.  
@@ -270,7 +268,7 @@ relatively poor seeing (1.2$''$) and also on the night of September
 28-29.  On each night, we acquired three sets of $1000\times
 60$$\,$msec exposures.  If a companion is present, the autocorrelation
 functions of these speckle images would reveal a characteristic
-interference pattern. This pattern in then used to determine the
+interference pattern. This pattern is then used to determine the
 properties of the detected companion and produce a reconstructed
 image.  Using the reconstructed speckle images, contrast curves are
 produced to determine the 5-$\sigma$ detection limits (see
@@ -322,15 +320,11 @@ changes at a steady rate:
   \label{eq:quadratic_model}
 \end{align}
 The free parameters are the reference time $t_0$, the period at the
-reference epoch $P$, and the period derivative, ${\rm d}P/{\rm d}t =
+reference time $P$, and the period derivative, ${\rm d}P/{\rm d}t =
 (1/P) {\rm d}P/{\rm d}E$.  We defined the epoch numbers such that
 $E=0$ is near the weighted average of the times of observed transits.
 This choice leads to a small covariance between the uncertainties in
 $t_0$ and $P$.
-%A third possible
-%model that we did not consider for reasons that will become apparent
-%is a precessing, eccentric orbit \citep[{\it
-%e.g.},][]{gimenez_revision_1995,patra_2017}.
 
 We fitted each model by assuming a Gaussian likelihood and sampling
 over the posterior probability distributions.  We sampled the
@@ -417,10 +411,10 @@ based on previous studies that placed stringent upper limits on the
 eccentricity
 \citep{beerer_secondary_2011,knutson_friends_2014,bonomo_gaps_2017}.
 The free parameters were the orbital velocity semi-amplitude, the
-instrument zero-points, an additive ``white noise'' instrument jitter
-for each instrument, and a linear ($\dot{v_{\rm r}}$) acceleration
-term.  (Without the linear trend, the model is a much poorer fit with
-$\Delta {\rm BIC}=73$.)
+instrument zero-points, a ``white noise'' instrument jitter for each
+instrument added in quadrature to its uncertainties, and a linear
+($\dot{v_{\rm r}}$) acceleration term.  (Without the linear trend, the
+model is a much poorer fit with $\Delta {\rm BIC}=73$.)
 
 In the best-fitting model, WASP-4 is accelerating along our
 line-of-sight at a rate
@@ -435,7 +429,7 @@ had marginal statistical significance
 \citep{knutson_friends_2014,bouma_wasp4b_2019}.
 
 Because of the Doppler effect, any line-of-sight acceleration should
-lead to an change in the observed orbital period:
+lead to a change in the observed orbital period:
 \begin{align}
   \dot{P}_{\rm\,RV} &= \frac{\dot{v}_{\rm r} P}{c},
 \end{align}
@@ -595,12 +589,12 @@ long-period binary eccentricity distributions are quite different: the
 exoplanet distribution is ``bottom-heavy'', with eccentricities
 preferentially close to zero.  The binary star distribution is
 ``top-heavy'', with a broad range of eccentricities extending close to
-unity.  The choice of $10\,M_{\rm Jup}$ as the dividing line between
-these two regimes was based on the empirical study of
-\citet{schlaufman_evidence_2018} on the distinction between giant
-planets and brown dwarfs. This value is also close to the $13\,M_{\rm
-Jup}$ deuterium-burning limit \citep[{\it
-e.g.},][]{burrows_nongray_1997}.
+unity \citep{moe_mind_2017,price-whelan_close_2020}.  The choice of
+$10\,M_{\rm Jup}$ as the dividing line between these two regimes was
+based on the empirical study of \citet{schlaufman_evidence_2018} on
+the distinction between giant planets and brown dwarfs. This value is
+also close to the $13\,M_{\rm Jup}$ deuterium-burning limit
+\citep[{\it e.g.},][]{burrows_nongray_1997}.
 
 For each simulated companion, we drew a set of model parameters from
 the converged posterior probability samples of our model for the
