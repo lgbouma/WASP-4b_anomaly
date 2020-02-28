@@ -110,31 +110,50 @@ def get_merged_companion_isochrone():
     return pd.read_csv(outpath)
 
 
-def abs_mag_in_zorro_bandpass(lum, teff, bandpass='562'):
+def abs_mag_in_bandpass(lum, teff, bandpass='562'):
     """
     lum: bolometric luminosity in units of Lsun
     teff: effective temperature in units of K
     bandpass: '562' or '832', nanometers.
     """
 
-    if bandpass not in ['562','832']:
+    if bandpass not in ['562','832','NIRC2_Kp']:
         raise ValueError
 
-    bandpassdir = '../data/WASP4_zorro_speckle/filters/'
-    bandpasspath = os.path.join(
-        bandpassdir, 'filter_EO_{}.csv'.format(bandpass)
-    )
+    if bandpass in ['562', '832']:
 
-    bpdf = pd.read_csv(bandpasspath, delim_whitespace=True)
+        bandpassdir = '../data/WASP4_zorro_speckle/filters/'
+        bandpasspath = os.path.join(
+            bandpassdir, 'filter_EO_{}.csv'.format(bandpass)
+        )
 
-    # the actual tabulated values here are bogus at the long wavelength end.
-    # obvious from like... physics, assuming detectors are silicon. (confirmed
-    # by Howell in priv. comm.) 
+        bpdf = pd.read_csv(bandpasspath, delim_whitespace=True)
 
-    width = 100 # nanometers, around the bandpass middle
-    sel = np.abs(float(bandpass) - bpdf.nm) < width
+        # the actual tabulated values here are bogus at the long wavelength end.
+        # obvious from like... physics, assuming detectors are silicon. (confirmed
+        # by Howell in priv. comm.) 
 
-    bpdf = bpdf[sel]
+        width = 100 # nanometers, around the bandpass middle
+        sel = np.abs(float(bandpass) - bpdf.nm) < width
+
+        bpdf = bpdf[sel]
+
+    elif bandpass == 'NIRC2_Kp':
+
+        # NIRC2 Kp band filter from 
+        # http://svo2.cab.inta-csic.es/theory/fps/getdata.php?format=ascii&id=Keck/NIRC2.Kp
+        bandpassdir = '../data/WASP4_NIRC2/'
+        bandpasspath = os.path.join(
+            bandpassdir, 'Keck_NIRC2.Kp.dat'
+        )
+
+        bpdf = pd.read_csv(bandpasspath, delim_whitespace=True,
+                           names=['wvlen_angst', 'Transmission'])
+
+        bpdf['nm'] = bpdf.wvlen_angst / 10
+
+    else:
+        raise NotImplementedError
 
     #
     # see /doc/20200121_blackbody_mag_derivn.pdf for relevant discussion of
@@ -173,7 +192,7 @@ def abs_mag_in_zorro_bandpass(lum, teff, bandpass='562'):
 def get_wasp4_mag_to_companion_contrasts():
 
     outpath = (
-        '../data/WASP4_zorro_speckle/wasp4_mag_to_companion_contrasts.csv'
+        '../data/WASP4_high_resoln_imaging/wasp4_mag_to_companion_contrasts.csv'
     )
 
     if not os.path.exists(outpath):
@@ -190,19 +209,14 @@ def get_wasp4_mag_to_companion_contrasts():
 
         df = get_merged_companion_isochrone()
 
-        df['M_562'] = abs_mag_in_zorro_bandpass(
-            nparr(df.lum), nparr(df.teff), '562')
-        df['M_832'] = abs_mag_in_zorro_bandpass(
-            nparr(df.lum), nparr(df.teff), '832')
+        for bp in ['562', '832', 'NIRC2_Kp']:
+            df['M_{}'.format(bp)] = abs_mag_in_bandpass(
+                nparr(df.lum), nparr(df.teff), bp)
 
-        # WASP-4 absolute magnitudes in the Zorro bands
-        M_562_w4 = float(abs_mag_in_zorro_bandpass(
-            [w4_dict['lum']], [w4_dict['teff']], '562'))
-        M_832_w4 = float(abs_mag_in_zorro_bandpass(
-            [w4_dict['lum']], [w4_dict['teff']], '832'))
+            M_bp_wasp4 = float(abs_mag_in_bandpass(
+            [w4_dict['lum']], [w4_dict['teff']], bp))
 
-        df['dmag_562'] = df.M_562 - M_562_w4
-        df['dmag_832'] = df.M_832 - M_832_w4
+            df['dmag_{}'.format(bp)] = df['M_{}'.format(bp)] - M_bp_wasp4
 
         df.to_csv(outpath, index=False)
         print('made {}'.format(outpath))
@@ -210,49 +224,97 @@ def get_wasp4_mag_to_companion_contrasts():
     return pd.read_csv(outpath)
 
 
-def get_companion_bounds():
+def get_companion_bounds(instrument):
 
-    zorrostr = 'WASP-4_20190928_832'
-    outpath = (
-        '../data/WASP4_zorro_speckle/{}_companionbounds.csv'.
-        format(zorrostr)
-    )
+    if instrument == 'Zorro':
 
-    if not os.path.exists(outpath):
-
-        df = get_wasp4_mag_to_companion_contrasts()
-
-        #
-        # WASP-4_20190928_832.dat is the most contstraining curve for basically any
-        # substellar mass companion. The blackbody curve works against us in 562,
-        # and the seeing was better on 20190928 than 20190912.
-        #
-        datapath = '../data/WASP4_zorro_speckle/{}.dat'.format(zorrostr)
-        zorro_df = pd.read_csv(
-            datapath, comment='#', skiprows=29,
-            names=['ang_sep', 'delta_mag'], delim_whitespace=True
+        zorrostr = 'WASP-4_20190928_832'
+        outpath = (
+            '../data/WASP4_zorro_speckle/{}_companionbounds.csv'.
+            format(zorrostr)
         )
 
-        #
-        # Interpolation function to convert observed deltamags to deltamass.
-        #
-        fn_dmag_to_mass = interp1d(
-            nparr(df.dmag_832),
-            nparr(df.mass),
-            kind='quadratic',
-            bounds_error=False,
-            fill_value=np.nan
+        if not os.path.exists(outpath):
+
+            df = get_wasp4_mag_to_companion_contrasts()
+
+            #
+            # WASP-4_20190928_832.dat is the most contstraining curve for basically any
+            # substellar mass companion. The blackbody curve works against us in 562,
+            # and the seeing was better on 20190928 than 20190912.
+            #
+            datapath = '../data/WASP4_zorro_speckle/{}.dat'.format(zorrostr)
+            zorro_df = pd.read_csv(
+                datapath, comment='#', skiprows=29,
+                names=['ang_sep', 'delta_mag'], delim_whitespace=True
+            )
+
+            #
+            # Interpolation function to convert observed deltamags to deltamass.
+            #
+            fn_dmag_to_mass = interp1d(
+                nparr(df.dmag_832),
+                nparr(df.mass),
+                kind='quadratic',
+                bounds_error=False,
+                fill_value=np.nan
+            )
+
+            zorro_df['m_comp/m_sun'] = fn_dmag_to_mass(zorro_df.delta_mag)
+
+            zorro_df.to_csv(outpath, index=False)
+            print('made {}'.format(outpath))
+
+        return pd.read_csv(outpath)
+
+    elif instrument == 'NIRC2':
+
+        namestr = 'WASP-4_20120727_NIRC2'
+        outpath = (
+            '../data/WASP4_NIRC2/{}_companionbounds.csv'.
+            format(namestr)
         )
 
-        zorro_df['m_comp/m_sun'] = fn_dmag_to_mass(zorro_df.delta_mag)
+        if not os.path.exists(outpath):
 
-        zorro_df.to_csv(outpath, index=False)
-        print('made {}'.format(outpath))
+            df = get_wasp4_mag_to_companion_contrasts()
 
-    return pd.read_csv(outpath)
+            #
+            # WASP-4_20190928_832.dat is the most contstraining curve for basically any
+            # substellar mass companion. The blackbody curve works against us in 562,
+            # and the seeing was better on 20190928 than 20190912.
+            #
+            datapath = '../data/WASP4_NIRC2/WASP-4_Kp_contrast_2012_07_27_contrast_dk_full_img.txt'
+            nirc2_df = pd.read_csv(
+                datapath, skiprows=2,
+                names=['ang_sep', 'delta_mag', 'completeness'], delim_whitespace=True
+            )
+
+            #
+            # Interpolation function to convert observed deltamags to deltamass.
+            #
+            fn_dmag_to_mass = interp1d(
+                nparr(df.dmag_832),
+                nparr(df.mass),
+                kind='quadratic',
+                bounds_error=False,
+                fill_value=np.nan
+            )
+
+            nirc2_df['m_comp/m_sun'] = fn_dmag_to_mass(nirc2_df.delta_mag)
+
+            nirc2_df.to_csv(outpath, index=False)
+            print('made {}'.format(outpath))
+
+        return pd.read_csv(outpath)
+
+    else:
+        raise NotImplementedError
 
 
-def plot_zorro_mass_semimaj_constraints(zdf):
+def plot_highresimg_mass_semimaj_constraints(df, instrument=None, df2=None):
+
+    assert instrument in ['Zorro', 'NIRC2', 'both']
 
     n_grid_edges = 51
     mass_grid = (
@@ -265,12 +327,23 @@ def plot_zorro_mass_semimaj_constraints(zdf):
     fig, ax = plt.subplots(figsize=(4,3))
 
     dist_pc = 1/(3.7145e-3) # Bouma+2019, Table 1
-    zdf['sma_AU'] = zdf.ang_sep * dist_pc
 
-    ax.plot(
-        nparr(zdf['sma_AU'])*u.AU,
-        (nparr(zdf['m_comp/m_sun'])*u.Msun).to(u.Mjup)
-    )
+    if df2 is None:
+        df['sma_AU'] = df.ang_sep * dist_pc
+        ax.plot(
+            nparr(df['sma_AU'])*u.AU,
+            (nparr(df['m_comp/m_sun'])*u.Msun).to(u.Mjup)
+        )
+    if not df2 is None:
+        labels = ['Zorro', 'NIRC2']
+        for l, d in zip(labels, [df, df2]):
+            d['sma_AU'] = d.ang_sep * dist_pc
+            ax.plot(
+                nparr(d['sma_AU'])*u.AU,
+                (nparr(d['m_comp/m_sun'])*u.Msun).to(u.Mjup),
+                label = l
+            )
+            ax.legend()
 
     ax.set_xscale('log')
     ax.set_yscale('log')
@@ -285,15 +358,31 @@ def plot_zorro_mass_semimaj_constraints(zdf):
     ax.get_xaxis().set_tick_params(which='both', direction='in')
     fig.tight_layout(h_pad=0, w_pad=0)
 
-    figpath = '../results/zorro_mass_semimaj_constraints.png'
+    figpath = '../results/{}_mass_semimaj_constraints.png'.format(instrument)
     savefig(fig, figpath)
 
 
 def main():
 
-    zdf = get_companion_bounds()
-    plot_zorro_mass_semimaj_constraints(zdf)
+    ##########
+    # config #
+    ##########
+    # 'both', 'Zorro', or 'NIRC2'.
+    instrument = 'both'
 
+    ##############
+    # end config #
+    ##############
+
+    if not instrument == 'both':
+        df = get_companion_bounds(instrument)
+        plot_highresimg_mass_semimaj_constraints(df, instrument=instrument)
+
+    else:
+        df1 = get_companion_bounds('Zorro')
+        df2 = get_companion_bounds('NIRC2')
+        plot_highresimg_mass_semimaj_constraints(
+            df1, instrument=instrument, df2=df2)
 
 if __name__ == "__main__":
     main()
