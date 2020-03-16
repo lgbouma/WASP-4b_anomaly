@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[12pt,twocolumn,tighten]{aastex62}
+%\documentclass[12pt,twocolumn,tighten]{aastex62}
+\documentclass[12pt,twocolumn,tighten,trackchanges]{aastex62}
 \usepackage{amsmath,amstext,amssymb}
 \usepackage[T1]{fontenc}
 \usepackage{apjfonts}
@@ -229,13 +230,14 @@ observed from the 3.58m New Technology Telescope and the Danish 1.54m
 telescope at La Silla, Chile, and the South African Astronomical
 Observatory 1.0m telescope.  Additional timing measurements were also
 reported recently by \citet{baluev_2019}, based on a homogeneous
-analysis of archival ground-based observations.  We included twelve of
-their ``high quality'' transit times from the TRAPPIST telescope (six
-transits), the El~Sauce 36$\,$cm (four transits), and
-\citet{petrucci_no_2013}.  For TRAPPIST and El~Sauce, we verified with
-the original observers that the timestamps were amenable to the
-appropriate barycentric and leap second corrections (M.~Gillon,
-P.~Evans, priv{.} comm{.}).  We omitted the fourteen remaining
+analysis of archival ground-based observations.  We included
+\deleted{twelve of} their \deleted{``high quality''} transit times
+from the TRAPPIST telescope (six transits), the El~Sauce 36$\,$cm
+(four transits), and \citet{petrucci_no_2013} \added{(two transits)}.
+For TRAPPIST and El~Sauce, we verified with the original observers
+that the timestamps were amenable to the appropriate barycentric and
+leap second corrections (M.~Gillon, P.~Evans, priv{.} comm{.}).  We
+omitted the fourteen remaining
 ETD\footnote{\url{http://var2.astro.cz/ETD}} times from
 \citeauthor{baluev_2019} due to ambiguity in whether leap-second
 corrections had been performed.  We did not include in our analysis
@@ -431,7 +433,7 @@ This agrees to within 1-$\sigma$ of the value reported by
 \citet{southworth_transit_2019} ($\dot{P} = - 9.2 \pm 1.1~{\rm
 ms}\,{\rm yr}^{-1}$).  It is 2.3-$\sigma$ larger than the rate of
 period decrease reported by \citetalias{bouma_wasp4b_2019}
-($- 12.6 \pm 1.2~{\rm ms}\,{\rm yr}^{-1}$), presumably because of the new
+($- 12.6 \pm 1.2~{\rm msec}\,{\rm yr}^{-1}$), presumably because of the new
 data from \citeauthor{southworth_transit_2019} and
 \citeauthor{baluev_2019}. The other best-fitting model parameters are
 reported in Table~3.
@@ -609,7 +611,9 @@ argument of periastron of the outer simulated companion.  We converted
 the resulting $128\times128\times512$ cube of log-likelihood values to
 probabilities, and averaged over the samples in each grid cell to
 derive a probability distribution in mass and semi-major axis.
-Figure~\ref{fig:mass_sma} shows the result.
+Figure~\ref{fig:mass_sma} shows the result\replaced{.}{: the companion
+responsible for the acceleration has a true mass of 10-200$\,M_{\rm
+Jup}$ and an orbital distance of $10$-$100\,{\rm AU}$.}
 
 \section{Discussion}
 \label{sec:discussion}
@@ -620,15 +624,18 @@ The previously offered explanations for WASP-4b's decreasing orbital
 period included tidal orbital decay, apsidal precession, and the
 Doppler effect \citep{bouma_wasp4b_2019}.  Our new radial velocity
 measurements strongly indicate that the least exotic option---the
-Doppler effect---is the most likely explanation.  Long-term transit
-timing data show the orbital period to be decreasing by $- 8.64 \pm
-1.26~{\rm ms}\,{\rm yr}^{-1}$.  The long-term radial velocity data
-show a trend that should lead to an apparent period derivative of
-$-5.94 \pm 0.39~{\rm ms}\,{\rm yr}^{-1}$ through the Doppler effect.
-Although these two measurements of the period derivative are
-discrepant by about 2-$\sigma$, Occam's razor suggests that most or
-all of the apparent decrease of WASP-4b's orbital period is caused by
-the line-of-sight acceleration.
+Doppler effect---is the \replaced{most likely explanation}{dominant
+physical process}.  Long-term transit timing data show the orbital
+period to be decreasing by $- 8.64 \pm 1.26~{\rm msec}\,{\rm
+yr}^{-1}$.  The long-term radial velocity data show a trend that
+should lead to an apparent period derivative of $-5.94 \pm 0.39~{\rm
+msec}\,{\rm yr}^{-1}$ through the Doppler effect.  Although these two
+measurements of the period derivative are discrepant by about
+2-$\sigma$, Occam's razor \replaced{suggests that most or all of}{would suggest that} the
+apparent decrease of WASP-4b's orbital period is caused
+\added{solely} by the line-of-sight acceleration.\added{ Detection
+of any additional second-order effects will require more precise data,
+and a more significant discrepancy.}
 
 Based on the data, the companion causing the acceleration is probably
 either a brown-dwarf or low mass star with an orbital distance of
@@ -704,10 +711,10 @@ significant ($>$$3\sigma$) linear trends in Figure~\ref{fig:pdot_pop}.
 
 Including WASP-4b, 16 of 51 hot Jupiters surveyed by
 \citet{knutson_friends_2014} show a non-zero radial velocity trend.
-Therefore, around 1 in 3 hot Jupiters is expected to show period
-changes comparable to that of WASP-4 due to acceleration by outer
-companions.  The sign of the accelerations should be random, with
-about half of them approaching and half of them receding.  With a
+Therefore, around 1 in 3 hot Jupiters \replaced{is}{are} expected to
+show period changes comparable to that of WASP-4 due to acceleration
+by outer companions.  The sign of the accelerations should be random,
+with about half of them approaching and half of them receding.  With a
 large enough sample of short-period hot Jupiters, one might be able to
 distinguish line-of-sight accelerations from tidal orbital decay by
 seeking evidence for a systematic tendency for the observed period to
@@ -900,5 +907,6 @@ velocity measurements of hot Jupiters are strongly encouraged.
 \bibliography{bibliography} 
 
 
+\listofchanges
 
 \end{document}

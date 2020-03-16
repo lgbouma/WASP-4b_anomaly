@@ -1,0 +1,54 @@
+===================================================
+Reviewer's Comments:
+
+This paper presents a reanalysis of transit times for the WASP-4 system,
+including additional transits and radial velocity (RV) data to ascertain the
+presence of a linear trend. The subsequent analysis demonstrates that the
+observed timing variations are likely the result of the presence of an
+additional companion that produces a time derivative in the observations.
+Although this is a known effect of the "Doppler effect", this has not been
+demonstrated for WASP-4b nor the numerous other hot Jupiters that are described
+in the analysis, and the results highlight the need to include such effects in
+similar analyses. Furthermore, the paper, including the associated figures, is
+very clear and extremely well written. As such, I have no hesitation in
+recommending publication and have relatively minor comments for the authors to
+help improve the manuscript, detailed below.
+
+Section 2.1
+
+Paragraph 2. It would be helpful if the authors briefly describe the exact
+meaning of "high quality" in the context of the transit times used in the
+analysis.
+
+Section 3.1
+
+In this section it is stated that the assumption of "a Gaussian likelihood and
+sampling over the posterior probability distributions" is made. This assumption
+needs further justification given the variety of data sources included. In
+particular, it is later stated in Section 3.1 that the cause of the high
+reduced chi2 values "must be some additional signal or noise". Alternatively,
+it could indeed mean that the Gaussian likelihood assumption is not completely
+valid.
+
+Section 3.3
+
+The discussion and figure in this section are very good. However, it is not
+sufficiently demonstrated that a stellar companion is ruled out when
+considering the possible angular separations of the companion resulting from
+being near inferior or superior conjunction. This is particularly important for
+this system since even a small degree of coplanarity of the companion with
+WASP-4b would result in an edge on orbit that makes the companion difficult to
+detect when near conjunction locations. Also, the very last sentence of this
+section "Figure 4 shows the result." should describe the results of the figure
+in more detail.
+
+Section 4.1
+
+Paragraph 1. The paragraph implies that the Doppler effect is the sole cause of
+the timing derivative. However, and given the 2 sigma discrepancy, the wording
+should allow for the possibility that the timing derivative is actually a
+result of a combination of the described effects.
+
+Section 4.2
+
+Paragraph 3. "hot Jupiters is expected" should be "hot Jupiters are expected".

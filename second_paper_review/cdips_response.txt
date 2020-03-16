@@ -1,0 +1,77 @@
+Dear Dr. Lintott,
+
+We thank you for organizing the review of our paper, and thank the
+referee for their helpful comments.  We have considered the referee's
+remarks carefully and revised our manuscript accordingly.
+
+Below, we have reproduced the referee's report, along with our
+point-by-point responses. A list of changes is also appended to the
+manuscript using the usual AASTeX macros.
+
+Sincerely,
+
+Luke Bouma
+
+********************************************************************************
+REFEREE COMMENT
+----------
+Page 8, 4th paragraph:
+You mention you choose a fixed saturation level of 8x10^4 ADU, which you
+consider "slightly" greater than the Vanderspek at al. saturation level
+of ~4x10^4 ADU. Can you please check if one of the values has a typo,
+since the chosen level is twice the other level (or justify in whoat
+sense this is only a slight difference).
+
+RESPONSE
+----------
+> We have changed the wording in the text from "slightly" to "a factor
+> of two greater than", and clarified the relevant sentence. The
+> paragraph now reads:
+>
+> """
+> After subtracting the background, we mask out saturated pixels using a
+> fixed saturation level of $8\times10^4$ analog-to-digital units (ADU).
+> This value was chosen based on the onset of bleeding charge trails in
+> the images, and is a factor of two greater than the saturation level of
+> $2\times10^5$ electrons, or about $4\times10^4\,{\rm ADU}$, reported by
+> \citet{vanderspek_2018}.  As a consequence, we do not analyze stars
+> brighter than $T\approx 6.5, even though the TESS CCID-80 CCDs conserve
+> charge across bloom trails up to at least $T\approx 4$
+> \citet{vanderspek_2018}.
+> """
+>
+> For context, we're not particularly worried about going a factor of
+> two over Vanderspek's stated saturation level because stars with <8e4
+> ADU show blooming trails that are quite short, and so much of the flux
+> is still captured in our circular apertures. If we go much higher
+> though, more of the flux falls outside our apertures (the charge
+> trails get longer), and difference imaging + circular aperture
+> photometry really isn't the correct data reduction approach. The
+> smarter thing is to use the photons in the bleed trails via "column
+> apertures" (e.g., Tim White and Benjamin Pope's work on K2 and now
+> also TESS).
+
+
+********************************************************************************
+REFEREE COMMENT
+----------
+Page 12, Section 3.7.1:
+"quartnerion" -> quaternion
+
+RESPONSE
+----------
+> Corrected, thank you!
+
+********************************************************************************
+REFEREE COMMENT
+----------
+Page 21, last paragraph:
+It would be good if you could make the link stand out more from the main
+text (even though it is in the abstract), since the light curves are the
+main product of the work presented in the paper.
+
+RESPONSE
+----------
+> Thank you for this suggestion. All links to the MAST high level
+> science product page are now in small-caps type. (Hopefully this will
+> conform to the journal's style conventions).
