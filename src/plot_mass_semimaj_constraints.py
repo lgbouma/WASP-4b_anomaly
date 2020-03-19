@@ -8,10 +8,14 @@ import matplotlib.patheffects as pe
 
 def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
                                   sma_grid=None, with_contrast=False,
-                                  discrete_color=False, linear_z=False):
+                                  discrete_color=False, linear_z=False,
+                                  figpath=None):
 
     if prob_arr is None:
 
+        # n_mass_grid_edges = 31 # a 4x4 grid has 5 edges. want: 64+1, 128+1...
+        # n_sma_grid_edges = 31 # a 4x4 grid has 5 edges.
+        # n_injections_per_cell = 16 # 500 # want: 500
         n_mass_grid_edges = 129 # a 4x4 grid has 5 edges. want: 51
         n_sma_grid_edges = 129 # a 4x4 grid has 5 edges. want: 51
         n_injections_per_cell = 512 # 500 # want: 500
@@ -41,7 +45,14 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
         # -2*logprob == chi^2
         # Convert likelihood values to a normalized probability via
         #   P ~ -exp(-chi^2/2)
-        prob_arr = np.exp(log_like)/np.exp(log_like).sum().sum()
+        rv_prob_arr = np.exp(log_like)/np.exp(log_like).sum().sum()
+
+        ao_detected_arr = pickle.load(
+            open(pklpath.replace('loglikearr', 'aodetectedarr'), 'rb')
+        )
+        ao_prob_arr = ao_detected_arr.mean(axis=2)
+
+        prob_arr = rv_prob_arr * (1-ao_prob_arr)
 
     #################
     # make the plot #
@@ -81,7 +92,7 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
     if with_contrast:
 
         from contrast_to_masslimit import get_companion_bounds
-        zdf = get_companion_bounds()
+        zdf = get_companion_bounds('Zorro')
 
         dist_pc = 1/(3.7145e-3) # Bouma+2019, Table 1
         zdf['sma_AU'] = zdf.ang_sep * dist_pc
@@ -93,21 +104,22 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
             zorder=4
         )
 
-        t = ax.text(
-            100, 450, 'Ruled out by\nspeckle imaging',
-            fontsize=7.5, ha='center', va='center',
-            # path_effects=[pe.withStroke(linewidth=0.5, foreground="white")],
-            color='C0', zorder=3
-        )
+        # NOTE: not really ruled out!
+        # t = ax.text(
+        #     100, 450, 'Ruled out by\nspeckle imaging',
+        #     fontsize=7.5, ha='center', va='center',
+        #     # path_effects=[pe.withStroke(linewidth=0.5, foreground="white")],
+        #     color='C0', zorder=3
+        # )
 
-        ax.fill_between(
-            nparr(zdf['sma_AU'])*u.AU,
-            (nparr(zdf['m_comp/m_sun'])*u.Msun).to(u.Mjup),
-            1000,
-            color='white',
-            alpha=0.8,
-            zorder=2
-        )
+        # ax.fill_between(
+        #     nparr(zdf['sma_AU'])*u.AU,
+        #     (nparr(zdf['m_comp/m_sun'])*u.Msun).to(u.Mjup),
+        #     1000,
+        #     color='white',
+        #     alpha=0.8,
+        #     zorder=2
+        # )
 
         _sma = np.logspace(np.log10(90), np.log10(180))
         _mass_min = 2 # rescale
@@ -130,7 +142,7 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
     ax.set_ylabel('Companion mass [M$_\mathrm{{Jup}}$]')
 
     cbar = fig.colorbar(im, orientation='vertical', extend='min',
-                        label='$\log_{{10}}$(likelihood)')
+                        label='$\log_{{10}}$(probability)')
     cbar.ax.tick_params(labelsize=6, direction='out')
 
     ax.set_ylim([1,1e3])
@@ -145,10 +157,11 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
     dstr = '_discretecolor' if discrete_color else ''
     wstr = '_with_contrast' if with_contrast else ''
     lzstr = '_linearz' if linear_z else ''
-    figpath = (
-        '../results/mass_semimaj_constraints{}{}{}.png'.
-        format(wstr, dstr, lzstr)
-    )
+    if figpath is None:
+        figpath = (
+            '../results/mass_semimaj_constraints{}{}{}.png'.
+            format(wstr, dstr, lzstr)
+        )
     savefig(fig, figpath)
 
 

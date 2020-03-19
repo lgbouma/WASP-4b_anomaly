@@ -36,7 +36,6 @@ from scipy.interpolate import interp1d
 
 from read_mist_model import ISO
 
-from astropy.modeling.models import BlackBody
 from astropy import units as u
 from astropy import constants as const
 
@@ -159,6 +158,8 @@ def abs_mag_in_bandpass(lum, teff, bandpass='562'):
     # see /doc/20200121_blackbody_mag_derivn.pdf for relevant discussion of
     # units and where the equations come from.
     #
+
+    from astropy.modeling.models import BlackBody
 
     M_Xs = []
     for temperature, luminosity in zip(teff*u.K, lum*u.Lsun):
