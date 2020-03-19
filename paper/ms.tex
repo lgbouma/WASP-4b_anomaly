@@ -285,13 +285,13 @@ filters centered at 562$\,$nm and 832$\,$nm.
 
 We observed WASP-4 twice, on the night of September 11-12 with
 relatively poor seeing (1.2$''$) and also on the night of September
-28-29.  On each night, we acquired three sets of $1000\times
-60$$\,$msec exposures.  If a companion is present, the autocorrelation
-functions of these speckle images would reveal a characteristic
-interference pattern. This pattern is then used to determine the
-properties of the detected companion and produce a reconstructed
-image.  Using the reconstructed speckle images, contrast curves are
-produced to determine the 5-$\sigma$ detection limits (see
+28-29\added{, 2019}.  On each night, we acquired three sets of
+$1000\times 60$$\,$msec exposures.  If a companion is present, the
+autocorrelation functions of these speckle images would reveal a
+characteristic interference pattern. This pattern is then used to
+determine the properties of the detected companion and produce a
+reconstructed image.  Using the reconstructed speckle images, contrast
+curves are produced to determine the 5-$\sigma$ detection limits (see
 \citealt{howell_speckle_2011}).  No companions were detected. The data
 from the second night, which had better seeing (0.6$''$), led to the
 most constraining limit.  The 832$\,$nm limits were the most useful,
@@ -391,8 +391,10 @@ This choice leads to a small covariance between the uncertainties in
 $t_0$ and $P$.
 
 We fitted each model by assuming a Gaussian likelihood and sampling
-over the posterior probability distributions.  We sampled the
-posterior using the algorithm proposed by
+over the posterior probability distributions.  
+\added{The transit timing measurements, uncertainties, and provenances
+are given in Table~1.}
+We sampled the posterior using the algorithm proposed by
 \citet{goodman_ensemble_2010} and implemented by
 \citet{foreman-mackey_emcee_2013} in \texttt{emcee}.  The prior for
 the quadratic model allowed the period derivative to be either
@@ -412,15 +414,18 @@ neither model provides a satisfactory fit to the transit data; there
 must be some additional signal or noise.  The earlier study by
 \citetalias{bouma_wasp4b_2019} found that the quadratic model for the
 (sparser) transit data gave $\chi^2_{\rm red}=1.0$.  The worsening of
-$\chi^2_{\rm red}$ probably reflects underestimated measurement
+$\chi^2_{\rm red}$ \replaced{probably reflects}{could reflect} underestimated \replaced{measurement}{statistical}
 uncertainties in at least some of the newly reported transit times,
-due to time correlated noise in the photometry. It might also be due
-to errors or misunderstandings of the time systems in which the data
-were recorded, despite our best efforts to interpret the literature.
-In what follows, we opted to enlarge the uncertainties in the
-best-fitting parameters of each model by a factor of $(\chi^2_{\rm
-red})^{1/2}$.  This was a factor of $\approx$1.73$\times$ for the
-linear model, and $\approx$1.41$\times$ for the quadratic model.
+\added{perhaps} due to time correlated noise in the photometry. It
+might also be due to \replaced{errors or}{systematic} misunderstandings of the time systems
+in which the data were recorded, despite our best efforts to interpret
+the literature. \added{In particular, mistaken leap-second corrections can introduce systematic errors of order one minute.}  \replaced{In what follows,}{Since we have no way of
+identifying which observations are affected by these issues,} we opted to
+\added{uniformly} enlarge the
+uncertainties in the best-fitting parameters of each model by a factor
+of $(\chi^2_{\rm red})^{1/2}$.  This was a factor of
+$\approx$1.73$\times$ for the linear model, and $\approx$1.41$\times$
+for the quadratic model.
 
 The resulting period derivative for the quadratic model is 
 \begin{equation}
@@ -439,6 +444,7 @@ data from \citeauthor{southworth_transit_2019} and
 reported in Table~3.
 
 \subsection{Radial velocities}
+\label{subsec:rvs}
 
 Our initial model for the radial velocity data was a circular orbit
 plus instrument offsets, ``jitter'' values (explained below), and a
@@ -541,11 +547,13 @@ resolution imaging was developed by \citet{wright_linear_trends_2007},
 \citet{knutson_friends_2014},
 \citet{bryan_statistics_2016,bryan_excess_2019}, and others.
 
-\paragraph{Speckle imaging constraints}
+%\paragraph{Speckle imaging constraints}
+% \replaced{\paragraph{Speckle imaging constraints}}{
+\paragraph{Speckle imaging transformations}
 
 First, we converted the contrast curves obtained from speckle imaging
 (Figure~\ref{fig:zorro}) to upper limits on the mass of a companion as
-a function of separation. To do this, we followed
+a function of \added{projected} separation. To do this, we followed
 \citet{montet_trends_2014}, and opted to employ the
 \citet{baraffe_evolutionary_2003} models for substellar mass objects
 and the MIST isochrones for stellar mass objects
@@ -566,13 +574,16 @@ magnitudes in the 562 and 832 nm Zorro bands for stellar and planetary
 mass companions.  Applying the same calculation to WASP-4 itself using
 the effective temperature and bolometric luminosity from
 \citetalias{bouma_wasp4b_2019}, we derived the transformation from
-contrast ratio to companion mass.  The resulting limits are shown in
-Figure~\ref{fig:mass_sma}.
+contrast ratio to companion mass.  The resulting
+limits \added{derived if we assume maximal projected separations} are
+\replaced{shown}{shown with the blue line} in Figure~\ref{fig:mass_sma}.
+\added{We describe our procedure for incorporating projection effects
+in the following paragraphs.}
 
-\paragraph{Radial velocity constraints}
-
+%\replaced{\paragraph{Radial velocity constraints}}
+\paragraph{Combined radial velocity and imaging constraints}
 To derive constraints on possible companion masses and separations
-from the radial velocities, we mostly followed the procedure of
+\deleted{from the radial velocities}, we mostly followed the procedure of
 \citet{bryan_excess_2019}. We began by defining a $128\times128$ grid
 in true planetary mass and semimajor axis, over a logarithmic grid
 ranging from 1 to 900$\,$$M_{\rm Jup}$ and 3 to 500$\,$${\rm AU}$.  We
@@ -600,9 +611,13 @@ the distinction between giant planets and brown dwarfs. This value is
 also close to the $13\,M_{\rm Jup}$ deuterium-burning limit
 \citep[{\it e.g.},][]{burrows_nongray_1997}.
 
-For each simulated companion, we drew a set of model parameters from
-the converged posterior probability samples of our model for the
-WASP-4 radial velocities.  We subtracted the orbital component of the
+\explain{Modified wording for clarity.}
+\replaced{For each simulated companion, we drew a set of model
+parameters from the converged posterior probability samples of our
+model for the WASP-4 radial velocities.}{The orbital properties of the
+inner hot Jupiter were assigned for each simulated system by sampling
+from from the radial velocity posterior derived in
+Section~\ref{subsec:rvs}.}  We subtracted the orbital component of the
 model from the observed RVs, leaving behind the RV residuals with a
 linear trend.  Given $(a_{\rm c}, M_{\rm c}, e_{\rm c})$ for each
 simulated outer companion, and the choice of instrument offsets and
@@ -610,10 +625,27 @@ jitters, we performed a maximum likelihood fit for the time and
 argument of periastron of the outer simulated companion.  We converted
 the resulting $128\times128\times512$ cube of log-likelihood values to
 probabilities, and averaged over the samples in each grid cell to
-derive a probability distribution in mass and semi-major axis.
-Figure~\ref{fig:mass_sma} shows the result\replaced{.}{: the companion
+derive a probability distribution in mass and semi-major axis, based
+on the radial velocities.
+
+\added{We incorporated the speckle imaging limits in each simulated
+system as follows. After fitting for the time and argument of
+periastron, all the orbital parameters needed to find the projected
+separation are known (we assumed uniform sensitivity as a function of
+position angle, and therefore fixed the longitude of the
+ascending node to zero). We calculated the projected separation using
+the parametrization given by \citet{quirrenbach_2010}, which required
+solving Kepler's equation for each simulated system at the time of the
+imaging observation (September 28, 2019).   For each cell, we then
+calculated the fraction of companions whose masses and
+projected separations would have enabled detection.  }
+
+\replaced{Figure~\ref{fig:mass_sma} shows the result.}
+{The contours in Figure~\ref{fig:mass_sma} show the result of multiplying the radial
+velocity and speckle imaging probability distributions. The companion
 responsible for the acceleration has a true mass of 10-200$\,M_{\rm
 Jup}$ and an orbital distance of $10$-$100\,{\rm AU}$.}
+%FIXME: might need to update this text!
 
 \section{Discussion}
 \label{sec:discussion}
@@ -634,7 +666,7 @@ measurements of the period derivative are discrepant by about
 2-$\sigma$, Occam's razor \replaced{suggests that most or all of}{would suggest that} the
 apparent decrease of WASP-4b's orbital period is caused
 \added{solely} by the line-of-sight acceleration.\added{ Detection
-of any additional second-order effects will require more precise data,
+of additional second-order effects will require more precise data,
 and a more significant discrepancy.}
 
 Based on the data, the companion causing the acceleration is probably
