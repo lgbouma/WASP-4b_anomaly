@@ -35,24 +35,26 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
             format(sizestr)
         )
         log_like_arr = pickle.load(open(pklpath, 'rb'))
+        ao_detected_arr = pickle.load(
+            open(pklpath.replace('loglikearr', 'aodetectedarr'), 'rb')
+        )
 
         #
         # Convert log-likelihood values to relative probability by taking the exp.
         # Then average out the "sample" dimension (mass, sma, eccentricity, etc).
         #
-        log_like = np.log(np.exp(log_like_arr).mean(axis=2))
+        rv_log_like = np.log(np.exp(log_like_arr).mean(axis=2))
+
+        rv_and_ao_log_like = np.log(np.exp(log_like_arr*(1-ao_detected_arr)).mean(axis=2))
 
         # -2*logprob == chi^2
         # Convert likelihood values to a normalized probability via
         #   P ~ -exp(-chi^2/2)
-        rv_prob_arr = np.exp(log_like)/np.exp(log_like).sum().sum()
+        rv_prob_arr = np.exp(rv_log_like)/np.exp(rv_log_like).sum().sum()
 
-        ao_detected_arr = pickle.load(
-            open(pklpath.replace('loglikearr', 'aodetectedarr'), 'rb')
-        )
-        ao_prob_arr = ao_detected_arr.mean(axis=2)
+        rv_and_ao_prob_arr = np.exp(rv_and_ao_log_like)/np.exp(rv_and_ao_log_like).sum().sum()
 
-        prob_arr = rv_prob_arr * (1-ao_prob_arr)
+        prob_arr = rv_and_ao_prob_arr
 
     #################
     # make the plot #

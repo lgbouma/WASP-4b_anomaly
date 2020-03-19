@@ -433,16 +433,18 @@ def derive_mass_semimaj_constraints(
     # Convert log-likelihood values to relative probability by taking the exp.
     # Then average out the "sample" dimension (mass, sma, eccentricity, etc).
     #
-    log_like = np.log(np.exp(log_like_arr).mean(axis=2))
+    rv_log_like = np.log(np.exp(log_like_arr).mean(axis=2))
+
+    rv_and_ao_log_like = np.log(np.exp(log_like_arr*(1-ao_detected_arr)).mean(axis=2))
 
     # -2*logprob == chi^2
     # Convert likelihood values to a normalized probability via
     #   P ~ -exp(-chi^2/2)
-    rv_prob_arr = np.exp(log_like)/np.exp(log_like).sum().sum()
+    rv_prob_arr = np.exp(rv_log_like)/np.exp(rv_log_like).sum().sum()
 
-    ao_prob_arr = ao_detected_arr.mean(axis=2)
+    rv_and_ao_prob_arr = np.exp(rv_and_ao_log_like)/np.exp(rv_and_ao_log_like).sum().sum()
 
-    return rv_prob_arr, ao_prob_arr, mass_grid, sma_grid
+    return rv_prob_arr, rv_and_ao_prob_arr, mass_grid, sma_grid
 
 
 if __name__=="__main__":
@@ -462,17 +464,15 @@ if __name__=="__main__":
 
     chainpath = os.path.join(rvfitdir, 'WASP4_chains.csv.tar.bz2')
 
-    rv_prob_arr, ao_prob_arr, mass_grid, sma_grid = (
+    rv_prob_arr, rv_and_ao_prob_arr, mass_grid, sma_grid = (
         derive_mass_semimaj_constraints(setupfn, rvfitdir, chainpath,
                                         verbose=VERBOSE)
     )
-
-    prob_arr = rv_prob_arr * (1-ao_prob_arr)
 
     figpath = '../results/mass_semimaj_constraints_rvonly.png'
     plot_mass_semimaj_constraints(rv_prob_arr, mass_grid, sma_grid,
                                   figpath=figpath)
 
     figpath = '../results/mass_semimaj_constraints_rvandao.png'
-    plot_mass_semimaj_constraints(prob_arr, mass_grid, sma_grid,
+    plot_mass_semimaj_constraints(rv_and_ao_prob_arr, mass_grid, sma_grid,
                                   figpath=figpath)
