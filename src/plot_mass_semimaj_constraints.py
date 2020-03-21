@@ -9,7 +9,7 @@ import matplotlib.patheffects as pe
 def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
                                   sma_grid=None, with_contrast=False,
                                   discrete_color=False, linear_z=False,
-                                  figpath=None):
+                                  figpath=None, rvsonly=False):
 
     if prob_arr is None:
 
@@ -55,6 +55,8 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
         rv_and_ao_prob_arr = np.exp(rv_and_ao_log_like)/np.exp(rv_and_ao_log_like).sum().sum()
 
         prob_arr = rv_and_ao_prob_arr
+        if rvsonly:
+            prob_arr = rv_prob_arr
 
     #################
     # make the plot #
@@ -123,19 +125,19 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
         #     zorder=2
         # )
 
-        _sma = np.logspace(np.log10(90), np.log10(180))
-        _mass_min = 2 # rescale
-        k = _mass_min / min(_sma**2)
-        _mass = k*_sma**2
-        ax.plot(
-            _sma, _mass, color='k', lw=1
-        )
-        ax.text(
-            np.percentile(_sma, 60), np.percentile(_mass, 40), '$M\propto a^2$',
-            fontsize=7.5, ha='left', va='center',
-            path_effects=[pe.withStroke(linewidth=0.5, foreground="white")],
-            color='black'
-        )
+    _sma = np.logspace(np.log10(90), np.log10(180))
+    _mass_min = 2 # rescale
+    k = _mass_min / min(_sma**2)
+    _mass = k*_sma**2
+    ax.plot(
+        _sma, _mass, color='k', lw=1
+    )
+    ax.text(
+        np.percentile(_sma, 60), np.percentile(_mass, 40), '$M\propto a^2$',
+        fontsize=7.5, ha='left', va='center',
+        path_effects=[pe.withStroke(linewidth=0.5, foreground="white")],
+        color='black'
+    )
 
     ax.set_xscale('log')
     ax.set_yscale('log')
@@ -159,17 +161,19 @@ def plot_mass_semimaj_constraints(prob_arr=None, mass_grid=None,
     dstr = '_discretecolor' if discrete_color else ''
     wstr = '_with_contrast' if with_contrast else ''
     lzstr = '_linearz' if linear_z else ''
+    rvstr = '_rvonly' if rvsonly else ''
     if figpath is None:
         figpath = (
-            '../results/mass_semimaj_constraints{}{}{}.png'.
-            format(wstr, dstr, lzstr)
+            '../results/mass_semimaj_constraints{}{}{}{}.png'.
+            format(wstr, dstr, lzstr, rvstr)
         )
     savefig(fig, figpath)
 
 
 if __name__ == "__main__":
 
-    plot_mass_semimaj_constraints(with_contrast=True, discrete_color=True,
-                                  linear_z=False)
-    plot_mass_semimaj_constraints(with_contrast=False, discrete_color=True,
-                                  linear_z=False)
+    for rvsonly in [True,False]:
+        plot_mass_semimaj_constraints(with_contrast=True, discrete_color=True,
+                                      linear_z=False, rvsonly=rvsonly)
+        plot_mass_semimaj_constraints(with_contrast=False, discrete_color=True,
+                                      linear_z=False, rvsonly=rvsonly)
