@@ -435,7 +435,7 @@ def derive_mass_semimaj_constraints(
     #
     rv_log_like = np.log(np.exp(log_like_arr).mean(axis=2))
 
-    rv_and_ao_log_like = np.log(np.exp(log_like_arr*(1-ao_detected_arr)).mean(axis=2))
+    rv_and_ao_log_like = np.log(nparr(np.exp(log_like_arr)*(1-ao_detected_arr)).mean(axis=2))
 
     # -2*logprob == chi^2
     # Convert likelihood values to a normalized probability via
