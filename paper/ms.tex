@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\documentclass[12pt,twocolumn,tighten]{aastex62}
-\documentclass[12pt,twocolumn,tighten,trackchanges]{aastex62}
+\documentclass[12pt,twocolumn,tighten]{aastex62}
+%\documentclass[12pt,twocolumn,tighten,trackchanges]{aastex62}
 \usepackage{amsmath,amstext,amssymb}
 \usepackage[T1]{fontenc}
 \usepackage{apjfonts}
@@ -15,8 +15,8 @@
 
 %% Reintroduced the \received and \accepted commands from AASTeX v5.2.
 %% Add "Submitted to " argument.
-\received{\today}
-\revised{---}
+\received{February 28, 2020}
+\revised{\today}
 \accepted{---}
 \submitjournal{AAS journals.}
 \shorttitle{WASP-4 is accelerating toward the Earth}
@@ -403,7 +403,7 @@ $t_0$ and $P$.
 
 We fitted each model by assuming a Gaussian likelihood and sampling
 over the posterior probability distributions.  
-\added{The transit timing measurements, uncertainties, and provenances
+\added{The timing measurements, uncertainties, and provenances
 are given in Table~1.}
 We sampled the posterior using the algorithm proposed by
 \citet{goodman_ensemble_2010} and implemented by
@@ -591,11 +591,11 @@ contrast ratio to companion mass.  The resulting
 limits \added{derived if we assume maximal projected separations} are
 \replaced{shown}{shown with the dotted line} in Figure~\ref{fig:mass_sma}.
 \added{
-However, because we are observing the primary star accelerate towards
-our line of sight, the companion very well be near
+However, because the primary star is accelerating towards
+our line of sight, the companion could very well be near
 inferior conjunction.
-We incorporate the relevant projection effects
-as described in the following paragraphs.}
+Our approach for incorporating the relevant projection effects
+is described in the following paragraphs.}
 
 %\replaced{\paragraph{Radial velocity constraints}}
 \paragraph{Combined radial velocity and imaging constraints}
@@ -639,26 +639,24 @@ model from the observed RVs, leaving behind the RV residuals with a
 linear trend.  Given $(a_{\rm c}, M_{\rm c}, e_{\rm c})$ for each
 simulated outer companion, and the choice of instrument offsets and
 jitters, we performed a maximum likelihood fit for the time and
-argument of periastron of the outer simulated companion.  \deleted{We converted
-the resulting $128\times128\times512$ cube of log-likelihood values to
-probabilities, and averaged over the samples in each grid cell to
-derive a probability distribution in mass and semi-major axis, based
-on the radial velocities.}
+argument of periastron of the outer simulated companion.  \deleted{We
+converted the resulting $128\times128\times512$ cube of log-likelihood
+values to probabilities, and averaged over the samples in each grid
+cell to derive a probability distribution in mass and semi-major axis,
+based on the radial velocities.}
 
-\added{We then incorporated the speckle imaging limits in each simulated
-system as follows. After fitting for the time and argument of
-periastron, all the orbital parameters needed to find the projected
-separation are known (we assumed uniform sensitivity as a function of
-position angle, and therefore fixed the longitude of the
-ascending node to zero). We calculated the projected separation using
-the parametrization given by \citet{quirrenbach_2010}, which required
-solving Kepler's equation for each simulated system at the time of the
-imaging observation (September 28, 2019).  If a simulated companion's
-mass and projected separation put it above the 5$\sigma$ contrast curve,
-we assumed it would have been detected.
-We multiplied
-the resulting $128\times128\times512$ cubes of radial velocity and speckle
-imaging probabilities, and marginalized over the systems in each grid cell to
+\added{We then incorporated the speckle imaging limits in each
+simulated system as follows. After fitting for the time and argument
+of periastron, all the orbital parameters needed to find the projected
+separation at the time of observation are known. We assumed uniform
+sensitivity as a function of position angle, and therefore fixed the
+longitude of the ascending node to zero. We then calculated the
+projected separation using the parametrization given by
+\citet{quirrenbach_2010}.  If a simulated companion's mass and
+projected separation put it above the 5$\sigma$ contrast curve, we
+assumed it would have been detected.  We multiplied the resulting
+$128\times128\times512$ cubes of radial velocity and speckle imaging
+probabilities, and marginalized over the systems in each grid cell to
 derive a probability distribution in mass and semi-major axis.
 }
 \replaced{Figure~\ref{fig:mass_sma} shows the result.}
