@@ -1,0 +1,144 @@
+Dear Dr. Jackson,
+
+We thank you for organizing the review of our paper, and also
+thank the referee for their helpful comments.  We have
+considered the referee's remarks carefully and revised our
+manuscript accordingly.
+
+Below, we have reproduced the relevant portions of the
+referee's report, alongside our responses. A list of changes is
+appended to the manuscript using the trackchanges AASTeX
+macros.
+
+Sincerely,
+
+Luke Bouma
+
+******************************************
+REFEREE COMMENT
+----------
+Section 2.1, Paragraph 2.
+
+It would be helpful if the authors briefly describe the exact
+meaning of "high quality" in the context of the transit times
+used in the analysis.
+
+RESPONSE
+----------
+> Thank you for this prompt. We have removed the phrase "high
+> quality", as its precise definition is not of particular
+> importance for this study. It is defined in Section 3.4 of
+> Baluev+ 2019, through an empirical cutoff that Baluev+ made
+> based on the sampling cadence and the light-curve residual
+> RMS. 
+
+******************************************
+REFEREE COMMENT
+----------
+Section 3.1
+
+In this section it is stated that the assumption of "a Gaussian
+likelihood and sampling over the posterior probability
+distributions" is made. This assumption needs further
+justification given the variety of data sources included. In
+particular, it is later stated in Section 3.1 that the cause of
+the high reduced chi2 values "must be some additional signal or
+noise". Alternatively, it could indeed mean that the Gaussian
+likelihood assumption is not completely valid.
+
+RESPONSE
+----------
+> We expect that the high reduced chi2 values are likely due to
+> either underestimated statistical uncertainties on transit
+> timing measurements, or that they are caused by systematic
+> errors.  We do not think that the specific choice of a
+> Gaussian likelihood vs. an alternate choice of likelihood is
+> necessarily at issue.
+>
+> We made every effort to ensure the integrity of our included
+> times, for instance by rejecting times that did not clearly
+> specify the nature of the barycentric/heliocentric
+> correction, or the nature of the leap-second correction (UTC
+> vs TDB). However we ultimately need to trust timestamps that
+> were recorded by observers other than ourselves.  Despite
+> these efforts, some observations might have systematic errors
+> (e.g., of order 1 minute for leap-second corrections), but we
+> cannot be sure which ones.
+>
+> Our approach for dealing with this issue was to introduce a
+> free parameter that uniformly inflates the uncertainties of
+> derived parameters (e.g., dP/dt) by the factor that would
+> ensure reduced chi2 = 1.  Any suggestions on better
+> methodologies are welcome, however it is not clear to us that
+> there is any way around the fundamental issue of needing to
+> trust that observers can record time correctly.
+>
+> We have updated the wording in the manuscript to improve the
+> clarity with which we present these issues.
+
+******************************************
+REFEREE COMMENT
+----------
+Section 3.3
+
+The discussion and figure in this section are very good.
+However, it is not sufficiently demonstrated that a stellar
+companion is ruled out when considering the possible angular
+separations of the companion resulting from being near inferior
+or superior conjunction. This is particularly important for
+this system since even a small degree of coplanarity of the
+companion with WASP-4b would result in an edge on orbit that
+makes the companion difficult to detect when near conjunction
+locations. Also, the very last sentence of this section "Figure
+4 shows the result." should describe the results of the figure
+in more detail.
+
+RESPONSE
+----------
+> We agree; we erroneously neglected this issue in the
+> submitted manuscript.  Thank you for bringing it to our
+> attention.
+>
+> In the revised manuscript, we amended our methodogy to
+> probabilistically include the speckle imaging limits. The
+> procedure is discussed in the text, but in brief, for each
+> simulated companion (which has known orbital parameters), we
+> calculated its projected separation on-sky at the time of the
+> imaging observation. We then multiply the RV and speckle
+> imaging posteriors, yielding contours in a revised Figure 4.
+>
+> This revision led to slightly weaker upper limits on the
+> companion mass (200Mjup -> 300Mjup), but did not otherwise
+> affect the primary conclusions of the study.
+>
+> The comment regarding the last sentence has also been
+> addressed; thank you.
+
+******************************************
+REFEREE COMMENT
+----------
+Section 4.1
+
+Paragraph 1. The paragraph implies that the Doppler effect is
+the sole cause of the timing derivative. However, and given the
+2 sigma discrepancy, the wording should allow for the
+possibility that the timing derivative is actually a result of
+a combination of the described effects.
+
+RESPONSE
+----------
+> We have modified the wording in this paragraph to clarify
+> that this is a possibility, but that at present the dominant
+> physical effect is the line-of-sight acceleration.
+
+******************************************
+REFEREE COMMENT
+----------
+Section 4.2
+
+Paragraph 3. "hot Jupiters is expected" should be "hot Jupiters
+are expected".
+
+RESPONSE
+----------
+> Corrected, thank you.
