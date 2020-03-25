@@ -48,10 +48,11 @@ likelihood assumption is not completely valid.
 
 RESPONSE
 ----------
-> We expect that the high reduced chi2 values are likely due to
-> either underestimated statistical uncertainties on transit
-> timing measurements, or that they are caused by systematic
-> errors.  We do not think that the specific choice of a
+> We expect that the high reduced chi2 values are due to
+> underestimated statistical uncertainties on transit
+> timing measurements, or systematic errors due to stellar
+> activity or mistakes in the conversion to the standard
+> time system.  We do not think that the specific choice of a
 > Gaussian likelihood vs. an alternate choice of likelihood is
 > necessarily at issue.
 >
@@ -68,10 +69,8 @@ RESPONSE
 > Our approach for dealing with this issue was to introduce a
 > free parameter that uniformly inflates the uncertainties of
 > derived parameters (e.g., dP/dt) by the factor that would
-> ensure reduced chi2 = 1.  Any suggestions on better
-> methodologies are welcome, however it is not clear to us that
-> there is any way around the fundamental issue of needing to
-> trust that observers can record time correctly.
+> ensure reduced chi2 = 1.  This seems like the simplest and most
+> reasonable way to handle this heterogeneous dataset.
 >
 > We have updated the wording in the manuscript to improve the
 > clarity with which we present these issues.
@@ -99,7 +98,7 @@ RESPONSE
 > submitted manuscript.  Thank you for bringing it to our
 > attention.
 >
-> In the revised manuscript, we amended our methodogy to
+> In the revised manuscript, we amended our methodology to
 > probabilistically include the speckle imaging limits. The
 > procedure is discussed in the text, but in brief, for each
 > simulated companion (which has known orbital parameters), we
