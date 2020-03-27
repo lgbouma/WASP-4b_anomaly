@@ -1,3 +1,6 @@
+"""
+env: py37_emcee2
+"""
 import os, pickle
 import numpy as np, pandas as pd, matplotlib.pyplot as plt
 from numpy import array as nparr
@@ -295,7 +298,7 @@ def plot_mass_semimaj_contours(prob_arr=None, mass_grid=None,
     bins = (sma_grid, mass_grid)
     ax = hist2d(
         samples[:,0], samples[:,1], bins=bins, range=None, weights=None,
-        levels=None, smooth=2.0, ax=ax, color=None, quiet=False,
+        levels=None, smooth=2.2, ax=ax, color=None, quiet=False,
         plot_datapoints=False, plot_density=False, plot_contours=True,
         no_fill_contours=False, fill_contours=True, contour_kwargs=None,
         contourf_kwargs=None, data_kwargs=None, pcolor_kwargs=None
@@ -352,7 +355,7 @@ def plot_mass_semimaj_contours(prob_arr=None, mass_grid=None,
 
     ax.hlines(
         (0.864*u.Msun * 0.1**(1/3.5) ).to(u.Mjup).value, 3, 310, color='k',
-        alpha=0.7, linestyles='--', linewidths=1
+        alpha=0.7, linestyles='--', linewidths=0.5
     )
 
     ax.set_xlabel('Semi-major axis [AU]')
