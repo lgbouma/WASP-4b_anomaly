@@ -28,15 +28,15 @@ def main():
     references = []
     for ref in original_references:
         if ref == 'Triaud+2010_vizier':
-            references.append('\citet{triaud_spin-orbit_2010}')
+            references.append('T+10')
         elif ref == 'Pont+2011_vizierMNRAS':
-            references.append('\citet{pont_determining_2011}')
+            references.append('P+11')
         elif ref == 'jump_20190911':
-            references.append('This work')
+            references.append('B+20')
     references = np.array(references)
 
     outdf = pd.DataFrame(
-        {'time': np.round(nparr(df.time),8),
+        {'time': np.round(nparr(df.time-2450000),6),
          'mnvel': np.round(nparr(df.mnvel),5),
          'errvel': np.round(nparr(df.errvel),5),
          'svalue': svalue,
@@ -47,10 +47,11 @@ def main():
 
     outpath = '../paper/WASP-4b_rv_data.tex'
     with open(outpath,'w') as tf:
-        tf.write(outdf.to_latex(index=False, escape=False))
+        tf.write(outdf.to_latex(index=False, escape=False, float_format='%.6f'))
     print('wrote {:s}'.format(outpath))
 
-    outdf.to_csv('../paper/WASP-4b_rv_data.csv', index=False)
+    outdf.to_csv('../paper/WASP-4b_rv_data.csv', index=False,
+                 float_format='%.6f')
     print('also wrote ../paper/WASP-4b_rv_data.csv')
 
 
@@ -65,6 +66,7 @@ def main():
     bottomrule_ix = [ix for ix,l in enumerate(lines)
                      if r'\bottomrule' in l][0]
     sel_lines = lines[midrule_ix+1 : bottomrule_ix]
+    sel_lines = [l.replace(' \\\\', '') for l in sel_lines]
 
     with open(outpath, 'w') as f:
         f.writelines(sel_lines)
