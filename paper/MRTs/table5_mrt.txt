@@ -1,20 +1,21 @@
-Title: WASP-4 is Accelerating Toward the Earth
-Authors: Bouma et al.
+Title: WASP-4 is Accelerating Toward the Earth 
+Authors: Bouma L.G., Winn J.N., Howard A.W., Howell S.B., Isaacson H., 
+         Knutson H., Matson R.A. 
 Table: Predicted hot Jupiter period changes from linear radial velocity trends
-reported by Knutson et al (2014).
+       reported by Knutson et al (2014) [2014ApJ...785..126K]
 ================================================================================
-Byte-by-byte Description of file: table5_mrt.txt
+Byte-by-byte Description of file: datafile5.txt
 --------------------------------------------------------------------------------
-   Bytes Format Units  Label           Explanations
+   Bytes Format Units    Label           Explanations
 --------------------------------------------------------------------------------
    1- 10 A10    ---      planet          Planet name
   12- 19 F8.5   m/s/yr   gammadot        Measured d(RV)/dt
-  21- 28 F8.5   m/s/yr   gammadotperr    Uncertainty (84-50)
-  30- 37 F8.5   m/s/yr   gammadotmerr    Uncertainity (50-16)
+  21- 28 F8.5   m/s/yr E_gammadot        Upper 84-50 uncertainty in gammadot
+  30- 37 F8.5   m/s/yr e_gammadot        Lower 50-16 uncertainty in gammadot6
   39- 47 F9.6   d        plorbper        Planet orbital period
   49- 55 F7.3   ms/yr    Pdot            Doppler predicted dP/dt
-  57- 62 F6.3   ms/yr    Pdotperr        Uncertainty (84-50)
-  64- 69 F6.3   ms/yr    Pdotmerr        Uncertainity (50-16)
+  57- 62 F6.3   ms/yr  E_Pdot            Upper 84-50 uncertainty in Pdot
+  64- 69 F6.3   ms/yr  e_Pdot            Lower 50-16 uncertainty in Pdot
   71- 71 I1     ---      K14significant  Is d(RV)dt >3 sigma significant?
   73-104 A32    ---      comment         Comment
 --------------------------------------------------------------------------------
@@ -49,7 +50,7 @@ HAT-P-33 b -0.02100  0.02000  0.02300  3.474470  -7.681  7.315  8.412 0
 HAT-P-34 b  0.07100  0.04800  0.05000  5.452650  40.752 27.551 28.699 0                                  
 HAT-P-6 b   0.00410  0.00190  0.00190  3.852980   1.663  0.771  0.771 0                                  
 HAT-P-8 b   0.00030  0.00340  0.00400  3.076340   0.097  1.101  1.295 0                                  
-HD149026 b -0.00098 -0.00099 -0.00089  2.875889  -0.297 -0.300 -0.269 0                                  
+HD149026 b -0.00098  0.00099  0.00089  2.875889  -0.297  0.300  0.269 0                                  
 TrES-2 b   -0.00410  0.00600  0.00590  2.470630  -1.066  1.560  1.534 0                                  
 TrES-3 b    0.08000  0.05300  0.05400  1.306186  11.000  7.287  7.425 0                                  
 TrES-4 b    0.01500  0.01200  0.01200  3.553950   5.612  4.489  4.489 0                                  

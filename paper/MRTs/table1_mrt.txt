@@ -1,21 +1,23 @@
-Title: WASP-4 is Accelerating Toward the Earth
-Authors: Bouma et al.
+Title: WASP-4 is Accelerating Toward the Earth 
+Authors: Bouma L.G., Winn J.N., Howard A.W., Howell S.B., Isaacson H., 
+         Knutson H., Matson R.A. 
 Table: WASP-4b transit times.
 ================================================================================
-Byte-by-byte Description of file: table1_mrt.txt
+Byte-by-byte Description of file: datafile1.txt
 --------------------------------------------------------------------------------
    Bytes Format Units   Label     Explanations
 --------------------------------------------------------------------------------
    1- 14 F14.6  d       ttra      Transit mid-time in BJDTDB
-  16- 23 F8.6   d     e_ttra      Uncertainty on transit mid-time
+  16- 23 F8.6   d     e_ttra      The 1{sigma} uncertainty in ttra
   25- 29 I5     ---     epoch     Transit number
-  31- 81 A41    ---     photfrom  Who first processed the light-curves
-  83-105 A23    ---     timefrom  Provence of transit mid-time
+  31- 71 A41    ---     photfrom  Who first processed the light-curves (1)
+  73-105 A23    ---     timefrom  Provence of transit mid-time (1)
 --------------------------------------------------------------------------------
 Note (1): The photfrom and timefrom columns can be different in cases when the
-light-curves were homogeneously reprocessed after they were originally reported
-in the literature.  The format of these columns is usually ADS bibcodes, unless
-further clarification in the format of a string is required.
+          light-curves were homogeneously reprocessed after they were 
+	  originally reported in the literature.  The format of these columns 
+	  is usually ADS bibcodes, unless further clarification in the format 
+	  of a string is required.
 --------------------------------------------------------------------------------
 2454368.592790 0.000330 -1354 2008ApJ...675L.113W                       2013MNRAS.434...46H     
 2454396.695760 0.000120 -1333 2009A&A...496..259G                       2013MNRAS.434...46H     
